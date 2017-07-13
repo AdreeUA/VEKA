@@ -1,0 +1,257 @@
+.print-section
+	display: none !important
+
+=print()
+	.medium__title
+		line-height: 1.3
+
+	.main__content
+		padding: 0
+
+	.container
+		max-width: 100%
+		padding: 0
+
+	.header,
+	.footer,
+	.main__content > div,
+	.top__head-buttons,
+	.button-group,
+	.control__links,
+	.window-tip,
+	.section-bg,
+	.compare__links,
+	.pattern-left-md,
+	.promo-info__buttons,
+	.promo-info__bottom,
+	.map-list__rating
+		display: none
+	
+	.print-is-show,
+	.print-section
+		display: block !important
+
+	.top__head
+		max-width: 100%
+
+	.medium__title
+		color: #000
+		font-size: 44px
+		margin-bottom: 20px
+
+	.window-tile__price
+		margin: 40px 0
+		font-size: 44px
+
+		.star-tip
+			font-size: 25px
+
+	.window-tile__tip
+		color: #666666
+		margin-top: 7px
+
+	.top__head-note
+		border-top: 2px solid #eef0f1
+		padding-top: 30px
+
+	.main__section-char
+		padding: 80px 0 60px
+
+		.main__section-head
+			margin-bottom: 50px
+
+		.row 
+			margin: 0
+
+		.col-md-6
+			width: 100%
+			float: none !important
+			padding: 0
+
+		.image
+			margin-bottom: 60px
+
+		table 
+			width: 100%
+
+			td
+				width: 50%
+				vertical-align: top
+				padding: 5px 0
+
+				&:first-child
+					font-weight: 700
+					position: relative
+
+					// &:before
+					// 	content: ""
+					// 	width: 100%
+					// 	height: 1px
+					// 	position: absolute
+					// 	left: 0
+					// 	top: 20px
+					// 	border-bottom: 1px solid #e2e6e7
+
+					// span 
+					// 	padding-left: 0
+
+				span 
+					// position: relative
+					// background: #fff
+					// padding: 5px 15px
+					// display: inline-block
+
+			.link 
+				border: none
+				color: #000
+
+	
+	.about-tile-print
+		margin: 60px 0
+
+	.about-tile-print__elem
+		width: 100%
+		margin-bottom: 30px
+		display: table
+
+	.about-tile-print__image
+		width: 265px
+		display: table-cell
+		vertical-align: top
+
+		img 
+			width: 100%
+
+	.about-tile-print__info
+		padding-left: 30px
+		display: table-cell
+		vertical-align: top
+
+		p 
+			font-size: 14px
+			line-height: 20px
+
+			& + p 
+				margin-top: 20px
+
+	.about-tile-print__title
+		font-size: 20px
+		font-weight: 700
+		margin-bottom: 20px
+
+
+	.print-footer
+		border-top: 2px solid #eef0f1
+		padding-top: 35px
+		padding-bottom: 30px
+		margin-top: 55px
+
+		.medium__title
+			margin-bottom: 40px
+
+	.qr-code__items
+		+clear
+
+	.qr-code__elem
+		font-size: 13px
+		line-height: 17px
+		color: #666666
+		float: left
+		margin-right: 55px
+
+		span 
+			color: #000000
+
+	.qr-code__image
+		width: 132px
+		margin-bottom: 20px
+
+		img 
+			width: 100%
+
+
+	.print-header
+		min-height: 250px
+		position: relative
+		margin-bottom: 30px
+		+clear
+
+	.print-header__logo
+		margin-bottom: 20px
+	
+	.logo
+		display: flex
+		align-items: center
+
+	.logo__text
+		font-size: 20px
+		color: $blue
+		margin-left: 15px
+
+	.print-header__phone
+		font-size: 30px
+		font-weight: 700
+		margin-bottom: 10px
+
+	.print-header__contact-info
+		font-size: 13px
+		line-height: 17px
+
+	.print-header__qr
+		position: absolute
+		right: 0
+		top: 15px
+
+	.print-header__link
+		font-size: 13px
+		color: #666666
+		border-top: 2px solid #eef0f1
+		padding-top: 15px
+		margin-top: 30px
+		padding-bottom: 70px
+
+		span 
+			color: $blue
+
+	.main__title
+		font-size: 40px
+		line-height: 42px
+		margin: 0 0 15px
+
+	.promo-info__image
+		margin-bottom: 30px
+
+	.list 
+		li
+			padding-left: 0
+
+			&:before
+				display: none
+
+	h6 
+		margin: 15px 0
+
+	.promo-bottom-box
+		padding: 10px 0
+		background: transparent
+
+		.icon-promo
+			display: none
+
+@media print
+	body 
+		color: #000
+		padding: 0
+
+	+print	
+
+.is-print-page
+	color: #000
+	padding: 20px
+
+	+print
+
+	.main__section-char
+		padding: 0
+
+		

@@ -1,0 +1,16 @@
+@each $font in GothamPro, GothamPro-Bold, GothamPro-Light {
+  @font-face {
+    font-family: "#{$font}";
+    src: url("../fonts/GothaPro/#{$font}.eot");
+    src: url("../fonts/GothaPro/#{$font}.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothaPro/#{$font}.woff2") format('woff2'),
+    url("../fonts/GothaPro/#{$font}.woff") format("woff"),
+    url("../fonts/GothaPro/#{$font}.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+$gotham: 'GothamPro';
+$gothamBold: 'GothamPro-Bold';
+$gothamLight: 'GothamPro-Light'

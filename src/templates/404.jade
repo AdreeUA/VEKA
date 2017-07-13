@@ -1,0 +1,176 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title 404
+		include _parts/_head
+	body.not-found__body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_call-modal
+		include _parts/_request-modal
+		include _parts/_modals
+
+		header.header.not-found__header
+			.header__main 
+				.container
+					.header__logo
+						a(href="/").logo
+							.logo__icon: img(src="images/logo.svg")
+
+							.logo__text Надёжно. Навсегда.
+
+					.header__phone
+						.header__phone-title: a(href="tel:88005058352") 8 800 505-83-52
+						p Контакт-центр VEKA. Режим работы 24/7<br>Звонок бесплатный
+
+					.header__controls
+						button.button.blue-border.js-inlineModal(data-mfp-src="#requestModal")
+							+icon('tape')
+							span Заявка на замер
+						button.button.blue-border.js-inlineModal(data-mfp-src="#callModal")
+							+icon('phone')
+							+icon('phone-call')
+							span Заказать звонок
+
+					.header__burger
+						.burger.js-burger
+							.burger__line
+							.burger__line
+							.burger__line
+
+			.header__mobile-bar
+				.container
+					.header__city
+						.city__link.js-citySelectLink
+							+icon('pin')
+							span.city__label Новосибирск
+							+icon('arrow-bottom')
+
+					.header__phone-title: a(href="tel:88005058352") 8 800 505-83-52
+
+
+		main
+			.not-found__bg
+
+				.not-found__block
+					h1.not-found__link-color.not-found__main-title 404
+					.main__title
+						| Страница не найдена
+					p
+						| Такой страницы на сайте больше не существует или адрес страницы был набран не правильно. <br> Вы можете <a class="not-found__link-color" href="main.html">вернуться на главную</a> или воспользоватсья поиском по сайту:
+					.not-found__search.hidden-xs
+						input.not-found__input(type="text" placeholder="Поиск по сайту...")
+						button.search__submit.not-found__search-submit: +icon('search')
+
+
+
+				.main__section.fast-link__section.not-found__section
+					.container
+						.not-found__search.visible-xs
+							input.not-found__input(type="text" placeholder="Поиск по сайту...")
+							button.search__submit.not-found__search-submit: +icon('search')
+
+						.main__pattern.not-found__pattern
+						.fast-links
+							.flex__grid
+								a(href="#").fast-link__elem.not-found__elem
+									.fast-link__title.not-found__title
+										+icon('filter')
+										span.link.not-found__link Помощь в выборе
+									p.not-found__text.not-found__text--white.hidden-xs Пройдите несложный онлайн тест, чтобы определить какое решение VEKA подойдет для вашего дома или квартиры.<br> Всего 5 минут!
+								a(href="#").fast-link__elem.not-found__elem
+									.fast-link__title.not-found__title
+										+icon('calc')
+										span.link.not-found__link Калькулятор
+									p.not-found__text.not-found__text--white.hidden-xs Рассчитайте стоимость своего заказа на основе выбранного типа окна или двери, размеров и свойств конструкции, а так же дополнительных характеристик.
+								a(href="#").fast-link__elem.not-found__elem
+									.fast-link__title.not-found__title
+										+icon('reference')
+										span.link.not-found__link Справочник покупателя
+									p.not-found__text.not-found__text--white.hidden-xs Статьи и видео о пластиковых окнах: как выбрать, как купить, как ухаживать и много другой полезной информации.
+
+
+
+		footer.footer
+			.footer__main
+				.container
+					.footer__flex
+						.footer-nav
+							.footer__flex
+								.footer-nav__col
+									.footer-nav__label Покупателям 
+									.footer-nav__list
+										ul 
+											li: a(href="#") Продукция
+											li: a(href="#") Где купить
+											li: a(href="#") Калькулятор
+											li: a(href="#") Помощь в подборе
+											li: a(href="#") Справочник покупателя
+											li: a(href="#") Отзывы
+											li: a(href="#") Акции
+											li: a(href="#") Контакты
+								.footer-nav__col
+									.footer-nav__label Партнёрам 
+									.footer-nav__list
+										ul 
+											li: a(href="#") О компании
+											li: a(href="#") Профили VEKA
+											li: a(href="#") Справочник партнёра
+											li: a(href="#") Наши приложения
+											li: a(href="#") VEKA Professional
+											li: a(href="#") Новости
+											li: a(href="#") Контакты
+											li: a(href="#") Стать партнёром
+								.footer-nav__col
+									.footer-nav__label Дилерам 
+									.footer-nav__list
+										ul 
+											li: a(href="#") О компании
+											li: a(href="#") Профили VEKA
+											li: a(href="#") Справочник партнёра
+											li: a(href="#") Наши приложения
+											li: a(href="#") Новости
+											li: a(href="#") Контакты
+											li: a(href="#") Стать дилером
+								.footer-nav__col
+									.footer-nav__label Дизайнерам и архитекторам 
+									.footer-nav__list
+										ul 
+											li: a(href="#") О компании
+											li: a(href="#") Предложение о сотрудничестве
+											li: a(href="#") Справочник партнёра
+											li: a(href="#") Наши приложения
+											li: a(href="#") Новости
+											li: a(href="#") Контакты
+
+						.footer-right
+							.footer__social
+								.footer__label Мы в социальных сетях
+								.social 
+									a(href="#").social__link: img(src="images/fb.png")
+									a(href="#").social__link: img(src="images/tw.png")
+									a(href="#").social__link: img(src="images/yo.png")
+									a(href="#").social__link: img(src="images/in.png")
+									a(href="#").social__link: img(src="images/vk.png")
+
+							.footer__app
+								.footer__label Наши приложения
+								.app__list
+									.app__link.gplay
+										a(href="#")
+											img(src="images/gplay.svg" width="148px" height="37px")
+									.app__link.appstore
+										a(href="#")
+											img(src="images/appstore.svg" width="148px" height="40px")
+
+			.footer__bottom
+				.container
+					.footer__copy © 2016 VEKA
+
+
+
+		include _parts/_scripts

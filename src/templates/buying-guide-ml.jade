@@ -1,0 +1,229 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Справочник покупателя
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content.guide
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Справочник покупателя
+
+			.main__section.list__section
+				.container
+					.main__section-head
+						.main__title Справочник покупателя
+
+
+			.main__section.gray__section.guide__section
+				.container
+					.row
+						.col-md-6.col-sm-6
+							.main__section-head.head-flex
+								.main__section-icon: +icon('plastic-win-icon')
+								.section__title.guide__title: a(href="#").link Статьи об окнах
+
+							ul.guide__list
+								li
+									a(href="#").guide__link Как выбрать пластиковые окна?
+								li
+									a(href="#").guide__link Окна VEKA - отзывы
+								li
+									a(href="#").guide__link Что такое «Евроокна»?
+								li
+									a(href="#").guide__link Преимущества пластиковых окон
+								li
+									a(href="#").guide__link Уход за пластиковыми окнами
+								li
+									a(href="#").guide__link Пластиковые окна любого цвета на Ваш вкус
+								li
+									a(href="#").guide__link Какой профиль пластиковых окон лучше
+								li
+									a(href="#").guide__link Какие окна лучше?
+								li
+									a(href="#").guide__link Почему «пахнут» пластиковые окна?
+								li
+									a(href="#").guide__link Миф или правда?
+
+
+
+						.col-md-6.col-sm-6
+							.main__section-head.head-flex
+								.main__section-icon: +icon('profile-guide')
+								.section__title.guide__title: a(href="#").link Статьи о профилях VEKA
+
+							ul.guide__list
+								li
+									a(href="#").guide__link Различия между производством профилей и окон
+								li
+									a(href="#").guide__link Адаптация к российскому климату
+								li
+									a(href="#").guide__link Независимая экспертиза качества
+								li
+									a(href="#").guide__link Профили высшего качества
+								li
+									a(href="#").guide__link Оригинальные профильные системы VEKA
+								li
+									a(href="#").guide__link Только лучшие партнёры
+
+
+			.main__section
+				.container
+					.main__section-head.head-flex
+						.main__section-icon: +icon('video')
+						.section__title: a(href="#").link Видео-отзывы
+
+					.video__slider.video-tiles.js-videoSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть 1
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example2.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть 2
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example3.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть 3
+
+							.swiper-pagination.visible-xs
+
+						.load-more__button.visible-xs
+							a(href="#").button.blue.md
+								span Смотреть все
+
+			.main__section.video__helpful
+				.container
+					.main__section-head
+						.section__title Полезные видео об окнах
+
+					.video__slider.video-tiles.js-videoTilesSwiper
+						.pattern-left-md
+
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example.jpg")
+											span.play-icon
+										.video-tile__title Панорамные двери VEKASLIDE
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example2.jpg")
+											span.play-icon
+										.video-tile__title Входные двери из профилей VEKA со штульпом
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example3.jpg")
+											span.play-icon
+										.video-tile__title Штульповое окно VEKA Softline 82
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example.jpg")
+											span.play-icon
+										.video-tile__title Профильная поверхность: новые решения
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example2.jpg")
+											span.play-icon
+										.video-tile__title Окна в современном дизайнерском интерьере
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example3.jpg")
+											span.play-icon
+										.video-tile__title Светопрозрачные ограждающие конструкции
+
+							.swiper-pagination.visible-xs
+
+						.load-more__button
+							a(href="#").button.blue.md.hidden-xs
+								span Загрузить ещё
+								img(src="images/refresh.png")
+
+							a(href="#").button.blue.md.visible-xs
+								span Смотреть все
+
+			.main__section.gray__section
+				.container
+					.main__section-head.head-flex
+						.main__section-icon: +icon('video')
+						.section__title: a(href="#").link Рекламные ролики VEKA
+
+					.video__slider.video-tiles.js-videoSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example5.jpg")
+											span.play-icon
+										.video-tile__title Панорамные двери VEKASLIDE
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example6.jpg")
+											span.play-icon
+										.video-tile__title VEKA - ведущий мировой производитель оконных систем
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example4.jpg")
+											span.play-icon
+										.video-tile__title Пластиковые окна VEKA
+
+							.swiper-pagination.visible-xs
+
+						.load-more__button
+							a(href="#").button.blue.md.hidden-xs
+								span Загрузить ещё
+								img(src="images/refresh.png")
+
+							a(href="#").button.blue.md.visible-xs
+								span Смотреть все
+
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

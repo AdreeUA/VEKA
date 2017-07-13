@@ -1,0 +1,13 @@
+include _mixin/_import
+
+#videoModal.modal-full
+	.modal__box
+		.modal-full__close.js-mfp-close: +icon('close-md')
+		.modal-full__body
+			.modal-video
+				.modal-video__frame
+					iframe(width="854" height="480" src="https://www.youtube.com/embed/TKjrE4fkfig" frameborder="0" allowfullscreen)
+					// video(id="video-main" width="854" height="480" autoplay="autoplay" loop="loop" preload="auto" controls="true")
+						source(src="video/aquatell-short.mp4")
+				.modal-video__title: .section__title Эрмитажное окно
+	.main__pattern

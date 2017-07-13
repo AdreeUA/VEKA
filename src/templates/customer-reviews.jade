@@ -1,0 +1,127 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Отзывы покупателей
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Отзывы
+							li.breadcrumb__item: a(href="#").breadcrumb__link Отзывы покупателей
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Отзывы покупателей
+						.main__section-head-button
+							button(data-mfp-src="#addReviewModal").button.blue-border.js-inlineModal
+								+icon('review')
+								span Добавить отзыв
+
+					.filter__box
+						form(action="#")
+							.filter__flex.promo__flex
+								.filter__select
+									select.select.js-select
+										option(value="0") Новосибирск
+										option(value="1") Новосибирск
+										option(value="2") Новосибирск
+										option(value="3") Новосибирск
+								.filter__select
+									select.select.js-select
+										option(value="0") Название компании
+										option(value="1") Название компании
+										option(value="2") Название компании
+										option(value="3") Название компании
+								.filter__promo-button
+									button.button.blue
+										+icon('search') 
+										span Найти отзывы
+
+					.main__section-body
+						.review-tiles
+							.row
+								mixin reviewTileElem() 
+									.col-md-4.col-sm-4
+										a(href="#").review-tile__elem
+											.review-tile__author Ратушный Ярослав о <span class="blue-color">«Окна 21 века»</span>
+											.review-tile__rating
+												.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+													input(type="hidden" name="val" value="4")
+													input(type="hidden" name="votes" value="")
+
+												.review-tile__count Отзывы 5907
+
+											.review-tile__description.mobile-sm
+												p Устанавливали двустворчатое окно в комнату ребенку. Впечатления положительные от начала и до конца. Подробная консультация по телефону,с описанием каждого этапа работы, быстрый выезд замерщика, цена, срок изготовления окон все устроило и понравилось. Есть еще один плюспервая предоплата-только после доставки окон, вторая-после монтажа. Договор, акт выполненных работ, чеки-все как полагается. Окна привезли в пятницу,в субботу уже установили.
+											
+											.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+
+											.review-tile__bottom 25 октября 2016, Новосибирск
+									.col-md-4.col-sm-4
+										a(href="#").review-tile__elem
+											.review-tile__author Вова Дергабузов о <span class="blue-color">«Окна 21 века»</span>
+											.review-tile__rating
+												.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+													input(type="hidden" name="val" value="5")
+													input(type="hidden" name="votes" value="")
+
+												.review-tile__count Отзывы 5907
+
+											.review-tile__description.mobile-sm
+												p <b>Достоинства:</b> быстрое и профессилнальноеобслуживание, скидки
+												p <b>Недостатки:</b> Нет
+												p Работают слаженно. Утром позвонил и в обед пришел замерщик. Стоимость работ со скидкой меня устроила. Лоджию остеклили и утеплили через 5 дней. Все сделали профессионально, с учетом моих требований и за собой убрали.
+											
+											.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+
+											.review-tile__bottom 25 октября 2016, Новосибирск
+									.col-md-4.col-sm-4
+										a(href="#").review-tile__elem
+											.review-tile__author Emily_Emily о <span class="blue-color">«Окна на VEKA»</span>
+											.review-tile__rating
+												.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+													input(type="hidden" name="val" value="5")
+													input(type="hidden" name="votes" value="")
+
+												.review-tile__count Отзывы 5907
+
+											.review-tile__description.mobile-sm
+												p <b>Достоинства:</b> Прочные окна, доступные цены, оперативность, приятное обслуживание, и ( ! ) шумоизоляция. Больше поп поводу окон не могу добавить, тк поставили только сегодня, но не думаю, что меня огорчит в этих окнах что-то
+												p <b>Недостатки:</b> отсутствуют
+												p Изначально обратила внимание на приятные цены и хорошие отзывы. При установке работали достаточно квалифицированные монтажники - Виталий Николаевич и Алексей. Окнами на данный момент очень довольна! прекрасная шумоизоляция!
+												
+											.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+
+											.review-tile__bottom 25 октября 2016, Новосибирск
+								+reviewTileElem()
+								+reviewTileElem()
+								+reviewTileElem()
+				
+						.load-more__button
+							a(href="#").button.blue.md
+								span Загрузить ещё
+								img(src="images/refresh.png")
+
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_review-modal
+
+		include _parts/_scripts

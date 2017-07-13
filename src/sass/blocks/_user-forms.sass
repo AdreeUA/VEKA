@@ -1,0 +1,409 @@
+.user-forms
+	padding: 50px 0
+	@media (min-width: 992px)
+		padding: 100px 0 690px
+
+	&__title
+		@extend .main__title
+		margin-bottom: 40px
+
+		@media (min-width: 992px)
+			font-size: 44px
+
+	&__text
+		color: #8295A0
+		margin-bottom: 20px
+		font-size: 16px
+
+	&__label
+		color: #8295A0
+
+	&__labeltext
+		position: relative
+		display: block
+
+	&__link-fogotpass
+		position: absolute
+		right: 0
+		top: 0
+		border-bottom: none
+
+	&__link-reg
+		border-bottom: none
+
+	&__input
+		margin-bottom: 20px
+		margin-top: 10px
+
+	&__button.button
+		font-size: 16px
+		margin-bottom: 40px
+		padding: 0 40px
+		font-weight: 400
+		text-transform: uppercase
+		font-family: Roboto, sans-serif
+
+	&__link
+		color: #8295A0
+		border-bottom-color: #8295A0
+
+
+
+/* === password-new-done === */
+.password-new-done__btn
+	margin-top: 40px
+
+
+/* === registration === */
+.registration
+	@media (min-width: 992px)
+		padding: 80px 0 220px
+
+	&__title
+		@extend .main__title
+		margin-bottom: 40px
+
+		@media (min-width: 992px)
+			font-size: 44px
+
+	.user-forms__label
+		position: relative
+		display: block
+		cursor: pointer
+		font-size: 16px
+		padding: 0 7px
+
+		&:before
+			display: none
+
+	&__checkbox-uncheck
+		display: inline-block
+		margin-right: 10px
+		height: 15px
+		width: 15px
+		font-size: 0
+		border: 1px solid #C1C3C4
+		border-radius: 2px
+
+	&__checkbox-check
+		display: inline-block
+		svg
+			height: 13px
+			width: 13px
+			opacity: 0
+			transition: opacity .2s
+
+	&__checkbox
+		margin-bottom: 40px
+
+		input[type="checkbox"]
+			display: none
+
+			&:checked ~ .user-forms__label
+				.registration__checkbox-check svg
+					opacity: 1
+
+	&__checkbox-grey
+		background-color: #F4F4F4
+		border: 1px solid #E4E4E4
+		border-radius: 2px
+		padding: 10px 7px
+
+		.user-forms__label
+			padding: 0
+			color: #272727
+
+	.user-forms
+		&__title
+			font-size: 28px
+
+		&__labeltext-small
+			padding-left: 20px
+			color: #BAC4C9
+
+		&__input
+			@media (min-width: 992px)
+				width: 85%
+
+		&__pass
+			display: inline-block
+			width: 45%
+
+		&__radiolabels
+			display: flex
+			@media (min-width: 992px)
+				width: 85%
+		&__radiolabel
+			flex: 1 1 80px
+			font-family: Roboto, sans-serif
+			padding: 20px
+			text-align: center
+			border: 1px solid #E4E4E4
+			background-color: #fff
+			transition: background-color .3s
+			cursor: pointer
+
+		&__radiolabel[for="nothing"]
+			flex: 1 1 130px
+
+		&__radioinput[id="nothing"]:checked ~ label[for="nothing"],
+		&__radioinput[id="male"]:checked ~ label[for="male"],
+		&__radioinput[id="female"]:checked ~ label[for="female"]
+			background-color: #F4F4F4
+
+		&__radioinput
+			display: none
+
+		&__telfield
+			position: relative
+
+			&-code
+				position: absolute !important
+				top: 0
+				left: 0
+				bottom: 0
+				width: 80px
+
+			.user-forms__input-tel
+				padding-left: 90px
+
+/* === registration-request-submitted  === */
+.registration-request-submitted
+	&__title
+		font-size: 35px
+		margin-bottom: 40px
+
+	&__subtitle
+		font-size: 22px
+		margin-bottom: 40px
+
+	&__box
+		margin-bottom: 50px
+		font-size: 16px
+		line-height: 1
+		max-width: 460px
+
+	&__number
+		font-size: 35px
+		color: #0074b8
+		padding-right: 0
+
+	&__row-title
+		color: #272727
+		margin-bottom: 10px
+
+	&__row-text
+		color: #8295A0
+		line-height: 20px
+
+.registration-email-confirmed
+	&__check
+		margin-top: 20px
+
+	&__number,
+	&__row-title
+		color: #8295A0
+
+
+/* === modal === */
+.user-forms__modal
+	font-size: 16px
+
+	.user-forms__title
+		font-size: 35px
+		margin-bottom: 0
+
+	.modal__body
+		padding-left: 35px
+		padding-right: 35px
+
+	.modal__submit
+		margin-top: 35px
+
+	.registration__modal-row
+		margin-bottom: 10px
+
+.registration__modal-row-title
+	color: #8295A0
+
+
+/* === request-approve === */
+.request-approve__button
+	margin-top: 30px
+
+	@media (min-width: 992px)
+		min-width: 40%
+
+
+/* === .request-revoke-already === */
+.request-revoke-already
+	padding-top: 40px
+
+	&__col
+		max-width: 540px
+
+	&__title
+		font-size: 25px
+		margin-top: 50px
+		margin-bottom: 30px
+
+	&__box
+		margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 40px
+
+
+/* === .request-employee-approve === */
+.request-employee-approve
+	&__yes-no
+		display: inline-block
+		width: 29px
+		height: 22px
+		margin-left: 10px
+		background: transparent url(../../images/check-green.png) 50% no-repeat
+		background-size: cover
+
+
+/* === .request-employee-reject === */
+.request-employee-reject
+	&__yes-no
+		display: inline-block
+		width: 24px
+		height: 24px
+		margin-left: 10px
+		background: transparent url(../../images/cross-red.png) 50% no-repeat
+		background-size: cover
+
+
+/* === .request-employee === */
+.request-employee
+	position: relative
+	padding-top: 40px
+	padding-bottom: 1000px
+
+	&__modal
+		position: absolute
+		@media (min-width: 992px)
+			right: 40px
+
+	p.user-forms__text
+		margin-bottom: 30px
+
+	&__box
+		margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 40px
+
+	&__btn.button
+		@media (min-width: 992px)
+			width: 40%
+			display: inline-block
+			margin-left: 5px
+			margin-right: 5px
+			height: 55px
+
+
+/* === .registration-request-sent === */
+.registration-request-sent
+	form
+		margin-top: 40px
+
+	.user-forms__button
+		padding-left: 10px
+		padding-right: 10px
+		width: 40%
+
+
+/* === .request-registration-employee === */
+.request-registration-employee
+	position: relative
+	padding-top: 40px
+	padding-bottom: 1000px
+
+	h5.user-forms__subtitle
+		font-size: 23px
+		color: #0074b8
+
+	.md.user-forms__button.button
+		width: 47%
+		font-size: 14px
+		padding-left: 10px
+		padding-right: 10px
+
+	ul:not(:last-child)
+		margin-bottom: 15px
+
+
+/* === .request-sample === */
+.request-sample
+	padding-bottom: 1100px
+
+	.user-forms__labeltext-status
+		padding-top: 25px
+
+	select.select
+		font-size: 16px
+
+	.modal__submit
+		margin-top: 0
+
+	.user-forms__button
+		width: 50%
+		margin-bottom: 0
+
+
+/* === .dealer-become === */
+.dealer-become
+	.registration__checkbox-grey
+		@media (min-width: 992px)
+			margin-left: 7px
+			width: 92%
+
+	.user-forms__button
+		@media (min-width: 992px)
+			margin-left: 7px
+
+#dealer-becomeModal
+	h5.user-forms__formtitle
+		margin: 30px 0
+
+	h5.user-forms__subtitle
+		font-size: 23px
+		color: #0074b8
+
+	button.button
+		@media (min-width: 992px)
+			width: 50%
+
+
+/* === .partner-become === */
+.partner-become
+	.registration__checkbox-grey
+		@media (min-width: 992px)
+			margin-left: 7px
+			width: 92%
+
+	.user-forms__button
+		@media (min-width: 992px)
+			margin-left: 7px
+
+#partner-becomeModal
+	h5.user-forms__formtitle
+		margin: 30px 0
+
+	h5.user-forms__subtitle
+		font-size: 20px
+		color: #0074b8
+
+	button.button
+		@media (min-width: 992px)
+			width: 50%
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Калькулятор
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Калькулятор
+
+			.main__section
+				.container
+					.main__section-body
+						.main__title Калькулятор VEKA
+
+						.calc
+							.calc-window
+								.calc-window-image
+									.window-image__title.visible-xs:  span.section__title Окно на кухню
+
+									.window-image
+										.window-image__size.width: span 1 300 мм
+										.window-image__size.height: span 1 460 мм
+										.window-image__elem: img
+
+									.window-image__select.hidden-xs
+										.row.sashes-bl
+											.sashes
+												select.select.js-select
+													option(value="1") Глухое (не открывается)
+											.sashes
+												select.select.js-select
+													option(value="1") Поворотно-откидное
+
+								.calc-window-type
+									label.label.visible-xs Тип окна
+									.window-type 
+										.window-type__elem(data-id="1" data-title="Одностворчатое окно"): +icon('window-type')
+										.window-type__elem(data-id="2" data-title="Двухстворчатое окно").is-active: +icon('window-type-2')
+										.window-type__elem(data-id="3" data-title="Трехстворчатые окна"): +icon('window-type-3')
+										.window-type__elem(data-id="4" data-title="Трехстворчатые окна с фрамугой"): +icon('window-type-4')
+										.window-type__elem(data-id="5" data-title="Балконный блок двухстворчатый"): +icon('window-type-5')
+										.window-type__elem(data-id="6" data-title="Балконный блок одностворчатый"): +icon('window-type-6')
+										.window-type__elem(data-id="7" data-title="Нестандартная конструкция"): +icon('window-type-7')
+
+								.calc-window-form
+									.window-form
+										.section__title.hidden-xs Окно на кухню
+
+										form(action="#")
+											fieldset.fieldset
+												label.label Название
+												input(type="text" name="name" placeholder="" required="required" value="Окно на кухню").input
+											fieldset.fieldset
+												.row 
+													.col-md-6.col-sm-6.col-xs-6
+														label.label Ширина, мм
+														input(type="text" name="weight" placeholder="" required="required" value="1 300").input
+													.col-md-6.col-sm-6.col-xs-6
+														label.label Высота, мм
+														input(type="text" name="height" placeholder="" required="required" value="1 460").input
+
+											fieldset.fieldset.visible-xs
+												label.label 1 створка
+												select.select.js-select
+													option(value="1") Глухое (не открывается)
+											fieldset.fieldset.visible-xs
+												label.label 2 створка
+												select.select.js-select
+													option(value="1") Поворотно-откидное
+
+											fieldset.fieldset
+												label.label Решение VEKA
+												select.select.js-select(required="required" name="decisions")
+													option(value="1") Энергоэффективное окно
+											fieldset.fieldset
+												label.label Профиль VEKA
+												select.select.js-select(required="required" name="profiles")
+													option(value="1") Softline
+											fieldset.fieldset
+												label.label Стеклопакет
+												select.select.js-select(required="required" name="glazed")
+													option(value="1") Энергосберегающий двухкамерный
+											fieldset.fieldset
+												label.label Цвет
+												select.select.select__color.js-select(required="required" name="color")
+													option(value="1").white-circle Белый
+
+		include _parts/_calc-panel						
+
+		include _parts/_footer
+
+		include _parts/_scripts

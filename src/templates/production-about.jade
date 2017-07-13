@@ -1,0 +1,184 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Производство VEKA
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+							li.breadcrumb__item: a(href="#").breadcrumb__link Карьера с VEKA
+
+			.main__section.tile__section
+				.container
+					.main__section-head
+						.main__title Производство VEKA
+
+			.main__section
+				.container
+					.main__section-body
+						.main__about
+							.about__description
+								p
+									| Производитель пластикового профиля для оконных и дверных конструкций
+									| VEKA Rus является дочерней компанией германской фирмы VEKA AG, и уже
+									| более 16 лет занимается изготовлением современных материалов для
+									| производства готовых окон из ПВХ. Оптимальные по сочетанию цены
+									| и качества, пластиковые окна пвх и двери из профиля VEKA — это стандарт
+									| современной жизни. Наши партнеры и их дилеры готовы предложить своим
+									| покупателям теплые окна с усиленным профилем, типовые балконные блоки,
+									| а также нестандартные конструкции для сложных дизайнерских решений.
+									| В зависимости от того, какие окна вы хотите выбрать, наши партнеры подберут
+									| оптимальное решение.
+									br
+									br
+									strong
+										| Выбирая качественные окна из металлопластикового профиля —
+										| выбирайте VEKA!
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Что такое профиль Softline
+
+					.main__section-body.js-advantageSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantages-1-1.png")
+										.small__title Контроль качества
+										p
+											| VEKA осуществляет сложный
+											| многоступенчатый контроль качества
+											| экструзии. Все предприятия концерна
+											| через систему спутниковой связи
+											| связаны с центральным контрольным
+											| пультом VEKA AG
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-2-1.png")
+										.small__title Сырьё и добавки
+										p
+											| Мы перерабатываем исключительно
+											| высококачественное сырье и добавки.
+											| Прежде чем полученное сырье поступает
+											| в бункеры, оно проходит тщательную
+											| проверку
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-3.svg")
+										.small__title Дизайн и долговечность
+										p Высококачественный пластик, устойчивый к воздействиям внешней среды, ровная гладкая поверхность в любом цвете и дизайне
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-4.svg")
+										.small__title Прочность и надежность
+										p Использование специальных армирующих усилителей обеспечивает высокую стабильность конструкции
+
+
+
+			.main__section.work-example__section
+				.work-example.js-workExampleSwiper
+					.main__section-head.visible-xs
+						.main__title Фотогалерея SOFTLINE
+
+					.swiper-mobile__nav
+						.huge-arrow__left: +icon('huge-arrow-left')
+						.huge-arrow__right: +icon('huge-arrow-right')
+
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide.wide.hidden-xs
+								.work-example__elem
+									.pattern-left-md.medium
+									.work-example__title
+										.main__title Фотогалерея <br>SOFTLINE
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example2.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example3.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example4.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example5.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example6.jpg')")
+
+					.swiper-pagination.visible-xs
+
+			.main__section.hidden-xs
+				.container
+					.main__section-head
+						.main__title Сертификаты VEKA
+
+					.main__about
+						.about__description
+							p
+								| VEKA c ее многолетним опытом экструзии является одним из пионеров
+								| в области разработки и производства пластиковых профилей для окон и дверей.
+								| Мы всячески стремимся к тому, чтобы наши заказчики получали продукцию
+								| только самого высокого качества; на это направлены все наши усилия на
+								| каждом этапе производства. Мы перерабатываем исключительно
+								| высококачественное сырье и добавки. Прежде чем полученное сырье
+								| поступает в бункеры, оно проходит тщательную проверку. В смесительной
+								| установке с компьютерным управлением осуществляется контроль за тем,
+								| чтобы в процессе смешивания соотношение компонентов в точности
+								| соответствовало заданной рецептуре. Кроме того, в лаборатории проводятся
+								| постоянные пробы готовой смеси.
+
+			.main__section
+				.container
+					.tile__slider.js-similarSwiper
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-1.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат ISO 9001:2008 VEKA AG
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-2.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат ISO 9001:2008 ООО ВЕКА РУС
+										//- p.company--translate-fix Скачать в формате jpg (80,7 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-3.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат Знак качества RAL
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-4.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат Знак качества RAL
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+
+							.swiper-pagination.visible-xs
+
+		include _parts/_footer
+
+		include _parts/_scripts

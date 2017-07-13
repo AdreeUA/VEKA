@@ -1,0 +1,57 @@
+include _mixin/_import
+
+#3dModal.modal-full
+	.modal__box
+		.modal-full__close.js-mfp-close: +icon('close-md')
+		.modal-full__body
+			.modal-3d
+				.threesixty.profile-threesixty
+					.spinner: span 0%
+					ol.threesixty_images
+
+				.modal-3d__controls
+					.modal-3d__control.js-3dControlPrev: img(src='images/3d-prev.png')
+					.modal-3d__control.js-3dControlNext: img(src='images/3d-next.png')
+					.modal-3d__control.js-3dControlPlay: img(src='images/3d-play.png')
+
+				script.
+					$(function(){
+						var profile = $('.profile-threesixty').ThreeSixty({
+							totalFrames: 52, // Total no. of image you have for 360 slider
+							endFrame: 52, // end frame for the auto spin animation
+							currentFrame: 1, // This the start frame for auto spin
+							imgList: '.threesixty_images', // selector for image list
+							progress: '.spinner', // selector to show the loading progress
+							imagePath:'images/3d/', // path of the image assets
+							filePrefix: '', // file prefix if any
+							ext: '.png', // extention for the assets
+							height: 500,
+							width: 600,
+							navigation: false,
+							responsive: true
+						});
+
+						$('.js-3dControlPrev').on('click', function(){
+							profile.previous();
+						});
+
+						$('.js-3dControlNext').on('click', function(){
+							profile.next();
+						});
+
+						$('.js-3dControlPlay').on('click', function(){
+							if($(this).hasClass('is-play')){
+								$(this).removeClass('is-play');
+								profile.stop();
+							}
+							else {
+								$(this).addClass('is-play');
+								profile.play();
+							}
+						});
+					});
+
+					
+						
+
+	.main__pattern

@@ -1,0 +1,268 @@
+.contact-list
+	&--fix
+		&-border-bottom
+			border-bottom: none
+
+			@media #{$mobile}
+				.sort-nav__item
+					display: block
+
+					& + .sort-nav__item
+						margin-top: 20px
+
+	&__buttons
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+			
+	&__button
+		width: 50%
+		height: 70px
+		font-size: 20px
+		font-weight: bold
+		cursor: pointer
+		transition: 200ms
+		background-color: #e7eff2
+		color: #272727
+
+		&:hover
+			background-color: darken(#e7eff2, 5%)
+
+		@media #{$mobile}
+			height: 65px
+
+		&.is-active
+			color: #fff
+			background-color: #0074b8
+
+			svg 
+				fill: #fff
+
+			&:hover
+				background-color: lighten(#0074b8, 5%)
+
+		& > svg
+			fill: $gray
+			margin-right: 10px
+			vertical-align: middle
+
+			//@media #{$mobile}
+				//display: none
+
+		.icon-list
+			width: 31px
+
+
+	&__margin-fix
+		margin-bottom: 0
+
+		@media (min-width: 768px)
+			margin-top: -50px
+
+		@media #{$mobile}
+			margin-top: -20px
+
+
+	&__main-flex-block
+		// display: flex
+		// justify-content: space-between
+		// flex-wrap: wrap
+		// flex-direction: column // ??
+		
+		@media (min-width: 768px)
+			margin-top: 50px
+			margin-bottom: 50px
+
+
+	&__head-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		background-color: #f3f8fa
+		padding: 14px 0 14px 40px
+		font-size: 22px
+		line-height: 26px
+		font-weight: 400
+
+		@media (max-width: 767px)
+			flex-direction: column
+
+	&__column-flex
+		display: flex
+		align-items: center
+		// width: 30%
+		width: 34% // ???
+
+		@media (min-width: 768px)
+			&.column--left
+				align-items: flex-start
+				width: 100%
+				padding-top: 30px
+
+			&.column--right
+				display: block
+				width: 100%
+				padding-top: 30px
+				padding-bottom: 10px
+
+				.contact-list__desc-row
+					margin-bottom: 20px
+
+				.contact-list--address
+					margin-bottom: 0
+
+		@media (max-width: 767px)
+			width: 100%
+
+			&.column--left
+				padding-top: 30px
+				margin-bottom: 25px
+
+			&.column--right
+				display: block
+				padding-bottom: 15px
+
+				.contact-list__desc-row
+					margin-bottom: 20px
+
+				.contact-list--address
+					margin-bottom: 0
+
+		& svg
+			// height: 30px
+			// width: 30px
+			margin-right: 10px
+			fill: #0074b8
+			transition: 200ms
+
+		&--width
+			// width: 31%
+			width: 100%
+
+	&__body-flex
+		display: flex
+		flex-direction: row
+		// justify-content: space-between
+		// padding: 0 40px
+		padding-left: 40px
+
+		@media (max-width: 767px)
+			flex-direction: column
+			padding-left: inherit
+
+
+
+
+	&__row-flex
+		font-size: 17px
+		line-height: 24px
+		display: flex
+		flex-direction: column
+		width: 100%
+
+		@media (max-width: 767px)
+			font-size: 15px
+			line-height: 20px
+
+		&--people
+			margin-bottom: 45px
+
+			@media (max-width: 767px)
+				margin-bottom: 15px
+				font-size: 14px
+
+		&--contacts
+			margin-bottom: 15px
+
+			&-fix
+				margin-bottom: 41px
+
+				@media (max-width: 767px)
+					margin-bottom: 15px
+
+		&--area
+			padding-right: 40px
+
+
+		& > svg
+			transform: translateY(4px)
+
+		& p
+			font-size: 14px
+			line-height: 20px
+			font-family: 'Roboto', 'Arial', sans-serif
+
+	&__colored-link
+		color: #0074b8
+		transition: 200ms
+
+		&:hover
+			color: $blueLight
+
+			& > svg 
+				fill: $blueLight
+
+	&__body-column-flex
+		flex-direction: column
+		margin-top: 25px
+
+		&--fix-width
+			@media (min-width: 768px)
+				width: 66%
+
+		& > hr
+			width: 100%
+			margin-bottom: 35px
+			border: none
+			border-bottom: 1px solid #e7eff2
+
+			@media (max-width: 767px)
+				display: none
+
+	&__body-column-flex--grow
+		width: 60%
+
+
+	&__mobile-gray-bg
+		@media (max-width: 767px)
+			background-color: #f3f8fa
+			margin-left: -15px
+			margin-right: -15px
+			padding-left: 15px
+			padding-right: 15px
+			border-bottom: 2px solid #e7eff2
+			border-top: 2px solid #e7eff2
+
+	&__desc-row
+		width: 100%
+		@media (min-width: 768px)
+			flex-direction: row
+			justify-content: space-between
+			display: flex
+
+	&__hr
+		border: none
+		border: 1px solid #e7eff2
+
+
+	&--address
+		font-size: 14px
+
+		@media (min-width: 768px)
+			&:first-child
+				margin-top: 0
+
+		@media #{$mobile}
+			margin: 15px 0
+
+
+.hr__thin
+	width: 100%
+	margin: 0 0 25px
+	border: none
+	border-bottom: 1px solid #e7eff2
+
+	@media (max-width: 767px)
+		margin: 10px 0 25px

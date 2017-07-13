@@ -1,0 +1,74 @@
+.documents
+	padding-bottom: 80px
+
+	&__title
+		@extend .main__title
+
+		font-size: 44px
+		margin: 80px 0
+
+	&__subtitle
+		@extend .main__title
+
+		font-size: 35px
+		margin-bottom: 30px
+
+	&__doctitle
+		@extend .main__title
+
+		display: inline-block
+		font-size: 22px
+		margin: 15px 0
+		line-height: 1.2
+		transition: color .2s
+
+		&:hover
+			color: #272727
+
+
+	&__block
+		margin-bottom: 100px
+
+	&__flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		@media (min-width: 1200px)
+			justify-content: flex-start
+
+	&__flexitem
+		flex: 0 0 320px
+		margin-bottom: 20px
+		margin-right: 20px
+
+		@media (min-width: 1200px)
+			margin-right: 75px
+
+		&:hover
+			.documents__images-box:after
+				opacity: 1
+
+
+	&__images-box
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		font-size: 0
+
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: rgba(255, 255, 255, .3)
+			pointer-events: none
+			opacity: 0
+			transition:  opacity .2s
+
+	&__image-box
+		flex: 0 0 150px
+		background-color: #F2F2F2
+

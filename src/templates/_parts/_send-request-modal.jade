@@ -1,0 +1,32 @@
+#send_request.modal.mfp-hide
+
+	// Modal: Заявка отправлена
+	.modal__box
+		.modal__head
+			.section__title Заявка отправлена
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__text
+				.row
+					.col-md-5.col-sm-12
+						p Ваш заказ:
+					.col-md-7.col-sm-12
+						span 2 окна
+				.row
+					.col-md-5.col-sm-12
+						p Ориентировочная цена:
+					.col-md-7.col-sm-12
+						span 31 860 рублей
+					
+				p.
+					Заявка успешно сформирована и отправлена
+					для расчета менеджером. Копия заявки отправлена
+					по электронной почте.
+				p.
+					Окончательную стоимость заказа Вам сообщит
+					оператор по указанному номеру телефона.
+				.row.links
+					.col-md-5.col-sm-12
+						a(href="#").md.link Новый расчет
+					.col-md-7.col-sm-12
+						a(href="#").md.link Вернуться на главную

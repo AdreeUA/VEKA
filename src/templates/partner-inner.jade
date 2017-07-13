@@ -1,0 +1,232 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Партнер
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Где купить
+							li.breadcrumb__item: a(href="#").breadcrumb__link Lauter
+
+			.main__section
+				.container
+					.main__section-body
+						.pattern-left-md
+
+						.row
+							.col-md-9.col-sm-9
+								.partner-box
+									.partner-box__head
+										.partner-box__logo: img(src="images/tmp/lauter_lg.png")
+										.partner-box__info 
+											.main__title Lauter
+
+											.map-list__review
+												span.map-list__rating
+													.js-rating(data-readonly="true")
+														input(type="hidden" name="val" value="4")
+														input(type="hidden" name="votes" value="")
+
+												span.map-list__review-count Отзывы 5907
+
+											.promo-info__contact
+												.map-list__info-elem
+													|Сайт: <a href="#">www.oknakomforta.ru</a>
+												.map-list__info-elem
+													|E-mail: <a href="#">centr-ofis@oknakomforta.com</a>
+
+											.promo-info__buttons
+												button.button.blue.js-inlineModal(data-mfp-src="#requestModal")
+													+icon('tape')
+													span Заявка на замер
+												button.button.blue.js-inlineModal(data-mfp-src="#callModal")
+													+icon('phone')
+													span Заказать звонок
+
+									.partner-box__description
+										p Мировые лидеры в производстве комплектующих для производства окон — немецкие концерны VEKA AG (ПВХ профиль) и Roto Frank (фурнитура) — наши надежные партнеры и добрые друзья. Они обеспечивают современные технологичные оконные производства продукцией стабильно высокого качества и точно вовремя. Собственная маркетинговая стратегия нашей компании — результат глобальных исследований международной практики оконной индустрии, с привязкой к современным Российским стандартам и реальным предпочтениям покупателей. С 2008 года, когда появились первые дилеры, реализующие продукцию марки Lauter, начинается история развития этого бренда.
+							
+							.col-md-3.col-sm-3
+								.promo-widjet
+									.promo-widjet__title Акции партнёра
+
+									.promo-widjet__slider.js-promoSwiper(data-effect="slide")
+
+										.swiper-mobile__nav
+											.huge-arrow__left: +icon('huge-arrow-left')
+											.huge-arrow__right: +icon('huge-arrow-right')
+
+										.swiper-container
+											.swiper-wrapper
+												.swiper-slide
+													a(href="#").tile__elem
+														.tile__image: img(src="images/tmp/promo_example.jpg")
+														.tile__title 
+															+icon('arrow-right')
+															|Утепли своё окно бесплатно!
+														p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+														.tile__more: span.link Подробнее об акции 
+												.swiper-slide
+													a(href="#").tile__elem
+														.tile__image: img(src="images/tmp/promo_example2.jpg")
+														.tile__title 
+															+icon('arrow-right')
+															|Распродажа окон ПВХ!
+														p C 19 до 30 ноября в интернет-магазине пластиковых окон КОНСИБ Вы можете приобрести окно со скидкой 43%. Условия акции: - окно без монтажа, - без комплектующих (откосы, внешняя отделка, подоконники).
+														.tile__more: span.link Подробнее об акции 
+												.swiper-slide
+													a(href="#").tile__elem
+														.tile__image: img(src="images/tmp/promo_example3.jpg")
+														.tile__title 
+															+icon('arrow-right')
+															|Утепли своё окно бесплатно!
+														p Lauter дарит каждому покупателю фирменный набор по уходу за окнами. В комплекте: средства для мытья стёкол, профиля, уплотнителей, смазка  для фурнитуры.
+														.tile__more: span.link Подробнее об акции 
+												.swiper-slide
+													a(href="#").tile__elem
+														.tile__image: img(src="images/tmp/promo_example4.jpg")
+														.tile__title 
+															+icon('arrow-right')
+															|Ваши окна будут всегда как новые
+														p Lauter дарит каждому покупателю фирменный набор по уходу за окнами. В комплекте: средства для мытья стёкол, профиля, уплотнителей, смазка  для фурнитуры.
+														.tile__more: span.link Подробнее об акции 
+
+										.swiper-pagination
+
+									.load-more__button.visible-xs
+										a(href="#").button.blue.md
+											span Смотреть все
+											img(src="images/refresh.png")
+
+
+			.map__content
+				include _parts/_map
+
+			.main__section.work-example__section
+				.work-example.js-workExampleSwiper
+					.main__section-head.visible-xs
+						.main__title Примеры работ от партнёров&nbsp;VEKA
+
+					.swiper-mobile__nav
+						.huge-arrow__left: +icon('huge-arrow-left')
+						.huge-arrow__right: +icon('huge-arrow-right')
+
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide.wide.hidden-xs
+								.work-example__elem
+									.pattern-left-md.medium
+									.work-example__title
+										.main__title Примеры работ<br> от партнёра VEKA
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example2.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example3.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example4.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example5.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example6.jpg')")
+
+					.swiper-pagination.visible-xs
+
+				.container
+					.main__section-footer.hidden-xs
+						a(href="#").button.blue.md
+							span Загрузить ещё
+							img(src="images/refresh.png")
+
+					.main__section-footer.visible-xs
+						a(href="#").button.blue.md
+							span Смотреть все
+							img(src="images/refresh.png")
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Отзывы о Lauter
+
+					.review__slider.js-reviewSwiper
+						.pattern-left-md
+
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.review-tile__elem
+										.review-tile__author Ратушный Ярослав о <span class="blue-color">«Окна 21 века»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="4")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description.mobile-sm
+											p Устанавливали двустворчатое окно в комнату ребенку. Впечатления положительные от начала и до конца. Подробная консультация по телефону,с описанием каждого этапа работы, быстрый выезд замерщика, цена, срок изготовления окон все устроило и понравилось. Есть еще один плюспервая предоплата-только после доставки окон, вторая-после монтажа. Договор, акт выполненных работ, чеки-все как полагается. Окна привезли в пятницу,в субботу уже установили.
+
+										.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+
+										.review-tile__bottom 25 октября 2016, Новосибирск
+								.swiper-slide
+									.review-tile__elem
+										.review-tile__author Вова Дергабузов о <span class="blue-color">«Окна 21 века»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="5")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description.mobile-sm
+											p <b>Достоинства:</b> быстрое и профессилнальноеобслуживание, скидки
+											p <b>Недостатки:</b> Нет
+											p Работают слаженно. Утром позвонил и в обед пришел замерщик. Стоимость работ со скидкой меня устроила. Лоджию остеклили и утеплили через 5 дней. Все сделали профессионально, с учетом моих требований и за собой убрали.
+										
+										.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+
+										.review-tile__bottom 25 октября 2016, Новосибирск
+								.swiper-slide
+									.review-tile__elem
+										.review-tile__author Emily_Emily о <span class="blue-color">«Окна на VEKA»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="5")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description.mobile-sm
+											p <b>Достоинства:</b> Прочные окна, доступные цены, оперативность, приятное обслуживание, и ( ! ) шумоизоляция. Больше поп поводу окон не могу добавить, тк поставили только сегодня, но не думаю, что меня огорчит в этих окнах что-то
+											p <b>Недостатки:</b> отсутствуют
+											p Изначально обратила внимание на приятные цены и хорошие отзывы. При установке работали достаточно квалифицированные монтажники - Виталий Николаевич и Алексей. Окнами на данный момент очень довольна! прекрасная шумоизоляция!
+										
+										.review-tile__toggle.visible-xs.js-reviewToggleLink(data-label="Развернуть" data-second-label="Свернуть"): span Развернуть
+										
+										.review-tile__bottom 25 октября 2016, Новосибирск
+
+					.main__section-footer
+						a(href="#").button.blue.md
+							span Читать все отзывы
+							+icon('arrow-right')
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,25 @@
+// Чтобы вызвать этот модал:
+// $.magnificPopup.open({
+//		items: {
+//			src: '#regionModal',
+//			type: 'inline'
+//		},
+//		closeBtnInside: false
+//	});
+
+#regionModal.modal.mfp-hide
+	.modal__box
+		.modal__body
+				.modal__description
+					p Вы находитесь на сайте «VEKA Казахстан»
+
+					p 
+						|Рекомендуем Вам перейти на сайт<br> 
+						|<b>«Veka Азербайджан»</b>
+				
+				fieldset.fieldset.modal__submit
+					a(href="#").button.blue.md
+						span Перейти
+
+					button.button.blue-border.md.js-mfp-close
+						span Остаться на этом сайте

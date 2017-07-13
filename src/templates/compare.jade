@@ -1,0 +1,199 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Сравнение
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+							li.breadcrumb__item: a(href="#").breadcrumb__link Контакты
+
+			.main__section
+				.container
+					.main__section-body
+						.compare__head
+							.main__title Сравнить <span class="num__elem">5</span>
+							.compare__sort
+								.sort-nav
+									.sort-nav__item Все параметры
+									.sort-nav__item.is-active Только отличия
+						.compare__body
+							.compare__container
+								.compare__grid
+									.compare__col
+										.compare__row &nbsp;
+										.compare__row
+											.compare__label Тип стеклопакета
+										.compare__row
+											.compare__label Монтажная ширина
+										.compare__row
+											.compare__label Толщина стеклопакета, мм
+										.compare__row
+											.compare__label Сопротивление теплопередаче (с установленным армированием), м²С/Вт
+										.compare__row
+											.compare__label Исполнение
+										.compare__row
+											.compare__label Цвет уплотнений
+										.compare__row
+											.compare__label Ширина комбинации и рама-створка в световом проеме (типовой вариант)
+										.compare__row
+											.compare__label Высота фальца, мм
+										.compare__row
+											.compare__label Материал уплотнений	
+										.compare__row
+											.compare__label Количество контуров уплотнения
+
+									.compare__col
+										.compare__row
+											.compare__del: +icon('close-md')
+											.compare__image: img(src="images/tmp/compare_example.jpg")
+											.small__title VEKA Softline
+										.compare__row
+											.compare__value Пятикамерный
+										.compare__row
+											.compare__value 70 мм
+										.compare__row
+											.compare__value от 4 до 42
+										.compare__row
+											.compare__value 0,78
+										.compare__row
+											.compare__value белое, цветное
+										.compare__row
+											.compare__value черный, серый, карамель
+										.compare__row
+											.compare__value 118 мм
+										.compare__row
+											.compare__value 21
+										.compare__row
+											.compare__value АРТК, силикон
+										.compare__row
+											.compare__value 2
+
+									.compare__col
+										.compare__row
+											.compare__del: +icon('close-md')
+											.compare__image: img(src="images/tmp/compare_example.jpg")
+											.small__title VEKA Softline
+										.compare__row
+											.compare__value Пятикамерный
+										.compare__row
+											.compare__value 70 мм
+										.compare__row
+											.compare__value от 4 до 42
+										.compare__row
+											.compare__value 0,78
+										.compare__row
+											.compare__value белое, цветное
+										.compare__row
+											.compare__value черный, серый, карамель
+										.compare__row
+											.compare__value 118 мм
+										.compare__row
+											.compare__value 21
+										.compare__row
+											.compare__value АРТК, силикон
+										.compare__row
+											.compare__value 2
+
+									.compare__col
+										.compare__row
+											.compare__del: +icon('close-md')
+											.compare__image: img(src="images/tmp/compare_example.jpg")
+											.small__title VEKA Softline
+										.compare__row
+											.compare__value Пятикамерный
+										.compare__row
+											.compare__value 70 мм
+										.compare__row
+											.compare__value от 4 до 42
+										.compare__row
+											.compare__value 0,78
+										.compare__row
+											.compare__value белое, цветное
+										.compare__row
+											.compare__value черный, серый, карамель
+										.compare__row
+											.compare__value 118 мм
+										.compare__row
+											.compare__value 21
+										.compare__row
+											.compare__value АРТК, силикон
+										.compare__row
+											.compare__value 2
+
+									.compare__col
+										.compare__row
+											.compare__del: +icon('close-md')
+											.compare__image: img(src="images/tmp/compare_example.jpg")
+											.small__title VEKA Softline
+										.compare__row
+											.compare__value Пятикамерный
+										.compare__row
+											.compare__value 70 мм
+										.compare__row
+											.compare__value от 4 до 42
+										.compare__row
+											.compare__value 0,78
+										.compare__row
+											.compare__value белое, цветное
+										.compare__row
+											.compare__value черный, серый, карамель
+										.compare__row
+											.compare__value 118 мм
+										.compare__row
+											.compare__value 21
+										.compare__row
+											.compare__value АРТК, силикон
+										.compare__row
+											.compare__value 2
+
+									.compare__col
+										.compare__row
+											.compare__del: +icon('close-md')
+											.compare__image: img(src="images/tmp/compare_example.jpg")
+											.small__title VEKA Softline
+										.compare__row
+											.compare__value Пятикамерный
+										.compare__row
+											.compare__value 70 мм
+										.compare__row
+											.compare__value от 4 до 42
+										.compare__row
+											.compare__value 0,78
+										.compare__row
+											.compare__value белое, цветное
+										.compare__row
+											.compare__value черный, серый, карамель
+										.compare__row
+											.compare__value 118 мм
+										.compare__row
+											.compare__value 21
+										.compare__row
+											.compare__value АРТК, силикон
+										.compare__row
+											.compare__value 2
+
+
+
+
+
+						
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,162 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Оконные решения VEKA
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Продукция
+							li.breadcrumb__item: a(href="#").breadcrumb__link Оконные решения VEKA
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Оконные решения VEKA
+						p Указаны средние цены по <span class="dotted__link">Новосибирску</span>
+
+					.main__section-body
+						.window-solution
+							.row
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Окно для защиты от шума
+										.window-tile__description Мы рекомендуем это решение для квартир и коттеджей, находящихся в непосредственной близости от автомагистралей, дорог с оживленным движением, аэропортов и прочих источников шума.
+										.window-tile__bottom
+											.window-tile__price 6 300 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example2.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Окно для детской
+										.window-tile__description Это специальное окно сделает детскую комнату максимально безопасной. Окно открывается только на проветривание. для полного открытия окна необходим ключ.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example3.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Энергоэффективное окно
+										.window-tile__description Такое окно эффективно сохраняет тепло в помещении и позволяет полностью отказаться от использования электрических нагревательных приборов в холодное время года.
+										.window-tile__bottom
+											.window-tile__price 10 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example4.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Окно для защиты от шума
+										.window-tile__description Мы рекомендуем это решение для квартир и коттеджей, находящихся в непосредственной близости от автомагистралей, дорог с оживленным движением, аэропортов и прочих источников шума.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example5.jpg")
+										.window-tile__title
+											+icon('arrow-right')
+											|Окно с защитой от взлома
+										.window-tile__description Окна на первых и последних этажах зданий всегда могут привлечь нежелательное внимание злоумышленников, чтобы обезопасить свое жилище от проникновения, установите окна с защитой от взлома.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example6.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Окно для загородного дома
+										.window-tile__description Многообразие цветов и оттенков, окна нестандартной формы, противовзломные и энергосберегающие технологии - все это мы предлагаем для владельцев загородных домов и коттеджей.
+										.window-tile__bottom
+											.window-tile__price 15 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Другие типовые решения VEKA
+
+					.main__services
+						a(href="#").service-tile__elem
+							.service-tile__icon: +icon('plastic-window')
+							.service-tile__title: span.link Пластиковые окна
+						a(href="#").service-tile__elem
+							.service-tile__icon: +icon('arch-window')
+							.service-tile__title: span.link Решения для коттеджей и загородных домов
+						a(href="#").service-tile__elem
+							.service-tile__icon: +icon('balconies')
+							.service-tile__title: span.link Остекление балконов и лоджий
+
+			include _parts/_fast-link
+			
+			.main__section.subscription__section(style="background-image: url('images/back/subscription_back_second.jpg')")
+				.container
+					.main__form.left
+						form(action="#").js-validate
+							.main__form-head
+								.main__title Заявка на замер
+							.main__form-body
+								fieldset.fieldset
+									select.select.js-select(data-placeholder="Город")
+										option
+										option(value="1") Краснодар
+										option(value="2") Москва
+										option(value="3") Воронеж
+								fieldset.fieldset
+									select.select.js-select(data-placeholder="Компания")
+										option
+										option(value="1") Компания 1
+										option(value="2") Компания 2
+										option(value="3") Компания 3
+								fieldset.fieldset
+									select.select.js-select(data-placeholder="Выберите офис")
+										option
+										option(value="1") Офис 1
+										option(value="2") Офис 2
+										option(value="3") Офис 3
+								fieldset.fieldset
+									input(type="text" name="name" required="required" placeholder="Ваше имя").input
+								fieldset.fieldset
+									input(type="tel" name="phone" required="required" placeholder="+7 (___) ___-__-__").input.js-phone
+								fieldset.fieldset
+									input(type="text" name="text" required="required" placeholder="Ваши пожелания").input
+								fieldset.fieldset
+									label.checkbox
+										input(type="checkbox" name="user_agreement" required="required")
+										span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+								fieldset.fieldset
+									button.button.blue.md
+										span Отправить заявку
+										+icon('email')
+
+		include _parts/_footer
+
+		include _parts/_scripts

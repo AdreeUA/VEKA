@@ -1,0 +1,238 @@
+.company
+	&--fix-margin-top
+		margin-top: 50px
+
+		@media #{$mobile}
+			margin-top: 20px
+
+	&__text
+		font-family: 'Roboto', 'Arial', sans-serif
+		font-weight: 300
+		color: #272727
+
+		@media (min-width: 768px)
+			font-size: 16px
+			line-height: 26px
+
+		@media (max-width: 767px)
+			font-size: 15px
+			line-height: 22px
+
+		&--white
+			color: #fff
+			font-family: 'Roboto', 'Arial', sans-serif
+			font-size: 16px
+			line-height: 26px
+			font-weight: 300
+
+			@media (min-width: 768px)
+				margin-top: 30px
+				width: 580px
+
+	&__map
+		@media (min-width: 767px)
+			background: url('../images/tmp/map-company-desc.png') no-repeat
+			background-size: contain
+			background-position: center center
+			min-height: 485px
+
+		&-mobile
+			position: relative
+			min-height: 280px 
+
+			// &:nth-child(3) .company__slide
+			// 	background: url('../images/tmp/map-company-mobile-slide-3.png')
+
+	&__slide
+		min-height: 360px
+		margin-left: -15px
+		margin-right: -15px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		overflow: hidden
+		display: none
+
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 50%
+			bottom: 0
+			width: 465px
+			height: 243px
+			background: url('../images/tmp/company_map_m.png') no-repeat
+
+		&:first-child
+			&:before
+				transform: translate3d(394px, 108px, 0)
+
+		&:nth-child(2)
+			&:before
+				transform: translate3d(271px, 33px, 0)
+				
+		&:last-child
+			&:before
+				transform: translate3d(70px, 22px, 0)
+
+		& img
+			position: relative
+			left: 50%
+			transform: translate3d(-50%, 50%, 0)
+	
+	&__date
+		@media (max-width: 767px)
+			position: relative
+			display: flex !important
+			flex-wrap: wrap
+			justify-content: space-between
+			max-width: 300px
+			margin: auto
+
+		@media (min-width: 768px)
+			display: none
+
+		&-item
+			// display: inline-block
+			font-weight: bold
+			font-size: 20px
+			line-height: 28px
+			color: #0071b2
+			// margin: 0 auto
+			cursor: pointer
+			text-decoration: underline
+			text-decoration-style: dotted
+			padding: 5px 18px
+			transition: 300ms ease-out
+			border: 2px solid transparent
+
+			&-active
+				border-color: #0071b2
+				text-decoration: none
+
+	&__blue-bg
+		background-color: #0074b8
+		padding-top: 90px
+		padding-bottom: 90px
+		margin-bottom: 140px
+		position: relative
+
+		@media (max-width: 767px)
+			padding-top: 35px
+			padding-bottom: 20px
+			margin-bottom: 40px
+
+	
+	&__flex-block
+		display: flex
+		justify-content: space-around
+		// align-items: center
+		flex-wrap: wrap
+
+		@media (min-width: 768px)
+			flex-direction: row
+			margin-top: 60px
+
+		@media (max-width: 767px)
+			flex-direction: column
+			align-items: center
+			margin-top: 20px
+
+
+		&-item
+			@media (min-width: 768px)
+				width: 140px
+
+			@media (max-width: 767px)
+				width: 100%
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				margin-bottom: 15px
+
+		&-img
+			height: 140px
+			background-repeat: no-repeat
+
+			@media (max-width: 767px)
+				width: 68px
+				height: 68px
+				background-size: contain
+
+		&-text
+			text-align: center
+			color: #fff
+			font-family: 'Roboto', 'Arial', sans-serif
+			font-size: 14px
+			line-height: 20px
+			font-weight: 300
+			margin-top: 20px
+
+			@media (max-width: 767px)
+				width: calc(100% - 90px)
+				text-align: left
+
+	&__title--color-black
+		color: #333333
+
+	&__sertificate
+		background: #f0f4f8
+
+		& img
+			width: 50%
+			display: block
+			margin: 0 auto
+
+	&__title
+		font-family: 'Roboto', 'Arial', sans-serif
+		font-size: 16px
+		line-height: 28px
+		// text-decoration: underline
+
+
+	&--translate-fix
+		@media (min-width: 768px)
+			transform: translateX(-34px)
+
+		@media (max-width: 767px)
+			transform: translateX(-23px)
+
+
+	&__btn
+
+		&-career
+			min-width: 228px
+			text-align: center
+
+		&-production
+			min-width: 274px
+
+			&:hover svg
+				fill: #fff
+
+	&__bg-mobile
+		min-height: 200px
+		background-size: cover
+		background-position: 100% center
+		background-repeat: no-repeat
+
+
+	&__pattern-top-position
+		right: -828px
+		top: 170px
+
+	&__section-height
+		@media (min-width: 767px)
+			min-height: 695px
+
+			.section-bg
+				background-position: center right !important
+
+	&__main-title
+		margin-top: 55px
+		margin-bottom: 25px
+
+		@media #{$mobile}
+			margin-top: 35px
+			margin-bottom: 15px

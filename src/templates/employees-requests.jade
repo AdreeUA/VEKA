@@ -1,0 +1,194 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Сотрудники и Дилеры
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.employees-requests: .container
+			.breadcrumb
+					ul.breadcrumb__list
+						li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+						li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+						li.breadcrumb__item: a(href="#").breadcrumb__link Сотрудники и Дилеры
+
+			h1.employees-requests__title Сотрудники и Дилеры
+			ul.employees-requests__nav
+				li: a(href="#").employees-requests__navlink Сотрудники
+				li: a(href="#").employees-requests__navlink Дилеры
+				li: a(href="#").employees-requests__navlink.active
+					| Запросы сотрудников и дилеров
+					span.employees-requests__navlink-counter 3
+				li: a(href="#").employees-requests__navlink Архив запросов
+				li: a(href="#").employees-requests__navlink
+					| Заявки на сотрудничество
+					span.employees-requests__navlink-counter 4
+
+
+			h6.employees-requests__select-title Запросы сотрудников и дилеров в компанию
+			.employees-requests__filters
+				.employees-requests__select-box
+					label.employees-requests__label Регион
+						select.select.user-forms__input.js-select.employees-requests__select(name="region")
+							option(value="Регион 1") Регион 1
+							option(value="Регион 2") Регион 2
+							option(value="Регион 3") Регион 3
+
+				.employees-requests__select-box
+					label.employees-requests__label Город
+						select.select.user-forms__input.js-select.employees-requests__select(name="city")
+							option(value="Город 1") Город 1
+							option(value="Город 2") Город 2
+							option(value="Город 3") Город 3
+
+				.employees-requests__select-box
+					label.employees-requests__label Статус
+						select.select.user-forms__input.js-select.employees-requests__select(name="status")
+							option(value="Статус 1") Статус 1
+							option(value="Статус 2") Статус 2
+							option(value="Статус 3") Статус 3
+				.employees-requests__btn-box
+					button.button.blue.md.employees-requests__filter-btn
+						span фильтровать
+
+			.employees-requests__employee-firstrow
+				.employees-requests__employee-col.employees-requests__coltitle Дата и время
+				.employees-requests__employee-col.employees-requests__coltitle Роль
+				.employees-requests__employee-col.employees-requests__coltitle Имя, фаилия
+				.employees-requests__employee-col.employees-requests__coltitle Эл. почта
+				.employees-requests__employee-col.employees-requests__coltitle Статус
+				.employees-requests__employee-col.employees-requests__coltitle Заметки
+				.employees-requests__employee-col.employees-requests__coltitle.employees-requests__refresh-box: +icon('refresh')
+
+			h5.employees-requests__table-titles В компанию «Окна от природы»
+			.employees-requests__table
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Сотрудник
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+							a(href="#").employees-requests__notes-box: +icon('notes')
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Дилер
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Сотрудник
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+			h5.employees-requests__table-titles В компанию Оконный завод "Лабрадор"
+			.employees-requests__table
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Сотрудник
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Дилер
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+							a(href="#").employees-requests__notes-box: +icon('notes')
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.employees-requests__flexrow
+						.employees-requests__employee-col 12.07.2017 / 12:00
+						.employees-requests__employee-col Сотрудник
+						.employees-requests__employee-col Иванов Иван
+						.employees-requests__employee-col user@mail
+						.employees-requests__employee-col новый
+						.employees-requests__employee-col
+						.employees-requests__employee-col
+							span.employees-requests__arrow: +icon('arrow-right')
+
+					.employees-requests__acordion-content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		include _parts/_footer
+
+		include _parts/_scripts

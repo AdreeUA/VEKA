@@ -1,0 +1,202 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Акции партнёров VEKA
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+
+			.print-section
+				.print-header
+					.print-header__logo
+						a(href="/").logo
+							.logo__icon
+								img(src="images/logo.svg").logo-default
+
+							.logo__text Надёжно. Навсегда.
+
+					.print-header__phone 8 800 505-83-52
+					.print-header__contact-info 
+						|Контакт-центр VEKA. Режим работы 24/7<br>
+						|Звонок бесплатный
+
+					.print-header__qr
+						.qr-code__elem
+							.qr-code__image: img(src="images/tmp/qr-code.jpg")
+							p Отсканируйте QR-код, чтобы<br> перейти на страницу решения
+
+				.print-header__link
+					|Источник: <span>http://www.veka.ru/products/win/euroline1.html</span>
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Акции партнёров VEKA
+							li.breadcrumb__item: a(href="#").breadcrumb__link Революционная акция! Заморозь не себя, а цену!
+
+			.main__section.print-is-show
+				.container
+					.main__section-head
+						.main__title Революционная акция! Заморозь не себя, а цену!
+						.date__head
+							+icon('calendar')
+							span.date__head-label 1 ноября — 31 января 2017 года
+
+					.main__section-body
+						.pattern-left-md
+
+						.promo-info
+							.promo-info__image: img(src="images/tmp/promo_wide.jpg")
+							.promo-info__text
+								.promo-info__logo: img(src="images/tmp/okna_comfort_logo.jpg")
+								.promo-info__title Окна комфорта
+
+								.map-list__review
+									span.map-list__rating
+										.js-rating(data-readonly="true")
+											input(type="hidden" name="val" value="4")
+											input(type="hidden" name="votes" value="")
+
+									span.map-list__review-count Отзывы 5907
+
+								.promo-info__contact
+									.map-list__info-elem
+										|Сайт: <a href="#">www.oknakomforta.ru</a>
+									.map-list__info-elem
+										|E-mail: <a href="#">centr-ofis@oknakomforta.com</a>
+
+								.promo-info__buttons
+									button.button.blue.js-inlineModal(data-mfp-src="#requestModal")
+										+icon('tape')
+										span Заявка на замер
+									button.button.blue.js-inlineModal(data-mfp-src="#callModal")
+										+icon('phone')
+										span Перезвоните мне
+
+								.promo-info__bottom.hidden-xs
+									.control-links
+										a(href="javascript:;").control-link__item.share-link.js-shareLink
+											+icon('share')
+											span Поделиться
+
+											.share
+												.share__inner
+													script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+													script(src="//yastatic.net/share2/share.js")
+													.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+										a(href="#").control-link__item
+											+icon('print')
+											span Распечатать
+										a(href="#").control-link__item
+											+icon('pdf')
+											span Сохранить
+
+
+						article.article
+							.row
+								.col-md-8.col-sm-8
+									ul.list
+										li Вы планируете ремонт весной или летом с установкой окон ПВХ?
+										li Вы хотите сэкономить на покупке и установке нового пластикового окна?
+										li Не хотите сюрпризов с изменениями сроков доставки и монтажа?
+
+									p Успейте заключить договор на установку нового окна ПВХ до 31 января 2017 года, воспользовавшись скидкой до 40% на цены 2016 года!!! Установить новое окно можно в любое удобное для вас время до 1 июня 2017 года. Актуально для ремонта квартир, дач и коттеджей.
+
+									h6 Преимущества
+									ul.list 
+										li Фиксированные выгодные цены 2016 года!
+										li Скидки до 40 % на окна ПВХ с установкой
+										li Экономия в будущем ремонте!
+										li БЕСПЛАТНОЕ ХРАНЕНИЕ изготовленных для Вас окон на нашем складе до момента монтажа.
+										li Точное планирование будущих затрат.
+
+							.promo-bottom-box
+								+icon('promo')
+								span.promo-bottom-box__label Подробнее об акции: 
+								span.promo-bottom-box__link: a(href="#").link http://www.oknakomforta.ru/aktsii/zamoroz-zenu-2016/
+
+
+			.print-section
+				.print-footer
+					.medium__title VEKA — ведущий мировой производитель оконных систем
+
+					.qr-code__items
+						.qr-code__elem
+							.qr-code__image: img(src="images/tmp/qr-code.jpg")
+							p <span>VEKA для iPhone и iPad</span><br>
+								|Отсканируйте QR-код
+						.qr-code__elem
+							.qr-code__image: img(src="images/tmp/qr-code2.jpg")
+							p <span>VEKA для Android</span><br>
+								|Отсканируйте QR-код
+
+			.map__content
+				include _parts/_map
+
+			.gray__section.similar__section
+				.container
+					.main__section-body
+						.section__title Другие акции партнёров
+
+						.similar-slider.js-similarSwiper
+							.swiper-mobile__nav
+								.huge-arrow__left: +icon('huge-arrow-left')
+								.huge-arrow__right: +icon('huge-arrow-right')
+
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										a(href="#").tile__elem
+											.tile__image: img(src="images/tmp/glass_example.jpg")
+											.tile__title 
+												+icon('arrow-right')
+												|Однокамерные стеклопакеты
+											p Однокамерный стеклопакет состоит из двух листов стекла, между которыми расположена одна воздушная камера. Такой стеклопакет является самым дешевым, ширина однокамерного стеклопакета - 24мм, возможен вариант и 32мм.
+											.tile__more.visible-xs: span.link Подробнее об акции
+									.swiper-slide
+										a(href="#").tile__elem
+											.tile__image: img(src="images/tmp/glass_example2.jpg")
+											.tile__title 
+												+icon('arrow-right')
+												|Двухкамерные стеклопакеты
+											p Двухкамерный стеклопакет - в котором используются три стекла и две воздушные камеры между ними. Дополнительная камера увеличивает тепло - и шумоизоляцию стеклопакета, но, увеличивает и вес и нагрузку на петли, однако, при использовании качественной фурнитуры это никак не влияет на срок эксплуатации окна.
+											.tile__more.visible-xs: span.link Подробнее об акции
+									.swiper-slide
+										a(href="#").tile__elem
+											.tile__image: img(src="images/tmp/glass_example3.jpg")
+											.tile__title 
+												+icon('arrow-right')
+												|Энергосберегающие стеклопакеты
+											p Энергосберегающие стеклопакеты изготавливаются из стекла, поверх которого наносится низкоэмиссионное покрытие. Это позволяет пропускать солнечную энергию во внутреннюю часть помещения, тепловые потоки свободно отражать, сохраняя ,таким образом, тепло.
+											.tile__more.visible-xs: span.link Подробнее об акции
+									.swiper-slide
+										a(href="#").tile__elem
+											.tile__image: img(src="images/tmp/glass_example4.jpg")
+											.tile__title 
+												+icon('arrow-right')
+												|Декоративная раскладка
+											p Шпросы - декоративные накладные алюминиевые профили, которые устанавливаются между стёклами, внутри стеклопакета для украшения окна.
+											.tile__more.visible-xs: span.link Подробнее об акции
+								.swiper-pagination.visible-xs
+
+								.load-more__button.visible-xs
+									a(href="#").button.blue.md
+										span Все акции
+
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

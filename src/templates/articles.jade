@@ -1,0 +1,127 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Статьи о пластиковых окнах
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Справочник покупателя
+							li.breadcrumb__item: a(href="#").breadcrumb__link Статьи о пластиковых окнах
+
+			.main__section.tile__section
+				.container
+					.main__section-head
+						.main__title Статьи о пластиковых окнах
+
+					.main__section-body
+						.row 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Многокамерные стеклопакеты и профили
+									p Мы предлагаем системы профилей для пластикового остекления окон, балконов, лоджий, мансард, а также современнее решения для монтажа межкомнатных дверей, офисных перегородок и  тамбуров. Наши профили идеальны для зимнего остекления и позволяют сохранить тепло даже самой суровой зимой.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example3.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Остекление дачи и загородного дома
+									p Совмещенные стеклопакеты бывают узкоспециализированные и многофункциональные. Они служат как для защиты от солнечных лучей. так и для сохранения тепла. Оченьважной характеристкой стеклопакета является шумоизоляция.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example5.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Качественная фурнитура
+									p Исправное функционирование правильно смонтированных оконных систем и их долговечность в значительной степени зависят от использования качественной фунитуры.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example6.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Панорамные двери VEKASLIDE
+									p Все меньше и меньше людей ориентируются на классический вариант окон с белым покрытием. Это не удивительно, ведь для создания уникального фасада или дополнения к уже имеющемуся дизайну предпочтительны разнообразное сочетание цветов и оттенков.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example7.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Тенденции развития оконных систем из ПВХ
+									p Сходство систем и трудно различимые конструктивные усовершенствования в значительной степени затрудняют для потребителя возможность адекватной оценки качества отдельных профилей.
+									.tile__more.visible-xs: span.link Узнать больше
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example8.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Что такое качественный профиль?
+									p Качественное окно можно изготовить только из хорошего профиля. Невозможно изготовить классную конструкцию из профиля низкого класса, точно также, как нереально сделать хороший костюм из бросовой ткани.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example9.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Основные особенности профильных систем VEKA шириной 70 мм
+									p Исправное функционирование правильно смонтированных оконных систем и их долговечность в значительной степени зависят от использования качественной фунитуры.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example10.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Любой цвет окон на Ваш вкус
+									p Это не удивительно, ведь для создания уникального фасада или дополнения к уже имеющемуся дизайну предпочтительны разнообразное сочетание цветов и оттенков.
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example10.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Профильная система Euroline в объектном строительстве
+									p На выставке "Мосбилд 2001" VEKA Rus впервые представила строительной общественности профильную систему "VEKA Euroline".
+									.tile__more.visible-xs: span.link Узнать больше 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/glass_example10.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Дилерство, прямые продажи, или какая логистика эффективна
+									p Строительный сезон этого года стал для многих компаний - производителей пластиковых профилей своеобразным экзаменом.
+									.tile__more.visible-xs: span.link Узнать больше
+
+						.load-more__button
+							a(href="#").button.blue-border.md.visible-xs
+								span Загрузить ещё
+								img(src="images/refresh.png")
+
+							a(href="#").button.blue.md
+								+icon('arrow-back')
+								span Назад в справочник покупателя
+ 
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

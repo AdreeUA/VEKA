@@ -1,0 +1,9 @@
+=below($width)
+  $em_width: ($width / 16)
+  @media all and (max-width: $em_width + 'em')
+    @content
+
+=above($width)
+  $em_width: ($width / 16)
+  @media all and (min-width: $em_width + 'em')
+    @content

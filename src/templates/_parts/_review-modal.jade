@@ -1,0 +1,110 @@
+#addReviewModal.modal-full.modal-ful--noflex.mfp-hide
+	.modal__box
+		.modal__head.modal-full__head.visible-xs
+			.section__title Написать отзыв
+			.modal__close.js-mfp-close: +icon('close-md')
+
+		.modal-full__close.js-mfp-close.hidden-xs: +icon('close-md')
+
+		.modal-full__body
+			.modal-full__form
+				form(action="#").js-validate
+					.main__section-head.hidden-xs
+						.main__title Написать отзыв
+					.row.form__row
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								input(type="text" name="name" placeholder="ФИО" required="required").input
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								input(type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="required").input.js-phone
+					
+					.row.form__row
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								input(type="email" name="email" placeholder="Электронная почта" required="required").input
+						.col-md-6.col-sm-6
+							.row
+								.col-md-6.col-sm-6
+									fieldset.fieldset
+										input(type="text" name="number" placeholder="№ договора" required="required").input.js-numberOnly
+								.col-md-6.col-sm-6
+									fieldset.fieldset
+										input(type="text" name="number" placeholder="Дата" required="required").input.js-datemask
+
+
+					.row.form__row.form__city-row
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								input(type="text" name="city" placeholder="Город" required="required").input.js-google-autocomplete
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								select.select.js-select(data-placeholder="Партнер VEKA" required="required")
+									option
+									option(value="1") Окна для жизни
+									option(value="2") Оконный комбинат «Светоч»
+									option(value="3") Официальный дилер VEKKER
+									option(value="4") Оконная компания №1
+									option(value="5") ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"
+									option(value="6") Горизонт-Сервис
+									option(value="1") Окна для жизни
+									option(value="2") Оконный комбинат «Светоч»
+									option(value="3") Официальный дилер VEKKER
+									option(value="4") Оконная компания №1
+									option(value="5") ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"
+									option(value="6") Горизонт-Сервис
+
+					.row.form__row
+						.col-md-6.col-sm-6
+							.rating-add
+								span Оценка:
+								span.rating-star__elem.js-rating(data-icon="images/stars-large.svg" data-loader="images/ajax-loader.gif" data-size="32")
+									input(type="hidden" name="val" value="0")
+									input(type="hidden" name="votes" value="")
+					.row.form__row
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								textarea(placeholder="Достоинства (необязательно)" onfocus="placeholder='';" onblur="placeholder='Достоинства (необязательно)';").input
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								textarea(placeholder="Недостатки (необязательно)" onfocus="placeholder='';" onblur="placeholder='Недостатки (необязательно)';").input
+
+					.row.form__row
+						.col-md-6.col-sm-6
+							fieldset.fieldset
+								textarea(placeholder="Текст отзыва" onfocus="placeholder='';" onblur="placeholder='Текст отзыва';" required="required").input
+							fieldset.fieldset
+								label.checkbox
+									input(type="checkbox" name="user_agreement" required="required")
+									span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+							fieldset.fieldset.modal__submit
+								button.button.blue.md
+									span Отправить отзыв
+									//- +icon('plane')
+									+icon('email')
+
+	.main__pattern
+
+// Чтобы вызвать модал «Отзыв отправлен»:
+// $.magnificPopup.open({
+//		items: {
+//			src: '#successFormReviewModal',
+//			type: 'inline'
+//		},
+//		closeBtnInside: false
+//	});
+
+#successFormReviewModal.modal-full.mfp-hide
+	.modal__head.modal-full__head.visible-xs
+		.section__title Отзыв отправлен
+		.modal__close.js-mfp-close: +icon('close-md')
+
+	.modal-full__close.js-mfp-close.hidden-xs: +icon('close-md')
+	.modal-full__success
+		.section__title.hidden-xs Отзыв отправлен
+		p 
+			|<b>Благодарим Ваc!</b> Ваш отзыв будет<br> 
+			|опубликован после прохождения<br> 
+			|проверки.
+
+	.main__pattern

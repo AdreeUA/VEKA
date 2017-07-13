@@ -1,0 +1,166 @@
+html,
+body
+    height: 100%
+
+html
+    overflow: visible !important
+
+body
+    position: relative
+    font-size: 14px
+    font-family: 'PT Sans', sans-serif
+    overflow-x: hidden
+    -webkit-font-smoothing: antialiased
+
+    @media (min-width: 1024px)
+        padding-top: 290px
+
+    @media (max-width: 1023px)
+        padding-top: 115px
+
+        &.is-first-level
+            &:before,
+            .header__top
+                display: block
+
+        &.is-second-level
+            &:before,
+            .header__bottom
+                display: block
+
+        &.is-third-level
+            &:before,
+            .header__bottom
+                display: block
+
+            .nav-main__label
+                display: none
+
+        &.is-first-level,
+        &.is-second-level,
+        &.is-third-level
+            overflow: hidden
+
+            .burger 
+                height: 65px !important
+                padding: 23px 18px !important
+
+            .burger__line
+                background: $blue !important
+
+        &:before
+            content: ""
+            position: fixed
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 10
+            background: rgba(0, 0, 0, 0.4)
+            display: none
+
+    &.is-city-select
+        overflow: hidden
+        
+        .city-select
+            display: block
+
+    &.mfp-open
+        overflow: hidden
+
+        .pac-container
+            z-index: 2000 !important
+
+*, :before, :after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.visually-hidden
+    border: 0 !important
+    clip: rect(0 0 0 0) !important
+    width: 1px !important
+    height: 1px !important
+    margin: -1px !important
+    overflow: hidden !important
+    padding: 0 !important
+    position: absolute !important
+
+.pac-container
+    z-index: 9 !important
+
+input,
+textarea,
+button
+    border: none
+    outline: none
+    border-radius: 0
+    font-family: 'PT Sans', sans-serif
+
+fieldset
+    border: none
+
+h1, h2, h3, h4, h5, h6
+    font-family: inherit
+    font-weight: normal
+    color: inherit
+
+h6 
+    color: $blue
+    font-size: 20px
+    line-height: 1.2
+    font-weight: 700
+    margin: 0 0 15px
+
+a
+    color: inherit
+    text-decoration: none
+
+    &:hover,
+    &:active,
+    &:focus
+        text-decoration: none
+
+li
+    list-style: none
+
+.container
+    margin: 0 auto
+    padding: 0 15px
+
+    @media (min-width: 768px)
+        /*min-width: 1100px*/
+        max-width: 1260px
+
+    @media #{$mobile}
+        width: 100%
+
+
+.ie
+    @media (min-width: 768px)
+        .modal__close
+            svg 
+                display: none
+
+            &:before
+                content: ""
+                width: 14px
+                height: 14px
+                +abscenter
+                background: url('../images/close-md.svg') no-repeat
+        
+        .modal__submit
+            .icon-email
+                fill: transparent !important
+                stroke: transparent !important
+                background: url('../images/email.svg') no-repeat
+
+    .icon-arrow-bottom
+        fill: transparent !important
+        stroke: transparent !important
+        background: url('../images/arrow-bottom.svg') no-repeat
+        background-size: 100%
+
+    .map-list__label
+        .icon-arrow-bottom
+            opacity: 0.5

@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Заявка отправлена
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.registration-request-submitted.user-forms
+				.row
+					.col-xs-12.col-sm-5
+						h2.user-forms__title.registration-request-submitted__title Заявка отправлена
+
+						.registration-request-submitted__col
+							h2.user-forms__title.registration-request-submitted__subtitle Дальнейшие действия
+
+							.registration-request-submitted__box
+								.row.registration-request-submitted__row
+									.col-xs-1.registration-request-submitted__number
+										| 1
+									.col-xs-11
+										.registration-request-submitted__row-title
+											| Подтвердить адрес электронной почты
+										.registration-request-submitted__row-text
+											| В течение 10 минут на указанный вами  адрес придёт письмо с инструкцией.
+
+							.registration-request-submitted__box
+								.row.registration-request-submitted__row
+									.col-xs-1.registration-request-submitted__number
+										| 2
+									.col-xs-11
+										.registration-request-submitted__row-title
+											| Дождаться одобрения компании-партнёра
+										.registration-request-submitted__row-text
+											| Заявку проверит представитель компании-партнёра, которого вы выбрали при подаче заявки. В среднем занимает 2 рабочих дня. Когда решение будет принято, вы получите уведомление на почту.
+
+		include _parts/_footer
+
+		include _parts/_scripts

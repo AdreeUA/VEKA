@@ -1,0 +1,502 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Главная
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			.main__slider.js-mainSwiper(data-speed='650')
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.main__slide(style="background-image: url('http://veka.demo.notamedia.ru/upload/iblock/0e1/0e1d0525911b28cef4d93c2a580ab4cd.png')")
+							.container.clearfix
+								.main__pattern
+								.main__form
+									form.js-validate(action='/', name='slider-form')
+										input#sessid_2(type='hidden', name='sessid', value='7f0bd95fb7d7819d3c93fb4dd7a3f565')
+										.main__form-head
+											.main__title Цены ниже!
+											p
+												| Зимние предложения от партнёров VEKA!
+												b Окно за 7 000 руб.
+										.main__form-body
+											fieldset.fieldset
+												input.input(type='text', required='required', placeholder='Ваше имя', name='NAME')
+											fieldset.fieldset
+												input.input.js-phone(type='tel', required='required', placeholder='Ваш телефон', name='PHONE')
+											fieldset.fieldset
+												label.checkbox
+													input(type='checkbox', name='user_agreement', required='required')
+													span.checkbox__text
+														| Ознакомлен с
+														a(href='/reglament/', target='_blank') Регламентом о защите персональных данных
+														|  и выражаю
+														a(href='/agreement/', target='_blank') согласие
+														|  на их обработку
+											fieldset.fieldset
+												button.button.blue.md
+													span Отправить заявку
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-email')
+											fieldset.fieldset
+												a.link(href='/shares/lovite-skidki/', target='_blank') Подробная информация об акции
+										input(type='hidden', name='SHARE', value='Цены ниже!')
+										input(type='hidden', name='NEW_SLIDER_SHARE', value='Y')
+										input(type='hidden', name='AJAX_NEW_SLIDER_SHARE', value='Y')
+						.swiper-slide
+							.main__slide(style="background-image: url('http://veka.demo.notamedia.ru/upload/iblock/0fe/0fecfc254e9b0609663d779d61cc3b8e.png')")
+							.container.clearfix
+								.main__pattern
+								.main__form
+									form.js-validate(action='#')
+										.main__form-head
+											.main__title Ловите скидки 2
+											p
+												| Главная задача для нас — сделать так, чтобы человек, купивший окна из профиля VEKA был не просто «в целом доволен». Для нас важно, чтобы клиент чувствовал себя комфортно и безопасно (основной текст анонса).
+											.main-form__tip
+												| Окна с гарантией от партнеров VEKA в Санкт-Петербурге и в Ярославле (дополнительный текст, опционально).
+										.main__form-body
+											fieldset.fieldset
+												a.button.blue.md.button--more(href='/shares/lovite-skidki-2/')
+													span Узнать больше
+													//svg.icon.icon-arrow-right-md.hidden-xs
+													//	use(xlink:href='#icon-arrow-right-md')
+						.swiper-slide
+							a.main__slide(href='/shares/slayder-garantii/', style="background-image: url('http://veka.demo.notamedia.ru/upload/iblock/d1f/d1f0f1f25b5b460c9c89579741f0770f.png')")
+						.swiper-slide
+							.main__slide(style="background-image: url('http://veka.demo.notamedia.ru/upload/iblock/90f/90f5c345a783799f852df7d854f5f98b.png')")
+							.container.clearfix
+								.main__pattern
+								.main__form
+									form.js-validate(action='#')
+										.main__form-head
+											.main__title veka slaid
+											p  Века слайд!
+											.main-form__tip
+										.main__form-body
+											fieldset.fieldset
+												a.button.blue.md.button--more(href='http://notamedia.ru')
+													span Переходим по ссылке
+													//svg.icon.icon-arrow-right-md.hidden-xs
+													//	use(xlink:href='#icon-arrow-right-md')
+					.swiper-pagination
+					.swiper-button-prev
+					.swiper-button-next
+
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Акции партнёров VEKA в <b class="dotted__link">Новосибирске</b>
+
+					.main__promo
+						.pattern-left
+
+						.main__promo-swiper.js-promoSwiper
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.main__promo-row
+											.main__promo-left
+												.promo-list__elem
+													.promo-list__icon: img(src="images/tmp/lauter.png")
+													.medium__title Ловите скидки!
+													.small__title 1 ноября 2016 — 31 декабря 2016
+													p Технологии не стоят на месте, и на рынке постоянно появляются продукты с качественно новыми свойствами. Lauter предлагает вам мультифункциональное стекло. Особенность такого стекла заключается в том, что оно позволяет существенно снизить затраты на охлаждение дома летом и эффективно повысить теплозащиту помещения в зимний период, и все это в сочетании с высоким показателем светопропускания. Стекло разработано специально для типовых квартир и частных домовладений. 
+													a(href="#").link Подробнее об акции
+
+											.main__promo-right
+												.main__promo-timer
+													.small__title До конца акции:
+													.timer.js-timer(data-date="27.04.2017")
+
+												.main__promo-form
+													.small__title Участвовать в акции!
+													form(action="#").js-validate
+														fieldset.fieldset
+															input(type="text" name="name" required="required" placeholder="Ваше имя").input
+														fieldset.fieldset
+															input(type="tel" name="phone" required="required" placeholder="Ваш телефон").input.js-phone
+														fieldset.fieldset
+															label.checkbox
+																input(type="checkbox" name="user_agreement" required="required")
+																span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+														fieldset.fieldset
+															button.button.blue.md
+																span Отправить заявку
+																+icon('email')
+											
+									.swiper-slide
+										.main__promo-row
+											.main__promo-left
+												.promo-list__elem
+													.promo-list__icon: img(src="images/tmp/lauter.png")
+													.medium__title Ловите скидки!
+													.small__title 2 ноября 2016 — 11 декабря 2017
+													p Технологии не стоят на месте, и на рынке постоянно появляются продукты с качественно новыми свойствами. Lauter предлагает вам мультифункциональное стекло. Особенность такого стекла заключается в том, что оно позволяет существенно снизить затраты на охлаждение дома летом и эффективно повысить теплозащиту помещения в зимний период, и все это в сочетании с высоким показателем светопропускания. Стекло разработано специально для типовых квартир и частных домовладений. 
+													a(href="#").link Подробнее об акции
+
+											.main__promo-right
+												.main__promo-timer
+													.small__title До конца акции:
+													.timer.js-timer(data-date="10.05.2017")
+
+												.main__promo-form
+													.small__title Участвовать в акции!
+													form(action="#").js-validate
+														fieldset.fieldset
+															input(type="text" name="name" required="required" placeholder="Ваше имя").input
+														fieldset.fieldset
+															input(type="tel" name="phone" required="required" placeholder="Ваш телефон").input.js-phone
+														fieldset.fieldset
+															label.checkbox
+																input(type="checkbox" name="user_agreement" required="required")
+																span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+														fieldset.fieldset
+															button.button.blue.md
+																span Отправить заявку
+																+icon('email')
+												
+								.swiper-pagination
+
+						
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Оконные решения VEKA
+						p Указаны средние цены по <span class="dotted__link">Новосибирску</span>
+
+					.solution__slider.js-solutionsSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example.jpg")
+										.window-tile__title
+											a(href="#") 
+												+icon('arrow-right')
+												|Простое окно
+										.window-tile__description Мы рекомендуем это решение для квартир и коттеджей, находящихся в непосредственной близости от автомагистралей, дорог с оживленным движением, аэропортов и прочих источников шума.
+										.window-tile__bottom
+											.window-tile__price 6 300 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example2.jpg")
+										.window-tile__title
+											a(href="#") 
+												+icon('arrow-right')
+												|Окно для детской
+										.window-tile__description Это специальное окно сделает детскую комнату максимально безопасной. Окно открывается только на проветривание. для полного открытия окна необходим ключ.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example3.jpg")
+										.window-tile__title
+											a(href="#") 
+												+icon('arrow-right')
+												|Энергоэффективное окно
+										.window-tile__description Такое окно эффективно сохраняет тепло в помещении и позволяет полностью отказаться от использования электрических нагревательных приборов в холодное время года.
+										.window-tile__bottom
+											.window-tile__price 10 200 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example4.jpg")
+										.window-tile__title
+											a(href="#") 
+												+icon('arrow-right')
+												|Окно для защиты от шума
+										.window-tile__description Мы рекомендуем это решение для квартир и коттеджей, находящихся в непосредственной близости от автомагистралей, дорог с оживленным движением, аэропортов и прочих источников шума.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example5.jpg")
+										.window-tile__title
+											a(href="#")
+												+icon('arrow-right')
+												|Окно с защитой от взлома
+										.window-tile__description Окна на первых и последних этажах зданий всегда могут привлечь нежелательное внимание злоумышленников, чтобы обезопасить свое жилище от проникновения, установите окна с защитой от взлома.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+								.swiper-slide
+									.window-tile__elem
+										.window-tile__image: a(href="#"): img(src="images/tmp/window_tile_example6.jpg")
+										.window-tile__title
+											a(href="#") 
+												+icon('arrow-right')
+												|Окно для загородного дома
+										.window-tile__description Многообразие цветов и оттенков, окна нестандартной формы, противовзломные и энергосберегающие технологии - все это мы предлагаем для владельцев загородных домов и коттеджей.
+										.window-tile__bottom
+											.window-tile__price 15 200 <sub>руб.</sub> <span class="star-tip">*</span>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: a(href="#").button.blue-border.sm Посчитать свой размер
+
+						.note__insert
+							|<span class="star-tip">*</span> Cтоимость является ориентировочной и может отличаться в зависимости от комплектации заказа.
+			.main__section
+				.container
+					.main__section-head
+						.main__title Все типовые решения VEKA
+
+					.main__services
+						a(href="#").service-tile__elem
+							.service-tile__icon: img(src="images/plastic-window.svg")
+							.service-tile__title: span.link Пластиковые окна
+						a(href="#").service-tile__elem
+							.service-tile__icon: img(src="images/plastic-door.svg")
+							.service-tile__title: span.link Пластиковые двери
+						a(href="#").service-tile__elem
+							.service-tile__icon: img(src="images/arch-window.svg")
+							.service-tile__title: span.link Решения для коттеджей и загородных домов
+						a(href="#").service-tile__elem
+							.service-tile__icon: img(src="images/balconies.svg")
+							.service-tile__title: span.link Остекление балконов и лоджий
+
+			include _parts/_fast-link
+			
+			.main__section
+				.container
+					.main__section-head
+						.main__title Что люди говорят о партнёрах VEKA
+
+					.review__slider.js-reviewSwiper
+						.pattern-left-md
+
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").review-tile__elem
+										.review-tile__author Ратушный Ярослав о <span class="blue-color">«Окна 21 века»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="4")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description
+											p Устанавливали двустворчатое окно в комнату ребенку. Впечатления положительные от начала и до конца. Подробная консультация по телефону,с описанием каждого этапа работы, быстрый выезд замерщика, цена, срок изготовления окон все устроило и понравилось. Есть еще один плюспервая предоплата-только после доставки окон, вторая-после монтажа. Договор, акт выполненных работ, чеки-все как полагается. Окна привезли в пятницу,в субботу уже установили.
+										.review-tile__bottom 25 октября 2016, Новосибирск
+								.swiper-slide
+									a(href="#").review-tile__elem
+										.review-tile__author Вова Дергабузов о <span class="blue-color">«Окна 21 века»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="5")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description
+											p <b>Достоинства:</b> быстрое и профессилнальноеобслуживание, скидки
+											p <b>Недостатки:</b> Нет
+											p Работают слаженно. Утром позвонил и в обед пришел замерщик. Стоимость работ со скидкой меня устроила. Лоджию остеклили и утеплили через 5 дней. Все сделали профессионально, с учетом моих требований и за собой убрали.
+										.review-tile__bottom 25 октября 2016, Новосибирск
+								.swiper-slide
+									a(href="#").review-tile__elem
+										.review-tile__author Emily_Emily о <span class="blue-color">«Окна на VEKA»</span>
+										.review-tile__rating
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="5")
+												input(type="hidden" name="votes" value="")
+
+										.review-tile__description
+											p <b>Достоинства:</b> Прочные окна, доступные цены, оперативность, приятное обслуживание, и ( ! ) шумоизоляция. Больше поп поводу окон не могу добавить, тк поставили только сегодня, но не думаю, что меня огорчит в этих окнах что-то
+											p <b>Недостатки:</b> отсутствуют
+											p Изначально обратила внимание на приятные цены и хорошие отзывы. При установке работали достаточно квалифицированные монтажники - Виталий Николаевич и Алексей. Окнами на данный момент очень довольна! прекрасная шумоизоляция!
+										.review-tile__bottom 25 октября 2016, Новосибирск
+
+					.main__section-footer
+						a(href="#").button.blue.md
+							span Читать все отзывы
+							+icon('arrow-right')
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Справочник покупателя VEKA
+
+					.main__reference
+						.reference__grid.js-referenceIsotope
+							.reference__grid-col.md
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Многокамерные стеклопакеты и профили
+									p Сегодня редко можно встретить окно с однокамерным стеклопакетом. Двухкамерные пластиковые окна (стеклопакеты) уверенно вошли в нашу жизнь, и подарили комфорт и тишину жилым помещениям. В офисах и местах общего пользования обычно используют однокамерные. И дело тут вовсе не в цене.
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example6.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Что такое качественный профиль?
+									p Качественное окно можно изготовить только из хорошего профиля. Невозможно изготовить классную конструкцию из профиля низкого класса, точно также, как нереально сделать хороший костюм из бросовой ткани. 
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example7.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Основные особенности профильных систем VEKA шириной 70 мм
+									p Одной из главных функций окна является защита помещения от негативных воздействий внешней среды, в том числе и температурных.Выбор пластика в качестве конструкционного материала для изготовления оконных и фасадных конструкций был во многом обусловлен его превосходными теплоизолирующими характеристиками. 
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example2.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Остекление дачи и загородного дома
+									p Для остекления дачи, где Вы проживаете только летом, можно выбрать доступные по цене системы профилей EUROLINE или PROLINE. Однокамерного стеклопакета будет достаточно, чтобы защитить вас от лишнего шума и пыли, а надежная противовзломная система защитит от нежданных гостей. Для остекления загородного дома с постоянным.
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example3.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Профильная система Euroline в объектном строительстве
+									p На выставке "Мосбилд 2001" VEKA Rus впервые представила строительной общественности профильную систему "VEKA Euroline".
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example4.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Тенденции развития оконных систем из ПВХ
+									p Сходство систем и трудно различимые конструктивные усовершенствования в значительной степени затрудняют для потребителя возможность адекватной оценки качества отдельных профилей.
+							.reference__grid-col
+								a(href="#").reference-tile__elem
+									.reference-tile__image: img(src="images/tmp/reference_example5.jpg")
+									.reference-tile__title 
+										+icon('arrow-right')
+										|Дилерство, прямые продажи, или какая логистика эффективна
+									p Строительный сезон этого года стал для многих компаний - производителей пластиковых профилей своеобразным экзаменом.
+							
+							
+
+						.flex__grid
+							.reference-tile__col
+								a(href="#").reference-tile__elem.video-elem
+									.reference-tile__image
+										span.play-icon
+										img(src="images/tmp/reference_example_video.jpg")
+									.reference-tile__title Панорамные двери VEKASLIDE
+									+icon('play')
+							.reference-tile__col
+								a(href="#").reference-tile__elem.video-elem
+									.reference-tile__image
+										span.play-icon
+										img(src="images/tmp/reference_example_video2.jpg")
+									.reference-tile__title Входные двери из профилей VEKA со штульпом
+									+icon('play')
+							.reference-tile__col
+								a(href="#").reference-tile__elem.video-elem
+									.reference-tile__image
+										span.play-icon
+										img(src="images/tmp/reference_example_video3.jpg")
+									.reference-tile__title Штульповое окно VEKA Softline 82
+									+icon('play')
+
+					.main__section-footer
+						a(href="#").button.blue.md 
+							span Справочник покупателя
+							+icon('arrow-right')
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Партнёры VEKA в <b class="dotted__link">Новосибирске</b>
+
+					.main__partners.js-partnerSwiper(data-autoplay="6000")
+						.pattern-right-md
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/consib.png")
+										.partner__count: span.link 4 отзыва
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/dinal.png")
+										.partner__count: span.link 10 отзывов
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/evrotek.png")
+										.partner__count: span.link 2 отзыва
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/topstyle.png")
+										.partner__count: span.link 7 отзывов
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/consib.png")
+										.partner__count: span.link 4 отзыва
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/dinal.png")
+										.partner__count: span.link 10 отзывов
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/evrotek.png")
+										.partner__count: span.link 2 отзыва
+								.swiper-slide
+									a(href="#").partner__elem
+										.partner__icon: img(src="images/tmp/topstyle.png")
+										.partner__count: span.link 7 отзывов
+
+							.swiper-pagination
+
+			.main__section.hidden-xs
+				.container
+					.main__section-head
+						.main__title О компании VEKA
+
+					.main__about
+						.about__description
+							p Компания VEKA Rus является дочерней производственной компанией концерна VEKA AG – одного из мировых лидеров в области разработки и производства оконных и дверных систем из высококачественного пластика, а также откидных и рольставен. Компания VEKA AG работает на рынке с 1969 года. Головное предприятие находится в г. Sendenhorst, ФРГ, Северный Рейн. Производственные дочерние компании концерна, помимо Германии, работают в США, Канаде, Бельгии, Великобритании, Польше, Китае, Испании, Франции. В мире действует развитая сеть коммерческих представительств VEKA осуществляющих свою деятельность в странах Латинской Америки, Индии, Сингапуре, Румынии. На сегодняшний день VEKA является одним из крупнейших в мире производителей пластикового профиля для оконных и дверных конструкций. Все производства группы компаний VEKA осуществляют свою деятельность под постоянным контролем главного предприятия в городе Sendenhorst, определяющего единый для всех предприятий стандарт качества.
+
+						.about__advantages
+							.about__advantage-elem
+								b 1995
+								p начало поставок профиля VEKA в Россию
+							.about__advantage-elem
+								b 440
+								p сотрудников работает в настоящее время на предприятии VEKA Rus
+							.about__advantage-elem
+								b 1024
+								p компании-партнера в России и СНГ
+							.about__advantage-elem
+								b 40
+								p продукция концерна экспортируется в более чем 40 стран мира
+
+
+					.main__section-footer
+						a(href="#").button.blue.md 
+							span Подробнее о компании
+							+icon('arrow-right')
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

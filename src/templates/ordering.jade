@@ -1,0 +1,75 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Оформление заказа
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header
+		
+		
+		main.main__content
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Калькулятор
+							li.breadcrumb__item: a(href="#").breadcrumb__link Оформление заказа
+
+			.main__section
+				.container
+					.main__section-body
+						.main__title Оформление заказа
+
+						.ordering__description Данный интерфейс предполагает формирование заявки, на основании которой расчет будет выполнять менеджер.
+						.ordering-wrap.hidden-xs
+							.row.ordering__item
+								.col-md-1.col-sm-12
+									span.ordering__order 1
+									.window-fav__icon: +icon('window-type-3')
+								.col-md-3.col-sm-12
+									.window-fav__info
+										.window-fav__title Окно в спальню
+										.window-fav__size 2000 х 1450 мм
+								.col-md-5.col-sm-12
+									p.window-fav__txt Окно для защиты от шума. Softline. Энергосберегающий двухкамерный стеклопакет. Поворотно-откидная фурнитура. Белый
+								.col-md-2.col-sm-12.ordering__price 12 360
+									span руб.
+								.col-md-1.col-sm-12.icon: +icon('trash')
+	
+							.row.ordering__item
+								.col-md-1.col-sm-12
+									span.ordering__order 2
+									.window-fav__icon: +icon('window-type-5')
+								.col-md-3.col-sm-12
+									.window-fav__info
+										.window-fav__title Окно в спальню
+										.window-fav__size 2000 х 1450 мм
+								.col-md-5.col-sm-12
+									p.window-fav__txt Окно для защиты от шума. Softline. Энергосберегающий двухкамерный стеклопакет. Поворотно-откидная фурнитура. Белый
+								.col-md-2.col-sm-12.ordering__price 12 360
+									span руб.
+								.col-md-1.col-sm-12.icon: +icon('trash')
+
+						.ordering-forms
+							.row
+								.col-md-6.col-sm-12.forms-wrap
+									include _parts/_personal-data
+
+								.col-md-6.col-sm-12.forms-wrap
+									include _parts/_additional-options
+								
+
+
+		include _parts/_ordering-panel
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,203 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Новости VEKA и партнёров
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header-partners-logged
+		
+		
+		main.main__content
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+							li.breadcrumb__item: a(href="#").breadcrumb__link Заявки на размер
+			.main__section
+				.container
+					.main__section-head
+						.main__title Новости VEKA и партнёров
+			.main__section
+				.container
+					.main__section-body
+						.row
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «Планета Свет» подвела
+										| итоги конкурса для детей «Символ
+										| 2017 года»
+									p
+										| Подведены итоги традиционного творческого
+										| конкурса для детей сотрудников завода Планета Свет,
+										| партнера VEKA Rus. В конкурсе приняли участие 247
+										| детей из Перми, Екатеринбурга, Ижевска, Казани,
+										| Тагила, Уфы, Бугульмы, Тюмени, Твери и Конаково.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('video-camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «АЛЬКОН» поздравила
+										| топ-менеджеров Алтая
+									p
+										| Накануне праздников компания АЛЬКОН совместно
+										| с VEKA участвовала в награждении алтайских
+										| предпринимателей, чьи достижения оказались
+										| наиболее заметными и значимыми.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('article')
+									.tile__title
+										+icon('arrow-right')
+										| Генеральный директор VEKA Rus
+										| & Ukraine Йозеф Бекхофф о ситуации
+										| на оконном рынке
+									p
+										| О конкурентной среде и ситуации на рынке
+										| пластиковых профилей, а так же о том, что больше
+										| всего интересует тех, кто покупает окна, рассказал
+										| генеральный директор VEKA Rus & Ukraine, Йозеф Лео
+										| Бекхофф в интервью для Строительство.RU.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «Планета Свет» подвела
+										| итоги конкурса для детей «Символ
+										| 2017 года»
+									p
+										| Подведены итоги традиционного творческого
+										| конкурса для детей сотрудников завода Планета Свет,
+										| партнера VEKA Rus. В конкурсе приняли участие 247
+										| детей из Перми, Екатеринбурга, Ижевска, Казани,
+										| Тагила, Уфы, Бугульмы, Тюмени, Твери и Конаково.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('video-camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «АЛЬКОН» поздравила
+										| топ-менеджеров Алтая
+									p
+										| Накануне праздников компания АЛЬКОН совместно
+										| с VEKA участвовала в награждении алтайских
+										| предпринимателей, чьи достижения оказались
+										| наиболее заметными и значимыми.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('article')
+									.tile__title
+										+icon('arrow-right')
+										| Генеральный директор VEKA Rus
+										| & Ukraine Йозеф Бекхофф о ситуации
+										| на оконном рынке
+									p
+										| О конкурентной среде и ситуации на рынке
+										| пластиковых профилей, а так же о том, что больше
+										| всего интересует тех, кто покупает окна, рассказал
+										| генеральный директор VEKA Rus & Ukraine, Йозеф Лео
+										| Бекхофф в интервью для Строительство.RU.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «Планета Свет» подвела
+										| итоги конкурса для детей «Символ
+										| 2017 года»
+									p
+										| Подведены итоги традиционного творческого
+										| конкурса для детей сотрудников завода Планета Свет,
+										| партнера VEKA Rus. В конкурсе приняли участие 247
+										| детей из Перми, Екатеринбурга, Ижевска, Казани,
+										| Тагила, Уфы, Бугульмы, Тюмени, Твери и Конаково.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('video-camera')
+									.tile__title
+										+icon('arrow-right')
+										| Компания «АЛЬКОН» поздравила
+										| топ-менеджеров Алтая
+									p
+										| Накануне праздников компания АЛЬКОН совместно
+										| с VEKA участвовала в награждении алтайских
+										| предпринимателей, чьи достижения оказались
+										| наиболее заметными и значимыми.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image
+										img(src="images/tmp/glass_example.jpg")
+										span.tile__type-news: +icon('article')
+									.tile__title
+										+icon('arrow-right')
+										| Генеральный директор VEKA Rus
+										| & Ukraine Йозеф Бекхофф о ситуации
+										| на оконном рынке
+									p
+										| О конкурентной среде и ситуации на рынке
+										| пластиковых профилей, а так же о том, что больше
+										| всего интересует тех, кто покупает окна, рассказал
+										| генеральный директор VEKA Rus & Ukraine, Йозеф Лео
+										| Бекхофф в интервью для Строительство.RU.
+									.tile__more.visible-xs: span.link Узнать больше
+									.tile__date 10 января 2017
+
+			.main__section
+				.container
+					.main__section-footer.hidden-xs
+						a(href="#").button.blue.md
+							span Загрузить ещё
+							img(src="images/refresh.png")
+
+
+
+						include _parts/_pager
+
+		include _parts/_footer
+
+		include _parts/_scripts

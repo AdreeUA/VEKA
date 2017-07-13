@@ -1,0 +1,14 @@
+#directionModal.modal.mfp-hide
+	.modal__box
+		.modal__head
+			.section__title Проложить маршрут
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__form
+				form(action="#").js-validate
+					fieldset.fieldset
+						label.label Откуда вы хотите поехать
+						input(type="text" name="city" placeholder="Город" required="required" value="Краснодар, Краснодарский край, Россия" data-location-value="Краснодар, Краснодарский край, Россия" data-location="48.515694668649,135.08926391602").input.js-google-autocompleteAddress
+					fieldset.fieldset.modal__submit
+						button.button.blue.md.disabled.js-directionButton
+							span Проложить маршрут

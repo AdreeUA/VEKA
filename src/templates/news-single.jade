@@ -1,0 +1,51 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Новость
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header
+		
+		
+		main.main__content
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+							li.breadcrumb__item: a(href="#").breadcrumb__link Заявки на размер
+
+			.main__section
+				.container
+					.main__section-body.news-list
+						.main__title Сокращение ассортимента профилей EUROLINE в цветном исполнении
+						.news
+							.news__image-wr
+								img(src='images/tmp/news-example.jpg')
+							p.news__text
+								| Главное действующее «лицо» любого стеклопакета - стекло. Обладая высокой прозрачностью, долговечностью, оно является идеальным строительным материалом.
+								| Кварцевый песок, известняк и сода - основные вещества, из которых производится стекло. Что же представляет собой стеклопакет? Это объемное изделие,  из двух
+								| или трех листов стекла, соединенных между собой по контуру с помощью дистанционной рамки и герметиков, образующих герметически замкнутые  камеры,
+								| заполненные осушенным воздухом или другим газом. В зависимости от числа камер стеклопакеты подразделяются на виды: СПО - стеклопакет однокамерный
+								| и СПД - стеклопакет двухкамерный. Разберем однокамерный стеклопакет, его достоинства и недостатки. Так называемый «базовый»- это однокамерный стеклопакет
+								| толщиной 24 мм (4М1-16-4М1).
+
+							.news__note
+								p
+									| Профили системы Softline доступны к заказу и поставке во всех цветах без исключения,
+									| согласно <span class="news__map">Цветовой Карте VEKA</span>.
+							//a.button.blue.md.news__button(href='#')
+							//	span Экспортировать в CSV
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

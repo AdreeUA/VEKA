@@ -1,0 +1,5389 @@
+/*
+ * Content
+ */
+
+.main__content
+	//@media (min-width: 768px)
+		//overflow-x: hidden
+
+.main__section
+	@media (min-width: 768px)
+		margin-bottom: 75px
+		overflow: hidden
+		+backcover
+
+		& + .fast-link__section
+			&:last-child
+				margin-top: -60px
+
+		& + .char__section
+			margin-top: -60px
+
+	@media #{$mobile}
+		margin-bottom: 45px
+		background-image: none !important
+
+		&:first-child
+			padding-top: 25px
+
+.main__title
+	color: $blue
+
+	@media (min-width: 768px)
+		font-size: 40px
+		line-height: 42px
+		margin: 0 0 15px
+
+	@media #{$mobile}
+		font-size: 26px
+		line-height: 30px
+		margin: 0 0 10px
+
+.medium__title
+	color: $blue
+
+	@media (min-width: 768px)
+		font-size: 38px
+		line-height: 38px
+		margin: 0 0 30px
+
+	@media #{$mobile}
+		font-size: 22px
+		line-height: 28px
+		margin: 0 0 10px
+
+.section__title
+	color: $blue
+
+	@media (min-width: 768px)
+		font-size: 30px
+		line-height: 28px
+		margin: 0 0 30px
+
+	@media #{$mobile}
+		font-size: 20px
+		line-height: 26px
+		margin: 0 0 10px
+		
+.small__title
+	color: $gray
+	font-weight: 700
+
+	@media (min-width: 768px)
+		font-size: 20px
+		line-height: 22px
+		margin: 0 0 15px
+	
+	@media #{$mobile}
+		font-size: 15px
+		line-height: 18px
+		margin: 0 0 10px
+
+
+.main__section-bg
+	position: relative
+
+	@media (min-width: 768px)
+		padding: 100px 0
+
+.section-bg
+	@media (min-width: 768px)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		+backcover
+
+	@media #{$mobile}
+		background: transparent !important
+		margin-bottom: 30px
+
+	img 
+		max-width: 100%
+
+
+
+.main__slider
+
+	.swiper-container
+		display: flex
+
+		@media (min-width: 1400px)
+			min-height: 650px
+
+		@media (min-width: 1000px) and  (max-width: 1399px)
+			min-height: 640px
+
+	.swiper-slide
+		height: auto
+
+	@media (min-width: 768px)
+		max-width: 1780px
+		margin: 0 auto 100px
+		position: relative
+
+		.swiper-container,
+		.swiper-wrapper
+			height: inherit
+
+		.swiper-button-prev
+			left: 50px
+
+		.swiper-button-next
+			right: 50px
+
+		.swiper-pagination
+			display: none
+
+		.container
+			//position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+
+		.main__pattern
+			right: -190px
+			bottom: -100px
+
+	@media (min-width: 768px) and (max-width: 1200px)
+		.main__pattern
+			background-size: 100%
+			right: -19vw
+			bottom: -10vw
+			width: 59vw
+			height: 46.5vw
+		
+		.main__form
+
+			&:not(.left)
+				//top: 2vw
+
+			padding: 15px
+
+			.main__title
+				font-size: 30px
+				margin-bottom: 0px
+
+			.main__form-head
+				margin: 0 0 10px
+
+			.checkbox
+				margin: 7px 0 10px
+
+			.fieldset
+				margin: 0 0 7px
+
+			.button
+				height: 45px
+
+	@media (min-width: 768px) and (max-width: 1400px)
+		//height: 39vw
+		margin-bottom: 10vw
+
+		.swiper-button-prev
+			left: 10px
+
+		.swiper-button-next
+			right: 10px
+
+	@media #{$mobile}
+		margin-bottom: 20px
+
+		.swiper-container
+			width: 100%
+
+		.swiper-button-prev,
+		.swiper-button-next
+			display: none
+
+		.swiper-pagination
+			padding-left: 17px
+			padding-bottom: 20px
+	
+.main__slide
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	background-position: center center
+
+	+backcover
+
+	@media (min-width: 768px) and (max-width: 1400px)
+		width: 100%
+		height: 100%
+		background-position: left top
+
+	@media #{$mobile}
+		position: static
+		display: block
+		padding-bottom: 48.24%
+		background-position: left top
+
+.swiper-button-prev
+	width: 30px
+	height: 57px
+	margin-top: -15px
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA5CAYAAAAhmZssAAABNklEQVRYR8XX3RGCMBAE4L0OLEE7sAVKsARLoEJboAMtgQ5w4gCjmJC/3ZAX3vJxd+HIGRquaZquAB4AemvlfqEnAGMTeIsC6OSwFzUbpHAIdeWVwXuoDI6hEjgFpcOpKBXOQWlwLkqBS9BquBStgmvQYrgWLYIZaDbMQrNgJpoMs9EkWIFGYRW6CyvRIKxGvfAGHQDczcw9qevn6uNBOzMbqeK82Qq3RNdUt0Y/8BHoAj8BnOfUX8zspajpds/jInZvckS6jz3VS/5bRv43O21wd9Bu8s4ViNx1LtfBqG0zOC2qfxS7Y6oSj87HKjwKe75zSs2TYAWeDLPxLJiJZ8MsvAhm4MVwLV4F1+DVcClOgUtwGpyLU+EcnA6n4hI4BZfBMVwK7+FyOIi3GFd8eJOIPbfX/g0bjE41AB9NygAAAABJRU5ErkJggg==)
+
+.swiper-button-next
+	width: 30px
+	height: 57px
+	margin-top: -15px
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA5CAYAAAAhmZssAAABJ0lEQVRYR93ZDQ0CMQwF4DcHSEACFnCCIyQgAQlYwAE4AAcluxwXLrfdrb9LmIEvbZqlL01EdAJwBnBMKd0R9BIRvQDsALwj8QwfANyi8ZQ72wMf4B74BEfjMzgSX8BReBGOwKuwN74Ke+KbsBfeBHvgzbA1zoItcTZshYtgC1wMa3EVrMHVsBQ3gSW4GczFTWEObg7/4BcAeZEsbq8u8IjnlTlvr0XcDd7CXeE13B2u4kFRKYeGPYDH6D3/t2IiKk63a8U1NLfbDV5D3eAxfV4B5IGK+blaI69pq1tR01ZzUDOYi5rAElQNS1EVrEHFsBYVwRYoG7ZCWbAl2gxbo02wB7oJe6GrsCdahb3RIhyBLuAodAZHohMcjQ5wD/QLd7vCdLk7fQC8BlF/6wuo7AAAAABJRU5ErkJggg==)
+
+.main__pattern
+	width: 590px
+	height: 465px
+	position: absolute
+	background: url('../images/pattern.png')
+	z-index: 2
+	pointer-events: none
+
+	@media #{$mobile}
+		display: none
+
+.main__form
+	position: relative
+	background: #fff
+
+	.button.md
+		height: auto
+		padding: 0
+		line-height: 72px
+
+	@media (min-width: 768px)
+		width: 432px
+		padding: 55px
+
+		&:not(.left)
+			// height: 640px
+			// position: absolute
+			float: right
+			margin: 10px 30px 10px 0
+			z-index: 2
+
+			@media (min-width: 768px) and (max-width: 1400px)
+				//right: 70px
+
+		&.left
+			float: left
+			margin: 55px 0
+
+		.main__title
+			font-size: 44px
+			margin: 0 0 20px
+
+		.checkbox 
+			margin: 15px 0 20px
+
+		.button.md
+			width: 100%
+			margin-bottom: 15px
+			line-height: 45px
+
+	@media #{$mobile}
+		padding: 10px 0 20px
+
+		.checkbox 
+			margin: 10px 0
+			font-size: 11px
+			line-height: 14px
+
+			span 
+				&:before
+					top: 2px
+
+				&:after
+					top: 7px
+
+		.button 
+			margin-bottom: 5px
+
+			svg 
+				display: inline-block
+
+				&:first-child
+					margin-right: 7px
+
+				&:last-child
+					margin-left: 7px
+
+	// .error-label
+	// 	display: none !important
+
+.main__form-head
+
+	@media (min-width: 768px)
+		margin: 0 0 40px
+
+		p
+			font-size: 19px
+			line-height: 28px
+
+	@media #{$mobile}
+		margin: 0 0 20px
+
+		p
+			font-size: 15px
+			line-height: 22px
+			font-weight: 300
+
+		br 
+			display: none
+
+	.main__title
+		letter-spacing: -0.5px
+
+		&:last-child
+			margin-bottom: 0
+
+	p 
+		color: $gray
+		font-family: 'Roboto', sans-serif
+
+		&.main__form-p
+			margin-bottom: 30px
+
+
+.main__section-head
+	position: relative
+
+	@media (min-width: 768px)
+		min-height: 55px
+		margin: 0 0 30px
+
+	@media #{$mobile}
+		margin: 0 0 20px
+
+	.section__title
+		margin: 0
+
+	p 
+		font-size: 14px
+		color: #969ea1
+
+	.dotted__link
+		color: $blue
+
+.head-flex
+	display: flex
+	align-items: center
+	
+.main__section-icon
+
+	@media (min-width: 768px)
+		width: 70px
+
+		& + .section__title
+			width: calc(100% - 70px)
+			margin: 0
+
+	@media #{$mobile}
+		width: 50px
+
+		& + .section__title
+			width: calc(100% - 60px)
+			margin: 0
+
+		svg 
+			max-width: 35px
+
+		.icon-video
+			height: 30px
+	
+	& > svg
+		fill: $blue
+
+	.icon-plastic-window
+		width: 54px
+		height: 54px
+	
+	.icon-plastic-window,
+	.icon-profile
+		fill: transparent
+		stroke: $blue
+		stroke-width: 2px
+
+.main__section-head-button
+	@media (min-width: 768px)
+		position: absolute
+		right: 0
+		top: -10px
+
+		.button 
+			height: 64px
+			min-width: 280px
+			font-size: 18px
+
+	@media #{$mobile}
+		margin: 20px 0 25px
+
+.top__head
+	max-width: 630px
+	position: relative
+
+	@media (min-width: 768px)
+		.window-tile__price
+			margin: 50px 0
+
+	@media #{$mobile}
+		.medium__title
+			font-size: 26px
+			line-height: 30px
+
+		.window-tile__price
+			margin: 20px 0
+
+	p 
+		font-family: 'Roboto', sans-serif
+		font-weight: 300
+		color: $gray
+		font-size: 16px
+		line-height: 26px
+
+		@media #{$mobile}
+			font-size: 14px
+			line-height: 20px
+
+
+.top__head-buttons
+	@media (min-width: 768px)
+		margin-bottom: 50px
+
+		.button 
+			padding-left: 25px
+			padding-right: 25px
+
+			&.md 
+				height: 66px
+
+			& + .button 
+				margin-left: 5px
+
+		a.button.md
+			padding-top: 21px
+
+	@media #{$mobile}
+		margin: 10px 0 20px
+
+		.button
+			text-align: center
+
+			& + .button 
+				margin-top: 5px
+
+.top__head-note
+	color: #838b90
+
+	@media (min-width: 768px)
+		position: absolute
+		bottom: 45px
+
+.main__section-body
+	position: relative
+
+	@media (min-width: 768px)
+		.video__list
+			margin-bottom: -50px
+
+	@media #{$mobile}
+		.col-md-3
+			&:last-child
+				.tile__elem
+					margin-bottom: 0
+
+		.col-md-8
+			margin-bottom: 35px
+
+	.pattern-left-md
+		left: -380px
+		top: -40px
+
+.main__section-footer
+	padding-top: 70px
+	text-align: center
+
+	@media #{$mobile}
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.button
+		@media (min-width: 768px)
+			padding-left: 60px
+			padding-right: 60px
+			margin: 0 2px
+
+.main__promo-swiper
+	@media (min-width: 768px)
+		.swiper-pagination
+			bottom: 0
+
+.main__promo-row
+	@media (min-width: 768px)
+		position: relative
+		display: flex
+		justify-content: space-between
+
+.main__promo-right
+	@media (min-width: 768px)
+		width: 315px
+
+	@media #{$mobile}
+		display: none
+
+.main__promo-left
+	@media (min-width: 768px)
+		width: calc(100% - 400px)
+		padding-top: 35px
+
+.main__promo-timer
+	margin-bottom: 25px
+
+.timer
+	height: 86px
+	font-size: 0
+	border: 4px solid #eaeced
+	position: relative
+
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 4px
+		background: #eaeced
+
+	&:before
+		left: 33.3333%
+
+	&:after
+		left: 66.6666%
+
+	.countdown-row
+		display: flex
+		// justify-content: space-between
+
+	.countdown-section
+		width: 33.3333%
+		height: 86px
+		text-align: center
+		padding-top: 10px
+		position: relative
+
+	.countdown-amount
+		color: $blue
+		font-family: 'Roboto', sans-serif
+		font-size: 43px
+		font-weight: 900
+		line-height: 1
+		display: block
+
+	.countdown-period
+		color: $blue
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		position: absolute
+		bottom: 17px
+		left: 0
+		right: 0
+		text-transform: lowercase
+
+.main__promo-form
+	.button 
+		width: 100%
+		margin-top: 10px
+
+	.error-label
+		display: none !important
+
+.promo-list__elem
+	color: $gray
+	font-family: 'Roboto', sans-serif
+	font-weight: 300
+	position: relative
+
+	@media (min-width: 768px)
+		font-size: 16px
+		line-height: 26px
+		padding-bottom: 90px
+
+	@media #{$mobile}
+		font-size: 14px
+		line-height: 20px
+		color: #838b90
+		padding-bottom: 10px
+
+	p
+		margin: 0 0 15px
+
+.promo-list__icon
+	@media (min-width: 768px)
+		position: absolute
+		bottom: 0
+		right: 0
+
+.pattern-left
+	width: 263px
+	height: 578px
+	background: url('../images/pattern_left.png') no-repeat
+	position: absolute
+	left: -320px
+	pointer-events: none
+
+	@media #{$mobile}
+		display: none
+
+.pattern-left-md
+	width: 397px
+	height: 496px
+	background: url('../images/pattern_left_md.png') no-repeat
+	position: absolute
+	pointer-events: none
+
+	&.medium
+		width: 463px
+		height: 472px
+		bottom: -30px
+		background: url('../images/pattern_left_md_2.png') no-repeat
+
+		&--fix-left
+			left: -324px
+			bottom: -210px
+
+
+
+	@media #{$mobile}
+		display: none
+
+.pattern-right-md
+	width: 482px
+	height: 572px
+	background: url('../images/pattern_right_md.png') no-repeat
+	position: absolute
+	pointer-events: none
+
+	@media #{$mobile}
+		display: none
+
+.pattern-right-md-2
+	width: 482px
+	height: 572px
+	background: url('../images/pattern_right_md-2.png') no-repeat
+	position: absolute
+	pointer-events: none
+
+	@media #{$mobile}
+		display: none
+
+
+
+.window-solution
+	@media (min-width: 768px)
+		.window-tile__elem
+			margin-bottom: 70px
+
+		.note__insert
+			margin-top: 0
+
+	@media #{$mobile}
+		.window-tile__elem
+			margin-bottom: 35px
+
+		[class*="col-md-"]
+			&:last-child
+				.window-tile__elem
+					margin-bottom: 0
+
+.similar__window
+	@media (min-width: 768px)
+		& + .subscription__section
+			margin-top: -75px
+
+.similar-slider
+	@media #{$mobile}
+		.tile__elem
+			margin-bottom: 0
+
+.window-tile__elem
+	display: block
+	color: #838b90
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	line-height: 20px
+	position: relative
+	
+	@media (min-width: 768px)
+		padding-left: 45px
+		margin-bottom: 40px
+
+		&:hover
+			.window-tile__image
+				opacity: 0.8
+
+			.window-tile__title
+				color: $blueLight
+
+				svg 
+					fill: $blueLight
+
+			.window-tile__button
+				opacity: 1
+	
+	@media #{$mobile}
+		padding-left: 25px
+
+
+.window-tile__image
+	font-size: 0
+	margin: 0 0 10px
+
+	@media (min-width: 768px)
+		margin-left: -45px
+		transition: 200ms ease-out
+
+	@media #{$mobile}
+		margin-left: -25px
+
+	img 
+		max-width: 100%
+
+.window-tile__title
+	color: $blue
+	margin: 0 0 10px
+	position: relative
+
+	@media (min-width: 768px)
+		min-height: 75px
+		font-size: 30px
+		line-height: 1.2
+		transition: 200ms
+
+	@media #{$mobile}
+		font-size: 18px
+		line-height: 1.1
+
+	svg 
+		fill: $blue
+		position: absolute
+
+		@media (min-width: 768px)
+			top: 10px
+			left: -45px
+			transition: 200ms
+
+		@media #{$mobile}
+			width: 9px
+			height: 14px
+			top: 3px
+			left: -25px
+
+.window-tile__description
+	min-height: 100px
+	margin-bottom: 20px
+
+	@media #{$mobile}
+		font-weight: 300
+
+.window-tile__bottom
+	position: relative
+	min-height: 46px
+
+	& + .window-tile__tip
+		padding-top: 10px
+
+.window-tile__price
+	color: $gray
+	font-size: 25px
+	line-height: 25px
+	font-weight: 700
+	margin: 0 0 5px
+	
+	@media (min-width: 768px)
+		&.lg
+			font-size: 44px
+
+			b
+				line-height: 44px
+
+	sub
+		font-size: 14px
+		font-weight: 900
+		vertical-align: bottom
+
+.star-tip
+	color: $blueLight
+
+.note__insert
+	padding-top: 25px
+	margin-top: 15px
+	color: #838b90
+	border-top: 2px solid #eef0f1
+
+	.star-tip
+		font-size: 18px
+		font-weight: 400
+
+	@media #{$mobile}
+		margin-top: 25px
+		font-weight: 300
+		position: relative
+		padding-left: 15px
+
+		.star-tip
+			position: absolute
+			left: 0
+			top: 25px
+
+.window-tile__tip
+	font-size: 12px
+	line-height: 16px
+	color: #969ea1
+	font-weight: 400
+
+	@media #{$mobile}
+		margin-top: 3px
+
+.window-tile__button
+	@media (min-width: 1200px)
+		position: absolute
+
+	@media (min-width: 768px)
+		right: 0
+		bottom: 5px
+		opacity: 0
+		transition: 300ms ease-out
+
+	@media (min-width: 768px) and (max-width: 1200px)
+		opacity: 1
+		bottom: 3px
+
+		.button.sm 
+			font-size: 13px
+	
+	@media #{$mobile}
+		margin-left: -25px
+		margin-top: 20px
+
+.flex__grid
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.main__services
+	padding-top: 40px
+	
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.service-tile__elem
+	display: block
+	text-align: center
+
+	@media (min-width: 768px)
+		width: 25%
+
+		&:hover
+			.link
+				border-bottom-color: transparent
+
+	@media #{$mobile}
+		margin: 0 auto 45px
+
+	svg 
+		fill: transparent
+		stroke: #000000
+		stroke-width: 2px
+
+.service-tile__icon
+	margin: 0 0 20px
+
+	@media #{$mobile}
+		margin: 0 0 15px
+
+.service-tile__title
+	max-width: 250px
+	color: $blue
+	font-size: 20px
+	font-weight: 700
+	line-height: 26px
+	margin: auto
+
+	@media #{$mobile}
+		font-size: 17px
+
+
+
+.fast-link__section
+	background: #f3f8fa
+	padding: 80px 0
+
+	&:last-child
+		background: #fff
+		margin-bottom: 0
+
+	@media (min-width: 768px)
+		& + .subscription__section
+			margin-top: -100px
+
+	@media #{$mobile}
+		padding: 50px 0
+
+		&:last-child
+			padding-top: 0
+
+	.container
+		position: relative
+
+	.main__pattern
+		opacity: 0.3
+		right: -400px
+		bottom: 70px
+	
+.fast-links
+	position: relative
+	z-index: 2
+
+.fast-link__elem
+	@media (min-width: 768px)
+		display: inline-block
+		max-width: 330px
+
+		&:first-child
+			.link 
+				position: relative
+				top: -8px
+
+		&:last-child
+			.link 
+				position: relative
+				top: -8px
+
+	@media #{$mobile}
+		display: block
+		padding-left: 50px
+
+		& + .fast-link__elem
+			margin-top: 30px
+
+	p 
+		color: $gray
+		font-family: 'Roboto', sans-serif
+
+		@media (min-width: 768px)
+			font-size: 16px
+			line-height: 24px
+
+		@media #{$mobile}
+			font-size: 14px
+			font-weight: 300
+			line-height: 20px
+
+.fast-link__title
+	color: $blue
+	font-weight: 400
+	position: relative
+
+	@media (min-width: 768px)
+		min-height: 75px
+		padding-left: 85px
+		font-size: 36px
+		line-height: 42px
+		margin: 0 0 20px
+
+	@media (max-width: 1023px)
+		font-size: 22px
+		line-height: 30px
+		margin: 0 0 10px
+
+	& > svg 
+		position: absolute
+		left: 0
+		top: 0
+		fill: $blue
+		
+		@media #{$mobile}
+			left: -45px
+			width: 27px
+			height: 32px
+
+.review-tiles
+	@media (min-width: 768px)
+		.review-tile__elem
+			margin-bottom: 35px
+
+	@media #{$mobile}
+		[class*="col-md-"]
+			&:last-child
+				.review-tile__elem
+					margin-bottom: 0
+
+		.review-tile__elem
+			margin-bottom: 20px
+
+.review-list
+	.review-tile__elem
+		margin-bottom: 20px
+
+		&:last-child
+			margin-bottom: 0
+
+.review__slider
+	position: relative
+
+	.swiper-container
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+	.pattern-left-md
+		left: -340px
+		bottom: -210px
+
+.review-tile__elem
+	background: #f3f8fa
+	color: #838b90
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	line-height: 20px
+	display: block
+	transition: 200ms
+
+	@media (min-width: 768px)
+		padding: 45px 30px
+
+		// &:hover
+		// 	background: darken(#f3f8fa, 2%)
+
+	@media #{$mobile}
+		padding: 35px 20px 25px
+
+		&.is-full
+			.review-tile__description
+				max-height: 100%
+
+				&:before
+					display: none
+
+	p 
+		margin-bottom: 15px
+
+		@media #{$mobile}
+			font-weight: 300
+
+		&:last-child
+			margin-bottom: 0
+
+	b 
+		font-size: 15px
+		color: $gray
+
+.review-tile__head
+	margin-bottom: 20px
+	+clear
+	
+	@media (min-width: 768px)
+		.review-tile__author
+			float: left
+			margin-right: 10px
+
+	.review-tile__rating
+		float: left
+		margin: 4px 10px 0 0
+
+.review-tile__author
+	color: $gray
+	font-weight: 700
+
+	@media (min-width: 768px)
+		font-size: 18px
+		line-height: 20px
+		margin: 0 0 15px
+
+	@media #{$mobile}
+		font-size: 15px
+		line-height: 18px
+		margin: 0 0 10px
+
+.review-tile__rating
+	min-height: 15px
+	display: flex
+	align-items: center
+
+	@media (min-width: 768px)
+		margin: 0 0 30px
+
+	@media #{$mobile}
+		margin: 0 0 20px
+
+	.review-tile__count
+		margin-left: 10px
+
+[data-readonly="true"]
+	pointer-events: none
+
+
+.review-tile__count
+	font-size: 13px
+	padding-top: 2px
+
+.review-tile__description
+	margin-bottom: 30px
+
+	@media #{$mobile}
+		&.mobile-sm
+			max-height: 195px
+			overflow: hidden
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 20px
+				@include background-image(linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(243,248,250,1) 100%))
+
+
+		& + .review-tile__toggle
+			margin-top: -15px
+
+.review-tile__toggle
+	font-size: 11px
+	color: $blue
+	text-align: center
+	cursor: pointer
+	position: relative
+	margin-bottom: 20px
+
+	&:before
+		content: ""
+		height: 1px
+		background: #dce0e2
+		+abscenter
+
+	span 
+		position: relative
+		display: inline-block
+		padding: 0 10px
+		background: #f3f8fa
+
+.review-tile__bottom
+	color: $blue
+
+.rating-add
+	color: #8295a0
+
+	@media (min-width: 768px)
+		margin-top: 5px
+		margin-bottom: 30px
+
+	@media #{$mobile}
+		margin-bottom: 20px
+
+.rating-star__elem
+	display: inline-block
+	vertical-align: middle
+	margin: -7px 0 0 10px
+
+
+
+.main__reference
+	@media (min-width: 1024px)
+		.flex__grid
+			margin: 0 -10px
+
+	@media (max-width: 1023px)
+		.flex__grid
+			.reference-tile__col
+				&:last-child
+					.reference-tile__elem
+						border-bottom: none
+
+.reference__grid
+	display: flex
+	flex-wrap: wrap
+
+	@media (min-width: 768px)
+		//margin-right: -20px
+
+		.reference-tile__elem
+			padding-right: 25px
+	@media (min-width: 768px) and (max-width: 1023px)
+		//display: flex
+		//flex-wrap: wrap
+
+.reference__grid-col
+	margin-bottom: 45px
+	width: 25%
+
+	&.md
+		width: 50%
+
+		.reference-tile__title
+			font-size: 30px
+
+	@media (max-width: 1199px)
+		width: 33%
+
+		&.md
+			width: 66%
+	@media (max-width: 1023px)
+		width: 50%
+
+		&.md
+			width: 50%
+
+			.reference-tile__title
+				font-size: 20px
+				line-height: 24px
+
+	@media (max-width: 767px)
+		width: 100%
+
+		&.md
+
+			.reference-tile__title
+				font-size: 15px
+				line-height: 20px
+
+.reference-tile__elem
+	display: block
+
+	@media (min-width: 768px)
+
+		&:hover
+			.reference-tile__image
+				opacity: 0.8
+
+			.reference-tile__title 
+				color: $blueLight
+
+				svg 
+					fill: $blueLight
+
+		.icon-play 
+			display: none
+
+		&.video-elem
+			padding-right: 0
+
+			.reference-tile__title 
+				padding-left: 0
+
+	@media #{$mobile}
+		position: relative
+		margin: 0 -15px
+		padding: 15px 25px 15px 15px
+		border-bottom: 1px solid #e6eaec
+
+		&.video-elem
+			padding-right: 35px
+
+	p
+		color: #838b90
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		padding-left: 35px
+
+		@media #{$mobile}
+			display: none
+
+	.icon-play 
+		fill: $blue
+		position: absolute
+		right: 15px
+		top: 0
+		bottom: 0
+		margin: auto
+
+.reference-tile__image
+	font-size: 0
+	margin: 0 0 25px
+	position: relative
+	transition: 200ms ease-out
+
+	img 
+		width: 100%
+
+	@media #{$mobile}
+		display: none
+
+.play-icon
+	width: 57px
+	height: 40px
+	background: url('../images/play.png') no-repeat
+	+abscenter
+
+	@media #{$mobile}
+		width: 37px
+		height: 25px
+		background-size: 100%
+
+.reference-tile__title 
+	color: $blue
+	position: relative
+	transition: 200ms
+
+	@media (min-width: 768px)
+		font-size: 22px
+		margin: 0 0 10px
+		padding-left: 35px
+
+	@media #{$mobile}
+		font-size: 15px
+		line-height: 20px
+
+		svg
+			display: none
+
+	svg 
+		position: absolute
+		left: 0
+		top: 5px
+		fill: $blue
+		transition: 200ms
+
+.reference-tile__col
+	@media (min-width: 768px)
+		width: 33.3333%
+		padding: 0 10px
+
+
+
+.main__partners
+	position: relative
+
+	@media (min-width: 768px)
+		.swiper-pagination
+			text-align: center
+			margin-top: 50px
+
+	@media #{$mobile}
+		.swiper-pagination
+			margin-top: 20px
+
+	.swiper-pagination
+		position: static
+
+	.pattern-right-md
+		right: -350px
+		bottom: -170px
+
+.partner__elem
+	display: block
+	text-align: center
+	
+	@media (min-width: 768px)
+		&:hover
+			.partner__icon
+				filter: grayscale(0)
+
+.partner__icon
+	position: relative
+
+	@media (min-width: 768px)
+		height: 160px
+		filter: grayscale(1)
+		transition: 200ms
+
+	@media #{$mobile}
+		height: 140px
+
+	img 
+		+abscenter
+
+
+.about__description
+	color: $gray
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 26px
+
+	@media (min-width: 768px)
+		column-count: 2
+		column-gap: 60px
+		margin-bottom: 75px
+	strong
+		margin-top: 20px
+
+.about__advantages
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.about__advantage-elem
+	color: $gray
+	text-align: center
+	font-family: 'Roboto', sans-serif
+
+	@media (min-width: 768px)
+		width: 25%
+		border-right: 2px solid #e5e8ea
+
+		&:last-child
+			border-right: none
+
+	b 	
+		display: block
+		font-size: 43px
+		font-weight: 900
+		margin: 0 0 5px
+
+	p 
+		max-width: 160px
+		font-size: 14px
+		line-height: 16px
+		display: inline-block
+
+
+.subscription__section
+	@media (min-width: 768px)
+		min-height: 740px
+		position: relative
+
+		&:last-child
+			margin-bottom: 0
+
+		.container
+			position: relative
+			+clear
+
+		.main__pattern
+			opacity: 0.5
+			right: -40px
+			bottom: -150px
+
+		& + .work-example__section
+			margin-top: -75px
+
+	@media #{$mobile}
+		margin-bottom: 20px
+
+
+
+/*
+ * Breadcrumb
+ */
+
+.main__breadcrumb
+	height: 115px
+	position: relative
+	z-index: 2
+
+	@media (min-width: 768px)
+		& + .main__section-bg
+			margin-top: -115px
+
+	@media #{$mobile}
+		display: none
+
+		& + .main__section:not(.main__section-bg)
+			padding-top: 30px
+
+.breadcrumb
+	padding-top: 25px
+
+.breadcrumb__list
+	+clear
+
+.breadcrumb__item 
+	float: left
+	position: relative
+	margin-right: 25px
+
+	&:last-child
+		margin-right: 0
+
+		.breadcrumb__link
+			color: #8295a0
+
+		&:before
+			display: none
+
+	&:before
+		content: "/"
+		position: absolute
+		right: -14px
+		top: 0
+		color: #8295a0
+
+.breadcrumb__link
+	color: $gray
+	transition: 200ms
+
+	&:hover
+		color: #8295a0
+
+	&:active
+		opacity: 0.6
+
+
+
+.filter
+	margin-bottom: 40px
+
+.filter__box
+	min-height: 60px
+	background: #f3f8fa
+	padding: 7px
+	margin-bottom: 35px
+
+	& + .filter__bottom
+		margin-top: -10px
+	
+	.button 
+		width: 100%
+		height: 46px
+
+		@media #{$mobile}
+			font-weight: 700
+
+	.icon-search 
+		width: 20px
+		height: 21px
+		margin-right: 10px
+
+.filter__flex
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.promo__flex
+	@media (min-width: 768px)
+		padding-right: 300px
+		position: relative
+
+.filter__select
+	width: 100%
+	font-size: 0
+
+	@media (min-width: 768px)
+		& + .filter__select
+			margin-left: 10px
+
+	@media #{$mobile}
+		margin-bottom: 7px
+
+.filter__search
+	width: 100%
+
+	@media #{$mobile}
+		margin-bottom: 7px
+
+.filter__promo-button
+	@media (min-width: 768px)
+		width: 290px
+		position: absolute
+		right: 0
+	
+	@media #{$mobile}
+		.icon-search
+			display: inline-block
+			vertical-align: middle
+
+.tile__section
+	@media (min-width: 768px)
+		& + .char__section,
+		& + .useful__video
+			margin-top: -60px
+
+		& + .fast-link__section
+			margin-top: -65px
+
+	@media #{$mobile}
+		& + .char__section
+			margin-top: -15px
+
+.tile__slider 
+	@media #{$mobile}
+		.main__section-head
+			margin-bottom: 5px
+
+		& + .tile__slider 
+			margin-top: 40px
+
+		.swiper-pagination
+			padding-top: 0
+
+.tile__elem
+	display: block
+	
+	@media (min-width: 768px)
+		padding-left: 35px
+		margin-bottom: 40px
+
+		&:hover
+			.tile__image
+				opacity: 0.8
+
+			.tile__title 
+				color: $blueLight
+
+				svg 
+					fill: $blueLight
+
+		.nav-list
+			margin-top: 20px
+
+	@media #{$mobile}
+		padding-left: 25px
+		margin-bottom: 35px
+
+	p
+		color: #838b90
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		margin: 0 0 10px
+
+.tile__image
+	font-size: 0
+	margin: 0 0 25px
+	position: relative
+
+	@media (min-width: 768px)
+		margin-left: -35px
+		transition: 200ms ease-out
+
+	@media #{$mobile}
+		margin-left: -25px
+
+	img 
+		width: 100%
+
+	&--center
+		text-align: center
+
+		img
+			width: auto
+	&--gray
+		background-color: #f0f4f8
+
+.tile__title 
+	color: $blue
+	margin: 0 0 10px
+	display: block
+	position: relative
+	transition: 200ms
+
+	@media (min-width: 768px)
+		font-size: 22px
+
+	@media #{$mobile}
+		font-size: 18px
+		line-height: 20px
+
+	svg 
+		position: absolute
+		left: -35px
+		top: 5px
+		fill: $blue
+		transition: 200ms
+
+		@media #{$mobile}
+			width: 9px
+			height: 14px
+			top: 2px
+			left: -25px
+
+.tile__date
+	color: #0074b8
+	font-family: Roboto, sans-serif
+	font-size: 14px
+	line-height: 20px
+
+.tile__note
+	color: #838b90
+	font-family: Roboto, sans-serif
+	font-size: 14px
+	line-height: 20px
+
+.tile__link
+	color: #006eae
+	font-family: Roboto, sans-serif
+	font-size: 16px
+	line-height: 28px
+	text-decoration: underline
+	transition: all 0.3s ease
+
+	&:hover
+		text-decoration: none
+
+.tile__type-news
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	width: 48px
+	height: 48px
+	background-color: #0074b8
+
+	svg
+		margin: auto
+		fill: #fff
+	.icon-camera
+		width: 28px
+		height: 24px
+	.icon-video-camera
+		width: 28px
+		height: 19px
+	.icon-article
+		width: 24px
+		height: 22px
+
+.char__section
+	background: #f3f8fa
+
+	@media (min-width: 768px)
+		padding: 60px 0
+
+		& + .fast-link__section
+			margin-top: -100px
+
+		.col-md-6
+			&:first-child
+				padding-right: 50px
+
+		p 
+			&:last-child
+				margin-bottom: 0
+
+	@media #{$mobile}
+		padding: 40px 0
+
+		.col-md-6
+			&:first-child
+				margin-bottom: 40px
+
+
+.image-right
+	@media (min-width: 768px)
+		float: right
+		margin: 0 0 30px 30px
+
+	&.shadow-image-align
+		@media (min-width: 768px)
+			margin-right: -160px
+
+.table
+	@media (min-width: 768px)
+		margin: 60px 0
+
+	@media #{$mobile}
+		overflow-x: auto
+		margin: 40px -15px
+
+	table
+		width: 100%
+		border-collapse: collapse
+
+		@media (min-width: 768px)
+			border-left: 2px solid #e0e6ed
+
+	tr
+		background: #f0f4f8
+
+		&:nth-child(2n)
+			background: #fff
+
+	th,
+	td
+		text-align: center
+		padding: 15px
+		border-right: 2px solid #e0e6ed
+
+		@media #{$mobile}
+			&:last-child
+				border-right: none
+
+	th 
+		font-size: 16px
+		line-height: 1.2
+		color: $gray
+
+	td 
+		font-size: 14px
+		color: #838b90
+
+.list
+	li 
+		line-height: 1.2
+		padding-left: 30px
+		position: relative
+		margin-bottom: 10px
+
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 5px
+			width: 8px
+			height: 8px
+			background: #c0d5dd
+
+.tick-list
+	li 
+		font-size: 16px
+		line-height: 1.3
+		padding-left: 45px
+		position: relative
+		margin-bottom: 30px
+
+		@media #{$mobile}
+			font-size: 14px
+			margin-bottom: 20px
+
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 5px
+			width: 18px
+			height: 13px
+			background: url('../images/tick-blue.svg') no-repeat
+	&--small
+		margin-bottom: 30px
+
+		li
+			margin-bottom: 10px
+			padding-left: 25px
+
+			&:before
+				background: url('../images/tick-blue-deep.svg') no-repeat
+
+.list-clip
+	li
+		position: relative
+		padding-left: 33px
+
+		&:not(:last-of-type)
+			margin-bottom: 15px
+
+		.icon-clip
+			position: absolute
+			width: 18px
+			height: 19px
+			top: 3px
+			left: 0
+			fill: #272727
+
+.list__section
+	@media (min-width: 768px)
+		margin-bottom: 80px
+
+	@media #{$mobile}
+		margin-bottom: 30px
+
+.gray__section
+	background: #f3f8fa
+
+	@media (min-width: 768px)
+		padding: 65px 0
+
+	@media #{$mobile}
+		padding: 25px 0 30px
+
+	.container
+		position: relative
+
+	.main__pattern
+		opacity: 0.3
+		right: -400px
+		bottom: 90px
+
+
+.list-elem
+	@media (min-width: 768px)
+		padding-left: 80px
+
+	@media #{$mobile}
+		margin-bottom: 40px
+
+.list-elem__head
+	@media (min-width: 768px)
+		position: relative
+		margin-bottom: 25px
+
+	@media #{$mobile}
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+
+.list-elem__title
+	@media (min-width: 768px)
+		font-size: 30px
+
+	@media #{$mobile}
+		font-size: 22px
+
+.list-elem__icon
+	@media (min-width: 768px)
+		position: absolute
+		left: -80px
+		top: -15px
+		width: 55px
+
+	@media #{$mobile}
+		width: 55px
+
+		svg 
+			max-width: 40px
+
+		.icon-plastic-window
+			height: 55px
+
+		& + .list-elem__title
+			width: calc(100% - 55px)
+
+	svg 
+		width: 100%
+		fill: $blue
+
+	.icon-plastic-window,
+	.icon-profile
+		fill: transparent
+		stroke: $blue
+		stroke-width: 2px
+
+
+.list-elem__body
+	li 
+		margin: 0 0 8px
+
+	a
+		transition: 200ms
+
+		&:hover
+			color: $blue
+
+
+.video__slider
+	position: relative
+
+	@media (min-width: 768px)
+		.swiper-container
+			margin-bottom: 20px		
+
+	.pattern-left-md
+		left: -340px
+		top: -130px
+
+.video__list
+	@media (min-width: 768px)
+		.video-tile
+			// margin-bottom: 45px
+			margin-bottom: 35px
+
+		& + .load-more__button
+			margin-top: 65px
+
+	@media #{$mobile}
+		[class*="col-md-"]:last-child
+			.video-tile
+				margin-bottom: 0
+
+		.video-tile
+			margin-bottom: 35px
+
+.video-tile
+	display: block
+	position: relative
+	z-index: 2
+
+	@media (min-width: 768px)
+		&:hover
+			.video-tile__image
+				opacity: 0.8
+
+			.video-tile__title
+				color: $blueLight
+
+				svg 
+					fill: $blueLight
+
+.video-tile__image
+	font-size: 0
+	margin: 0 0 25px
+	position: relative
+	text-align: center
+	height: 225px
+	overflow: hidden
+	transition: 200ms ease-out
+
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 100px
+		@include background-image(linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%))
+
+	img 
+		height: 100%
+
+	@media #{$mobile}
+		margin: 0 0 20px
+
+.video-tile__title 
+	color: $blue
+	position: relative
+	transition: 200ms
+
+	@media (min-width: 768px)
+		font-size: 22px
+		margin: 0 0 10px
+
+	@media #{$mobile}
+		font-size: 18px
+		line-height: 20px
+
+.video-tiles
+	@media (min-width: 768px)
+		margin-right: -25px
+
+		.swiper-container,
+		.swiper-wrapper
+			display: block
+			transform: translate3d(0, 0, 0) !important
+
+		.swiper-slide
+			width: 33.33333%
+			float: left
+			padding-right: 25px
+			margin-bottom: 25px
+
+			&:nth-child(3n + 1)
+				clear: both
+
+		.load-more__button
+			margin-top: 0
+
+.load-more__button
+	margin-top: 30px
+	text-align: center
+	
+	@media (min-width: 768px)
+		.button
+			padding-left: 60px
+			padding-right: 60px
+
+		& + .load-more__button
+			margin-top: 15px
+
+	@media #{$mobile}
+		.button
+			// font-size: 16px
+
+			& + .button
+				margin-top: 10px
+
+	.icon-arrow-back
+		margin-top: -5px
+
+
+.nav-list
+	li 
+		& + li 
+			margin-top: 10px
+
+	a 
+		transition: 200ms
+
+		&:hover
+			color: $blueLight
+
+
+
+/*
+ * City select
+ */
+
+.city-select
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 20
+	color: #fff
+	padding-bottom: 30px
+	overflow: auto
+	overflow-x: hidden
+	background: rgba(0, 116, 184, 0.95)
+	display: none
+
+	.main__pattern
+		position: fixed
+		right: -100px
+		bottom: 0
+		opacity: 0.3
+	
+.city-select__head
+	padding: 35px 0
+	position: relative
+
+	@media #{$mobile}
+		padding: 15px 0 30px
+
+.city-select__search
+	position: relative
+
+	@media (min-width: 768px)
+		width: 710px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 25px
+
+	@media #{$mobile}
+		margin-right: 35px
+
+.city-select__input
+	width: 100%
+	color: #fff
+	background: transparent
+	border: 1px solid rgba(255, 255, 255, 0.2)
+	transition: 300ms ease-out
+
+	&:focus
+		border-color: #fff
+
+	@media (min-width: 768px)
+		height: 55px
+		font-size: 30px
+		padding-left: 90px
+		padding-right: 15px
+		+placeholder(#9fcbdd, 30px)
+
+	@media #{$mobile}
+		height: 46px
+		font-size: 14px
+		padding-left: 65px
+		padding-right: 15px
+		+placeholder(#9fcbdd, 14px)
+
+.city-select__button
+	width: 65px
+	height: 35px
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	cursor: pointer
+	background: transparent
+	margin: auto
+	pointer-events: none
+	border-right: 1px solid rgba(255, 255, 255, 0.2)
+
+	@media #{$mobile}
+		width: 44px
+		height: 34px
+
+	svg 
+		width: 20px
+		height: 21px
+		fill: #fff
+		+abscenter
+		left: 3px
+		transition: 300ms ease-out
+
+.city-select__close
+	position: absolute
+	right: 0
+	top: 50px
+	cursor: pointer
+
+	@media (min-width: 768px)
+		transition: 200ms ease-out
+
+		&:hover
+			svg 
+				fill: #fff
+
+		&:active
+			opacity: 0.3
+
+	@media #{$mobile}
+		top: 23px
+		right: -5px
+		padding: 5px
+
+		svg
+			width: 20px
+			height: 20px
+		
+	svg 
+		fill: #5eabd9
+		transition: 200ms ease-out
+
+.city-selected 
+	cursor: pointer
+
+	@media (min-width: 768px)
+		display: inline-block
+		vertical-align: middle
+
+		&:hover
+			span 
+				border-bottom-color: transparent
+
+		&:active
+			span
+				opacity: 0.3
+
+	@media #{$mobile}
+		margin-top: 22px
+
+	svg 
+		fill: #fff
+		margin-right: 7px
+		vertical-align: middle
+
+	span 
+		border-bottom: 1px dashed #fff
+		transition: 200ms ease-out
+
+.city-select__grid
+	@media (min-width: 768px)
+		padding-top: 40px
+		width: 800px
+		column-count: 4
+
+.city-select__elem
+	@media (min-width: 768px)
+		width: 190px
+		margin-bottom: 40px
+		display: inline-block
+		vertical-align: top
+
+	@media #{$mobile}
+		margin-bottom: 30px
+
+.city-select__label
+	font-size: 44px
+	line-height: 1
+	margin: 0 0 15px
+
+	@media #{$mobile}
+		font-size: 26px
+		margin: 0 0 10px
+
+.city-select__list
+	font-size: 16px
+
+	li 
+		margin-bottom: 8px
+
+	a 
+		color: #bbe1f0
+		border-bottom: 1px solid #bbe1f0
+
+		@media (min-width: 768px)
+			transition: 200ms ease-out
+
+			&:hover
+				border-bottom-color: transparent
+
+			&:active
+				opacity: 0.3
+
+.city-select__text
+	font-size: 16px
+	color: #a3d4e8	
+
+	@media #{$mobile}
+		br 
+			display: none
+
+.city__example
+	cursor: pointer
+	color: #fff
+	border-bottom: 1px dashed #fff
+
+	@media (min-width: 768px)
+		transition: 200ms ease-out
+
+		&:hover
+			border-bottom-color: transparent
+
+		&:active
+			opacity: 0.3
+
+
+.article
+	color: $gray 
+	font-family: 'Roboto', sans-serif
+
+	@media (min-width: 768px)
+		font-size: 16px
+		line-height: 26px
+
+		h1
+			font-size: 40px
+			line-height: 42px
+			margin: 0 0 35px
+
+		p,
+		ul,
+		ol
+			margin-bottom: 30px
+
+		& > img
+			margin: 30px 0
+
+	@media #{$mobile}
+		font-size: 14px
+		line-height: 20px
+
+		h1 
+			font-size: 26px
+			line-height: 30px
+			margin: 0 0 25px
+
+		p,
+		ul,
+		ol
+			margin-bottom: 20px
+
+		& > img
+			margin: 20px 0
+
+	h1
+		color: $blue
+
+	h5
+		font-size: 20px
+		line-height: 1.2
+		color: $blue
+		font-weight: 700
+		margin: 0 0 10px
+
+		@media #{$mobile}
+			margin-bottom: 15px
+
+	h4
+		font-size: 22px
+		line-height: 1.2
+		color: $blue
+		margin: 0 0 10px
+
+		@media #{$mobile}
+			font-size: 18px
+
+	p,
+	ul,
+	ol
+		font-weight: 300
+
+	a 
+		color: $blue
+		transition: 200ms
+
+		&:hover
+			color: $blueLight
+
+	img 
+		max-width: 100%
+
+// .article__images
+// 	font-size: 0
+// 	line-height: 0
+
+// 	@media (min-width: 768px)
+// 		width: 480px
+// 		position: absolute
+// 		right: -500px
+// 		top: 85px
+// 		text-align: center
+
+// 	@media #{$mobile}
+// 		margin: 35px -15px
+
+// 		&:first-child
+// 			margin-top: 0
+
+.article__image
+	@media (min-width: 768px)
+		margin: 50px 0
+
+		&.flex
+			display: flex
+			align-items: flex-end
+
+			img 
+				width: 815px
+
+	@media #{$mobile}
+		margin: 30px -15px
+
+.image__caption
+	color: #838b90
+
+	@media (min-width: 768px)
+		max-width: 30%
+		font-size: 14px
+		line-height: 20px
+		padding-left: 20px
+
+	@media #{$mobile}
+		font-size: 12px
+		line-height: 16px
+		padding: 10px 15px
+
+.article__video
+	max-width: 815px
+	margin: 40px 0
+
+	@media #{$mobile}
+		margin: 30px 0
+
+.video-frame
+	position: relative
+	margin-bottom: 10px
+
+	@media #{$mobile}
+		width: auto
+		height: auto
+		padding-bottom: 67%
+		margin-bottom: 15px
+
+	iframe
+		width: 100%
+
+		@media #{$mobile}
+			width: 100%
+			height: 100%
+			position: absolute
+			margin: 0
+
+.similar__section
+	@media #{$mobile}
+		& + .fast-link__section
+			padding-top: 50px
+
+
+.compare__head
+	@media (min-width: 768px)
+		+clear
+		border-bottom: 2px solid #e0e6ed
+		padding-bottom: 30px
+
+		.main__title
+			float: left
+			margin: 0 130px 0 0
+
+		.num__elem
+			display: none
+
+.num__elem
+	width: 30px
+	height: 30px
+	font-size: 16px
+	line-height: 30px
+	font-weight: 700
+	display: inline-block
+	vertical-align: middle
+	margin-left: 10px
+	text-align: center
+	color: #fff
+	background: $blueLight
+	border-radius: 50%
+
+.sort-nav
+	@media (min-width: 768px)
+		padding-top: 13px
+		float: left
+
+	@media #{$mobile}
+		+clear
+		margin-top: 20px
+
+.sort-nav__item
+	float: left
+	color: #0071b2
+	font-weight: 700
+	cursor: pointer
+	border-bottom: 1px dotted #0071b2
+	transition: 200ms
+	
+	@media (min-width: 768px)
+		font-size: 20px
+		margin-right: 25px
+
+		&:hover
+			color: #000
+			border-bottom-color: transparent
+
+	@media #{$mobile}
+		font-size: 15px
+		margin-right: 25px
+
+	&.is-active
+		cursor: default
+		color: #000
+		border-bottom-color: #000
+
+.compare__container
+	padding: 40px 0 0
+	overflow-x: auto
+
+	@media #{$mobile}
+		margin: 0 -15px
+
+.compare__grid
+	display: flex
+
+.compare__col
+	width: 204px
+	float: left
+
+	@media #{$mobile}
+		width: 140px
+
+		&:first-child
+			width: 160px
+
+			.compare__row
+				width: 160px
+
+	.small__title
+		color: $blue
+		font-weight: 400
+
+.compare__row
+	width: 204px
+	padding: 12px 15px
+	position: relative
+
+	@media #{$mobile}
+		width: 140px
+
+	&:nth-child(2n)
+		background: #f0f4f8
+
+.compare__label
+	font-weight: 700
+	color: $gray
+
+	@media #{$mobile}
+		font-size: 13px
+
+.compare__del
+	background: #7b9bb4
+	position: absolute
+	top: 0
+	margin: auto
+	cursor: pointer
+	border-radius: 50%
+
+	@media (min-width: 768px)
+		width: 40px
+		height: 40px
+		right: 0
+		transition: 200ms
+
+		&:hover
+			background: #698ca9
+
+		&:active
+			opacity: 0.6
+
+		svg 
+			width: 14px
+			height: 14px
+
+	@media #{$mobile}
+		width: 30px
+		height: 30px
+		right: 5px
+		fill: $blue
+
+		svg 
+			width: 14px
+			height: 14px
+
+	svg 
+		fill: #fff
+		+abscenter
+
+.compare__image
+	margin-bottom: 20px
+
+	img 
+		max-width: 100%
+
+.compare__value
+	color: #838b90
+
+
+/*
+ * Calc
+ */
+
+.calc-window
+	position: relative
+
+	@media (min-width: 768px)
+		min-height: 560px
+		padding-left: 120px
+		padding-right: 380px
+		padding-top: 30px
+		+clear
+
+.calc-window-type
+	@media (min-width: 768px)
+		position: absolute
+		left: 0
+		top: 30px
+
+	@media #{$mobile}
+		margin: 25px 0
+
+.window-type__elem
+	width: 75px
+	height: 75px
+	cursor: pointer
+	position: relative
+	margin-bottom: 5px
+	border-radius: 50%
+	transition: 200ms ease-out
+
+	@media (min-width: 768px)
+		&:hover
+			&:not(.is-active)
+				&:before
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+
+		&:before
+			content: attr(data-title)
+			position: absolute
+			bottom: 0
+			left: 100%
+			font-size: 12px
+			line-height: 1
+			color: #8295a0
+			padding: 6px 8px 4px
+			background: #fff
+			white-space: nowrap
+			opacity: 0
+			border: 1px solid #c2c9d0
+			box-shadow: 0 0 10px rgba(39, 117, 186, 0.35)
+			transition: 200ms ease-out
+			transform: translate3d(5px, 0, 0)
+			z-index: 9999
+
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -30px
+			margin: auto
+			width: 17px
+			height: 9px
+			opacity: 0
+			border-left: 3px solid $blueLight
+			border-bottom: 3px solid $blueLight
+			transform: rotate(-45deg)
+			transition: 200ms ease-out
+
+	@media #{$mobile}
+		width: 50px
+		height: 50px
+		background: #f0f4f8
+		display: inline-block
+		vertical-align: top
+		margin: 0 4px 8px 0
+
+	&.is-active
+		background: $blueLight
+
+		svg 
+			fill: #fff
+
+		&:after
+			opacity: 1
+		
+	svg 
+		fill: #bac2ca
+		+abscenter
+		transition: 200ms ease-out
+
+		@media #{$mobile}
+			width: auto
+			height: auto
+			max-width: 50%
+			max-height: 50%
+
+.calc-window-image
+	text-align: center
+	position: relative
+
+	@media (min-width: 768px)
+		width: 100%
+		max-width: 760px
+		float: left
+		text-align: center
+
+	@media #{$mobile}
+		padding: 0 40px
+
+.window-image__title
+	text-align: left
+	margin: 15px -40px 20px
+
+.window-image
+	position: relative
+	display: inline-block
+
+	@media (min-width: 768px)
+		padding-top: 45px
+
+	@media #{$mobile}
+		padding-top: 30px
+
+.window-image__size
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	font-size: 12px
+	color: #969ea1
+
+	&.height 
+		left: -20px
+		top: 100%
+		width: 417px
+		transform-origin: 0 0
+		transform: rotate(-90deg)
+
+		@media #{$mobile}
+			margin-left: 5%
+	
+	span 
+		display: inline-block
+		vertical-align: middle
+		background: #fff
+		position: relative
+		padding: 5px 20px
+
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		height: 2px
+		background: #eaeff4
+
+.window-image__elem
+	font-size: 0
+
+	img 
+		max-width: 570px
+
+.window-image__select
+	padding-top: 35px
+	max-width: 420px
+	margin: auto
+
+	.row 
+		margin-left: -4px
+		margin-right: -4px
+
+	[class*="col-md-"]
+		padding-left: 4px
+		padding-right: 4px
+
+.calc-window-form
+	@media (min-width: 768px)
+		width: 350px
+		position: absolute
+		right: 0
+		top: 30px
+
+
+/*
+ * Calc panel
+ */
+
+.calc-panel
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 10
+	transition: 300ms ease-out
+
+	@media (min-width: 768px)
+		transform: translate3d(0, calc(100% - 85px), 0)
+
+	@media #{$mobile}
+		transform: translate3d(0, calc(100% - 120px), 0)
+	
+	&.is-open
+		transform: translate3d(0, 0, 0)
+		box-shadow: 0 0 50px rgba(39, 117, 186, 0.3)
+
+		.calc-panel__toggle
+			transition: 200ms 200ms ease-out transform, 200ms ease-out background
+			transform: translate3d(0, 0, 0)
+
+		&:before
+			opacity: 0.85
+			visibility: visible
+
+	&:before
+		content: ""
+		position: fixed
+		height: 2500px
+		bottom: 0
+		left: 0
+		right: 0
+		background: #d3dbe2
+		opacity: 0
+		visibility: hidden
+		transition: 300ms ease-out
+
+.calc-panel__toggle
+	width: 130px
+	height: 34px
+	border-radius: 5px 5px 0 0
+	background: #7b9bb4
+	cursor: pointer
+	position: absolute
+	top: -34px
+	left: 0
+	right: 0
+	margin: auto
+	transition: 200ms ease-out
+	transform: translate3d(0, 100%, 0)
+
+	&:hover
+		background: #698ca9
+
+	&:active
+		background: darken(#7b9bb4, 10%)
+
+	svg 
+		width: 18px
+		height: 11px
+		fill: #fff
+		+abscenter
+
+.calc-panel__top
+	overflow: hidden
+	background: #f0f4f8
+	height: 85px 
+	position: relative
+	z-index: 2
+
+	@media #{$mobile}
+		height: 120px
+
+.calc-panel__control
+	cursor: pointer
+	line-height: 1
+	font-size: 15px
+	padding: 23px 0
+
+	@media (min-width: 768px)
+		float: left
+		color: $blue
+		font-size: 20px
+		font-weight: 700
+		margin-right: 55px
+
+		&:hover
+			.calc-panel__label 
+				color: $blueLight
+
+			.calc-panel__icon
+				background: $blueLight
+	
+	@media #{$mobile}
+		height: 60px
+		padding: 14px 0
+		color: #fff
+		margin: 0 -15px
+		text-align: center
+
+		&.blue 
+			background: $blue
+
+		&.blue-light
+			background: $blueLight
+
+.calc-panel__icon
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	margin-right: 10px
+	transition: 200ms
+	border-radius: 50%
+
+	@media (min-width: 768px)
+		width: 40px
+		height: 40px
+		background: $blue
+
+	@media #{$mobile}
+		width: 30px
+		height: 30px
+
+	svg 
+		fill: #fff
+		+abscenter
+		transition: 200ms
+
+	.icon-window-type-2
+		width: 20px
+		height: 22px
+
+.calc-panel__label 
+	display: inline-block
+	vertical-align: middle
+	transition: 200ms
+
+	.dotted__link
+		transition: 0ms
+
+.calc-panel__count
+	color: $gray
+
+.calc-panel__button
+	float: right
+	height: 85px
+
+	.button 
+		width: 350px
+		height: 100%
+
+.calc-panel__bottom
+	background: #fff
+	padding-top: 35px
+	position: relative
+	z-index: 2
+
+.window-fav
+	+clear
+
+.window-fav__elem
+	width: 100%
+	max-width: 395px
+	height: 100px
+	cursor: pointer
+	position: relative
+	border: 2px solid #eef0f1
+	padding: 10px 125px 10px 80px
+	float: left
+	display: flex
+	align-items: center
+	margin: 0 35px 35px 0
+
+	@media (min-width: 768px)
+		transition: 300ms ease-out
+
+		&:hover
+			border-color: #c1c8d0
+			box-shadow: 0 0 10px rgba(191, 196, 202, 0.35)
+
+		&:active
+			box-shadow: none
+
+.window-fav__icon
+	width: 35px
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 25px
+
+	svg 
+		fill: $blue
+		width: auto
+		height: auto
+		max-width: 100%
+		max-height: 100%
+
+.window-fav__title
+	font-size: 16px
+	font-weight: 700
+	margin: 0 0 5px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	width: 210px
+
+.window-fav__size 
+	color: #969ea1
+	font-size: 12px
+
+.window-fav__controls
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	padding-right: 15px
+	display: flex
+	align-items: center
+
+.window-fav__control
+	width: 45px
+	height: 45px
+	float: left
+	position: relative
+	cursor: pointer
+
+	&:hover
+		svg 
+			fill: $blue
+
+	svg 
+		fill: #bac2ca
+		+abscenter
+		transition: 200ms
+
+
+
+.help-choosing
+	@media #{$mobile}
+		.back-link
+			padding: 8px 0
+			margin-bottom: 7px
+
+.help-choosing__result
+	@media #{$mobile}
+		display: none
+
+.image
+	position: relative
+
+	@media (min-width: 768px)
+		margin-bottom: 80px
+
+	@media #{$mobile}
+		margin-bottom: 40px
+
+	img 
+		max-width: 100%
+
+.back-link
+	display: inline-block
+	cursor: pointer
+	color: $blue
+
+	svg 
+		width: 19px
+		height: 12px
+		vertical-align: middle
+		margin-right: 8px
+		fill: $blue
+
+	span 
+		display: inline-block
+		vertical-align: middle
+
+
+.table__char
+	@media (min-width: 768px)
+		font-size: 16px
+		margin-bottom: 50px
+		border-collapse: collapse
+
+		td 
+			width: 50%
+			vertical-align: top
+			padding: 5px 10px 5px 0
+
+			&:first-child
+				font-weight: 700
+				position: relative
+
+				&:before
+					content: ""
+					position: absolute
+					height: 1px
+					background: #e2e6e7
+					left: 0
+					right: 0
+					top: 66%
+
+				span 
+					padding-left: 0
+
+		span 
+			position: relative
+			background: #fff
+			padding: 5px 15px
+			display: inline-block
+
+	@media #{$mobile}
+		margin: 0 -15px 30px
+		
+		table,
+		tbody,
+		tr,
+		td 
+			display: block
+
+		tr 
+			padding: 10px 15px 15px
+			border-bottom: 1px solid #e2e6e7
+
+		td 
+			&:first-child
+				font-weight: 700
+				padding-bottom: 5px
+
+.button-group
+	@media (min-width: 768px)
+		margin-bottom: 60px
+		display: flex
+		// justify-content: space-between
+
+		& + .compare__links
+			margin-top: -15px
+
+	@media #{$mobile}
+		display: flex
+		margin: 0 -15px 20px
+
+.button-group__elem
+	width: 100%
+
+	@media (min-width: 768px)
+		width: 33.3333%
+		padding-right: 10px
+
+		.button 
+			width: 100%
+
+	@media #{$mobile}
+		&:not(:first-child)
+			padding-left: 1px
+
+	&.is-hide
+		display: none
+
+.compare__links
+	@media (min-width: 768px)
+		margin: 0 0 45px
+
+	@media #{$mobile}
+		text-align: center
+		margin: 20px -10px
+
+.compare__link-elem
+	font-size: 18px
+	font-weight: 700
+	display: inline-block
+	vertical-align: top
+	margin-right: 30px
+
+	@media #{$mobile}
+		font-size: 15px
+		margin: 5px 7px
+
+.control__links
+	max-width: 530px
+
+	@media (min-width: 768px)
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	@media #{$mobile}
+		padding: 10px 15px 0
+		margin-bottom: 40px
+		text-align: center
+
+		&:last-child
+			margin-bottom: 0
+
+.control__link
+	font-size: 18px
+	font-weight: 700
+	color: $blue
+	position: relative
+
+	@media (min-width: 768px)
+		&:hover
+			& > svg
+				// &:not(.icon-share)
+				fill: $blueLight
+
+				// &.icon-share
+				// 	stroke: $blueLight
+
+			& > span 
+				color: $blueLight
+				border-bottom-color: transparent
+
+	@media #{$mobile}
+		display: inline-block
+		vertical-align: middle
+		margin: 0 10px
+
+	& > svg 
+		display: inline-block
+		vertical-align: middle
+		fill: $blue
+		transition: 200ms
+
+		@media (min-width: 768px)
+			margin-right: 10px
+
+		// &:not(.icon-share)
+		// 	fill: $blue
+
+	& > span 
+		display: inline-block
+		vertical-align: middle
+		border-bottom: 1px solid rgba(0, 116, 184, 0.5)
+		transition: 200ms
+
+		@media #{$mobile}
+			display: none
+
+	// .icon-share
+	// 	fill: $blue
+		// stroke: $blue
+	
+	&.is-active
+		.share
+			visibility: visible
+			opacity: 1
+			transform: translate3d(0, 0, 0)
+
+	.icon-share
+		width: 32px
+		height: 38px
+
+.share-link
+	position: relative
+
+	&.is-active
+		.share
+			visibility: visible
+			opacity: 1
+			transform: translate3d(0, 0, 0)
+
+	.dotted__link
+		position: relative
+		transform: translateZ(0)
+
+	.share
+		top: 40px
+
+		@media #{$mobile}
+			right: auto
+			left: 0
+
+			&:before
+				right: auto
+				left: 25px
+
+.share
+	position: absolute
+	top: 60px
+	cursor: default
+	background: #ffffff
+	padding: 20px
+	visibility: hidden
+	opacity: 0
+	z-index: 2
+	transition: 300ms
+	transform: translate3d(0, 10px, 0)
+	box-shadow: 0 0 50px rgba(39, 117, 186, 0.3)
+
+	@media (min-width: 768px)
+		left: 0
+
+	@media #{$mobile}
+		right: -20px
+
+	&:before
+		content: ""
+		position: absolute
+		top: -20px
+		border: 10px solid transparent
+		border-bottom: 10px solid #fff
+
+		@media (min-width: 768px)
+			left: 30px
+
+		@media #{$mobile}
+			right: 25px
+
+	[class*="ya-share"]
+		white-space: nowrap
+
+.help-choosing__list
+	@media (min-width: 768px)
+		margin: -20px 0 30px
+
+		.swiper-wrapper,
+		.swiper-slide
+			display: block
+
+	@media #{$mobile}
+		&.is-button-show
+			.help-choosing__count
+				display: none
+
+			.help-choosing__button
+				display: block
+
+.help-choosing__elem
+	position: relative
+	padding: 30px
+	border: 2px solid #eef0f1
+	margin: 20px 0
+
+	@media #{$mobile}
+		padding-top: 20px
+		margin: 10px 0 0
+
+.help-choosing__title
+	color: $gray
+	font-size: 20px
+	line-height: 1
+	font-weight: 700
+	text-align: center
+	position: absolute
+	top: -10px
+	left: 0
+	right: 0
+
+	@media #{$mobile}
+		font-size: 15px
+
+	span 
+		background: #fff
+		padding: 5px 20px
+		position: relative
+		z-index: 2
+
+		@media #{$mobile}
+			padding: 5px 15px
+
+.choosing__questions
+	@media (min-width: 768px)
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+
+
+.choosing__question
+	position: relative
+
+	@media (min-width: 768px)
+		width: 33.3333%
+		padding: 0 10px
+		
+		&:nth-child(2)
+			&:before
+				content: ""
+				position: absolute
+				top: 32px
+				left: -40%
+				right: -40%
+				height: 1px
+				border-bottom: 1px dotted #c3cacd
+				z-index: -1
+
+	@media #{$mobile}
+		margin-bottom: 15px
+
+		&:before
+			content: ""
+			position: absolute
+			bottom: -21px
+			left: 0
+			right: 0
+			margin: auto
+			width: 1px
+			height: 15px
+			border-left: 1px dotted #c3cacd
+
+		&:last-child
+			margin-bottom: 0
+
+			&:before
+				display: none
+	
+.choosing__elem
+	text-align: center
+	cursor: pointer
+
+	input 
+		width: 0
+		height: 0
+		opacity: 0
+
+		&:checked + span
+			color: $blue
+
+			&:before
+				background: $blue
+
+			&:after
+				opacity: 1
+
+	span 
+		display: block
+		position: relative
+		color: #838b90
+
+		&:before
+			content: ""
+			display: block
+			width: 30px
+			height: 30px
+			margin: 0 auto 15px
+			background-color: #eef0f1
+			border-radius: 50%
+
+			@media (min-width: 768px)
+				box-shadow: 0 0 0 12px #fff
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 9px
+			margin: auto
+			width: 12px
+			height: 8px
+			border-left: 2px solid #fff
+			border-bottom: 2px solid #fff
+			opacity: 0
+			transform: rotate(-45deg)
+
+.list__tick
+	font-size: 16px
+	color: $gray
+
+	li 
+		padding-left: 30px
+		margin-bottom: 12px
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 3px
+			width: 20px
+			height: 13px
+			background: url('../images/tick.svg') no-repeat
+
+.help-choosing__count
+	background: #eef0f1
+	padding: 15px
+	text-align: center
+	color: #838b90
+	font-style: italic
+
+	@media (min-width: 768px)
+		display: none
+
+.help-choosing__button
+	display: none
+
+.group__buttons
+	@media #{$mobile}
+		.button 
+			& + .button 
+				margin-top: 10px
+
+
+.result__head
+	font-size: 20px
+	padding-bottom: 30px
+	border-bottom: 2px solid #eef0f1
+
+	@media #{$mobile}
+		font-size: 17px
+		padding-bottom: 20px
+
+.result__elem
+	padding: 30px 0
+	border-bottom: 1px solid #eef0f1
+
+	@media (min-width: 768px)
+		min-height: 270px
+		padding-right: 320px
+		position: relative
+
+.result__title
+	font-size: 22px
+	margin-bottom: 20px
+
+	& > b 
+		font-weight: normal
+		color: $blueLight
+
+	@media #{$mobile}
+		font-size: 18px
+		margin-bottom: 10px
+
+.result__cat
+	color: $gray
+	margin-bottom: 20px
+	display: inline-block
+
+	@media #{$mobile}
+		margin-bottom: 10px
+
+	li 
+		float: left
+		margin-right: 20px
+		position: relative
+
+		&:last-child
+			&:before
+				display: none
+
+		&:before
+			content: "/"
+			position: absolute
+			right: -12px
+			top: 0
+
+	a 
+		transition: 200ms
+
+		&:hover
+			color: $blueLight
+
+.result__description
+	color: #838b90
+	line-height: 20px
+	font-family: 'Roboto', sans-serif
+
+	& > b 
+		font-weight: normal
+		color: $blueLight
+
+.note__found
+	color: $blueLight
+
+.result__link
+	padding-top: 25px
+	padding-bottom: 2px
+	width: 100%
+	+to
+
+.result__image
+	font-size: 0
+
+	&.result-video
+		cursor: pointer
+
+	@media (min-width: 768px)
+		width: 290px
+		height: 205px
+		position: absolute
+		right: 0
+		top: 30px
+
+		img 
+			height: 100%
+
+	@media #{$mobile}
+		max-width: 110px
+		float: right
+		position: relative
+		margin: 0 0 15px 20px
+
+	img 
+		max-width: 100%
+
+
+// Pager
+
+.pager
+	font-size: 20px
+	color: $blue
+	font-weight: 700
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	@media (min-width: 768px)
+		margin: 35px 0
+
+	@media #{$mobile}
+		font-size: 17px
+		margin: 30px 0
+
+	svg 
+		fill: $blue
+		transition: 200ms
+
+		&:first-child
+			margin-right: 5px
+
+		&:last-child
+			margin-left: 5px
+
+.pager__link
+	width: 40px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	display: inline-block
+	vertical-align: middle
+	border-radius: 50%
+	transition: 200ms
+
+	@media #{$mobile}
+		width: 35px
+		height: 35px
+		line-height: 35px
+
+	&.is-active
+		width: 66px
+		height: 66px
+		line-height: 66px
+		color: #fff
+		background: $blueLight
+
+		@media #{$mobile}
+			width: 50px
+			height: 50px
+			line-height: 50px
+
+a.pager__link
+	@media (min-width: 768px)
+		&:hover
+			color: $blueLight
+
+.pager__prev,
+.pager__next
+	@media #{$mobile}
+		width: 40px
+		height: 40px
+		position: relative
+
+		span 
+			display: none
+
+		svg 
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+
+.pager__next
+	@media #{$mobile}
+		svg 
+			right: 0
+
+a.pager__prev,
+a.pager__next
+	@media (min-width: 768px)
+		transition: 200ms
+
+		&:hover
+			color: $blueLight
+
+			svg 
+				fill: $blueLight
+
+
+/*
+ * Map
+ */
+
+.map__head
+	position: relative
+
+	@media (min-width: 768px)
+		height: 95px
+		background-color: rgb(243,248,250)
+		@include filter-gradient(#f3f8fa, #ffffff, horizontal)
+		@include background-image(linear-gradient(left,  rgba(243,248,250,1) 0%,rgba(243,248,250,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%))
+
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 15px
+			right: 15px
+			height: 2px
+			background: #f3f8fa
+
+	@media #{$mobile}
+		background: #f3f8fa
+		height: 45px
+		z-index: 2
+		margin-top: -30px
+		box-shadow: 0 0 6px rgba(88, 115, 131, 0.4)
+
+.map__search
+	position: relative
+
+	@media (min-width: 768px)
+		width: 450px
+		float: left
+
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			width: 40px
+			pointer-events: none
+			@include background-image(linear-gradient(left, rgba(255,255,255,0) 0%,rgba(243,248,250,1) 100%))
+
+.map__search-button
+	width: 45px
+	height: 45px
+	position: absolute
+	top: 0
+	bottom: 0
+	left: -10px
+	background: transparent
+	outline: none
+	cursor: pointer
+	margin: auto
+
+	@media (min-width: 768px)
+		&:hover
+			svg 
+				fill: $blueLight
+
+	svg 
+		fill: $blue
+		+abscenter
+		transition: 300ms
+
+		@media #{$mobile}
+			width: 20px
+			height: 20px
+
+
+.map__search-input
+	color: $blue
+	background: transparent
+
+	@media (min-width: 768px)
+		width: 100%
+		height: 95px
+		font-size: 26px
+		padding-left: 45px
+		// padding-right: 25px
+		+placeholder($blue, 26px)
+
+	@media #{$mobile}
+		width: 100%
+		height: 45px
+		font-size: 14px
+		padding-left: 40px
+		+placeholder($blue, 14px)
+
+.map__promo
+	@media (min-width: 768px)
+		float: left
+		width: calc(100% - 450px)
+		height: 93px
+		margin-top: 2px
+		background: #fff
+
+	@media #{$mobile}
+		display: none
+
+.promo-top
+	height: 100%
+	padding: 0 80px 0 40px
+	position: relative
+	font-size: 16px
+	line-height: 24px
+	font-family: 'Roboto', sans-serif
+	display: flex
+	align-items: center
+	// transition: 200ms
+
+	// &:hover
+	// 	opacity: 0.6
+
+.promo-top__logo
+	width: 120px
+
+	img 
+		max-width: 100%
+
+.promo-top__icon
+	position: absolute
+	right: 0
+	top: -2px
+
+
+.map__content
+	position: relative
+	overflow: hidden
+
+	@media (min-width: 768px)
+		height: 840px
+
+		&.small--map 
+			height: 600px
+
+			.aside-map
+				height: 600px
+
+	@media #{$mobile}
+		overflow-x: hidden
+
+		& + .work-example__section,
+		& + .fast-link__section
+			margin-top: 40px
+
+		&.is-sm
+			.map
+				height: 195px
+
+			.map-list
+				display: block
+
+.map
+	@media (min-width: 768px)
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+	@media #{$mobile}
+		height: 480px
+
+	@media (max-width: 360px)
+		height: 335px
+
+.aside-map
+	@media (min-width: 768px)
+		width: 450px
+		height: 840px
+		padding: 2px
+		background: #fff
+		position: relative
+		z-index: 2
+		// border-bottom: 4px solid #ecf1f3
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+		display: none
+
+		&.is-open
+			display: block
+
+		.scroll 
+			height: 100%
+
+		.jspPane
+			width: 100% !important
+
+		&.partner-aside
+			display: block
+
+			.map-list
+				padding-top: 30px
+
+			.map-list__label
+				cursor: default
+
+	@media #{$mobile}
+		margin: 0 -15px
+		position: relative
+
+.aside-map__control
+	text-align: center
+	margin-top: -15px
+	margin-bottom: 10px
+
+	@media (min-width: 768px)
+		display: none
+
+.aside-map__toggle
+	width: 100px
+	height: 36px
+	cursor: pointer
+	text-align: center
+	color: $blue
+	font-size: 12px
+	background: #fff
+	box-shadow: 0 2px 6px rgba(153, 159, 167, 0.4)
+	border-radius: 38px
+
+	&.is-active
+		color: #a6aeb7
+
+		& > svg 
+			fill: #a6aeb7
+			transform: rotate(180deg)
+
+	& > svg 
+		display: inline-block
+		vertical-align: middle
+		margin-right: 2px
+		fill: $blue
+
+.aside-map__text
+	padding: 40px
+	font-size: 16px
+
+	p 
+		margin-bottom: 30px
+
+.scroll 
+	outline: none
+
+.map-list
+	@media (min-width: 768px)
+		padding: 0 36px
+
+	@media #{$mobile}
+		display: none
+
+.map-list__elem
+	position: relative
+	border-bottom: 2px solid #e7eff2
+
+	@media (min-width: 768px)
+		&:last-child
+			border-bottom-color: transparent
+
+	@media #{$mobile}
+		border-bottom-width: 1px
+
+	&.is-open
+		.map-list__dropdown
+			display: block
+
+		.map-list__label
+			font-weight: 700
+
+			.icon-arrow-bottom
+				fill: $gray
+				transform: rotate(-180deg)
+
+				@media #{$mobile}
+					display: none
+
+.map-list__label
+	position: relative
+	padding: 16px 15px 12px 0
+	font-size: 22px
+	line-height: 1
+	color: $gray
+	cursor: pointer
+
+	@media #{$mobile}
+		font-size: 15px
+		font-weight: 700
+		padding: 15px
+
+	.icon-arrow-bottom
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		fill: #c3cdd4
+		transition: 200ms
+
+		@media #{$mobile}
+			right: 15px
+			transform: rotate(-90deg)
+
+.map-list__dropdown
+	padding-bottom: 20px
+	display: none
+
+	@media #{$mobile}
+		padding: 0 15px
+
+.map-list__review
+	margin-bottom: 10px
+
+.map-list__rating
+	display: inline-block
+	margin-right: 5px
+
+.map-list__review-count
+	color: #838b90
+
+.map-list__info
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+		margin-bottom: 20px
+
+.map-list__info-col
+	@media (min-width: 768px)
+		&:first-child
+			width: 60%
+
+		&:last-child
+			text-align: right
+
+.map-list__info-elem
+	color: #838b90
+	margin-bottom: 7px
+
+	@media #{$mobile}
+		margin-bottom: 10px
+
+	a 
+		color: $blue
+
+		@media (min-width: 768px)
+			transition: 200ms
+
+			&:hover
+				color: $blueLight
+
+	svg 
+		margin-right: 5px
+		margin-top: -3px
+		display: inline-block
+		vertical-align: middle
+
+.map-list__info-icon
+	width: 22px
+	display: inline-block
+
+	.icon-share
+		width: 17px
+		height: 17px
+		// stroke: #000
+		// fill: transparent
+
+.map-list__buttons
+	@media (min-width: 768px)
+		width: 100%
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-between
+
+		.button 
+			width: 49%
+			font-size: 16px
+			padding-left: 5px
+			padding-right: 5px
+
+	@media #{$mobile}
+		position: absolute
+		top: 5px
+		right: 5px
+
+		.button 
+			width: 40px
+			height: 40px
+			background: transparent
+
+			svg 
+				display: inline-block
+
+			span 
+				display: none
+
+			.icon-tape
+				width: 28px
+				height: 24px
+				stroke: $blue
+				stroke-width: 2px
+
+			.icon-phone
+				fill: $blue
+				width: 22px
+				height: 22px
+
+
+.map-list__address
+	@media #{$mobile}
+		margin: 15px -15px 0
+
+.address-elem
+	@media (min-width: 768px)
+		margin-bottom: 5px
+
+		.icon-arrow-bottom
+			display: none
+
+		&.is-open
+			.address-elem__label
+				color: $gray
+				border-bottom-color: $gray
+
+			.address-elem__body
+				display: block
+
+	@media #{$mobile}
+		border-bottom: 1px solid #e6eaec
+
+		&:last-child
+			border-bottom: none
+
+		&.is-open
+			background: #f0f4f8
+			border-bottom-color: transparent
+
+			.address-elem__head
+				.icon-arrow-bottom
+					fill: $gray
+					transform: rotate(180deg)
+
+			.address-elem__label
+				color: $gray
+
+			.address-elem__body
+				display: block
+
+
+.address-elem__head
+	position: relative
+
+	.icon-arrow-bottom
+		position: absolute
+		right: 15px
+		top: 0
+		bottom: 0
+		margin: auto
+		fill: #c1c9cf
+
+.address-elem__label
+	font-weight: 700
+	color: $blue
+	cursor: pointer
+
+	@media (min-width: 768px)
+		font-size: 17px
+		display: inline-block
+		border-bottom: 1px dotted $blue
+		transition: 200ms
+
+		&:hover
+			border-bottom-color: transparent
+
+	@media #{$mobile}
+		padding: 10px 15px
+	
+.address-elem__body
+	position: relative
+	display: none
+
+	@media (min-width: 768px)
+		padding: 20px 0 15px
+
+		.map-list__info
+			margin-bottom: 0
+
+	@media #{$mobile}
+		padding: 15px 15px 20px
+		border-top: 1px solid #dae0e3
+
+.address-elem__info
+	display: flex
+	margin-bottom: 10px
+
+	.dotted__link
+		color: $blue
+
+.address-elem__info-label
+	color: #838b90
+	margin-right: 10px
+
+.address-elem__info-content
+	@media (min-width: 768px)
+		br 
+			display: none
+
+	&.is-open
+		.dotted__link
+			display: none
+
+		.address-elem__hidden
+			display: block
+
+.address-elem__hidden
+	display: none
+
+.address-elem__phone
+	white-space: nowrap
+
+.address-elem__bottom
+	position: relative
+
+.address-elem__buttons
+	position: absolute
+	right: 0
+
+	@media (min-width: 768px)
+		top: 5px
+
+	@media #{$mobile}
+		bottom: -15px
+		
+.button__sm
+	width: 45px
+	height: 45px
+	cursor: pointer
+	position: relative
+	background: transparent
+
+	@media (min-width: 768px)
+		background: #eaf6fd
+		transition: 200ms
+
+		&:hover
+			background: darken(#eaf6fd, 5%)
+
+	svg 
+		+abscenter
+
+	.icon-tape
+		width: 28px
+		height: 24px
+		fill: transparent
+		stroke: $blue
+		stroke-width: 1.5px
+		left: 2px
+		top: -2px
+
+	.icon-phone
+		fill: $blue
+		width: 22px
+		height: 22px
+
+.contact-aside
+	@media (min-width: 768px)
+		.map-list
+			padding-top: 10px
+
+	@media #{$mobile}
+		.map-list__elem 
+			&.is-open
+				background: #f0f4f8
+
+				.map-list__label
+					border-bottom: 1px solid #dae0e3
+
+					.icon-arrow-bottom
+						display: block
+
+			&:not(.is-open)
+				.map-list__label
+					font-weight: 400
+
+		.map-list__dropdown
+			padding-top: 20px
+			padding-bottom: 20px
+	&--partner
+		position: absolute
+		top: 0
+		left: 15px
+		bottom: 0
+		width: 450px
+		padding: 30px 43px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+		background-color: #ffffff
+
+		.icon-print-map
+			width: 24px
+			height: 21px
+
+
+.map-aside__info
+	color: $gray
+	margin-bottom: 25px
+
+	@media (min-width: 768px)
+		font-size: 17px
+
+.map-aside__contact
+	@media (min-width: 768px)
+		font-size: 16px
+
+.map-aside__contact
+	margin-bottom: 14px
+
+	@media #{$mobile}
+		margin-bottom: 12px
+
+	a 
+		color: $blue
+
+.map-aside__contact-elem
+	min-height: 20px
+	padding-left: 38px
+	display: flex
+	align-items: center
+	position: relative
+
+	& > svg 
+		position: absolute
+		left: 0
+		top: 0
+		fill: $blue
+		transition: 200ms
+
+	.icon-phone-ring
+		width: 20px
+		height: 20px
+
+	.icon-phone-fax,
+	.icon-mail-send
+		width: 20px
+		height: 22px
+
+	.icon-pdf
+		width: 24px
+		height: 22px
+
+	.icon-pin-place
+		width: 24px
+		height: 24px
+
+	.icon-share
+		width: 24px
+		height: 26px
+
+a.map-aside__contact-elem
+	transition: 200ms
+
+	&:hover
+		color: $blueLight
+
+		& > svg 
+			fill: $blueLight
+
+.map-aside__address
+	margin: 20px 0
+	line-height: 21px
+
+	@media #{$mobile}
+		margin: 25px 0
+
+		b 
+			display: block
+			margin-bottom: 5px
+
+.map-aside__address-elem
+	& + .map-aside__address-elem
+		margin-top: 10px
+
+
+.date__head
+	margin-bottom: 45px
+
+	@media #{$mobile}
+		margin: 15px 0 20px
+
+	svg 
+		fill: $blue
+		vertical-align: middle
+		margin-right: 10px
+		position: relative
+		top: -3px
+
+.date__head-label
+	font-size: 17px
+	font-weight: 700
+	color: $gray
+
+	@media #{$mobile}
+		font-size: 15px
+
+.promo-bottom-box
+	background: #f3f8fa
+	padding: 25px 60px
+	position: relative
+	margin: 35px 0
+
+	@media #{$mobile}
+		margin: 0 0 25px
+
+	.icon-promo
+		width: 25px
+		height: 25px
+		fill: $blue
+		position: absolute
+		top: 25px
+		left: 20px
+
+.promo-bottom-box__link
+	@media #{$mobile}
+		width: 100%
+		+to
+
+
+
+.promo-info
+	margin-bottom: 35px
+
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.promo-info__image
+	@media (min-width: 768px)
+		width: calc(100% - 420px)
+
+		img 
+			max-width: 100%
+
+	@media #{$mobile}
+		margin: 0 -15px 20px
+
+		img 
+			width: 100%
+
+.promo-info__text
+	@media (min-width: 768px)
+		width: 400px
+
+.promo-info__title
+	font-size: 22px
+	font-weight: 700
+	margin: 0 0 10px
+
+.promo-info__logo
+	font-size: 0
+	margin-bottom: 20px
+
+	img 
+		max-width: 100%
+		max-height: 100%
+
+	@media (min-width: 768px)
+		height: 65px
+
+.promo-info__contact
+	margin-bottom: 25px
+
+.promo-info__buttons
+	margin-bottom: 20px
+
+	@media (min-width: 768px)
+		margin-right: -15px
+		white-space: nowrap
+
+		.button
+			font-size: 16px
+			padding-left: 20px
+			padding-right: 20px
+
+	@media (min-width: 768px) and (max-width: 1100px)
+		.button
+			padding-left: 15px
+			padding-right: 15px
+
+	@media #{$mobile}
+		.button
+			font-size: 18px
+
+			& + .button
+				margin-top: 10px
+				background: #fff
+				color: $blue
+				border: 2px solid $blue
+
+.control-links
+	@media (min-width: 768px)
+		display: flex
+
+.control-link__item
+	color: $blue
+	margin-right: 20px
+	transition: 200ms
+
+	&:last-child
+		margin-right: 0
+
+	&:hover
+		color: $blueLight
+
+	svg 
+		fill: $gray
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px 
+
+	& > span 
+		display: inline-block
+		vertical-align: middle
+
+	.icon-share
+		width: 17px
+		height: 18px
+
+	.icon-print
+		width: 21px
+		height: 20px
+
+	.icon-pdf
+		width: 20px
+		height: 21px
+
+
+.partner-box__head
+	@media (min-width: 768px)
+		margin-bottom: 45px
+		display: flex
+		justify-content: space-between
+
+.partner-box__logo
+	@media (min-width: 768px)
+		width: 315px
+		height: 215px
+		position: relative
+		border-right: 2px solid #e7eff2
+		
+		img 
+			+abscenter
+
+	@media #{$mobile}
+		text-align: center
+		margin-bottom: 15px
+
+	img 
+		max-width: 100%
+
+.partner-box__info
+	@media (min-width: 768px)
+		width: calc(100% - 390px)
+
+.partner-box__description
+	font-size: 16px
+	line-height: 26px
+	font-weight: 300
+	color: $gray
+
+
+.promo-widjet
+	position: relative
+	z-index: 1
+
+	@media #{$mobile}
+		margin-top: 25px
+
+.promo-widjet__title
+	font-size: 36px
+	color: $blue
+	margin-bottom: 20px
+
+	@media #{$mobile}
+		font-size: 26px
+		margin-bottom: 15px
+
+
+.work-example
+	@media (min-width: 768px)
+		.swiper-wrapper
+			display: flex
+			flex-wrap: wrap
+			transform: translate3d(0, 0, 0) !important
+
+		.swiper-slide
+			width: 25% !important
+			height: 475px
+
+			&.wide
+				width: 50% !important
+				z-index: 2
+
+	@media (min-width: 768px) and (max-width: 1199px) and (max-height: 1024px)
+		.swiper-slide
+			height: 380px
+
+	@media (min-width: 1200px) and (max-height: 800px)
+		.swiper-slide
+			height: 380px
+
+	@media #{$mobile}
+		.main__section-head,
+		.swiper-mobile__nav,
+		.swiper-pagination
+			padding: 0 15px
+
+		.swiper-container
+			margin-bottom: 20px
+
+	.pattern-left-md
+		bottom: -30px
+
+.work-example__title
+	width: 370px
+	// margin: auto
+	padding-top: 90px
+	position: absolute
+	right: 26%
+
+.work-example__elem
+	width: 100%
+	height: 100%
+	background-color: $blue
+	+backcover
+
+	@media #{$mobile}
+		height: auto
+		padding-bottom: 100%
+
+	.main__title
+		color: #fff
+
+
+.advantage-elem
+	max-width: 275px
+	margin: auto
+	text-align: center
+	
+	p 
+		color: #838b90
+
+.advantage-elem__icon
+	width: 120px
+	height: 120px
+	margin: 0 auto 25px
+	background: #f3f8fa
+	position: relative
+	border-radius: 50%
+
+	img 
+		+abscenter
+
+
+.flex-row
+	@media (min-width: 768px)
+		display: flex
+		align-items: center
+
+.window-profile__section
+	position: relative
+	margin-bottom: 0
+
+	.pattern-left-md
+		bottom: -30px
+
+.window-profile-image
+	@media #{$mobile}
+		text-align: center
+		margin-bottom: 30px
+
+	img 
+		max-width: 100%
+
+.window-constructor__section
+	position: relative
+
+	&--profile
+		padding: 65px 0 135px
+		background-color: #f3f8fa
+		background-position: 100% 0
+		background-size: contain
+
+		@media #{$mobile}
+			padding: 0
+
+	@media #{$mobile}
+		margin-bottom: 40px
+
+		.container
+			padding: 0
+
+
+
+.window-constructor__elem
+	position: relative
+	z-index: 2
+	
+	@media (min-width: 768px)
+		&:first-child
+			padding-top: 90px
+
+		& + .window-constructor__elem
+			margin-top: 60px
+
+	@media #{$mobile}
+		padding: 30px 10px
+
+		.arrow-prev,
+		.arrow-next
+			display: none
+
+.window-constructor__swiper
+	@media (min-width: 768px)
+		max-width: 840px
+		padding: 0 45px
+		position: relative
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+		.swiper-pagination
+			left: 0
+			right: 0
+			padding-top: 20px
+			text-align: center
+
+		&.sm
+			.swiper-slide
+				width: 84px
+
+		&.md
+			.swiper-slide
+				width: 145px
+
+		&.swiper-padding-reset
+			padding-left: 0
+			padding-right: 90px
+
+	@media #{$mobile}
+		&.sm
+			// .swiper-slide
+			// 	width: 74px
+
+			.constructor-elem
+				margin-bottom: 10px
+
+		&.md
+			// .swiper-slide
+			// 	width: 85px
+
+.arrow-prev,
+.arrow-next
+	height: 35px
+	cursor: pointer
+	position: absolute
+	top: 0
+	bottom: 30px
+	margin: auto
+
+	svg 
+		fill: #cbd2d5
+		transition: 200ms 
+
+.arrow-prev
+	left: 0
+
+.arrow-next
+	right: 0
+
+.constructor-elem
+	cursor: pointer
+	text-align: center
+
+	@media (min-width: 768px)
+		width: 84px
+		
+		&:hover
+			.constructor-elem__image
+				border-color: $blue		
+			
+			.constructor-elem__title
+				color: $blue	
+
+		&.md
+			width: 145px
+
+			.constructor-elem__image
+				width: 125px
+				height: 125px
+
+	@media #{$mobile}
+		// width: 74px
+
+		&.md
+			// width: 85px
+
+			.constructor-elem__image
+				width: 85px
+				height: 85px
+
+	&.is-active
+		.constructor-elem__image
+			border-color: $blue		
+		
+		.constructor-elem__title
+			color: $blue
+
+.constructor-elem__image
+	width: 70px
+	height: 70px
+	margin: 0 auto 10px
+	border: 2px solid #e0e5e7
+	+backcover
+	border-radius: 50%
+	transition: 200ms
+
+	@media #{$mobile}
+		width: 65px
+		height: 65px
+
+.constructor-elem__title
+	font-size: 12px
+	color: #838b90
+	transition: 200ms
+
+	@media #{$mobile}
+		padding: 0 2px
+		line-height: 1
+
+.window-constructor__image
+	font-size: 0
+
+	@media (min-width: 768px)
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+
+		& + .window-constructor__elem
+			padding-top: 60px
+
+	@media (min-width: 768px) and (max-width: 1800px)
+		right: -200px
+
+	@media (min-width: 768px) and (max-width: 1340px)
+		right: -340px
+	
+	@media #{$mobile}
+		img 
+			width: 100%
+
+.window-constructor__box
+	@media #{$mobile}
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: #fff
+		overflow-y: auto
+		z-index: 100
+		display: none
+
+		&.is-open
+			display: block
+
+.window-constructor__controls
+	@media #{$mobile}
+		padding-top: 20px
+
+	.button 
+		& + .button 
+			margin-top: 10px
+
+
+.window-tip
+	position: absolute
+	
+	// @media (min-width: 768px)
+		// &.tip--first
+		// 	top: 78px
+		// 	left: -10px
+
+		// 	// .window-tooltip
+		// 	// 	top: -75px
+
+		// &.tip--second
+		// 	top: 115px
+		// 	left: 120px
+
+		// 	// .window-tooltip
+		// 	// 	top: -110px
+
+		// &.tip--third
+		// 	top: 275px
+		// 	left: 300px
+
+		// 	// .window-tooltip
+		// 	// 	top: -215px
+
+		// &.tip--fourth
+		// 	top: 460px
+		// 	left: 520px
+
+		// 	// .window-tooltip
+		// 	// 	top: -415px
+
+		// &.tip--fifth
+		// 	top: 585px
+		// 	left: 100px
+
+			// .window-tooltip
+			// 	top: -415px
+
+	// @media #{$mobile}
+	// 	&.tip--first
+	// 		top: 15%
+	// 		left: -10px
+
+	// 	&.tip--second
+	// 		top: 25%
+	// 		left: 20%
+
+	// 	&.tip--third
+	// 		top: 42%
+	// 		left: 52%
+
+	// 	&.tip--fourth
+	// 		top: 70%
+	// 		left: 82%
+
+	// 	&.tip--fifth
+	// 		top: 90%
+	// 		left: 15%
+
+
+.window-tip__icon
+	width: 33px
+	height: 33px
+	cursor: pointer
+	background: $blueLight
+	position: absolute
+	z-index: 2
+	transition: 200ms
+	border-radius: 50%
+
+	@media (min-width: 768px)
+		&:hover
+			background: $blue
+
+	&.is-open
+		background: $blue
+
+		& > svg
+			transform: rotate(45deg)
+
+		& + .window-tooltip
+			opacity: 1
+			visibility: visible
+			z-index: 3
+
+			@media (min-width: 768px)
+				transform: translate3d(0, -52%, 0)
+
+	& > svg 
+		width: 15px
+		height: 15px
+		fill: #fff
+		+abscenter
+		transition: 200ms
+
+.window-tooltip
+	position: absolute
+	top: 0
+	right: 10px
+	z-index: 2
+	opacity: 0
+	visibility: hidden
+	transition: 200ms
+
+	@media (min-width: 768px)
+		width: 395px
+		transform: translate3d(10px, -52%, 0)
+
+	@media #{$mobile}
+		position: fixed
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		overflow: auto
+		text-align: center
+		background: rgba(211, 219, 226, 0.85)
+		// display: none
+
+.window-tooltip__container
+	background: #fff
+	position: relative
+	box-shadow: 0 0 50px rgba(39, 117, 186, 0.3)
+
+	@media #{$mobile}
+		max-width: 300px
+		display: inline-block
+		text-align: left
+		margin: 70px 0 20px
+
+.window-tooltip__close
+	width: 33px
+	height: 33px
+	cursor: pointer
+	position: absolute
+	top: 10px
+	right: 10px
+	cursor: pointer
+	background: #2775ba
+	z-index: 2
+	border-radius: 50%
+
+	@media (min-width: 768px)
+		display: none
+
+	svg 
+		fill: #fff
+		width: 11px
+		height: 11px
+		+abscenter
+
+.window-tooltip__image
+	font-size: 0
+
+	img 
+		width: 100%
+
+.window-tooltip__content
+	padding: 30px
+
+	@media #{$mobile}
+		padding: 20px 15px
+
+		.small__title 
+			font-size: 20px
+			line-height: 1.2
+
+	p 
+		color: #838b90
+		margin-bottom: 20px
+
+
+.tab-content
+	& > div 
+		display: none
+
+		&:first-child
+			display: block
+
+
+
+// Ordering
+.ordering-wrap
+	margin-bottom: 55px
+
+.ordering__order
+	background-color: rgb(2, 173, 238)
+	width: 30px
+	height: 30px
+	z-index: 50
+	border-radius: 50%
+	padding: 4px 11px
+	color: #fff
+	font-size: 18px
+
+.ordering__description
+	margin-top: 35px
+	margin-bottom: 20px
+	font-size: 16px
+	@media #{$mobile}
+		margin-top: 0
+
+.ordering
+	&__item
+		border-bottom: 2px solid #eef0f1
+		padding-top: 25px
+		padding-bottom: 25px
+		display: flex
+		flex-direction: row
+		align-items: center
+		align-content: center
+
+		.window-fav__icon
+			width: 47px
+			height: 37px
+			position: absolute
+			top: -7px
+			bottom: 0
+			left: initial
+			right: 0
+			svg
+				width: 47px
+
+		.window-fav__info
+			margin-left: 10px
+
+			@media #{$mobile}
+				margin-left: 0
+
+		.window-fav__title
+			font-size: 18px
+			font-weight: bold
+			color: #272727
+
+		.window-fav__size
+			color: #969ea1
+			font-size: 12px
+			font-weight: normal
+
+		.window-fav__txt
+			color: #838b90
+			font-size: 14px
+			line-height: 20px
+
+		.ordering__price
+			font-size: 25px
+			color: #272727
+			font-weight: bold
+			text-align: center
+			span
+				color: #272727
+				font-size: 14px
+				font-weight: bold
+
+		.icon
+			margin-right: -10px
+			svg
+				float: right
+				fill: #adb4bd
+
+.ordering-panel
+
+	@media #{$mobile}
+		transform: translate3d(0,calc(100% - 60px),0)
+
+	.calc-panel__top
+		height: auto
+
+		.container
+			padding: 0
+
+.ordering-panel
+	&__control
+		height: 85px
+		float: left
+		color: #0074b8
+		font-size: 20px
+		font-weight: 700
+		margin-right: 0
+		max-width: 345px
+		width: 100%
+		display: flex !important
+		flex-direction: row
+		align-items: center
+		justify-content: flex-start
+		@media #{$mobile}
+			display: none !important
+		.ordering-panel
+
+			&__icon
+				font-size: 14px
+				float: left
+				width: 22px
+				height: 26px
+				display: inline-block
+				vertical-align: middle
+				position: relative
+				margin-right: 10px
+				transition: 200ms
+				svg
+					width: 22px
+					height: 26px
+					fill: #2775ba
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					margin: auto
+			&__label
+				font-size: 20px
+				float: left
+				color: #272727
+				font-weight: bold
+
+	&__price
+		position: relative
+		height: 85px
+		float: right
+		max-width: 345px
+		width: 100%
+		display: flex
+		flex-direction: row
+		align-items: center
+		align-content: center
+		justify-content: center
+		@media #{$mobile}
+			display: none !important
+		&:before
+			content: ''
+			border-left: 2px dashed rgba(39,117,186,.2)
+			height: 100%
+			position: absolute
+			left: 0
+		.ordering-panel
+
+			&__icon
+				width: 30px
+				height: 30px
+				font-size: 14px
+				float: left
+				display: inline-block
+				vertical-align: middle
+				position: relative
+				margin-right: 10px
+				transition: 200ms
+				svg
+					width: 30px
+					height: 30px
+					fill: #2775ba
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					margin: auto
+					transform: rotate(90deg)
+
+			&__label
+				float: left
+				.panel
+
+					&__price
+						font-size: 25px
+						font-weight: bold
+						width: 100%
+						color: #272727
+					&__description
+						color: #969ea1
+						font-size: 14px
+						line-height: 18px
+						font-weight: normal
+						width: 100%
+
+	&__button
+		float: right
+		height: 85px
+		@media #{$mobile}
+			float: left
+			width: 100%
+		.button
+			width: 345px
+			height: 100%
+			@media #{$mobile}
+				width: 100%
+				height: 60px
+				svg
+					display: inline-block
+					position: relative
+					top: 6px
+					margin-left: 10px
+
+
+.ordering-forms
+	max-width: 815px
+	width: 100%
+	margin: 0 auto
+	display: block
+	padding: 0 15px
+	.forms-wrap
+		padding: 0 30px
+
+		@media #{$mobile}
+			padding: 0
+
+@media #{$mobile}
+	.additional-options,
+	.personal-data
+		.section__title
+			color: #222222
+			font-weight: bold
+			font-size: 15px
+			margin-top: 20px
+
+
+
+/*** custom checkboxes ***/
+.checkbox-wrap
+	margin-top: 25px
+
+.checkbox
+	display: block !important
+	color: #272727
+	font-size: 16px
+	line-height: 24px
+
+input[type=checkbox]
+	visibility: hidden
+
+/* to hide the checkbox itself */
+
+input[type=checkbox] + label
+	position: absolute
+	left: 0
+	top: 0
+	margin-top: 2px
+
+input[type=checkbox] + label:before
+	font-family: 'FontAwesome'
+	display: inline-block
+	cursor: pointer
+	transition: all .3s
+
+input[type=checkbox] + label:before
+	content: url("../../images/un-check.svg")
+/* unchecked icon */
+input[type=checkbox] + label:before
+	letter-spacing: 10px
+/* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before
+	content: url("../../images/check.svg")
+/* checked icon */
+input[type=checkbox]:checked + label:before
+	letter-spacing: 5px
+/* allow space for check mark */
+
+#send_request.modal
+	.modal__box
+		display: none
+		.modal__text
+			.row
+				padding-bottom: 15px
+				@media #{$mobile}
+					padding-bottom: 5px
+				P
+					margin-bottom: 0
+					margin-top: 0
+					font-size: 16px
+				span
+					font-size: 16px
+					font-weight: bold
+
+				&.links
+					padding-top: 45px
+					text-align: left
+
+					@media #{$mobile}
+						padding-top: 25px
+
+					a
+						margin-bottom: 10px
+						display: inline-block
+						color: #0071b2
+						font-weight: bold
+						font-size: 18px
+						line-height: 26px
+
+			p
+				font-size: 16px
+				margin-top: 25px
+				@media #{$mobile}
+					margin-top: 10px
+
+body.mfp-open
+	#send_request.modal
+		.modal__box
+			display: block

@@ -1,0 +1,229 @@
+/*
+ * Footer
+ */
+	
+.footer__top
+	background: #f3f8fa
+
+	@media (min-width: 768px)
+		padding: 40px 0 
+
+		.container
+			position: relative
+
+	@media #{$mobile}
+		padding: 20px 0
+		text-align: center
+
+.footer__pattern
+	width: 292px
+	height: 479px
+	position: absolute
+	bottom: -20px
+	left: -330px
+	background: url('../images/footer_pattern.png') no-repeat
+
+	@media #{$mobile}
+		display: none
+
+.footer__slogan
+	color: $blue
+
+	@media (min-width: 768px)
+		font-size: 30px
+		line-height: 1
+
+		span 
+			font-size: 44px
+			margin-right: 10px
+			display: inline-block
+			vertical-align: middle
+
+	@media #{$mobile}
+		line-height: 20px
+		font-size: 15px
+
+		span 
+			font-size: 18px
+
+.footer__main
+	@media (min-width: 768px)
+		padding: 40px 0 30px
+
+	@media #{$mobile}
+		.container
+			padding: 0
+
+.footer-nav
+	@media (min-width: 768px)
+		width: calc(100% - 225px)
+
+.footer__flex
+	@media (min-width: 768px)
+		display: flex
+		justify-content: space-between
+
+.footer-nav__col
+	padding-right: 10px
+
+	@media #{$mobile}
+		border-bottom: 1px solid #e6eaec
+
+.footer-nav__label
+	font-weight: 700
+	color: $gray
+
+	@media (min-width: 768px)
+		font-size: 17px
+		margin: 0 0 15px
+	
+	@media #{$mobile}
+		font-size: 15px
+		padding: 13px 15px
+		cursor: pointer
+		position: relative
+
+		&:before
+			content: ""
+			width: 6px
+			height: 6px
+			position: absolute
+			right: 15px
+			top: 0
+			bottom: 0
+			margin: auto
+			border-top: 1px solid #c6d0d7
+			border-right: 1px solid #c6d0d7
+			transform: rotate(45deg)
+			transition: 200ms
+
+		&.is-active
+			&:before
+				transform: rotate(135deg)
+
+.footer-nav__list
+	color: #0071b2
+
+	@media (min-width: 768px)
+		li 
+			margin: 0 0 10px
+
+		a 
+			transition: 200ms
+
+			&:hover
+				color: $blueLight
+
+	@media #{$mobile}
+		padding-bottom: 15px
+		display: none
+
+		a 
+			display: block
+			padding: 5px 15px
+
+.footer-right
+	@media (min-width: 768px)
+		width: 225px
+
+	@media #{$mobile}
+		padding: 20px 15px
+
+.footer__label
+
+	@media (min-width: 768px)
+		font-size: 17px
+		font-weight: 700
+		color: $blue
+		margin: 0 0 15px
+
+	@media #{$mobile}
+		height: 12px
+		color: #838b90
+		margin: 0 0 10px
+
+.footer__social
+	@media (min-width: 768px)
+		margin-bottom: 25px
+
+	@media #{$mobile}
+		margin-bottom: 10px
+
+.social__link
+	width: 36px
+	height: 36px
+	position: relative
+	display: inline-block
+	vertical-align: top
+	background: #f0f0f0
+	transition: 200ms
+
+	@media (min-width: 768px)
+
+		&:hover
+			background: darken(#f0f0f0, 5%)
+
+	img 
+		+abscenter
+
+.app__list
+	@media #{$mobile}
+		padding-top: 3px
+
+.app__link
+	background: #f0f0f0
+	position: relative
+	
+	@media (min-width: 768px)
+		width: 210px
+		height: 60px
+		margin: 0 0 10px
+		transition: 200ms
+
+		&:hover
+			background: darken(#f0f0f0, 5%)
+
+		&.gplay
+			img
+				width: 148px
+				height: 37px
+
+		&.appstore
+			img
+				width: 148px
+				height: 40px
+
+	@media #{$mobile}
+		width: 139px
+		height: 40px
+		display: inline-block
+		vertical-align: top
+
+		&.gplay
+			img
+				width: 98px
+				height: 25px
+
+		&.appstore
+			img
+				width: 98px
+				height: 27px
+	
+	a 
+		width: 100%
+		height: 100%
+		display: block
+
+	img 
+		+abscenter
+
+.footer__bottom
+	border-top: 2px solid #e5e8ea
+	padding: 25px 0
+	color: #868686
+
+	@media (min-width: 768px)
+		padding: 25px 0
+
+	@media #{$mobile}
+		padding: 20px 0

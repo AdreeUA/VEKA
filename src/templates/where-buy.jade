@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Где купить
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Где купить
+
+			.main__section
+				.main__section-body
+					.map__head
+						.container
+							.map__search
+								form(action="#")
+									input(type="text" placeholder="Название города...").map__search-input.js-whereBuyAutocomplete
+									button.map__search-button: +icon('search')
+							.map__promo
+								.promo-top
+									.promo-top__logo: img(src="images/tmp/lauter_promo.png")
+									.promo-top__info
+										div 1 ноября 2016 - 31 декабря 2016
+										a(href="#").link Зима близко! Закажите тёплые окна со специальной скидкой
+									.promo-top__icon: img(src="images/tmp/promo-icon.png")
+
+					.map__content
+						include _parts/_map
+
+
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,160 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Акции партнёров VEKA
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Акции партнёров VEKA
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Акции партнёров VEKA в <b class="dotted__link js-citySelectLink">Новосибирске</b>
+
+					.filter__box
+						form(action="#")
+							.filter__flex.promo__flex
+								.filter__select
+									select.select.js-select(style="opacity: 0")
+										option(value="0") Все компании
+										option(value="1") Все компании
+										option(value="2") Все компании
+										option(value="3") Все компании
+								.filter__promo-button
+									button.button.blue
+										+icon('search') 
+										span Искать акции
+
+					.main__section-body
+						.row 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example2.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Распродажа окон ПВХ!
+									p C 19 до 30 ноября в интернет-магазине пластиковых окон КОНСИБ Вы можете приобрести окно со скидкой 43%. Условия акции: - окно без монтажа, - без комплектующих (откосы, внешняя отделка, подоконники).
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example3.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Lauter дарит каждому покупателю фирменный набор по уходу за окнами. В комплекте: средства для мытья стёкол, профиля, уплотнителей, смазка  для фурнитуры.
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example4.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Ваши окна будут всегда как новые
+									p Lauter дарит каждому покупателю фирменный набор по уходу за окнами. В комплекте: средства для мытья стёкол, профиля, уплотнителей, смазка  для фурнитуры.
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example5.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Скидки пенсионерам и студентам
+									p Всем пенсионерам и студентам СтройИнтерьер дарит постоянную скидку 10% на остекление балконов и установку пластиковых окон.
+									.tile__more.visible-xs: span.link Подробнее об акции  
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example6.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.promo-tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example7.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example8.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example9.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example10.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+							.col-md-3.col-sm-3.js-equalheight
+								a(href="#").tile__elem
+									.tile__image: img(src="images/tmp/promo_example11.jpg")
+									.tile__title 
+										+icon('arrow-right')
+										|Утепли своё окно бесплатно!
+									p Уникальное предложение месяца для клиентов <b>Lauter</b>! Поменяйте свое окно на новое теплое до сильных морозов бесплатно!
+									.tile__more.visible-xs: span.link Подробнее об акции 
+	
+
+
+			.main__section.subscription__section(style="background-image: url('images/back/subscription_back.jpg')")
+				.container
+					.main__form.left
+						form(action="#").js-validate
+							.main__form-head
+								.main__title Подписка<br> на акции
+								p <b>Хотите первым узнавать о всех новинках VEKA?</b> Оформите подписку, указав свой e-mail:
+							.main__form-body
+								fieldset.fieldset
+									input(type="email" name="email" required="required" placeholder="Ваш e-mail").input
+								fieldset.fieldset
+									label.checkbox
+										input(type="checkbox" name="user_agreement" required="required")
+										span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+								fieldset.fieldset
+									button.button.blue.md
+										+icon('email')
+										span Отправить
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

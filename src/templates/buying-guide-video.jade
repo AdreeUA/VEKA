@@ -1,0 +1,162 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Справочник покупателя
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Справочник покупателя
+							li.breadcrumb__item: a(href="#").breadcrumb__link Видео о пластиковых окнах
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Видео о пластиковых окнах
+
+				.gray__section
+					.container
+						.main__pattern
+
+						.main__section-head.head-flex
+							.main__section-icon: +icon('video')
+							.section__title: a(href="#").link Видео-отзывы
+
+						.main__section-body
+							.row.video__list
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").video-tile
+										.video-tile__image
+											img(src="images/tmp/video_example.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть&nbsp;1
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").video-tile
+										.video-tile__image
+											img(src="images/tmp/video_example2.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть&nbsp;2
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").video-tile
+										.video-tile__image
+											img(src="images/tmp/video_example3.jpg")
+											span.play-icon
+										.video-tile__title Отзывы о пластиковых окнах. Часть&nbsp;3
+								
+			.main__section
+				.container
+					.main__section-head
+						.section__title Полезные видео об окнах
+
+					.main__section-body
+						.row.video__list
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example.jpg")
+										span.play-icon
+									.video-tile__title Панорамные двери VEKASLIDE
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example2.jpg")
+										span.play-icon
+									.video-tile__title Входные двери из профилей VEKA со штульпом
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example3.jpg")
+										span.play-icon
+									.video-tile__title Штульповое окно VEKA Softline 82
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example.jpg")
+										span.play-icon
+									.video-tile__title Профильная поверхность: новые решения
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example2.jpg")
+										span.play-icon
+									.video-tile__title Окна в современном дизайнерском интерьере
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example3.jpg")
+										span.play-icon
+									.video-tile__title Светопрозрачные ограждающие конструкции
+
+						.load-more__button.visible-xs
+							a(href="#").button.blue.md
+								span Загрузить ещё
+								img(src="images/refresh.png")
+
+			.main__section.gray__section
+				.container
+					.main__section-head
+						.section__title Рекламные ролики VEKA
+
+					.main__section-body
+						.row.video__list
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example.jpg")
+										span.play-icon
+									.video-tile__title Панорамные двери VEKASLIDE
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example2.jpg")
+										span.play-icon
+									.video-tile__title Входные двери из профилей VEKA со штульпом
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example3.jpg")
+										span.play-icon
+									.video-tile__title Штульповое окно VEKA Softline 82
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example.jpg")
+										span.play-icon
+									.video-tile__title Профильная поверхность: новые решения
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example2.jpg")
+										span.play-icon
+									.video-tile__title Окна в современном дизайнерском интерьере
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").video-tile
+									.video-tile__image
+										img(src="images/tmp/video_example3.jpg")
+										span.play-icon
+									.video-tile__title Светопрозрачные ограждающие конструкции
+
+						.load-more__button
+							a(href="#").button.blue.md
+								+icon('arrow-back')
+								span Назад в справочник покупателя
+
+			include _parts/_fast-link
+
+		include _parts/_footer
+
+		include _parts/_scripts

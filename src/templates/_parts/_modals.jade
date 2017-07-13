@@ -1,0 +1,23 @@
+// Чтобы вызвать модал «Заявка отправлена»:
+// $.magnificPopup.open({
+//		items: {
+//			src: '#successFormModal',
+//			type: 'inline'
+//		},
+//		closeBtnInside: false
+//	});
+
+#successFormModal.modal-full.mfp-hide
+	.modal__head.modal-full__head.visible-xs
+		.section__title Заявка отправлена
+		.modal__close.js-mfp-close: +icon('close-md')
+
+	.modal-full__close.js-mfp-close.hidden-xs: +icon('close-md')
+	.modal-full__success
+		.section__title.hidden-xs Заявка отправлена
+		p 
+			|<b>Благодарим за Вашу заявку!</b> С вами<br>
+			|свяжутся для уточнения заказа в ближайшее<br>
+			|рабочее время.
+
+	.main__pattern

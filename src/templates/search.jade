@@ -1,0 +1,125 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Результаты поиска
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Результаты поиска
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Результаты поиска
+
+					.filter
+						form(action="#")
+							.filter__box
+								.filter__flex.promo__flex
+									.filter__search
+										input(type="text" value="профильная система").input
+
+									.filter__promo-button
+										button.button.blue
+											+icon('search') 
+											span Найти
+
+							.filter__bottom
+								.radio__list.hidden-xs
+									label.radio
+										input(type="radio" name="radio")
+										span Везде
+									label.radio
+										input(type="radio" name="radio")
+										span Покупателям
+									label.radio
+										input(type="radio" name="radio")
+										span Партнерам
+									label.radio
+										input(type="radio" name="radio")
+										span Дилерам
+									label.radio
+										input(type="radio" name="radio")
+										span Дизайнерам и архитекторам
+
+								.select__list.visible-xs
+									select.select.js-select
+										option(value="1") Везде
+										option(value="2") Покупателям
+										option(value="3") Партнерам
+										option(value="4") Дилерам
+										option(value="5") Дизайнерам и архитекторам
+
+					.main__section-body
+						.result
+							.result__head
+								|По запросу <b>«профильная система»</b> найдено 213 результатов
+							.result__list
+								.result__elem
+									.result__title Оконный профиль PROLINE
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__image: img(src="images/tmp/result_example.jpg")
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+								.result__elem
+									.result__title Окна из <b>профильной системы</b> Alphaline 90 пришлись по вкусу заказчикам компании «АЛЬКОН»
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+								.result__elem
+									.result__title Оконный профиль PROLINE
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__image.result-video(data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").js-inlineModal
+										img(src="images/tmp/result_example.jpg")
+										span.play-icon
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+								.result__elem
+									.result__title Окна из <b>профильной системы</b> Alphaline 90 пришлись по вкусу заказчикам компании «АЛЬКОН»
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+								.result__elem
+									.result__title Оконный профиль PROLINE
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__image: img(src="images/tmp/result_example.jpg")
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+								.result__elem
+									.result__title Окна из <b>профильной системы</b> Alphaline 90 пришлись по вкусу заказчикам компании «АЛЬКОН»
+									ul.result__cat
+										li Продукция
+										li Системы профилей
+									.result__description ...четырехкамерная <b>профильная система</b> для окон VEKA. Возможна установка одно- и двухкамерных стеклопакетов. Стандартные окна, окна с повышенной теплоизоляцией, окна с улучшенными шумозащитными качествами, оконные <b>системы</b> повышенной безопасности, балконные двери, фасады...
+									.result__link: a(href="#").link www.veka.ru/products/win/proline.html
+
+						include _parts/_pager
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

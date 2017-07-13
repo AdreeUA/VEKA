@@ -1,0 +1,89 @@
+#requestModal.modal.mfp-hide
+	.modal__box
+		.modal__head
+			.section__title Заявка на замер
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__form
+				form(action="#").js-validate
+					//- fieldset.fieldset
+					//- 	label.label Город
+					//- 	select.select.js-select(data-placeholder="Выберите город" data-search="true" required="required")
+					//- 		option
+					//- 		option(value="1") Краснодар
+					//- 		option(value="2") Москва
+					//- 		option(value="3") Воронеж
+					//- 		option(value="4") Волгоград
+					//- 		option(value="5") Волгодонск
+					//- 		option(value="6") Волжский
+					//- 		option(value="1") Краснодар
+					//- 		option(value="2") Москва
+					//- 		option(value="3") Воронеж
+					//- 		option(value="4") Волгоград
+					//- 		option(value="5") Волгодонск
+					//- 		option(value="6") Волжский
+					//- fieldset.fieldset
+					//- 	label.label Компания
+					//- 	select.select.js-select(data-placeholder="Название компании" required="required")
+					//- 		option
+					//- 		option(value="1") Окна для жизни
+					//- 		option(value="2") Оконный комбинат «Светоч»
+					//- 		option(value="3") Официальный дилер VEKKER
+					//- 		option(value="4") Оконная компания №1
+					//- 		option(value="5") ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"
+					//- 		option(value="6") Горизонт-Сервис
+					//- 		option(value="1") Окна для жизни
+					//- 		option(value="2") Оконный комбинат «Светоч»
+					//- 		option(value="3") Официальный дилер VEKKER
+					//- 		option(value="4") Оконная компания №1
+					//- 		option(value="5") ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"
+					//- 		option(value="6") Горизонт-Сервис
+					//- fieldset.fieldset
+					//- 	label.label Офис
+					//- 	select.select.js-select(data-placeholder="Укажите офис" required="required")
+					//- 		option
+					//- 		option(value="1") Офис 1
+					//- 		option(value="2") Офис 2
+					//- 		option(value="3") Офис 3
+					//- 		option(value="4") Офис 4
+					//- 		option(value="5") Офис 5
+					//- 		option(value="1") Офис 1
+					//- 		option(value="2") Офис 2
+					//- 		option(value="3") Офис 3
+					//- 		option(value="4") Офис 4
+					//- 		option(value="5") Офис 5
+					fieldset.fieldset
+						//- label.label Город
+						//- input(type="text" name="city" data-ajax="js/ajax-city-example.js" placeholder="Начните вводить название..." required="required").input.js-autocomplete
+						input(type="text" name="city" placeholder="Город" required="required").input.js-google-autocomplete
+					fieldset.fieldset
+						//- label.label Представьтесь, пожалуйста
+						input(type="text" name="name" placeholder="Представьтесь, пожалуйста" required="required").input
+					fieldset.fieldset
+						//- label.label Номер телефона
+						input(type="text" name="phone" placeholder="Номер телефона" required="required").input.js-phone
+					fieldset.fieldset
+						//- label.label Дополнительная информация
+						textarea(placeholder="Ваши пожелания" onfocus="placeholder='';" onblur="placeholder='Ваши пожелания';").input
+						p Здесь Вы можете указать общие пожелания по своему заказу, желаемое время для связи и прочую информацю, которую сочтете необходимой
+					fieldset.fieldset
+						label.checkbox
+							input(type="checkbox" name="user_agreement" required="required")
+							span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+					fieldset.fieldset.modal__submit
+						button.button.blue.md
+							+icon('email')
+							span Отправить
+
+	// Modal: Сообщение отправлено
+	.modal__box(style="display: none")
+		.modal__head
+			.section__title Сообщение отправлено!
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__text
+				.modal__icon
+					img(src="images/logo.svg")
+				h6 Ваше сообщение успешно отправлено!
+				p Благодарим вас за обращение в компанию VEKA. Наши специалисты перезвонят вам в течение нескольких часов. Если в течение 3-х рабочих дней вы не получите ответа, пожалуйста, напишите в службу поддержки по адресу <a href="#">support@veka.ru</a>
+					

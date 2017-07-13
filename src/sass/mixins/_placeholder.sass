@@ -1,0 +1,26 @@
+*:focus::-moz-placeholder
+  color: transparent !important
+*[autofocus]::-moz-placeholder:focus
+  color: graytext !important
+*:focus:-moz-placeholder
+  color: transparent !important
+*[autofocus]:-moz-placeholder:focus
+  color: graytext !important
+*:focus::-webkit-input-placeholder
+  color: transparent !important
+*[autofocus]::-webkit-input-placeholder
+  color: graytext !important
+
+=placeholder($c, $z)
+  &::-webkit-input-placeholder
+    color: $c
+    font-size: $z
+  &:-moz-placeholder
+    color: $c
+    font-size: $z
+  &::-moz-placeholder
+    color: $c
+    font-size: $z
+  &:-ms-input-placeholder
+    color: $c
+    font-size: $z

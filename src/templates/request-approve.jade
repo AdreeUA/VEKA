@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Заявка одобрена
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.request-approve.user-forms
+				.row
+					.col-xs-12.col-sm-6
+						h2.user-forms__title Заявка уже одобрена
+
+						p.user-forms__text Заявка уже одобрена. У вас больше нет возможности её одобрить или отклонить.
+
+						button.button.blue.md.user-forms__button.request-approve__button
+							span Закрыть
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

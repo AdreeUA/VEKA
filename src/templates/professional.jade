@@ -1,0 +1,209 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title VEKA Professional
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header
+		
+		
+		main.main__content.professional
+			.main__section.top(style="background-image: url('images/back/professional_back.jpg')")
+				.main__pattern
+				.main__breadcrumb
+					.container
+
+						.breadcrumb
+							ul.breadcrumb__list
+								li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+								li.breadcrumb__item: a(href="#").breadcrumb__link VEKA Professional
+
+				.main__section-head
+					.container
+						.main__title VEKA Professional
+				.main__section-body
+					.container
+						.row
+							.col-md-6
+								p
+									| Уважаемые коллеги и гости официального сайта компании «VEKA Rus», рады
+									| приветствовать Вас в разделе, который посвящен корпоративному учебному
+									| центру VEKA  Professional.
+								a.button.blue.professional__button
+									+icon('apple')
+									span VEKA Professional для iPhone и iPad
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Мы вас обучим!
+					.main__section-body
+						.article
+							.row
+								.col-md-6.col-sm-12
+									p.company__text.profiles__text
+										| В рамках партнёрского сотрудничества, с целью оказания партнёрам
+										| всестороннего содействия и квалифицированной поддержки в повышении
+										| уровня профессионализма штатного персонала всех уровней, руководством
+										| компании VEKA Rus & Ukraine, было принято решение о создании учебного
+										| центра «VEKA  Professional», который производит свою деятельность на всей
+										| территории постсоветского пространства.
+									h6 С чем вы можете ознакомиться в данном разделе
+									ul.list
+										li Полный перечень тем и наполнение тренинговых программ
+										li Полное собрание электронной версии корпоративного издания
+										li Сборники и методические материалы, которые являются авторскими разработками УЦ «VEKA Professional»
+										li Библиотека полезной литературы, которая соответствует профильной направленности
+
+								.col-md-6.col-sm-12
+									p.company__text.profiles__text
+										| Кроме этого, Вы можете воспользоваться такой функцией как «почтовый
+										| ящик» УЦ «VEKA Professional», в котором можете оставить свои пожелания
+										| или благодарность в адрес центра, а также отдельных лиц, которые его
+										| представляют!
+									p.company__text.profiles__text
+										| От создателей сайта: на этапе работы над созданием и наполнение данной
+										| страницы, преследовалась цель сделать ее полезной, интересной и в тоже
+										| время простой для изучения. Хочется верить, что изложенный здесь материал,
+										| поспособствует в принятии Важного для Вас решения, или поможет найти
+										| нужный выход!
+
+			.main__section.gray__section
+				.container
+					.main__section-body
+						.main__title Полезные материалы
+						.article
+							.row
+								.col-md-6.col-sm-12
+									ul.list-clip
+										li
+											+icon('clip')
+											a.link(href="#") Тематика программ VEKA Professional
+										li
+											+icon('clip')
+											a.link(href="#") Управление Бизнесом​
+										li
+											+icon('clip')
+											a.link(href="#") Эффективное позиционирование продуктов
+										li
+											+icon('clip')
+											a.link(href="#") Сотрудник компании – носитель корпоративной культуры
+										li
+											+icon('clip')
+											a.link(href="#") Полный каталог тематических программ от учебного центра VEKA Professional
+
+								.col-md-6.col-sm-12
+									.professional__ipad
+										img(src="images/ipad-air.png")
+									.app__list
+										.app__link.gplay
+											a(href="#")
+												img(src="images/gplay.svg" width="151px" height="34px")
+										.app__link.appstore
+											a(href="#")
+												img(src="images/appstore_dark.svg" width="126px" height="34px")
+			.main__section
+				.container
+					.main__section-head
+						.main__title Скачать журналы VEKA
+					.main__section-body
+						.row
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-1.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-2.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-3.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-4.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-5.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-6.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-7.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+			.main__section
+				.container
+					.main__section-head
+						.main__title Скачать журналы VEKA
+					.main__section-body
+						.row
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-1.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-2.jpg")
+									a.tile__link(href="#")
+										| Колесо развития
+									p.tile__note
+										| Скачать в формате jpg (5,7 Mb) -
+										| графическая схема для заполнения, метод
+										| постановки целей и миссии компании
+							.col-md-3.col-sm-3.js-equalheight.tile
+								a(href="#").tile__elem
+									.tile__image.tile__image--center.tile__image--gray: img(src="images/tmp/magazine-3.jpg")
+									a.tile__link(href="#")
+										| Корпоративный журнал VEKA
+										| Professional №1
+									p.tile__note
+										| Скачать в формате pdf (4.45 Mb)
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,83 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Заявка на регистрацию отправлена
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.request-employee.registration-request-sent.user-forms
+				#registration-request-sentModal.modal.user-forms__modal.request-employee__modal
+					.modal__box
+						.modal__head
+							h2.user-forms__title Ваша заявка на регистрацию
+							.modal__close.js-mfp-close: +icon('close-md')
+						.modal__body
+							.modal__form
+								form(action="#").js-validate
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Имя, фамилия
+											.col-xs-9
+												| Антон Викторович Григорьев
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Пол
+											.col-xs-9
+												| мужской
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Телефон
+											.col-xs-9
+												| +7 689 536 25 95
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Эл. почта
+											.col-xs-9
+												| user@mail
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Адрес
+											.col-xs-9
+												| Россия, Санкт-Петербург, 192086, Невский пр., д. 10, офис 1
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Представитель
+											.col-xs-9
+												| ООО «Супер-окна»
+
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Комментарий
+											.col-xs-9
+												| Здравствуйте, хочу продавать окна Veka. У меня в стадии согласования заказ на 10 тысяч окон в моём регионе. Было бы круто поставить именно окна Veka, так как они надёжные, и это позволит мне не разориться на гарантийном ремонте.
+
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Номер заявки
+											.col-xs-9
+												| 36589
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Дата подачи
+											.col-xs-9
+												| 12.06.2017 12:00
+
+									fieldset.fieldset.modal__submit
+										button.button.blue.md.user-forms__button
+											span Отозвать заявку
+
+		include _parts/_footer
+
+		include _parts/_scripts

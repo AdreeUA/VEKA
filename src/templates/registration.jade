@@ -1,0 +1,219 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Регистрация
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main
+			.container
+				.breadcrumb
+					ul.breadcrumb__list
+						li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+						li.breadcrumb__item: a(href="#").breadcrumb__link Регистрация
+
+				section.registration.user-forms
+					.registration__title Регистрация
+					form(class="user-forms__form", method="post", action="")
+						.row
+							.col-xs-12.col-md-4
+								.user-forms__form-head
+									h2.user-forms__title Основные сведения
+
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Имя
+										input(type="text", required="required", class="user-forms__input input")
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Фамилия
+										input(type="text", required="required", class="user-forms__input input")
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Отчество
+											small.user-forms__labeltext-small не обязательно
+										input(type="text", class="user-forms__input input")
+								fieldset.fieldset
+									.user-forms__label Пол
+									.user-forms__radiolabels.user-forms__input
+										input(name="gender", type="radio", class="user-forms__radioinput", id="nothing", value="пол не выбран" checked="checked")
+										input(name="gender", type="radio", class="user-forms__radioinput", id="male", value="М")
+										input(name="gender", type="radio", class="user-forms__radioinput", id="female", value="Ж")
+
+										label.user-forms__radiolabel(for="nothing") не выбран
+										label.user-forms__radiolabel(for="male") М
+										label.user-forms__radiolabel(for="female") Ж
+
+
+								fieldset.fieldset.user-forms__tel
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Телефон
+										.user-forms__telfield
+											select.select.user-forms__input.user-forms__telfield-code.js-select(name="phone")
+												option(value="+7") +7
+												option(value="+999") +999
+											input(type="tel", required="required", class="user-forms__input user-forms__input-tel input")
+											.user-forms__labeltext-small
+												| Страны: Россия или Казахстан
+
+							.col-xs-12.col-md-3
+								.user-forms__form-head
+									h2.user-forms__title Местоположение
+
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Страна
+										select.select.user-forms__input.js-select(name="country")
+											option(value="1") Россия
+											option(value="2") Казахстан
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Индекс
+											small.user-forms__labeltext-small не обязательно
+										input(type="text", class="user-forms__input input")
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Адрес
+										input(type="text", required="required", class="user-forms__input input")
+
+							.col-xs-12.col-md-5
+								.user-forms__form-head
+									h2.user-forms__title В какую компанию подаётся заявка
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Компания
+										select.select.user-forms__input.js-select(name="order-country")
+											option(value="1") ООО «Супер-окна»
+											option(value="2") Компания 2
+											option(value="3") Компания 3
+
+								fieldset.fieldset
+									label.user-forms__label Комментарий к заявке
+									textarea.input.user-forms__input
+
+								h2.user-forms__title Настройки личного кабинета
+
+								fieldset.fieldset
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Эл. почта
+										input(type="text", required="required", class="user-forms__input input")
+								fieldset.fieldset.user-forms__pass
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Пароль
+										input(type="password", required="required", class="user-forms__input input")
+								fieldset.fieldset.user-forms__pass
+									label.user-forms__label
+										span.user-forms__labeltext
+											| Ещё раз пароль
+										input(type="password", required="required", class="user-forms__input input")
+
+								fieldset.fieldset
+
+									.registration__checkbox
+										input(type="checkbox" id="news-agree" name="checkbox-news-agree" value="news-agree" checked-true)
+
+										label(for="news-agree").user-forms__label
+											span.registration__checkbox-uncheck
+												span.registration__checkbox-check: +icon('check')
+											| Хочу подписаться на рассылку новостей
+
+
+									.registration__checkbox.registration__checkbox-grey
+										input(type="checkbox" id="accept" name="checkbox-accept" value="accept" checked-true)
+
+										label(for="accept").user-forms__label
+											span.registration__checkbox-uncheck
+												span.registration__checkbox-check: +icon('check')
+											span
+												| Ознакомлен с регламентом о защите персональных данных и выражаю согласие на их обработку
+												br
+												br
+												| Отправленную заявку проверит представитель компании-партнёра, которую вы выбрали выше. В среднем это занимает 2 рабочих дня.
+
+								fieldset.fieldset
+									button.button.blue.md.user-forms__button.js-inlineModal(data-mfp-src="#registrationModal")
+										span Отправить заявку
+
+				#registrationModal.modal.user-forms__modal.mfp-hide
+					.modal__box
+						.modal__head
+							h2.user-forms__title Ваша заявка на регистрацию
+							.modal__close.js-mfp-close: +icon('close-md')
+						.modal__body
+							.modal__form
+								form(action="#").js-validate
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Имя, фамилия
+										.col-xs-9
+											| Антон Викторович Григорьев
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Пол
+										.col-xs-9
+											| мужской
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Телефон
+										.col-xs-9
+											| +7 689 536 25 95
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Эл. почта
+										.col-xs-9
+											| user@mail
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Адрес
+										.col-xs-9
+											| Россия, Санкт-Петербург, 192086, Невский пр., д. 10, офис 1
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Представитель
+										.col-xs-9
+											| ООО «Супер-окна»
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Комментарий
+										.col-xs-9
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat.
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Номер заявки
+										.col-xs-9
+											| 36589
+									.row.registration__modal-row
+										.col-xs-3.registration__modal-row-title
+											| Дата подачи
+										.col-xs-9
+											| 12.06.2017 12:00
+									fieldset.fieldset.modal__submit
+										button.button.blue.md
+											span Отозвать заявку
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

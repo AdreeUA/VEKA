@@ -1,0 +1,15 @@
+$ico-layout: vertical
+$ico-spacing: 10px
+$ico-sprite-dimensions: true
+
+@import "ico/*.png"
++all-ico-sprites
+$my-sprite: sprite-map("ico/*.png", $spacing: 10px)
+
+.ico-sprite
+	display: inline-block
+	font-size: 0
+	text-indent: -9999px
+
+
+

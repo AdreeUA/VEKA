@@ -1,0 +1,389 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Справочник покупателя
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content.dealer
+			.main__slider.dealer__slider.js-mainSwiper(data-speed='650')
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.main__slide.dealer__slide(style="background-image: url(images/back/dealers-slider-bg.jpg)")
+							.container.clearfix
+								.main__pattern
+								.main__form.dealer__sliderform
+									form.js-validate(action='/', name='slider-form')
+										input#sessid_2(type='hidden', name='sessid', value='7f0bd95fb7d7819d3c93fb4dd7a3f565')
+										.main__form-head
+											.main__title.dealer__slide_title Стань дилером VEKA!
+											p
+												b Хотите продавать окна?
+												| Вас интересует как стать дилером оконных компаний, или у вас уже есть опыт и вы ищете надежного поставщика?
+										.main__form-body
+											fieldset.fieldset
+												button.button.blue.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-registration-dealer')
+													span Регистрация дилера
+											fieldset.fieldset
+												button.button.blue-border.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-more-dealer')
+													span Больше преимуществ
+
+										input(type='hidden', name='SHARE', value='Стань дилером VEKA!')
+										input(type='hidden', name='NEW_SLIDER_SHARE', value='Y')
+										input(type='hidden', name='AJAX_NEW_SLIDER_SHARE', value='Y')
+						.swiper-slide
+							.main__slide.dealer__slide(style="background-image: url(images/back/dealers-slider-bg.jpg)")
+							.container.clearfix
+								.main__pattern
+								.main__form.dealer__sliderform
+									form.js-validate(action='/', name='slider-form')
+										input#sessid_2(type='hidden', name='sessid', value='7f0bd95fb7d7819d3c93fb4dd7a3f565')
+										.main__form-head
+											.main__title Стань дилером VEKA!
+											p
+												b Хотите продавать окна?
+												| Вас интересует как стать дилером оконных компаний, или у вас уже есть опыт и вы ищете надежного поставщика?
+										.main__form-body
+											fieldset.fieldset
+												button.button.blue.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-registration-dealer')
+													span Регистрация дилера
+											fieldset.fieldset
+												button.button.blue-border.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-more-dealer')
+													span Больше преимуществ
+
+										input(type='hidden', name='SHARE', value='Стань дилером VEKA!')
+										input(type='hidden', name='NEW_SLIDER_SHARE', value='Y')
+										input(type='hidden', name='AJAX_NEW_SLIDER_SHARE', value='Y')
+						.swiper-slide
+							.main__slide.dealer__slide(style="background-image: url(images/back/dealers-slider-bg.jpg)")
+							.container.clearfix
+								.main__pattern
+								.main__form.dealer__sliderform
+									form.js-validate(action='/', name='slider-form')
+										input#sessid_2(type='hidden', name='sessid', value='7f0bd95fb7d7819d3c93fb4dd7a3f565')
+										.main__form-head
+											.main__title Стань дилером VEKA!
+											p
+												b Хотите продавать окна?
+												| Вас интересует как стать дилером оконных компаний, или у вас уже есть опыт и вы ищете надежного поставщика?
+										.main__form-body
+											fieldset.fieldset
+												button.button.blue.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-registration-dealer')
+													span Регистрация дилера
+											fieldset.fieldset
+												button.button.blue-border.md.dealer__slider_btn
+													svg.icon.icon-email.hidden-xs
+														use(xlink:href='#icon-more-dealer')
+													span Больше преимуществ
+
+										input(type='hidden', name='SHARE', value='Стань дилером VEKA!')
+										input(type='hidden', name='NEW_SLIDER_SHARE', value='Y')
+										input(type='hidden', name='AJAX_NEW_SLIDER_SHARE', value='Y')
+					.swiper-pagination
+					.swiper-button-prev
+					.swiper-button-next
+
+			.dealer__news.container
+				.dealer__title Новости VEKA и партнёров
+				.row
+					.dealer__newsbox.col-xs-12.col-md-4
+						a(href="#").tile__elem.dealer__news_elem
+							.tile__image
+								img(src="images/tmp/news-dealer1.jpg")
+								.dealer__news_icon: +icon('camera')
+							.tile__title
+								+icon('arrow-right')
+								|VEKA подарила рождественские каникулы победителям конкурса «Выбираю VEKA»
+							p В середине ноября компания VEKA объявила имена победителей конкурса "Выбираю VEKA", в результате восемь участников получили прекрасный подарок – поездку в Германию, в канун Рождественских праздников.
+							.dealer__newsdate 23 декабря 2016
+							.tile__more.visible-xs: span.link Узнать больше
+					.dealer__newsbox.col-xs-12.col-md-4
+						a(href="#").tile__elem
+							.tile__image
+								img(src="images/tmp/news-dealer1.jpg")
+								.dealer__news_icon: +icon('video-camera')
+							.tile__title
+								+icon('arrow-right')
+								|Компания «Бизнес-М» оправдала ожидания участников программы «Квартирный вопрос»
+							p Компания «Бизнес-М», партнер VEKA Rus, приняла участие в программе «Квартирный вопрос» – проект «Интерьер без барьеров», эфир которой состоялся 17 декабря 2016 на канале НТВ.
+							.dealer__newsdate 21 декабря 2016
+							.tile__more.visible-xs: span.link Узнать больше
+					.dealer__newsbox.col-xs-12.col-md-4
+						a(href="#").tile__elem
+							.tile__image
+								img(src="images/tmp/news-dealer1.jpg")
+								.dealer__news_icon: +icon('list-news')
+							.tile__title
+								+icon('arrow-right')
+								|«КАРВИ»: и снова Япония
+							p Дальневосточный партнер VEKA, компания «КАРВИ», принимает участие в «Русско-японском бизнес-диалоге» - мероприятии, которое проходит в рамках визита Президента России в Страну восходящего солнца.
+							.dealer__newsdate 16 декабря 2016
+							.tile__more.visible-xs: span.link Узнать больше
+					.load-more__button.visible-xs
+						a(href="#").button.blue.md
+							span Смотреть все
+
+			.dealer__subscribe_section
+				.container
+					.row
+						.col-xs-12.col-md-6.col-lg-4.dealer__subscribe_box
+							h3.dealer__title Подписка на новости
+							p.dealer__subscribe_text
+								b Хотите первым узнавать о всех новинках VEKA?
+								|  Оформите подписку, указав свой e-mail:
+							form(class="dealer__subscribe_form", method="post", action="")
+								fieldset.fieldset
+									input(type="text", placeholder="Ваш e-mail", class="dealer__subscribe_email")
+
+								fieldset.fieldset
+									label.checkbox
+										input(type='checkbox', name='user_agreement', required='required')
+										span.checkbox__text
+											| Ознакомлен с
+											a(href='/reglament/', target='_blank') Регламентом о защите персональных данных
+											|  и выражаю
+											a(href='/agreement/', target='_blank') согласие
+											|  на их обработку
+								fieldset.fieldset
+									button.button.blue.md.dealer__subscribe_button
+										span Отправить
+			.dealer__apps.container
+				.dealer__title Наши приложения
+				.dealer__apps_flex
+					.dealer__apps_flexitem.text-center
+						img(class="dealer__appimage", alt="app image", src="images/tmp/catalog-app.png")
+						h6.dealer__apptitle Каталог VEKA
+						a(href="#" target="blank" rel="nofollow" class="dealer__applink") Посмотреть в iTunes
+						a(href="#" target="blank" rel="nofollow" class="dealer__applink") GooglePlay
+					.dealer__apps_flexitem.text-center
+							img(class="dealer__appimage", alt="app image", src="images/tmp/sizer-app.png")
+							h6.dealer__apptitle Замерщик окон
+							a(href="#" target="blank" rel="nofollow" class="dealer__applink") Посмотреть в iTunes
+					.dealer__apps_flexitem.text-center
+							img(class="dealer__appimage", alt="app image", src="images/tmp/config-app.png")
+							h6.dealer__apptitle Конфигуратор
+							a(href="#" target="blank" rel="nofollow" class="dealer__applink") Посмотреть в iTunes
+					.dealer__apps_flexitem.text-center
+							img(class="dealer__appimage", alt="app image", src="images/tmp/magazin-app.png")
+							h6.dealer__apptitle Журнал VEKA Professional
+							a(href="#" target="blank" rel="nofollow" class="dealer__applink") Посмотреть в iTunes
+					.dealer__apps_flexitem.text-center
+							img(class="dealer__appimage", alt="app image", src="images/tmp/color-app.png")
+							h6.dealer__apptitle VEKA Kolory
+							a(href="#" target="blank" rel="nofollow" class="dealer__applink") GooglePlay
+				.dealer__apps_flex
+					.dealer__apps_flexitem.dealer__apps_buttons.text-center
+						a(href="#", target="blank", rel="nofollow", class="dealer__appbtn " alt="logo")
+							img(src="images/tmp/google-logo.png")
+					.dealer__apps_flexitem.dealer__apps_buttons.text-center
+						a(href="#", target="blank", rel="nofollow", class="dealer__appbtn ")
+							img(src="images/tmp/appstore-logo.png" alt="logo")
+
+			.main__section.list__section
+				.pattern-left-md
+				.container
+					.dealer__title Справочник партнёра
+
+				.container
+					.tile__slider.js-similarSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image: img(src="images/tmp/glass_example.jpg")
+										.tile__title
+											+icon('arrow-right')
+											| Многокамерные стеклопакеты и профили
+										p Мы предлагаем системы профилей для пластикового остекления окон, балконов, лоджий, мансард, а также современнее решения для монтажа межкомнатных дверей, офисных перегородок и  тамбуров. Наши профили идеальны для зимнего остекления и позволяют сохранить тепло даже самой суровой зимой.
+										.tile__more.visible-xs: span.link Узнать больше
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image: img(src="images/tmp/glass_example2.jpg")
+										.tile__title
+											+icon('arrow-right')
+											|Остекление дачи и загородного дома
+										p Совмещенные стеклопакеты бывают узкоспециализированные и многофункциональные. Они служат как для защиты от солнечных лучей, так и для сохранения тепла. Оченьважной характеристкой стеклопакета является шумоизоляция.
+										.tile__more.visible-xs: span.link Узнать больше
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image: img(src="images/tmp/glass_example3.jpg")
+										.tile__title
+											+icon('arrow-right')
+											|Качественная фурнитура
+										p Исправное функционирование правильно смонтированных оконных систем и их долговечность в значительной степени зависят от использования качественной фунитуры.
+										.tile__more.visible-xs: span.link Узнать больше
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image: img(src="images/tmp/glass_example4.jpg")
+										.tile__title
+											+icon('arrow-right')
+											|Панорамные двери VEKASLIDE
+										p Все меньше и меньше людей ориентируются на классический вариант окон с белым покрытием. Это не удивительно, ведь для создания уникального фасада или дополнения к уже имеющемуся дизайну предпочтительны разнообразное сочетание цветов и оттенков.
+
+							.swiper-pagination.visible-xs
+
+							.load-more__button.visible-xs
+								a(href="#").button.blue.md
+									span Смотреть все
+
+
+
+				.container
+					.dealer__guide_flex
+						.dealer__guide_flexitem.text-center
+							a(href="#").button.blue-border.md.dealer__guide_btn
+								+icon('answers')
+								span Вопросы и ответы
+						.dealer__guide_flexitem.text-center
+							a(href="#").button.blue.md.dealer__guide_btn
+								span Все статьи
+								+icon('arrow-right')
+
+
+
+				.container.dealer__videolessons
+					.dealer__title Видео-уроки
+
+					.video__slider.video-tiles.js-videoSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example.jpg")
+											span.play-icon
+										.video-tile__title Важные параметры пластиковых окон
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example2.jpg")
+											span.play-icon
+										.video-tile__title Как выбрать и купить окна
+								.swiper-slide
+									a(href="javascript:;" data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").video-tile.js-inlineModal
+										.video-tile__image
+											img(src="images/tmp/video_example3.jpg")
+											span.play-icon
+										.video-tile__title Штульповое окно VEKA Softline 82
+
+							.swiper-pagination.visible-xs
+
+						.load-more__button
+							a(href="#").button.blue.md
+								span Все видео-уроки
+								+icon('arrow-right')
+				.dealer__professional
+					.container
+						.pattern-right-md.dealer__professional_pattern
+						.dealer__title VEKA Professional
+
+						.row.dealer__professional_row
+							.col-xs-12.col-md-6.dealer__professional_col
+								img(alt="veka-professional", src="images/tmp/professional-veka3.jpg" class="dealer__professional_img")
+							.col-xs-12.col-md-6.dealer__professional_col.dealer__professional_text
+								div Компания VEKA Rus является дочерней производственной компанией концерна VEKA AG – одного их мировых лидеров в области разработки и производства оконных и дверных систем из высококачественного пластика, а также откидных- и рольставен. Компания VEKA AG работает на рынке с 1969 года. Головное предприятие находится в г. Sendenhorst, ФРГ, Северный Рейн-Вестфалия.
+						.row.dealer__professional_row
+							.col-xs-12.col-md-6.dealer__professional_col.dealer__professional_text
+								div Производственные дочерние компании концерна, помимо Германии, работают в США, Канаде, Бельгии, Великобритании, Польше, Китае, Испании, Франции. В мире действует развитая сеть коммерческих представительств VEKA, осуществляющих свою деятельность в странах Латинской Америки, Индии, Сингапуре, Румынии.
+							.col-xs-12.col-md-6.dealer__professional_col
+								img(alt="veka-professional", src="images/tmp/professional-veka3.jpg" class="dealer__professional_img")
+						.row.dealer__professional_row
+							.col-xs-12.col-md-6.dealer__professional_col
+								img(alt="veka-professional", src="images/tmp/professional-veka3.jpg" class="dealer__professional_img")
+							.col-xs-12.col-md-6.dealer__professional_col.dealer__professional_text
+								div На сегодняшний день VEKA является одним из крупнейших в мире производителей пластикового профиля для изготовления оконных и дверных конструкций. Все производства группы компаний VEKA осуществляют свою деятельность под постоянным контролем главного предприятия в городе Sendenhorst, определяющего единый для всех предприятий стандарт качества независимо от страны производства.
+
+
+
+
+			.dealer__seminars.gray__section
+				.pattern-right-md.dealer__professional_pattern
+				.container
+					.row
+						.col-xs-12.col-md-4.dealer__seminar_box
+							h6.dealer__seminar_name Семинар
+							.dealer__seminar_data
+								span.dealer__seminar_date 25 декабря 2016,
+								span.dealer__seminar_location Челябинск
+							a(href="#").dealer__seminar_link.link Компания VEKA провела цикл лекций для студентов Уральского федерального университета
+						.col-xs-12.col-md-4.dealer__seminar_box
+							h6.dealer__seminar_name Тренинг
+							.dealer__seminar_data
+								span.dealer__seminar_date 19 декабря 2016,
+								span.dealer__seminar_location Новосибирск
+							a(href="#").dealer__seminar_link.link Учебный центр VEKA Professional провел тренинг для компании «Китеж»
+						.col-xs-12.col-md-4.dealer__seminar_box
+							h6.dealer__seminar_name Семинар
+							.dealer__seminar_data
+								span.dealer__seminar_date 7 декабря 2016,
+								span.dealer__seminar_location Новосибирск
+							a(href="#").dealer__seminar_link.link Учебный центр VEKA Professional и компания Консиб провели семинар для менеджеров по продажам
+
+
+			.dealer__aboutveka
+				.container
+					.dealer__title О компании VEKA
+					.row
+						.col-xs-12.col-md-6.dealer__aboutveka_text
+							p Компания VEKA Rus является дочерней производственной компанией концерна VEKA AG – одного из мировых лидеров в области разработки и производства оконных и дверных систем из высококачественного пластика, а также откидных и рольставен. Компания VEKA AG работает на рынке с 1969 года. Головное предприятие находится в г. Sendenhorst, ФРГ, Северный Рейн. Производственные дочерние компании концерна, помимо Германии, работают в США, Канаде, Бельгии, Великобритании, Польше, Китае, Испании, Франции. В мире действует развитая сеть коммерческих представительств VEKA.
+						.col-xs-12.col-md-6.dealer__aboutveka_text
+							p осуществляющих свою деятельность в странах Латинской Америки, Индии, Сингапуре, Румынии. На сегодняшний день VEKA является одним из крупнейших в мире производителей пластикового профиля для оконных и дверных конструкций. Все производства группы компаний VEKA осуществляют свою деятельность под постоянным контролем главного предприятия в городе Sendenhorst, определяющего единый для всех предприятий стандарт качества.
+					.row.dealer__aboutveka_counters
+						.col-xs-12.col-md-3.dealer__aboutveka_counter
+							.dealer__aboutveka_num 1995
+							.dealer__aboutveka_info начало поставок профиля VEKA в Россию
+						.col-xs-12.col-md-3.dealer__aboutveka_counter
+							.dealer__aboutveka_num 440
+							.dealer__aboutveka_info сотрудников работает в настоящее время на предприятии VEKA Rus
+						.col-xs-12.col-md-3.dealer__aboutveka_counter
+							.dealer__aboutveka_num 1024
+							.dealer__aboutveka_info компании-партнера в России и СНГ
+						.col-xs-12.col-md-3.dealer__aboutveka_counter
+							.dealer__aboutveka_num 40
+							.dealer__aboutveka_info продукция концерна экспортируется в более чем 40 стран мира
+				.load-more__button
+					a(href="#").button.blue.md
+						span Подробнее о компании
+						+icon('arrow-right')
+
+
+
+
+
+
+
+
+
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

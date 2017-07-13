@@ -1,0 +1,217 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Контакты
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+							li.breadcrumb__item: a(href="#").breadcrumb__link Контакты
+
+			.main__section
+				.container
+					.main__section-body
+						.compare__head.contact-list--fix-border-bottom
+							.main__title Контакты
+							.compare__sort
+								.sort-nav
+									.sort-nav__item.is-active Контакты VEKA
+									.sort-nav__item Региональные представители
+
+			.main__section.contact-list__margin-fix.js-tab
+
+			
+				.tab-content.js-tab-content
+					#contact-map
+						.map__content
+							#map.map(data-pin="images/pin.png" data-cluster-icon="images/cluster.svg" data-location="45.064065,38.9550991")
+							.container
+								.aside-map.contact-aside
+									.aside-map__control
+										button.aside-map__toggle.js-mapListToggle(data-label="Развернуть" data-second-label="Свернуть")
+											+icon('circle-arrow')
+											span.aside-map__toggle-label Развернуть
+									.scroll.js-scroll
+										.map-list
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.7550991")
+													| Завод в Москве, центральный офис
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																| +7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem
+																+icon('phone-fax')
+																| (495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																| skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br>
+															| Широта: 55°4`29.51`N (55.074864)<br>
+															| Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br>
+															| Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.9550991")
+													| Завод в Новосибирске
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																| +7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem
+																+icon('phone-fax')
+																| (495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																| skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br>
+															| Широта: 55°4`29.51`N (55.074864)<br>
+															| Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br>
+															| Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.8550991")
+													| Филиал и склад в Хабаровске
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																| +7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem
+																+icon('phone-fax')
+																| (495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																| skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br>
+															| Широта: 55°4`29.51`N (55.074864)<br>
+															| Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br>
+															| Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+
+
+
+
+
+
+		include _parts/_direction-modal
+
+		include _parts/_footer
+
+		include _parts/_scripts

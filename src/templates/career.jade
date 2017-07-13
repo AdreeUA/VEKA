@@ -1,0 +1,193 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Карьера с VEKA
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+							li.breadcrumb__item: a(href="#").breadcrumb__link Карьера с VEKA
+
+			.main__section.tile__section
+				.container
+					.main__section-head
+						.main__title Карьера с VEKA
+
+			.main__section
+				.container
+					.main__section-body
+						.main__about
+							.about__description
+								p.profiles__text
+									| Одним из основных принципов кадровой политики компании является
+									| ориентация  на долгосрочные цели и выбор приоритетных направлений
+									| развития. В компании сложилась спокойная, доброжелательная, демократичная
+									| и творческая атмосфера. Управление компанией в первую очередь основано
+									| на авторитете руководителей всех уровней, которые всегда открыты для
+									| общения со всеми сотрудниками.
+								p.profiles__text
+									| Руководство компании заинтересовано в профессиональном росте
+									| сотрудников, готово поддерживать и создавать условия для продвижения
+									| тех,  кто способен брать на себя ответственность не только за результаты своей
+									| деятельности, но и за реализацию коллективных проектов, проявлять разумную
+									| инициативу и творчество.
+								p.profiles__text
+									| Отношение к любому члену нашего коллектива изначально проникнуто
+									| уважением и заботой. Компания стремится создавать все условия для того,
+									| чтобы каждый сотрудник чувствовал себя частью большого и дружного
+									| коллектива.енные окна из металлопластикового профиля —
+									| выбирайте VEKA!
+
+			.main__section
+				.container
+					.main__section-body.js-advantageSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-5.png")
+										.small__title Прежде всего люди
+										p
+											| Ориентация на профессионализм,
+											| инициативу и ответственность каждого
+											| сотрудника является ключевым фактором
+											| при оценке персонала.
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-6.png")
+										.small__title Доброта и забота
+										p
+											| Отношения в нашем коллективе
+											| изначально проникнуты уважением
+											| и заботой. Компания стремится к тому,
+											| чтобы каждый сотрудник чувствовал
+											| себя частью большого и дружного
+											| коллектива.
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-7.png")
+										.small__title Условия труда
+										p
+											| VEKA Rus  создает оптимальные
+											| условия труда, которые позволяют
+											| каждому сотруднику полностью
+											| реализовать себя и раскрыть
+											| свои способности и таланты.
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-8.png")
+										.small__title Карьера - VEKA!
+										p
+											| VEKA открыта для сотрудничества,
+											| как с профессионалами, так
+											| и с молодыми специалистами.
+
+
+
+			.main__section.work-example__section
+				.work-example.js-workExampleSwiper
+					.main__section-head.visible-xs
+						.main__title Ценность VEKA – наш коллектив
+
+					.swiper-mobile__nav
+						.huge-arrow__left: +icon('huge-arrow-left')
+						.huge-arrow__right: +icon('huge-arrow-right')
+
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide.wide.hidden-xs
+								.work-example__elem
+									.pattern-left-md.medium
+									.work-example__title
+										.main__title Фотогалерея <br>SOFTLINE
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-1.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-2.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-3.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-4.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-5.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/career-6.jpg')")
+
+					.swiper-pagination.visible-xs
+
+			.main__section.hidden-xs
+				.container
+					.main__section-head
+						.main__title Работа в компании VEKA
+					.main__section-body
+						.row
+							.col-md-6.col-sm-12
+								p.company__text.profiles__text
+									| На протяжении многих лет мы всем коллективом встречаем Новый год, День
+									| рождения компании, проводим чемпионаты по футболу и детские праздники.
+									| Меняются места проведения этих мероприятий, их формат и творческая
+									| программа, но неизменным остается интерес и приятные воспоминания.
+								p.company__text.profiles__text
+									| Кадровая политика ВЕКА Рус направлена на привлечение и развитие
+									| сотрудников, нацеленных на достижение успеха совместно с компанией.
+									| Основными критериями успеха являются инициатива, профессиональный
+									| рост и личностное развитие.
+
+							.col-md-6.col-sm-12
+								p.company__text
+									strong
+										| Что значит работать в компании VEKA?
+									ul.tick-list.tick-list--small
+										li Профессионально расти и развиваться
+										li Быть уверенным в своем будущем
+										li Испытывать гордость за свою Компанию
+										li Достигать успеха вместе с сильной командой
+								p.company__text.profiles__text
+									| Если вы заинтересованы в том, чтобы стать частью крупной и успешной
+									| компании, строить карьеру, работать со знаменитым брендом, внести свой
+									| вклад в достижение устойчивого развития, то VEKA  – то, что вам нужно.
+					.main__section-footer
+						a(href="#").button.blue.md.video
+							span Видео о компании
+							+icon('video')
+
+			.main__section.subscription__section(style="background-image: url('images/back/career_back.jpg')")
+				.container
+					.main__form.left
+						form(action="#").js-validate
+							.main__form-head
+								.main__title Как стать частью<br> команды?
+								p.main__form-p
+									| Если Вы хотите увидеть, как ваши
+									| идеи воплощаются в жизнь, <b>приходите работать к нам!</b>
+								p.main__form-p
+									| <b>Служба персонала:</b><br>
+									| (495) 518-98-50 доб. 1231, 1233
+								p.main__form-p
+									| <b>Резюме направляйте по адресу:</b><br>
+									| <a href="mailto:hr_rus@veka.com" class="link">hr_rus@veka.com</a>
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

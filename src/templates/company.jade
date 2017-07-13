@@ -1,0 +1,157 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title О компании
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+
+
+			.main__section.main__section-bg.company__section-height
+				//- .section-bg(style="background-image: url('images/tmp/company_back.jpg')"): img(src="images/tmp/company_back.jpg").visible-xs.company__bg-mobile
+				.section-bg(style="background-image: url('images/tmp/company_back.jpg')"): .company__bg-mobile(style="background-image: url('images/tmp/company_back.jpg')").visible-xs
+				.container
+					.main__section-head
+						.top__head
+							.pattern-right-md.company__pattern-top-position
+							.main__title.company__main-title О компании VEKA
+							p 
+								|VEKA Rus является дочерней производственной компанией концерна <br>VEKA AG - одного из мировых лидеров в области разработки и производства <br>оконных и дверных систем из высококачественного пластика.
+
+
+							.top__head-buttons.company--fix-margin-top
+								a(href="#").button.blue.company__btn-career
+									+icon('career')
+									span Карьера
+								button.button.blue-border.company__btn-production
+									+icon('wrench')
+									span Производство
+
+
+
+			.main__section
+				.container
+					.main__section-head
+						.medium__title Концерн VEKA AG
+
+					.main__section-body
+						.row
+							.col-md-6.col-sm-12
+								p.company__text Компания VEKA Rus является дочерней производственной компанией концерна VEKA AG - одного из мировых лидеров в области разработки и производства оконных и дверных систем из высококачественного пластика, а также откидных и рольставен. Компания VEKA AG работает на рынке с 1969 года. Головное предприятие находится в г. Sendenhost, ФНГ, Северный Рейн-Вестфалия.
+								br
+								p.company__text.hidden-xs Производственные дочерние компании концерна, помимо Германии, работают в США, Канаде, Бельгии, Великобритании, Польше, Китае, Испании, Франции. В мире действует развитая сеть коммерческих представительств VEKA,
+								p.company__text.visible-xs Производственные дочерние компании концерна, помимо Германии, работают в США, Канаде, Бельгии, Великобритании, Польше, Китае, Испании, Франции. В мире действует развитая сеть коммерческих представительств VEKA, осущеставляющих свою деятельность в странах Латинской Америки, Индии, Сингапуре, Румынии.
+
+							.col-md-6.col-sm-12
+								p.company__text.hidden-xs осущеставляющих свою деятельность в странах Латинской Америки, Индии, Сингапуре, Румынии.
+								br
+								p.company__text На сегодняшний день VEKA является одним из крупнейших в мире производителей пластикового профиля для изготовления оконных и дверных конструкций. Все производства группы компаний VEKA осуществляют свою деятельность под постоянным контролем главного предприятия в городе Sendenhorst, определяющего единый для всех предприятий стандарт качества независимо от страны производства.
+					
+
+			.main__section
+				.container
+					.main__section-head
+						.medium__title VEKA в России
+
+					.main__section-body
+						.row
+							.col-md-6.col-sm-12
+								p.company__text.hidden-xs VEKA стала первой европейской экструзионной компанией, открывшей в России собственный завод. Он был построен в 30 километрах от Москвы, в Наро-Фоминском районе, рядом с городом Троицком. Первый завод VEKA Rus был открыт 8 октября 1999 года. Ровно через пять лет, 8 октября 2004 года, был
+								p.company__text.visible-xs VEKA стала первой европейской экструзионной компанией, открывшей в России собственный завод. Он был построен в 30 километрах от Москвы, в Наро-Фоминском районе, рядом с городом Троицком. Первый завод VEKA Rus был открыт 8 октября 1999 года. Ровно через пять лет, 8 октября 2004 года, был открыт второй завод компании в Новосибирске. В феврале 2005 года заработал Дальневосточный филиал компании в Хабаровске, а в мае того же года начались отгрузки профиля со склада Дальневосточного филиала.
+				
+							.col-md-6.col-sm-12.hidden-xs
+								p.company__text открыт второй завод компании в Новосибирске. В феврале 2005 года заработал Дальневосточный филиал компании в Хабаровске, а в мае того же года начались отгрузки профиля со склада Дальневосточного филиала.
+
+			.main__section
+				.container
+					.company__map
+						.company__map-mobile.visible-xs
+							.company__slide(data-company-slide="1999")
+								img(src="images/tmp/company-slide-item-1.png")
+							.company__slide(data-company-slide="2004")
+								img(src="images/tmp/company-slide-item-2.png")
+							.company__slide(data-company-slide="2005" style="display: block;")
+								img(src="images/tmp/company-slide-item-3.png")
+						ul.company__date
+							li.company__date-item.js-company_date-link(data-company="1999") 1999
+							li.company__date-item.js-company_date-link(data-company="2004") 2004
+							li.company__date-item.js-company_date-link.company__date-item-active(data-company="2005") 2005
+
+
+			.main__section.company__blue-bg
+				//- .pattern-left-md.medium.medium--fix-left
+				.container
+					.row
+						.col-md-6.col-xs-12
+							.pattern-left-md.medium.medium--fix-left
+							.main__title.not-found__text--white Гарантия качества
+							p.company__text--white Вся продукция VEKA Rus имеет необходимые сертификаты и может использоваться во всех климатических зонах, включая регионы Крайнего Севера и районы с резко континентальным климатом, повышенной влажностью и сверхнормативными ветровыми нагрузками. 25 марта 2004 года VEKA стала первой западной экструзионной компанией в России, получившей сертификат соответствия стандарту качества <b>DIN ISO 9001:2000</b>. В апреле 2006 года VEKA Rus стала первой и единственной компанией в России, чья продукция прошла сертификацию на соответствие европейскому <b>знаку качества RAL</b>.
+						.col-md-6.col-xs-12
+							.company__flex-block
+								.company__flex-block-item
+									.company__flex-block-img(style="background-image: url('images/tmp/garanty-1.png')")
+									.company__flex-block-text Знак качества RAL
+								.company__flex-block-item
+									.company__flex-block-img(style="background-image: url('images/tmp/garanty-2.png')")
+									.company__flex-block-text Стандарт качества DIN ISO 9001:2000
+								.company__flex-block-item
+									.company__flex-block-img(style="background-image: url('images/tmp/garanty-3.png')")
+									.company__flex-block-text Член Союза производителей полимерных профилей
+
+
+			.main__section
+				.container
+					.tile__slider.js-similarSwiper
+						.main__section-head.head-flex
+							.main__title.company__title--color-black Сертификаты VEKA
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-1.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат ISO 9001:2008 VEKA AG
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-2.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат ISO 9001:2008 ООО ВЕКА РУС
+										//- p.company--translate-fix Скачать в формате jpg (80,7 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-3.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат Знак качества RAL
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+								.swiper-slide
+									a(href="#").tile__elem
+										.tile__image.company__sertificate: img(src="images/tmp/sertificate-4.jpg")
+										.tile__title.company__title.company--translate-fix
+											span.link Сертификат Знак качества RAL
+										//- p.company--translate-fix Скачать в формате jpg (80,4 Kb)
+
+							.swiper-pagination.visible-xs
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

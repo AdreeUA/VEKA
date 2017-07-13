@@ -1,0 +1,87 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Заявка сотрудника одобрена
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.request-employee-approve.request-revoke-already.user-forms
+				.row
+					.col-xs-12.col-sm-7
+						h2.user-forms__title.request-employee-approve__title
+							| Заявка одобрена
+							.request-employee-approve__yes-no
+
+						.request-revoke-already__col
+							h2.user-forms__title.request-revoke-already__title Заявка сотрудника
+
+							.request-revoke-already__box
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Имя, фамилия
+									.col-xs-9
+										| Антон Викторович Григорьев
+
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Телефон
+									.col-xs-9
+										| +7 689 536 25 95
+
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Город
+									.col-xs-9
+										| Москва
+
+							.request-revoke-already__box
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Комментарий
+									.col-xs-9
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat.
+							.request-revoke-already__box
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| В компанию
+									.col-xs-9
+										| ООО «Супер-окна»
+
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Офис
+									.col-xs-9
+										| Россия, Санкт-Петербург, 192086, Невский пр., д. 10, офис 1
+
+							.request-revoke-already__box
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Номер заявки
+									.col-xs-9
+										| 36589
+
+								.row.registration__modal-row
+									.col-xs-3.registration__modal-row-title
+										| Дата и время
+									.col-xs-9
+										| 12.06.2017 12:00
+
+						button.button.blue.md.user-forms__button
+							span Вернуться к списку категорий
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

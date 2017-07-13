@@ -1,0 +1,36 @@
+.calc-panel
+	.calc-panel__toggle.js-favHideLink: +icon('arrow-bottom')
+
+	.calc-panel__top
+		.container
+			.calc-panel__control.blue.js-new-window
+				.calc-panel__icon: +icon('plus')
+				.calc-panel__label Добавить новое окно
+			.calc-panel__control.blue-light.js-favToggleLink
+				.calc-panel__icon: +icon('window-type-2')
+				.calc-panel__label <span class="dotted__link">Мои окна</span> <span class="calc-panel__count">- 2 окна</span>
+			.calc-panel__button
+				a(href="ordering.html").button.blue.md.link
+					span Оформить заказ
+					+icon('edit')
+
+	.calc-panel__bottom
+		.container
+			.calc-panel__window
+				.window-fav
+					.window-fav__elem
+						.window-fav__icon: +icon('window-type-3')
+						.window-fav__info
+							.window-fav__title Окно в спальню
+							.window-fav__size 2000 х 1450 мм
+						.window-fav__controls
+							.window-fav__control: +icon('doc')
+							.window-fav__control: +icon('trash')
+					.window-fav__elem
+						.window-fav__icon: +icon('window-type-5')
+						.window-fav__info
+							.window-fav__title Окно на кухню
+							.window-fav__size 2000 х 1450 мм
+						.window-fav__controls
+							.window-fav__control: +icon('doc')
+							.window-fav__control: +icon('trash')

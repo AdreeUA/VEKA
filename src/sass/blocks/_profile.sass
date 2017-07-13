@@ -1,0 +1,73 @@
+.profile
+
+	&__char
+		padding-top: 25px
+		clear: both
+
+		table
+			width: 100%
+			table-layout: fixed
+
+			td
+				&:first-of-type
+					width: 8*100%/12
+				&:last-of-type
+					width: 4*100%/12
+	&__icons
+		float: left
+		width: 46px
+	&__icon
+		width: 46px
+		height: 45px
+		margin-bottom: 38px
+		cursor: pointer
+
+		svg
+			height: 100%
+			width: 100%
+			fill: #2775ba
+	&__image
+		float: right
+	&__buttons
+		font-size: 0
+	&__button
+		min-width: 297px
+		padding-left: 10px
+		padding-right: 10px
+
+		&:not(:last-of-type)
+			margin-right: 10px
+	&__controls
+		margin-top: 25px
+		margin-bottom: 44px
+		font-size: 0
+
+		.icon-compare
+			width: 26px
+			height: 23px
+
+		.icon-print
+			width: 26px
+			height: 25px
+
+
+		.icon-share
+			width: 18px
+			height: 26px
+		svg
+			fill: #b2bac2
+	&__control
+		position: relative
+		display: inline-block
+		margin-right: 30px
+		cursor: pointer
+
+		.share
+			top: 100%
+
+			@media (min-width: 768px)
+				left: -30px
+
+		&.is-active .share
+			visibility: visible
+			opacity: 1

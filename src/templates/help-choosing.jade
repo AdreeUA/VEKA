@@ -1,0 +1,267 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Помощь в выборе
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Помощь в выборе
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Помощь в выборе
+
+					.main__section-body
+						.help-choosing
+							.row
+								.col-md-6.col-sm-6.help-choosing__result
+									.visible-xs
+										.back-link.js-choosingBackLink
+											+icon('arrow-left')
+											span Назад к вопросам
+
+									.image: img(src="images/tmp/window_help_example.png")
+
+									.medium__title Рекомендуемое решение
+									.table__char
+										table 
+											tr
+												td: span Профиль
+												td: span: a(href="#").link VEKA Softline
+											tr
+												td: span Количество камер
+												td: span 5
+											tr
+												td: span Ширина профиля
+												td: span 70 мм
+											tr
+												td: span Количество контуров уплотнения
+												td: span 2
+											tr
+												td: span Стеклопакет
+												td: span Энергосберегающий, двухкамерный стеклопакет, стёкла разной толщины, воздушные камеры разной ширины до 42 мм
+											tr
+												td: span Фурнитура
+												td: span Поворотно-откидная
+											tr
+												td: span Открывание створок
+												td: span Ступенчатое проветривание
+											tr 
+												td: span Цвет
+												td: span Белый/цветной
+
+									.control__links
+										a(href="#").control__link
+											+icon('pdf')
+											span Скачать
+										a(href="#").control__link
+											+icon('print')
+											span Распечатать
+										a(href="#").control__link
+											+icon('share')
+											span Поделиться
+
+									.group__buttons.visible-xs
+										button.button.blue.md.js-inlineModal(data-mfp-src="#requestModal")
+											+icon('tape')
+											span Заявка на замер
+										button.button.blue-border.md.js-inlineModal(data-mfp-src="#callModal")
+											+icon('phone')
+											span Заказать звонок
+
+								.col-md-6.col-sm-6.help-choosing__questions
+									.help-choosing__list.js-helpChoosingSwiper
+										.swiper-mobile__nav
+											.huge-arrow__left: +icon('huge-arrow-left')
+											.huge-arrow__right: +icon('huge-arrow-right')
+										.swiper-container
+											.swiper-wrapper
+												.swiper-slide
+													.help-choosing__elem
+														.help-choosing__title: span Где вы живёте?
+														.choosing__questions
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question")
+																	span Первый или последний этаж многоквартирного дома
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question")
+																	span Средний этаж многоквартирного дома
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question")
+																	span Дом в частном секторе или загородный дом
+												.swiper-slide
+													.help-choosing__elem
+														.help-choosing__title: span Куда выходят окна?
+														.choosing__questions
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_2")
+																	span Тихий двор
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_2")
+																	span Улица с автомобильным движением
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_2")
+																	span Автомагистраль, стройка или аэропорт
+												.swiper-slide
+													.help-choosing__elem
+														.help-choosing__title: span Тепло ли в помещении?
+														.choosing__questions
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_3")
+																	span Очень тепло
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_3")
+																	span Нормальная температура
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_3")
+																	span Холодно
+												.swiper-slide
+													.help-choosing__elem
+														.help-choosing__title: span Есть ли у вас дети?
+														.choosing__questions
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_4")
+																	span Нет
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_4")
+																	span Есть дети младше 7 лет
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_4")
+																	span Есть дети старше 7 лет
+												.swiper-slide
+													.help-choosing__elem
+														.help-choosing__title: span Дизайн окна
+														.choosing__questions
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_5")
+																	span Белое
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_5")
+																	span Цветное окрашивание
+															.choosing__question
+																label.choosing__elem
+																	input(type="radio" name="question_5")
+																	span Ламинация под дерево
+
+										.help-choosing__count.js-choosingCount: <span class="js-questionActiveNum">1</span> вопрос из 5
+
+										.help-choosing__button.js-choosingButton
+											button.button.blue-border: span Готово
+
+									.answer__list.hidden-xs
+										.medium__title Ваши ответы
+										ul.list__tick
+											li: b Первый или последний этаж многоквартирного дома
+											li: b Автомагистраль, стройка или аэропорт
+											li: b Нормальная температура
+											li: b Есть дети младше 7 лет
+											li: b Белое
+					
+					.main__section-footer.hidden-xs
+						button.button.blue.md.js-inlineModal(data-mfp-src="#requestModal")
+							+icon('tape')
+							span Заявка на замер
+						button.button.blue-border.md.js-inlineModal(data-mfp-src="#callModal")
+							+icon('phone')
+							span Заказать звонок					
+
+			.main__section.similar__window.hidden-xs
+				.container
+					.main__section-head
+						.main__title Другие подходящие вам окна VEKA
+
+					.main__section-body
+						.window-solution
+							.row
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Простое окно
+										.window-tile__description Экономичное решение для подъездов, дачных домиков, коммерческих и производственных помещений.
+										.window-tile__bottom
+											.window-tile__price 6 300 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+										.window-tile__tip Cтоимость является ориентировочной и может отличаться в зависимости от комплектации заказа.
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example2.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Окно для детской
+										.window-tile__description Это специальное окно сделает детскую комнату максимально безопасной. Окно открывается только на проветривание: для полного открытия окна необходим ключ.
+										.window-tile__bottom
+											.window-tile__price 7 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+										.window-tile__tip Cтоимость является ориентировочной и может отличаться в зависимости от комплектации заказа.
+								.col-md-4.col-sm-4.js-equalheight
+									a(href="#").window-tile__elem
+										.window-tile__image: img(src="images/tmp/window_tile_example3.jpg")
+										.window-tile__title 
+											+icon('arrow-right')
+											|Энергоэффективное окно
+										.window-tile__description Такое окно эффективно сохраняет тепло в помещении и позволяет полностью отказаться от использования электрических нагревательных приборов в холодное время года.
+										.window-tile__bottom
+											.window-tile__price 10 200 <sub>руб.</sub>
+											.window-tile__tip за окно 1300 х 2000 мм
+											.window-tile__button: button.button.blue-border.sm Посчитать свой размер
+										.window-tile__tip Cтоимость является ориентировочной и может отличаться в зависимости от комплектации заказа.
+	
+			.main__section.subscription__section(style="background-image: url('images/back/subscription_back_second.jpg')")
+				.container
+					.main__form.left
+						form(action="#").js-validate
+							.main__form-head
+								.main__title Поможем вам с выбором!
+								p Мы с удовольствием ответим на ваши вопросы и поможем <b>выбрать правильное решение!</b>
+
+							.main__form-body
+								fieldset.fieldset
+									input(type="text" name="name" required="required" placeholder="Ваше имя").input
+								fieldset.fieldset
+									input(type="tel" name="phone" required="required" placeholder="+7 (___) ___-__-__").input.js-phone
+								fieldset.fieldset
+									label.checkbox
+										input(type="checkbox" name="user_agreement" required="required")
+										span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+								fieldset.fieldset
+									button.button.blue.md
+										span Отправить заявку
+										+icon('email')
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,43 @@
+.guide
+	&__section
+		position: relative
+		&:after
+			display: none
+			position: absolute
+			content: ""
+			right: 0
+			bottom: 67px
+			width: 582px
+			height: 544px
+			background-image: url(../../images/tmp/guide-decor.png)
+			background-size: contain
+			background-repeat: no-repeat
+			z-index: 0
+
+			@media (min-width: 768px)
+				display: block
+
+	&__title
+		position: relative
+		z-index: 1
+		@media (min-width: 768px)
+			line-height: 31px
+
+	&__list
+		margin-bottom: 30px
+		padding-left: 70px
+		position: relative
+		z-index: 1
+		li
+			margin-bottom: 10px
+
+	&__link
+		color: #272727
+		&:hover
+			color: #000
+
+	.main__section-icon svg
+		height: 50px
+		width: 50px
+
+

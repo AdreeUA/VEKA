@@ -1,0 +1,193 @@
+.city-select
+	.main__pattern
+
+	.container
+		.city-select__head
+			.city-select__search
+				form(action="#")
+					input(type="text" placeholder="Ваш населённый пункт").city-select__input
+					button.city-select__button: +icon('search')
+			.city-selected 
+				+icon('pin')
+				span Новосибирск
+			.city-select__close.js-closeCitySelect: +icon('close')
+
+		.city-select__body
+			// Если ничего не найдено
+			.city-select__text(style="display: none")
+				p По указанному адресу не найдено точек продаж.<br> Найден ближайший населенный пункт: <span class="city__example">Омск</span>
+			.city-select__grid
+				.city-select__elem
+					.city-select__label А
+					ul.city-select__list
+						li: a(href="#") Абакан
+						li: a(href="#") Альметьевск
+						li: a(href="#") Ангарск
+						li: a(href="#") Архангельск
+						li: a(href="#") Ачинск
+				.city-select__elem
+					.city-select__label Б
+					ul.city-select__list
+						li: a(href="#") Балашиха
+						li: a(href="#") Барнаул
+						li: a(href="#") Белгород
+						li: a(href="#") Бердск
+						li: a(href="#") Бийск
+				.city-select__elem
+					.city-select__label В
+					ul.city-select__list
+						li: a(href="#") Владивосток
+						li: a(href="#") Владимир
+						li: a(href="#") Волгоград
+						li: a(href="#") Волжский
+						li: a(href="#") Воронеж
+				.city-select__elem
+					.city-select__label Г
+					ul.city-select__list
+						li: a(href="#") Глазов
+				.city-select__elem
+					.city-select__label Д
+					ul.city-select__list
+						li: a(href="#") Дзержинск
+				.city-select__elem
+					.city-select__label Е
+					ul.city-select__list
+						li: a(href="#") Ейск
+						li: a(href="#") Екатеринбург
+				.city-select__elem
+					.city-select__label Ж
+					ul.city-select__list
+						li: a(href="#") Железногорск
+				.city-select__elem
+					.city-select__label З
+					ul.city-select__list
+						li: a(href="#") Зеленоград
+						li: a(href="#") Златоуст
+				.city-select__elem
+					.city-select__label И
+					ul.city-select__list
+						li: a(href="#") Ижевск
+						li: a(href="#") Иркутск
+				.city-select__elem
+					.city-select__label К
+					ul.city-select__list
+						li: a(href="#") Казань
+						li: a(href="#") Калининград
+						li: a(href="#") Калуга
+						li: a(href="#") Кемерово
+						li: a(href="#") Киров
+						li: a(href="#") Комсомольск-на-Амуре
+						li: a(href="#") Королёв
+						li: a(href="#") Красногорск
+						li: a(href="#") Краснодар
+						li: a(href="#") Красноярск
+						li: a(href="#") Курган
+						li: a(href="#") Курск
+				.city-select__elem
+					.city-select__label Л
+					ul.city-select__list
+						li: a(href="#") Линево
+						li: a(href="#") Липецк
+						li: a(href="#") Люберцы
+				.city-select__elem
+					.city-select__label М
+					ul.city-select__list
+						li: a(href="#") Магнитогорск
+						li: a(href="#") Москва
+						li: a(href="#") Мурманск
+						li: a(href="#") Мытищи
+				.city-select__elem
+					.city-select__label Н
+					ul.city-select__list
+						li: a(href="#") Набережные Челны
+						li: a(href="#") Находка
+						li: a(href="#") Нижневартовск
+						li: a(href="#") Нижний Новгород
+						li: a(href="#") Нижний Тагил
+						li: a(href="#") Новокузнецк
+						li: a(href="#") Новороссийск
+						li: a(href="#") Новосибирск
+						li: a(href="#") Новотроицк
+						li: a(href="#") Новочеркасск
+				.city-select__elem
+					.city-select__label О
+					ul.city-select__list
+						li: a(href="#") Одинцово
+						li: a(href="#") Омск
+						li: a(href="#") Оренбург
+						li: a(href="#") Орск
+				.city-select__elem
+					.city-select__label П
+					ul.city-select__list
+						li: a(href="#") Пенза
+						li: a(href="#") Первоуральск
+						li: a(href="#") Пермь
+						li: a(href="#") Петрозаводск
+						li: a(href="#") Подольск
+						li: a(href="#") Прокопьевск
+						li: a(href="#") Псков
+				.city-select__elem
+					.city-select__label Р
+					ul.city-select__list
+						li: a(href="#") Радужный
+						li: a(href="#") Реутов
+						li: a(href="#") Ростов-на-Дону
+						li: a(href="#") Рязань
+				.city-select__elem
+					.city-select__label С
+					ul.city-select__list
+						li: a(href="#") Самара
+						li: a(href="#") Санкт-Петербург
+						li: a(href="#") Саранск
+						li: a(href="#") Саратов
+						li: a(href="#") Северодвинск
+						li: a(href="#") Сосновый Бор
+						li: a(href="#") Сочи
+						li: a(href="#") Ставрополь
+						li: a(href="#") Стерлитамак
+						li: a(href="#") Сургут
+						li: a(href="#") Сызрань
+				.city-select__elem
+					.city-select__label Т
+					ul.city-select__list
+						li: a(href="#") Таганрог
+						li: a(href="#") Тверь
+						li: a(href="#") Тольяти
+						li: a(href="#") Томск
+						li: a(href="#") Тула
+						li: a(href="#") Тюмень
+				.city-select__elem
+					.city-select__label У
+					ul.city-select__list
+						li: a(href="#") Ульяновск
+						li: a(href="#") Усолье-Сибирское
+						li: a(href="#") Уссурийск
+						li: a(href="#") Уфа
+				.city-select__elem
+					.city-select__label Х
+					ul.city-select__list
+						li: a(href="#") Хабаровск
+						li: a(href="#") Химки
+				.city-select__elem
+					.city-select__label Ч
+					ul.city-select__list
+						li: a(href="#") Чебоксары
+						li: a(href="#") Челябинск
+				.city-select__elem
+					.city-select__label Э
+					ul.city-select__list
+						li: a(href="#") Энгельс
+				.city-select__elem
+					.city-select__label Ю
+					ul.city-select__list
+						li: a(href="#") Южно-Сахалинск
+						li: a(href="#") Югра
+				.city-select__elem
+					.city-select__label Я
+					ul.city-select__list
+						li: a(href="#") Якутск
+						li: a(href="#") Ярославль
+						li: a(href="#") Ясный
+		
+
+

@@ -1,0 +1,267 @@
+.dealer
+	#dealer__slider_btn
+		padding: 20px
+
+	&__slide_title
+		font-size: 44px
+		line-height: 50px
+
+	#dealer__sliderform
+		@media (min-width: 768px)
+			margin-top: 55px
+			margin-bottom: 55px
+
+
+	&__newsbox
+		.tile__image
+			position: relative
+
+	&__news_elem
+		position: relative
+
+	&__news_icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 48px
+		height: 48px
+		background-color: #0074b8
+		padding: 11px
+
+		.icon
+			height: 27px
+			width: 27px
+			fill: #fff
+
+	&__title
+		font-size: 44px
+		line-height: 54px
+		color: #0074b8
+		margin-bottom: 55px
+
+	&__newsdate
+		color: #0074b8
+		font-family: Roboto, sans-serif
+		line-height: 20px
+		margin-top: 20px
+		margin-bottom: 20px
+
+	/* === subscribe_section === */
+	&__subscribe_section
+		background: #FFF url(../../images/back/subscription_back.jpg) 50% no-repeat
+		background-size: cover
+		padding-top: 53px
+		padding-bottom: 53px
+
+	&__subscribe_box
+		background-color: #FFF
+		padding: 62px 55px 105px
+
+	&__subscribe_form
+		margin-top: 30px
+
+	&__subscribe_text
+		font-size: 19px
+		line-height: 28px
+
+	&__subscribe_email
+		border: 1px solid #8295a0
+		padding: 10px
+		display: block
+		width: 100%
+		margin-bottom: 25px
+
+	&__subscribe_button
+		width: 100%
+		font-size: 20px
+		vertical-align: middle
+
+		&:before
+			display: inline-block
+			margin-right: 14px
+			content: url('../../images/envelop.svg')
+
+	/* === apps_section === */
+	&__apps
+		padding: 100px 0 60px
+
+	&__apps_flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		text-align: center
+
+	&__apps_flexitem
+		flex-basis: 240px
+		padding: 45px
+
+	&__appimage
+		margin-bottom: 20px
+		min-height: 80px
+
+	&__apptitle
+		color: #000
+
+	&__applink
+		color: #0074b8
+
+	&__apps_buttons
+		flex: 0 0 225px
+		padding: 5px
+
+	&__appbtn
+		background-color: #f0f0f0
+		padding: 10px 30px
+		border: 1px solid #F0F0F0
+		display: inline-block
+		width: 214px
+		transition:  background-color .3s
+
+		&:hover
+			background-color: transparent
+
+	&__guide_flex
+		@extend .dealer__apps_flex
+
+	&__guide_flexitem
+		flex-basis: 300px
+		margin: 55px 5px
+
+	&__guide_btn
+		width: 100%
+		height: 68px
+		font-size: 20px
+		font-weight: 700
+		padding-top: 22px
+
+		svg
+			height: 25px
+			width: 22px
+
+	&__videolessons
+		padding-top: 55px
+		padding-bottom: 55px
+
+
+	/* === professional_section === */
+	&__professional
+		position: relative
+
+	&__professional_pattern
+		right: 0
+		z-index: -1
+		top: -370px
+
+	&__professional_row,
+	&__professional_col
+		padding: 0
+
+	&__professional_row:nth-child(even)
+		display: flex
+		flex-wrap: wrap
+
+	&__professional_col:nth-child(1)
+		order: 1
+		@media (min-width: 992px)
+			order: 0
+
+	&__professional_img
+		width: 100%
+		display: block
+
+	&__professional_text
+		padding: 90px 56px 30px
+		font-family: Roboto, sans-serif
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+		color: #272727
+
+	/* === seminars_section === */
+	&__seminars
+		position: relative
+		padding-top: 60px
+		padding-bottom: 80px
+
+		.dealer__professional_pattern
+			z-index: 0
+			right: -200px
+
+	&__seminar_box
+		padding-left: 25px
+		padding-right: 25px
+		margin-bottom: 30px
+
+	&__seminar_name
+		color: #272727
+		font-size: 20px
+		font-weight: 700
+
+	&__seminar_data
+		color: #0074b8
+		margin-bottom: 20px
+
+	&__seminar_link
+		font-size: 20px
+		font-weight: 700
+		line-height: 26px
+
+	/* === aboutveka_section === */
+	&__aboutveka
+		padding-top: 100px
+		padding-bottom: 160px
+
+	&__aboutveka_text
+		color: #272727
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+		column-count: 2
+		column-gap: 60px
+
+
+	&__aboutveka_counters
+		max-width: 1150px
+		margin: 60px auto
+		text-align: center
+
+	&__aboutveka_counter
+		margin-bottom: 10px
+		padding-left: 60px
+		padding-right: 60px
+		position: relative
+
+		&:not(:first-child):before
+			position: absolute
+			content: ""
+			width: 2px
+			height: 97px
+			background-color: #e5e8ea
+			left: 0
+			top: 35px
+
+	&__aboutveka_num
+		color: #272727
+		font-family: Roboto, sans-serif
+		font-size: 43px
+		font-weight: 900
+		line-height: 82px
+
+	&__aboutveka_info
+		line-height: 16px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

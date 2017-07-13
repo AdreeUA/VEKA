@@ -1,0 +1,118 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Новости
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header
+		
+		
+		main.main__content
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+							li.breadcrumb__item: a(href="#").breadcrumb__link Заявки на размер
+
+			.main__section
+				.container
+					.main__section-body.news-list
+						.main__title Новости
+						.row.news-list__row
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example4.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example3.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example3.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example3.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example3.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+							.col-md-3.col-sm-3.js-equalheight.news-list__item
+								a.news-list__elem(href='#')
+									.news-list__image
+										img(src='images/tmp/promo_example3.jpg')
+
+									.news-list__title
+										| Скидки пенсионерам и
+										| студентам
+									p.news-list__desc
+										| Всем пенсионерам и студентам <b>СтройИнтерьер</b> дарит постоянную скидку
+										| 10% на остекление балконови установку
+										| пластиковых окон.
+									.news-list__date 14 февраля <span class=news-list__date-year>2016</span>
+
+
+
+
+
+						include _parts/_pager
+
+		include _parts/_footer
+
+		include _parts/_scripts

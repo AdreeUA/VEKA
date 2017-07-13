@@ -1,0 +1,901 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Контакты
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main.main__content
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link О компании
+							li.breadcrumb__item: a(href="#").breadcrumb__link Контакты
+
+			.main__section
+				.container
+					.main__section-body
+						.compare__head.contact-list--fix-border-bottom
+							.main__title Контакты
+							.compare__sort
+								.sort-nav
+									.sort-nav__item Контакты VEKA
+									.sort-nav__item.is-active Региональные представители
+
+			.main__section.contact-list__margin-fix.js-tab
+				.contact-list__buttons
+					button(data-tab-link="#contact-map").contact-list__button.is-active.js-tab-link
+						+icon('pointer-map')
+						|Карта
+					button(data-tab-link="#contact-list").contact-list__button.js-tab-link
+						+icon('list')
+						|Список
+
+			
+				.tab-content.js-tab-content
+					#contact-map
+						.map__content
+							#map.map(data-pin="images/pin.png" data-cluster-icon="images/cluster.svg" data-location="45.064065,38.9550991")
+							.container
+								.aside-map.contact-aside
+									.aside-map__control
+										button.aside-map__toggle.js-mapListToggle(data-label="Развернуть" data-second-label="Свернуть")
+											+icon('circle-arrow')
+											span.aside-map__toggle-label Развернуть
+									.scroll.js-scroll
+										.map-list
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.7550991")
+													|Завод в Москве, центральный офис
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+													
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																|+7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem 
+																+icon('phone-fax')
+																|(495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																|skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br> 
+															|Широта: 55°4`29.51`N (55.074864)<br> 
+															|Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br> 
+															|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.9550991")
+													|Завод в Новосибирске
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+													
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																|+7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem 
+																+icon('phone-fax')
+																|(495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																|skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br> 
+															|Широта: 55°4`29.51`N (55.074864)<br> 
+															|Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br> 
+															|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+
+											.map-list__elem
+												.map-list__label.js-toggleLink.js-mapLabel(data-location="45.064065,38.8550991")
+													|Филиал и склад в Хабаровске
+													+icon('arrow-bottom')
+												.map-list__dropdown
+													.map-aside__info
+														p: b 630511, Новосибирская область, п. Криводановка, ул.Промышленная,4
+													
+													.map-aside__contacts
+														.map-aside__contact
+															a(href="tel:79867635212").map-aside__contact-elem
+																+icon('phone-ring')
+																|+7 (985) 760 78 11
+														.map-aside__contact
+															.map-aside__contact-elem 
+																+icon('phone-fax')
+																|(495) 777 36 11
+														.map-aside__contact
+															a(href="mailto:skorohov@veka.com").map-aside__contact-elem
+																+icon('mail-send')
+																|skorohov@veka.com
+
+													.map-aside__address
+														.map-aside__address-elem
+															b Координаты GPS:<br> 
+															|Широта: 55°4`29.51`N (55.074864)<br> 
+															|Долгота: 82°40`42.06`E (82.678351)
+														.map-aside__address-elem
+															b Адрес для почтовой корреспонденции:<br> 
+															|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+													.map-aside__contacts
+														.map-aside__contact
+															a.map-aside__contact-elem.js-printMapLink
+																+icon('pdf')
+																span.link Распечатать карту
+														.map-aside__contact
+															a(data-mfp-src="#directionModal").map-aside__contact-elem.js-inlineModal
+																+icon('pin-place')
+																span.link Проложить маршрут
+														.map-aside__contact
+															a.map-aside__contact-elem.share-link.js-shareLink
+																+icon('share')
+																span.link Поделиться
+
+																.share
+																	.share__inner
+																		script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+																		script(src="//yastatic.net/share2/share.js")
+																		.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+										
+					#contact-list
+						.container
+							// Контакты список Регион/контакты
+							.contact-list__main-flex-block(style="display: none")
+								.contact-list__head-flex.hidden-xs
+									.contact-list__column-flex.contact-list__column-flex--width
+										+icon('pin')
+										|Регион
+									.contact-list__column-flex.contact-list__column-flex--width
+										+icon('mail')
+										|Контакты
+
+								.contact-list__body-flex
+									.contact-list__column-flex.column--left
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Москва и Центральный регион России:</b>
+											|Нижегородская, Владимирская и Рязанская области
+									.contact-list__column-flex.column--right
+										.contact-list__desc-row
+											.contact-list__row-flex
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+											.contact-list__row-flex
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr.hr__thin
+										.contact-list__desc-row
+											.contact-list__row-flex
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+											.contact-list__row-flex
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+
+								hr.hidden-xs.contact-list__hr
+
+								.contact-list__body-flex.contact-list__mobile-gray-bg
+									.contact-list__column-flex.column--left
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Москва и Центральный регион России:</b>
+											|Нижегородская, Владимирская и Рязанская области
+									.contact-list__column-flex.column--right
+										.contact-list__desc-row
+											.contact-list__row-flex
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+											.contact-list__row-flex
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr.hr__thin
+										.contact-list__desc-row
+											.contact-list__row-flex
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+											.contact-list__row-flex
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+
+								.contact-list__body-flex
+									.contact-list__column-flex.column--left
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Москва и Центральный регион России:</b>
+											|Нижегородская, Владимирская и Рязанская области
+									.contact-list__column-flex.column--right
+										.contact-list__desc-row
+											.contact-list__row-flex
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+											.contact-list__row-flex
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+					
+							.contact-list__main-flex-block
+								.contact-list__head-flex.hidden-xs
+									.contact-list__column-flex.contact-list__column-flex--width
+										+icon('pin')
+										|Регион
+									.contact-list__column-flex.contact-list__column-flex--width
+										+icon('user')
+										|Представители
+									.contact-list__column-flex.contact-list__column-flex--width
+										+icon('mail')
+										|Контакты
+								.contact-list__body-flex
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Москва и Центральный регион России:</b>
+											|Нижегородская, Владимирская и Рязанская области
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Сергей Геннадьевич Матвеев
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (986) 763 52 12
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|smatveyev@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Сергей Корохов
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (985) 760 78 11
+												p
+													a(href="tel:79867635212")
+														+icon('phone-fax')
+														|(495) 777 36 11
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|skorohov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex.contact-list__mobile-gray-bg
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Юг России:</b>
+											|Оренбургская, Пензенская, Ульяновская, Самарская, Саратовская, Тамбовская области и республика Мордовия
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Александр Витальевич Таранушич
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (495) 220 58 04
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 11
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|ALTaranushich@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Руслан Картузов
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (985) 760 70 33
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 11
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|rkartuzov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Дальний Восток и Восточная Сибирь:</b>
+											|Красноярский край, Республика Хакасия, Республика Тыва, Иркутская обл., Республика Бурятия, Читинская обл.
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Иван Юрьевич Киреев
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (914) 772 87 88
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|ikireev@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Сергей Валитов
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (985) 760 66 29
+											
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|s_valitov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex.contact-list__mobile-gray-bg
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Северо-Западный регион:</b>
+											|Ярославская, Кастромская, Ивановская, Кировская, Новгородская, Псковская, Смоленская, Тверсткая, Мурманская, Архангельская, Костромская области Республика Карелия и Коми
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Максим Владимирович Касьянов
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (915) 047 62 63
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|mkasyanov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Вадим Фахрадов
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (985) 760 44 77
+											
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|v_fahradov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Уральский регион и Поволжье:</b>
+											|Чувашия, Удмуртия, Татарстан, Башкирия, Марий Эл
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Максим Валерьевич Швецов
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (912) 241 28 07
+
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 13
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|mkasyanov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Дмитрий Уткин
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (985) 149 55 13
+											
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|d_utkin@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex.contact-list__mobile-gray-bg
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Республика Казахстан, Киргизия, Узбекистан, Таджикистан и Туркмения</b>
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Александр Сергеевич Удодов
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (701) 924 04 88
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|audodov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area.contact-list__row-flex--contacts-fix
+											|<b>Западная Сибирь</b>
+											|(Новосибирская обл., Кемеровская обл., Алтайский край, Омская обл., Томская обл., Республика Алтай)
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Богдан Максимович Киселев
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+7 (913) 912 05 58
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|bkiselev@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex.contact-list__mobile-gray-bg
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Азербайджан</b>
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Сабухи Нуриев
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+994 50 208 05 26
+
+												p
+													a(href="tel:79867635212")
+														+icon('phone-fax')
+														|+994 12 510 40 83
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|snuriyev@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Тебриз Искендеров
+											.contact-list__row-flex.contact-list__row-flex--contacts-fix
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+994 40 201 77 25
+											
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|t_iskanderov@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>АСНАФ:</b>
+												|Азербайджан, Хатаинской р-он, <br> Зыхское шоссе, 18
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|+994 50 208 05 26
+
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|+994 12 510 40 83
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|kamran.h@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+
+								hr.hidden-xs.contact-list__hr
+								.contact-list__body-flex
+									.contact-list__column-flex.contact-list__body-column-flex
+										.contact-list__row-flex.contact-list__row-flex--area
+											|<b>Республика Беларусь</b>
+									.contact-list__column-flex.contact-list__body-column-flex.contact-list__body-column-flex--fix-width
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Региональный представитель:</b>
+												|Евгений Вячеславович Гребенко
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|375 (29) 855 99 55
+
+												p
+													a(href="tel:79867635212")
+														+icon('phone-fax')
+														|(495) 777 36 11
+												
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|egrebenko@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+										hr
+										.contact-list__desc-row
+											.contact-list__row-flex.contact-list__row-flex--people
+												|<b>Технический представитель:</b>
+												|Андрей Шепелевич
+											.contact-list__row-flex.contact-list__row-flex--contacts
+												p
+													a(href="tel:79867635212").contact-list__colored-link 
+														+icon('phone-ring')
+														|375 (29) 857 43 49
+
+												p
+													a(href="tel:79867635212") 
+														+icon('phone-fax')
+														|(495) 777 36 11
+											
+												p
+													a(href="mailto:a_shepelevich@veka.com").contact-list__colored-link 
+														+icon('mail-send')
+														|a_shepelevich@veka.com
+
+												.map-aside__address.contact-list--address
+													.map-aside__address-elem
+														b Координаты GPS:<br> 
+														|Широта: 55°4`29.51`N (55.074864)<br> 
+														|Долгота: 82°40`42.06`E (82.678351)
+													.map-aside__address-elem
+														b Адрес для почтовой корреспонденции:<br> 
+														|Москва, 117465, а/я 34, ООО «ВЕКА Рус»
+
+
+		include _parts/_direction-modal
+
+		include _parts/_footer
+
+		include _parts/_scripts

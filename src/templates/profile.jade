@@ -1,0 +1,312 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title SOFTLINE
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+		
+		include _parts/_header
+		
+		
+		main.main__content
+
+			.main__breadcrumb
+				.container
+					.breadcrumb
+						ul.breadcrumb__list
+							li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+							li.breadcrumb__item: a(href="#").breadcrumb__link Профили VEKA
+							li.breadcrumb__item: a(href="#").breadcrumb__link SOFTLINE
+
+			.main__section
+				.container
+					.main__section-body
+						.row
+							.col-md-6.col-sm-6.clearfix.js-equalheight
+								.profile__icons
+									.profile__icon
+										+icon('magnifier')
+									.profile__icon(data-mfp-src="video-modal-ajax.html" data-mfp-ajax="ajax").js-inlineModal
+										+icon('play-lg')
+									.profile__icon(data-mfp-src="3d-modal-ajax.html" data-mfp-ajax="ajax").js-inlineModal.js-3dmodal
+										+icon('3d')
+								.profile__image
+									img(src="images/tmp/softline.jpg")
+							.col-md-6.col-sm-6.js-equalheight
+								.main__title SOFTLINE
+								.profile__controls
+									span.profile__control: +icon('compare')
+									span.profile__control: +icon('print')
+									span.profile__control.js-shareLink
+										+icon('share')
+										.share
+											.share__inner
+												script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+												script(src="//yastatic.net/share2/share.js")
+												.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+								ul.tick-list
+									li Стабильная многокамерная система с превосходными изолирующими характеристиками
+									li Высокая шумоизоляция обеспечивает тишину и спокойствие Вашего дома
+									li Высококачественный пластик, устойчивый к воздействиям внешней среды, не нуждается ни в покраске, ни в любом ином специальном уходе
+									li Ровная гладкая поверхность
+									li Использование специальных армирующих усилителей обеспечивает высокую стабильность конструкций
+								.profile__buttons
+									button.button.blue.profile__button Купить профиль
+									button.button.blue-border.profile__button Купить окна
+
+
+
+			.main__section.window-constructor__section.window-constructor__section--profile(style="background-image: url('images/handle-md.png')")
+				.container
+
+					.window-constructor__box
+						.modal__head.visible-xs
+							.section__title Варианты ламинации
+							.modal__close.js-constructorModalClose: +icon('close-md')
+
+						.window-constructor__elem.js-laminationModalSection
+							.section__title.hidden-xs Варианты ламинации
+							.window-constructor__swiper.sm.js-laminationSwiper
+								.arrow-prev: +icon('arrow-prev')
+								.arrow-next: +icon('arrow-next')
+
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-1.jpg')")
+												.constructor-elem__title Белая пленка
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-2.jpg')")
+												.constructor-elem__title Агатово-серый
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-3.jpg')")
+												.constructor-elem__title Алый
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-4.jpg')")
+												.constructor-elem__title Базальт
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-5.jpg')")
+												.constructor-elem__title Болотная зелень
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-6.jpg')")
+												.constructor-elem__title Горная сосна
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-7.jpg')")
+												.constructor-elem__title Бриллиантово-синий
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-8.jpg')")
+												.constructor-elem__title Болотный дуб
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-9.jpg')")
+												.constructor-elem__title Винчестер
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-7.jpg')")
+												.constructor-elem__title Бриллиантово-синий
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-8.jpg')")
+												.constructor-elem__title Болотный дуб
+										.swiper-slide
+											.constructor-elem
+												.constructor-elem__image(style="background-image: url('images/tmp/color-9.jpg')")
+												.constructor-elem__title Винчестер
+
+
+								.window-constructor__controls.visible-xs
+									button.button.blue Выбрать
+									button.button.blue-border.js-constructorModalClose Отменить
+
+					.visible-xs
+						button(data-constructor-modal=".js-laminationModalSection").button.blue.md.js-constructorModalLink Варианты ламинации
+			.main__section
+				.container
+					.main__section-body
+						.sort-nav
+							.sort-nav__item Характеристики
+							.sort-nav__item.is-active Подробное описание
+						.profile__char.table__char
+							table
+								tr
+									td: span Количество камер
+									td: span 5
+								tr
+									td: span Монтажная ширина
+									td: span 70 мм
+								tr
+									td: span Толщина стеклопакета
+									td: span от 4 до 42
+								tr
+									td: span Сопротивление теплопередаче (с установленным армированием)
+									td: span 0,78 м²С/Вт
+								tr
+									td: span Исполнение
+									td: span белое, цветное
+								tr
+									td: span Цвет уплотнений
+									td: span черный, серый, карамель
+								tr
+									td: span Ширина комбинации и рама-створка в световом проеме (типовой вариант)
+									td: span 118 мм
+								tr
+									td: span Высота фальца
+									td: span 21 мм
+								tr
+									td: span Материал уплотнений
+									td: span АРТК, силикон
+								tr
+									td: span Количество контуров уплотнения
+									td: span 2
+
+			.main__section
+				.container
+					.main__section-head
+						.main__title Что такое профиль Softline
+
+					.main__section-body.js-advantageSwiper
+						.swiper-mobile__nav
+							.huge-arrow__left: +icon('huge-arrow-left')
+							.huge-arrow__right: +icon('huge-arrow-right')
+
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-1.svg")
+										.small__title Энергоэффективность
+										p Стабильная многокамерная система с превосходными изолирующими характеристиками
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-2.svg")
+										.small__title Защита от шума
+										p Высокая шумоизоляция обеспечивает тишину и спокойствие Вашего дома
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-3.svg")
+										.small__title Дизайн и долговечность
+										p Высококачественный пластик, устойчивый к воздействиям внешней среды, ровная гладкая поверхность в любом цвете и дизайне
+								.swiper-slide
+									.advantage-elem
+										.advantage-elem__icon: img(src="images/advantage-4.svg")
+										.small__title Прочность и надежность
+										p Использование специальных армирующих усилителей обеспечивает высокую стабильность конструкции
+
+			.main__section.work-example__section
+				.work-example.js-workExampleSwiper
+					.main__section-head.visible-xs
+						.main__title Фотогалерея SOFTLINE
+
+					.swiper-mobile__nav
+						.huge-arrow__left: +icon('huge-arrow-left')
+						.huge-arrow__right: +icon('huge-arrow-right')
+
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide.wide.hidden-xs
+								.work-example__elem
+									.pattern-left-md.medium
+									.work-example__title
+										.main__title Фотогалерея <br>SOFTLINE
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example2.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example3.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example4.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example5.jpg')")
+							.swiper-slide
+								.work-example__elem(style="background-image: url('images/tmp/work-example6.jpg')")
+
+					.swiper-pagination.visible-xs
+
+				.container
+					.main__section-footer.hidden-xs
+						a(href="#").button.blue.md
+							span Загрузить ещё
+							img(src="images/refresh.png")
+
+			.main__section
+				.container
+					.main__section-body
+						.main__title Другие профили VEKA
+					.main__section-body.profiles
+						.row
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image.tile__image--center: img(src="images/tmp/compare_example.jpg")
+									.tile__title
+										+icon('arrow-right')
+										|EUROLINE
+									p
+										|Возможна установка одно- и двухкамерных
+										|стеклопакетов/ Рекомендуется для остекления
+										|балконов, лоджий, дачных домов. Ваш выбор –
+										|VEKA Euroline!
+									.profiles__props
+										span.profiles__prop
+											span.profiles__prop-value 5
+											span.profiles__prop-key Камеры
+										span.profiles__prop
+											span.profiles__prop-value A+
+											span.profiles__prop-key Энергоэффективность
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image.tile__image--center: img(src="images/tmp/compare_example.jpg")
+									.tile__title
+										+icon('arrow-right')
+										|EUROLINE
+									p
+										|Возможна установка одно- и двухкамерных
+										|стеклопакетов/ Рекомендуется для остекления
+										|балконов, лоджий, дачных домов. Ваш выбор –
+										|VEKA Euroline!
+									.profiles__props
+										span.profiles__prop
+											span.profiles__prop-value 5
+											span.profiles__prop-key Камеры
+										span.profiles__prop
+											span.profiles__prop-value A+
+											span.profiles__prop-key Энергоэффективность
+							.col-md-4.col-sm-4.js-equalheight
+								a(href="#").tile__elem
+									.tile__image.tile__image--center: img(src="images/tmp/compare_example.jpg")
+									.tile__title
+										+icon('arrow-right')
+										|EUROLINE
+									p
+										|Возможна установка одно- и двухкамерных
+										|стеклопакетов/ Рекомендуется для остекления
+										|балконов, лоджий, дачных домов. Ваш выбор –
+										|VEKA Euroline!
+									.profiles__props
+										span.profiles__prop
+											span.profiles__prop-value 5
+											span.profiles__prop-key Камеры
+										span.profiles__prop
+											span.profiles__prop-value A++
+											span.profiles__prop-key Энергоэффективность
+
+
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

@@ -1,0 +1,123 @@
+.not-found
+
+	&__title
+		color: #fff
+
+		& svg
+			fill: #fff
+
+	&__text
+
+		&--white
+			color: #fff
+
+	&__link
+		color: #fff
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+
+	&__elem p
+		color: #fff
+
+	&__bg
+		background: url('../images/back/not-found_bg.jpg')
+		background-size: cover
+		position: relative
+
+		@media (min-width: 768px)
+			min-height: 1050px
+
+		@media (max-width: 767px)
+			// min-height: 670px
+			background-position: -180px 0px
+
+	&__body
+		@media (min-width: 768px)
+			padding-top: 170px
+
+		@media (max-width: 767px)
+			padding-top: 115px
+	
+	&__header
+		@media (min-width: 768px)
+			height: 170px
+
+
+
+	&__block
+		margin: 0 auto
+		text-align: center
+
+		@media (min-width: 768px)
+			width: 817px
+			left: 0
+			right: 0
+			position: absolute
+			bottom: 516px
+
+		@media (max-width: 767px)
+			padding: 35px
+
+	&__search
+
+		@media (min-width: 768px)
+			background-color: rgba(39, 39, 39, 0.5)
+			padding: 40px
+			margin-top: 35px
+			position: relative
+
+		@media (max-width: 767px)
+			padding-top: 18px
+			padding-bottom: 50px
+
+	&__input
+		border: 1px solid #d0d5d8
+		width: 100%
+		box-sizing: border-box
+		height: 48px
+		padding-left: 19px
+		padding-right: inherit
+		font-size: 18px
+		line-height: 44px
+		color: #272727 
+		
+
+		&:placeholder
+			color: #8295a0
+			font-size: 18px
+			line-height: 44px
+
+	&__search-submit
+		@media (min-width: 768px)
+			top: 30px
+			right: 45px
+
+		@media (max-width: 767px)
+			left: inherit
+			top: 34px
+			right: 25px
+
+		& svg
+			fill: #272727
+
+	&__link-color
+		color: #0071b2
+
+	&__main-title
+		font-size: 100px
+		line-height: 100px
+
+
+	&__pattern
+		background: url('../images/pattern_404.png')
+
+		@media (min-width: 768px) and (max-width: 1200px)
+			display: none !important
+
+	&__section
+		background: rgba(39, 39, 39, 0.5) !important
+
+		@media (min-width: 768px)
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0

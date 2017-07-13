@@ -1,0 +1,276 @@
+include _city-select
+include _call-modal
+include _request-modal
+include _modals
+include _region-modal
+include _send-request-modal
+
+header.header
+	.header__top
+		.container
+			.header__city
+				.city__link.js-citySelectLink
+					+icon('pin')
+					span.city__label Новосибирск
+					+icon('arrow-bottom')
+
+			.header__nav-top
+				ul.top-nav
+					li.top-nav__item.is-active: a(href="#buyers-windows").top-nav__link Покупателям окон
+					li.top-nav__item: a(href="#partners").top-nav__link Партнёрам
+					li.top-nav__item: a(href="#dealers").top-nav__link Дилерам
+					li.top-nav__item: a(href="#designers").top-nav__link Дизайнерам и архитекторам
+
+			.header__right
+				.header__fav
+				.header__lang
+					+icon('planet')
+					a(href="#").lang__link.is-active рус
+					a(href="#").lang__link укр
+
+			.header__search.visible-xs
+				.search__form
+					form(action="#")
+						input(type="text" placeholder="Поиск по сайту").search__input
+						button.search__submit: +icon('search')
+
+	.header__main 
+		.container
+			.header__logo
+				a(href="/").logo
+					.logo__icon
+						img(src="images/logo.svg").logo-default
+						img(src="images/logo-white.svg").logo-white
+
+					.logo__text Надёжно. Навсегда.
+
+			.header__phone
+				.header__phone-title: a(href="tel:88005058352") 8 800 505-83-52
+				p Контакт-центр VEKA. Режим работы 24/7<br>Звонок бесплатный
+
+			.header__controls
+				button.button.blue-border
+					+icon('login')
+					span Личный кабинет
+
+			.header__burger
+				.burger.js-burger
+					.burger__line
+					.burger__line
+					.burger__line
+
+	.header__bottom
+		.header__back-link.js-headerBackLink.visible-xs
+			+icon('arrow-left')
+			span.header__back-label(data-label="Меню") Меню
+		.container
+			#buyers-windows.header__nav-main.is-active
+				.nav-main__label.visible-xs Покупателям окон
+				ul.nav-main
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Продукция
+							.nav-main__toggle: +icon('arrow-bottom')
+
+						.nav-main__submenu
+							.nav-main__overlay
+							.submenu
+								.submenu__col
+									.submenu__label Пластиковые окна
+									.submenu__list
+										ul 
+											li: a(href="#") Простое окно
+											li: a(href="#") Окно для детской
+											li: a(href="#") Энергоэффективное окно
+											li: a(href="#") Окно для защиты от шума
+											li: a(href="#") Окно с защитой от взлома
+								.submenu__col
+									.submenu__label Пластиковые двери
+									.submenu__list
+										ul 
+											li: a(href="#") Входные двери
+											li: a(href="#") Межкомнатные двери
+											li: a(href="#") Офисные двери
+									.submenu__label Решения для коттеджей и загородных домов
+									.submenu__list
+										ul 
+											li: a(href="#") Арочные и фигурные окна
+											li: a(href="#") Ламинированные окна
+											li: a(href="#") Панорамные окна Vekaslide
+								.submenu__col
+									.submenu__label Остекление балконов и лоджий
+									.submenu__list
+										ul 
+											li: a(href="#") Г-образный балкон
+											li: a(href="#") П-образные балкон
+											li: a(href="#") Лоджия 2,5 м
+											li: a(href="#") Лоджия 3 м
+											li: a(href="#") Лоджия 4 м
+								.submenu__col
+									.submenu__label Специальные возможности
+									.submenu__list
+										ul 
+											li: a(href="#") Профильные системы Veka
+											li: a(href="#") Стеклопакеты
+											li: a(href="#") Фурнитура
+											li: a(href="#") Ламинация окон
+											li: a(href="#") Различная форма окон
+											li: a(href="#") Подоконники
+											li: a(href="#") Москитные сетки
+											li: a(href="#") Откосы и отливы
+
+					li.nav-main__item
+						a(href="#").nav-main__link Где купить
+					li.nav-main__item
+						a(href="#").nav-main__link Калькулятор
+					li.nav-main__item
+						a(href="#").nav-main__link Помощь в выборе
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|Справочник покупателя
+							.nav-main__toggle: +icon('arrow-bottom')
+
+						.nav-main__submenu
+							.nav-main__overlay
+							.submenu
+								.submenu__col
+									.submenu__label Пластиковые окна
+									.submenu__list
+										ul 
+											li: a(href="#") Простое окно
+											li: a(href="#") Окно для детской
+											li: a(href="#") Энергоэффективное окно
+											li: a(href="#") Окно для защиты от шума
+											li: a(href="#") Окно с защитой от взлома
+								.submenu__col
+									.submenu__label Пластиковые двери
+									.submenu__list
+										ul 
+											li: a(href="#") Входные двери
+											li: a(href="#") Межкомнатные двери
+											li: a(href="#") Офисные двери
+									.submenu__label Решения для коттеджей и загородных домов
+									.submenu__list
+										ul 
+											li: a(href="#") Арочные и фигурные окна
+											li: a(href="#") Ламинированные окна
+											li: a(href="#") Панорамные окна Vekaslide
+								.submenu__col
+									.submenu__label Остекление балконов и лоджий
+									.submenu__list
+										ul 
+											li: a(href="#") Г-образный балкон
+											li: a(href="#") П-образные балкон
+											li: a(href="#") Лоджия 2,5 м
+											li: a(href="#") Лоджия 3 м
+											li: a(href="#") Лоджия 4 м
+								.submenu__col
+									.submenu__label Специальные возможности
+									.submenu__list
+										ul 
+											li: a(href="#") Профильные системы Veka
+											li: a(href="#") Стеклопакеты
+											li: a(href="#") Фурнитура
+											li: a(href="#") Ламинация окон
+											li: a(href="#") Различная форма окон
+											li: a(href="#") Подоконники
+											li: a(href="#") Москитные сетки
+											li: a(href="#") Откосы и отливы
+
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|Отзывы
+							.nav-main__toggle: +icon('arrow-bottom')
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Акции
+							span.nav-main__count 5
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|О компании
+							.nav-main__toggle: +icon('arrow-bottom')
+
+			#partners.header__nav-main
+				.nav-main__label.visible-xs Партнёрам
+				ul.nav-main
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|О компании
+					li.nav-main__item
+						a(href="#").nav-main__link Профили VEKA
+					li.nav-main__item
+						a(href="#").nav-main__link Справочник партнёра
+					li.nav-main__item
+						a(href="#").nav-main__link Наши приложения
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|VEKA Professional
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|Новости
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Контакты
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Стать партнёром
+
+			#dealers.header__nav-main
+				.nav-main__label.visible-xs Дилерам
+				ul.nav-main
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|О компании
+					li.nav-main__item
+						a(href="#").nav-main__link Профили VEKA
+					li.nav-main__item
+						a(href="#").nav-main__link Справочник партнёра
+					li.nav-main__item
+						a(href="#").nav-main__link Наши приложения
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|Новости
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Контакты
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Стать дилером
+
+			#designers.header__nav-main
+				.nav-main__label.visible-xs Дизайнерам и архитекторам
+				ul.nav-main
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|О компании
+					li.nav-main__item
+						a(href="#").nav-main__link Предложение о сотрудничестве
+					li.nav-main__item
+						a(href="#").nav-main__link Справочник партнёра
+					li.nav-main__item
+						a(href="#").nav-main__link Наши приложения
+					li.nav-main__item
+						a(href="#").nav-main__link
+							|Новости
+					li.nav-main__item
+						a(href="#").nav-main__link 
+							|Контакты
+
+
+			.header__search.hidden-xs
+				.search__control.js-searchControl: +icon('search')
+				.search__form
+					form(action="#")
+						input(type="text" placeholder="Поиск по сайту").search__input
+						button.search__submit: +icon('search')
+						.search__close.js-searchClose: +icon('close')
+
+	.header__mobile-bar
+		.container
+			.header__city
+				.city__link.js-citySelectLink
+					+icon('pin')
+					span.city__label Новосибирск
+					+icon('arrow-bottom')
+
+			.header__phone-title: a(href="tel:88005058352") 8 800 505-83-52

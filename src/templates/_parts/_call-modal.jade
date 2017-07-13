@@ -1,0 +1,42 @@
+#callModal.modal.mfp-hide
+	.modal__box
+		.modal__head
+			.section__title Мы вам перезвоним
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__form
+				form(action="#").js-validate
+					fieldset.fieldset
+						//- label.label Город
+						//- input(type="text" name="city" data-ajax="js/ajax-city-example.js" placeholder="Начните вводить название..." required="required").input.js-autocomplete
+						input(type="text" name="city" placeholder="Город" required="required").input.js-google-autocomplete
+					fieldset.fieldset
+						//- label.label Представьтесь, пожалуйста
+						input(type="text" name="name" placeholder="Представьтесь, пожалуйста" required="required").input
+					fieldset.fieldset
+						//- label.label Номер телефона
+						input(type="text" name="phone" placeholder="Номер телефона" required="required").input.js-phone
+					fieldset.fieldset
+						//- label.label Дополнительная информация
+						textarea(placeholder="Ваши пожелания" onfocus="placeholder='';" onblur="placeholder='Ваши пожелания';").input
+					fieldset.fieldset
+						label.checkbox
+							input(type="checkbox" name="user_agreement" required="required")
+							span.checkbox__text Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку
+					fieldset.fieldset.modal__submit
+						button.button.blue.md
+							+icon('email')
+							span Отправить
+
+	// Modal: Запрос получен
+	.modal__box(style="display: none")
+		.modal__head
+			.section__title Запрос получен!
+			.modal__close.js-mfp-close: +icon('close-md')
+		.modal__body
+			.modal__text
+				.modal__icon
+					img(src="images/logo.svg")
+				h6 Мы вам обязательно перезвоним!
+				p Благодарим вас за обращение в компанию VEKA. Наши специалисты перезвонят вам в течение нескольких часов. Если в течение 3-х рабочих дней вы не получите ответа, пожалуйста, напишите в службу поддержки по адресу <a href="#">support@veka.ru</a>
+					

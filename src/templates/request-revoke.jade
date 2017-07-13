@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Заявка отозвана
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.request-revoke.user-forms
+				.row
+					.col-xs-12.col-sm-6
+						h2.user-forms__title Заявка отозвана
+
+						p.user-forms__text Заявка на партнерство успешно отозвана по вашей просьбе
+
+						button.button.blue.md.user-forms__button.request-approve__button
+							span Подать новую заявку
+
+
+		include _parts/_footer
+
+		include _parts/_scripts

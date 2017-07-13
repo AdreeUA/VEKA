@@ -1,0 +1,335 @@
+include ../_mixin/_icon
+
+#map.map(data-pin="images/pin.png" data-cluster-icon="images/cluster.svg" data-location="45.064065,38.9550991")
+.container
+	.aside-map
+		.aside-map__control
+			button.aside-map__toggle.js-mapListToggle(data-label="Развернуть" data-second-label="Свернуть")
+				+icon('circle-arrow')
+				span.aside-map__toggle-label Развернуть
+		.scroll.js-scroll
+			.map-list
+				.map-list__elem
+					.map-list__label.js-toggleLink
+						|Lauter
+						+icon('arrow-bottom')
+					.map-list__dropdown
+						.map-list__review
+							span.map-list__rating
+								.js-rating(data-readonly="true")
+									input(type="hidden" name="val" value="4")
+									input(type="hidden" name="votes" value="")
+
+							span.map-list__review-count Отзывы 5907
+						.map-list__info
+							.map-list__info-col
+								.map-list__info-elem
+									|Сайт: <a href="#">www.lauter.ru</a>
+								.map-list__info-elem
+									|E-mail: <a href="#">info@lauter.net</a>	
+							.map-list__info-col
+								.map-list__info-elem
+									a(href="#")
+										+icon('star')
+										|О компании
+								.map-list__info-elem
+									a(href="#")
+										+icon('promo')
+										|Акция
+						.map-list__buttons
+							button.button.blue.js-inlineModal(data-mfp-src="#requestModal")
+								+icon('tape')
+								span Заявка на замер
+							button.button.blue.js-inlineModal(data-mfp-src="#callModal")
+								+icon('phone')
+								span Заказать звонок
+						.map-list__address
+							.address-elem
+								.address-elem__head.js-toggleLink.js-mapLabel(data-location="45.064065,38.7550991")
+									.address-elem__label ул. Советская, 95
+									svg(class="icon icon-arrow-bottom")
+										use(xlink:href="#icon-arrow-bottom")
+								.address-elem__body
+									.address-elem__info
+										.address-elem__info-label Телефоны:
+										.address-elem__info-content
+											span.address-elem__phone 8 800 505-83-52,
+											span.address-elem__phone 8 800 505-83-52
+									.address-elem__info
+										.address-elem__info-label Время работы:
+										.address-elem__info-content
+											|пн-пт 9:00 - 19:00,<br> 
+											|сб 10:00 - 17:00
+
+									.address-elem__bottom
+										.map-list__info-elem
+											a(href="#")
+												span.map-list__info-icon: +icon('location')
+												span.dotted__link Как проехать?
+										.map-list__info-elem
+											a(href="images/tmp/slide_example_r.jpg" data-fancybox="gallery_office_1")
+												span.map-list__info-icon: +icon('pic')
+												span.dotted__link Фото офиса
+											a(href="images/tmp/slide_example_sec.jpg" data-fancybox="gallery_office_1")
+										.map-list__info-elem
+											a(href="javascript:;").share-link.js-shareLink
+												span.map-list__info-icon: +icon('share')
+												span.dotted__link Поделиться
+
+												.share
+													.share__inner
+														script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+														script(src="//yastatic.net/share2/share.js")
+														.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+										.address-elem__buttons
+											button.button__sm.js-inlineModal(data-mfp-src="#requestModal")
+												+icon('tape')
+											button.button__sm.js-inlineModal(data-mfp-src="#callModal")
+												+icon('phone')
+
+							.address-elem
+								.address-elem__head.js-toggleLink.js-mapLabel(data-location="45.064065,38.9550991")
+									.address-elem__label пл. Карла Маркса, 6/1
+									svg(class="icon icon-arrow-bottom")
+										use(xlink:href="#icon-arrow-bottom")
+								.address-elem__body
+									.address-elem__info
+										.address-elem__info-label Телефоны:
+										.address-elem__info-content
+											span.address-elem__phone 8 800 505-83-52,
+											span.address-elem__phone 8 800 505-83-52
+									.address-elem__info
+										.address-elem__info-label Время работы:
+										.address-elem__info-content
+											|пн-пт 9:00 - 19:00,<br> 
+											|сб 10:00 - 17:00
+
+									.address-elem__bottom
+										.map-list__info-elem
+											a(href="#")
+												span.map-list__info-icon: +icon('location')
+												span.dotted__link Как проехать?
+										.map-list__info-elem
+											a(href="images/back/subscription_back.jpg" data-fancybox="gallery_office_2")
+												span.map-list__info-icon: +icon('pic')
+												span.dotted__link Фото офиса
+
+											a(href="images/back/not-found_bg.jpg" data-fancybox="gallery_office_2")
+										.map-list__info-elem
+											a(href="javascript:;").share-link.js-shareLink
+												span.map-list__info-icon: +icon('share')
+												span.dotted__link Поделиться
+
+												.share
+													.share__inner
+														script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+														script(src="//yastatic.net/share2/share.js")
+														.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+										.address-elem__buttons
+											button.button__sm.js-inlineModal(data-mfp-src="#requestModal")
+												+icon('tape')
+											button.button__sm.js-inlineModal(data-mfp-src="#callModal")
+												+icon('phone')
+
+							.address-elem
+								.address-elem__head.js-toggleLink.js-mapLabel(data-location="45.064065,38.8550991")
+									.address-elem__label ул. Красина, 43, офис 305
+									svg(class="icon icon-arrow-bottom")
+										use(xlink:href="#icon-arrow-bottom")
+								.address-elem__body
+									.address-elem__info
+										.address-elem__info-label Телефоны:
+										.address-elem__info-content
+											span.address-elem__phone 8 800 505-83-52,
+											span.address-elem__phone 8 800 505-83-52
+									.address-elem__info
+										.address-elem__info-label Время работы:
+										.address-elem__info-content
+											|пн-пт 9:00 - 19:00,<br> 
+											|сб 10:00 - 17:00
+
+									.address-elem__bottom
+										.map-list__info-elem
+											a(href="#")
+												span.map-list__info-icon: +icon('location')
+												span.dotted__link Как проехать?
+										.map-list__info-elem
+											a(href="images/back/not-found_bg.jpg" data-fancybox="gallery_office_3")
+												span.map-list__info-icon: +icon('pic')
+												span.dotted__link Фото офиса
+
+											a(href="images/back/subscription_back_second.jpg" data-fancybox="gallery_office_3")
+										.map-list__info-elem
+											a(href="javascript:;").share-link.js-shareLink
+												span.map-list__info-icon: +icon('share')
+												span.dotted__link Поделиться
+
+												.share
+													.share__inner
+														script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+														script(src="//yastatic.net/share2/share.js")
+														.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+
+										.address-elem__buttons
+											button.button__sm.js-inlineModal(data-mfp-src="#requestModal")
+												+icon('tape')
+											button.button__sm.js-inlineModal(data-mfp-src="#callModal")
+												+icon('phone')
+
+				.map-list__elem
+					.map-list__label.js-toggleLink
+						|Окна комфорта
+						+icon('arrow-bottom')
+					.map-list__dropdown
+						.map-list__review
+							span.map-list__rating
+								.js-rating(data-readonly="true")
+									input(type="hidden" name="val" value="4")
+									input(type="hidden" name="votes" value="")
+
+							span.map-list__review-count Отзывы 5907
+						.map-list__info
+							.map-list__info-col
+								.map-list__info-elem
+									|Сайт: <a href="#">www.lauter.ru</a>
+								.map-list__info-elem
+									|E-mail: <a href="#">info@lauter.net</a>	
+							.map-list__info-col
+								.map-list__info-elem
+									a(href="#")
+										+icon('star')
+										|О компании
+								.map-list__info-elem
+									a(href="#")
+										+icon('promo')
+										|Акция
+						.map-list__buttons
+							button.button.blue.js-inlineModal(data-mfp-src="#requestModal")
+								+icon('tape')
+								span Заявка на замер
+							button.button.blue.js-inlineModal(data-mfp-src="#callModal")
+								+icon('phone')
+								span Заказать звонок
+						.map-list__address
+							.address-elem
+								.address-elem__head.js-toggleLink.js-mapLabel(data-location="45.064065,38.5550991")
+									.address-elem__label ул. Советская, 95
+									svg(class="icon icon-arrow-bottom")
+										use(xlink:href="#icon-arrow-bottom")
+								.address-elem__body
+									.address-elem__info
+										.address-elem__info-label Телефоны:
+										.address-elem__info-content
+											span.address-elem__phone 8 800 505-83-52,
+											span.address-elem__phone 8 800 505-83-52
+									.address-elem__info
+										.address-elem__info-label Время работы:
+										.address-elem__info-content
+											|пн-пт 9:00 - 19:00,<br> 
+											|сб 10:00 - 17:00
+
+									.address-elem__bottom
+										.map-list__info-elem
+											a(href="#")
+												span.map-list__info-icon: +icon('location')
+												span.dotted__link Как проехать?
+										.map-list__info-elem
+											a(href="images/back/subscription_back_second.jpg" data-fancybox="gallery_office_4")
+												span.map-list__info-icon: +icon('pic')
+												span.dotted__link Фото офиса
+
+										.map-list__info-elem
+											a(href="javascript:;").share-link.js-shareLink
+												span.map-list__info-icon: +icon('share')
+												span.dotted__link Поделиться
+
+												.share
+													.share__inner
+														script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+														script(src="//yastatic.net/share2/share.js")
+														.ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp")
+
+										.address-elem__buttons
+											button.button__sm.js-inlineModal(data-mfp-src="#requestModal")
+												+icon('tape')
+											button.button__sm.js-inlineModal(data-mfp-src="#callModal")
+												+icon('phone')
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.8550991")
+				//- 	.map-list__label.js-toggleLink
+				//- 		|Окна комфорта
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.7550991")
+				//- 	.map-list__label.js-toggleLink
+				//- 		|Лока
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.6550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|Лока
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.5550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|Топ Стиль
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.4550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|ЕВРОТЭК
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.3550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|КОНСИБ-БАРНАУЛ
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.2550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|БФК
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.1550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|АСК Сервис
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.0550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|АСК Сервис
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,38.0250991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|Динал
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+				//- .map-list__elem.js-mapLabel(data-location="45.064065,39.9550991")
+				//- 	.map-list__label.js-toggleLink 
+				//- 		|Окна 21 века
+				//- 		+icon('arrow-bottom')
+				//- 	+mapListElemDropdown()
+
+	
+	// Добавить класс is-open
+	.aside-map(style="display: none !important")
+		.aside-map__text
+			p: b В указанном городе нет офисов VEKA.
+
+			p 
+				|Ближайший город, в котором есть офисы VEKA,<br>
+				<a href="#" class="link">Новосибирск</a>

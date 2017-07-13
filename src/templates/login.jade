@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Вход в личный кабинет
+		include _parts/_head
+	body
+		//- for svg
+		include svg-symbols
+		//- mixin
+		include _mixin/_import
+
+		include _parts/_header
+
+
+		main: .container
+			section.user-login.user-forms
+				.row
+					.col-xs-12.col-sm-5
+						form(class="user-forms__form", method="post", action="")
+							.user-forms__form-head
+								h2.user-forms__title Вход в личный кабинет
+								p.user-forms__text Укажите адрес электронной почты, с которым вы зарегистрировались
+							fieldset.fieldset
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Эл. почта
+									input(type="text", required="required", class="user-forms__input input")
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Пароль
+										a.link.user-forms__link.user-forms__link-fogotpass(href='#', target='_blank')
+											|Забыли пароль?
+									input(type="text", required="required", class="user-forms__input input")
+
+							p.user-forms__text
+								| Ещё не зарегистрированы?
+								a.link.user-forms__link.user-forms__link-reg(href='#', target='_blank')
+									|Регистрация
+
+							fieldset.fieldset
+								button.button.blue.md.user-forms__button
+									span Войти
+
+		include _parts/_footer
+
+		include _parts/_scripts

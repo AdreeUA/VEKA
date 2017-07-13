@@ -1,0 +1,35 @@
+.additional-options
+
+	.section__title Дополнительные опции
+	
+	form(action="#")
+		fieldset.fieldset
+			select.select.js-select(name="type_house")
+				option(value="1") Тип вашего дома
+		
+		fieldset.fieldset.checkbox-wrap
+
+			.checkbox
+				input(type="checkbox" id="ch1" name="checkbox1" value="ch1" checked-true)
+				| Подоконник
+				label(for="ch1").label
+
+			.checkbox
+				input(type="checkbox" id="ch2" name="checkbox2" value="ch2" checked-true).checkbox
+				| Отливы
+				label(for="ch2").label
+
+			.checkbox
+				input(type="checkbox" id="ch3" name="checkbox3" value="ch3").checkbox
+				| Откосы
+				label(for="ch3").label
+
+			.checkbox
+				input(type="checkbox" id="ch4" name="checkbox4" value="ch4").checkbox
+				| Москитная сетка
+				label(for="ch4").label
+
+			.checkbox
+				input(type="checkbox" id="ch5" name="checkbox5" value="ch5" checked-true).checkbox
+				| Монтаж
+				label(for="ch5").label

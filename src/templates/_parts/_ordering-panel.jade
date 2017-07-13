@@ -1,0 +1,22 @@
+.calc-panel.ordering-panel
+
+	.calc-panel__top
+		.container
+			.ordering-panel__control
+				.ordering-panel__icon: +icon('clipboard')
+				.ordering-panel__label Ваш заказ: 2 окна
+
+			.ordering-panel__button
+				//a(href="#send_request").button.blue.md.link.js-inlineModal
+				button.button.blue.md.link.js-inlineModal(data-mfp-src="#send_request")
+					span Оформить заказ
+					+icon('edit')
+
+			.ordering-panel__price
+				.ordering-panel__icon: +icon('price-tag')
+				.ordering-panel__label
+					.panel__price 31 860 рублей
+					.panel__description Цена ориентировочная
+
+
+s

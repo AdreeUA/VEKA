@@ -1,0 +1,6 @@
+{{#shapes}}
+.icon-{{base}} {
+	width:ceil({{width.inner}}px);
+	height:ceil({{height.inner}}px);
+}
+{{/shapes}}
