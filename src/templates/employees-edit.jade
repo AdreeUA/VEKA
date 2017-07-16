@@ -1,0 +1,122 @@
+extends ./_layout/_layout
+include _mixin/_checkbox-square
+
+block head
+	- pageTitle = 'Опубликованые отзывы'
+
+block content
+
+	main.employees: .container
+		.breadcrumb
+				ul.breadcrumb__list
+					li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+					li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+					li.breadcrumb__item: a(href="#").breadcrumb__link Сотрудники и Дилеры
+
+		h1.employees__title Сотрудники и Дилеры
+		ul.employees__nav
+			li: a(href="#").employees__navlink Сотрудники
+			li: a(href="#").employees__navlink Дилеры
+			li: a(href="#").employees__navlink
+				| Запросы сотрудников и дилеров
+				span.employees__navlink-counter 3
+			li: a(href="#").employees__navlink Архив запросов
+			li: a(href="#").employees__navlink
+				| Заявки на сотрудничество
+				span.employees__navlink-counter 4
+
+		.employees__select-flex
+			h6.employees__select-title Дилеры компании
+			.employees__select-box
+				select.select.user-forms__input.js-select.employees__select(name="employee")
+					option(value="1") Окна от природы
+					option(value="2") ООО «Супер-окна»
+					option(value="3") Компания 3
+
+		.employees__table.employees__table_edit
+			.employees__employee-row
+				.employees__flexrow
+					.employees__employee-col.employees__coltitle Имя, фамилия
+					.employees__employee-col.employees__coltitle Телефон
+					.employees__employee-col.employees__coltitle Эл. почта
+					.employees__employee-col.employees__coltitle.employees__employee-col_arrow
+					.employees__employee-col.employees__coltitle.employees__employee-col_display-mod Режим отображения
+
+
+			- for (var i = 0; i < 4; i++ )
+
+				.employees__employee-row
+					.employees__flexrow
+						.employees__employee-col Иванов Иван
+						.employees__employee-col +7 867 563 25 65
+						.employees__employee-col user@mail
+						.employees__employee-col.employees__employee-col_arrow
+							span.employees__arrow:  +icon('arrow-right')
+						.employees__employee-col.employees__employee-col_display-mod
+							span.employees__icon.employees__icon_show
+							span.employees__icon.employees__icon_pin
+
+
+					.employees__acordion-content
+						.employees__edit-list
+							.employees__edit-box
+								.employees__edit-title Дилеры компании “Окна от природы”
+								.row
+									.col-xs-2.employees__edit-col-title
+										| Адрес
+									.col-xs-10
+										| Россия, Санкт-Петербург, 192086, Невский пр., д. 10, офис 1
+								.row
+									.col-xs-2.employees__edit-col-title
+										| Пол
+									.col-xs-10
+										| мужской
+
+							.employees__edit-box
+								.employees__edit-title Точки продаж дилера
+								.employees__edit-city Москва
+								.employees__edit-address
+									+checkbox-square({
+										id: 'id-1' + i,
+										text: 'ул. Большая Московская, 15/10, м. Достоевская'
+									})
+									+checkbox-square({
+										id: 'id-2' + i,
+										text: 'ул. Киришская, 2А'
+									})
+									+checkbox-square({
+										id: 'id-3' + i,
+										text: 'ул. Автовская, 17, оф. 301, м. Автово'
+									})
+									+checkbox-square({
+										id: 'id-4' + i,
+										text: 'ул. Дыбенко, 20, м. Улица Дыбенко'
+									})
+
+								.employees__edit-city Санкт-Петербург
+								.employees__edit-address
+									+checkbox-square({
+										id: 'id-5' + i,
+										text: 'ул. Большая Московская, 15/10, м. Достоевская',
+										checked: false
+									})
+									+checkbox-square({
+										id: 'id-6' + i,
+										text: 'ул. Киришская, 2А',
+										checked: false
+									})
+									+checkbox-square({
+										id: 'id-7' + i,
+										text: 'ул. Автовская, 17, оф. 301, м. Автово',
+										checked: false
+									})
+									+checkbox-square({
+										id: 'id-8' + i,
+										text: 'ул. Дыбенко, 20, м. Улица Дыбенко',
+										checked: false
+									})
+
+								button.button.blue.employees__edit-btn привязать точки продаж
+
+
+

@@ -56,6 +56,8 @@
 		&.open
 			.employees__arrow
 				transform: rotate(90deg)
+			.employees__icon_show
+				opacity: 1
 
 	&__arrow
 		display: block
@@ -70,6 +72,18 @@
 		flex: 0 0 190px
 		padding: 23px 10px
 
+		&_display-mod
+			display: flex
+			justify-content: space-between
+			padding-left: 16px
+			padding-right: 55px
+
+		&_arrow
+			flex-basis: 100px
+			text-align: center
+			.employees__arrow
+				display: inline-block
+
 	&__coltitle
 		padding: 10px
 		color: #8295A0
@@ -77,6 +91,59 @@
 	&__acordion-content
 		display: none
 		padding: 10px
+
+	&__icon
+		transition: opacity .5s
+		&_pin
+			opacity: .7
+			width: 14px
+			height: 20px
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAYAAAC9BQwsAAABcElEQVQ4T52TsS8EURDGv28TERQq/wKFRikkipNQKhW0O69QuYgoJBKJiKglt+91FxK1jgSFoKQh3L+g42QTkht5m11Ze4tlq8nM/ObNfDNL5D5r7QSAPVUdBdCTht5J3gFYEpGrLJ2ZYa3dB7CQL1RiH4jIovcnYEUoq5PATNu7/OWlYnjSgzcAxvIRVQXJlvep6jD5OVGWdssoit5IZkL4RARBMB2G4ZnPcs7VOp3OaR5W1XcPaqFiS0RGCmo/AhjOfElH/wattW+5nVVv1Tn3oKpfWqsgzr1XdQXA7l/WQXKZqurhmGRvRTgWkf5kQVEUbZNcqwhuishGAvpXnXMvAAZ+glX12Rgz+Hmr3mg0GvNBEBx+B6aCzYnI0RcwPfZrAONlMMmLMAynun4r72g2mwNxHD+R7CvAr+12e6her8elYCrUDIDj7Ax9iwBqxpjzfLGus0/hHZKrqXBbxpj1YvulYDrviaqqMWa2bOYP0VW0vKI1kyMAAAAASUVORK5CYII=')
+
+		&_show
+			opacity: .3
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABHklEQVQ4T7XUsS4GURAF4O+PApWC4CWIglZEjQqFjkqhQzyDoFOo6BSoUItoSQgvgVCoUAiZ5G6ybvbnj9gt58ycnXPuubfh568DIxhAd2p9xh0u8dZsvNEECKJlzKKzSc8rDrCVfvStLSeODTexiLZf1BTwB3awUlZQJu7DKYYzwvO0VUiPL6wJNWNZ3xUm8BD1grgLFxjMmjewhs+sHnPrWM3qtxjFS0F8iOmKTceTx9uYS/g+lhAen1VsfoSZIJ7EcYWfUQ9rdjGf4XtYSNJPKmangvgaQxVgf/IrItWe4e9JSS/uK2ZvfiN+TJL/RFybFaGklsML4lbiViQootdy3IK8lgtSHGwtV7qcmn9/hPJIlp/NngQ+tfJsfgHON1VJSbcSiQAAAABJRU5ErkJggg==')
+			width: 22px
+			height: 16px
+
+	&__table
+		&_edit
+			.employees__acordion-content
+				background-color: #fff
+
+	&__edit-list
+		font-size: 16px
+		color: #272727
+		padding-top: 20px
+
+	&__edit-title
+		margin-bottom: 13px
+		font-size: 18px
+		color: $blue
+
+	&__edit-box
+		margin-bottom: 40px
+
+	&__edit-col-title
+		color: #8295a0
+
+	&__edit-address
+		margin-bottom: 28px
+		color: #272727
+
+		.checkbox-square
+			margin-bottom: 3px
+
+	&__edit-city
+		margin-bottom: 8px
+		color: #8295a0
+
+	&__edit-btn
+		height: 46px
+		margin-top: 36px
+		text-transform: uppercase
+		padding-left: 33px
+		padding-right: 33px
 
 
 

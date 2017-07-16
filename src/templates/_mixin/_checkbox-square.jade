@@ -1,5 +1,5 @@
 mixin checkbox-square(data)
     +b('fieldset').checkbox-square()&attributes(attributes)
-        input(type="checkbox" id=data.id checked=data.checked || true)
+        input(type="checkbox" id=data.id checked=data.checked === false ? false : true)
         +e.LABEL.label(for=data.id)
             +e.text=data.text
