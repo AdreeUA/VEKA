@@ -1,0 +1,173 @@
+extends ./_layout/_layout
+
+block head
+	- pageTitle = 'Заявки на обратный звонок'
+
+block content
+	main.request-content
+		.container
+			.breadcrumb
+				ul.breadcrumb__list
+					li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+					li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+					li.breadcrumb__item: a(href="#").breadcrumb__link Заявки на обратный звонок
+
+		section.request-content__form.user-forms
+			.container
+				.request-content__title Заявки на обратный звонок
+				form.user-forms__form.request-content__form
+					.request-content__form-header
+						.request-content__form-row.request-content__form-row_half
+							fieldset.fieldset
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Компания
+									select.select.user-forms__input.js-select(name="company")
+										option(value="1") любая компания
+										option(value="2") Компания 2
+										option(value="3") Компания 3
+							fieldset.fieldset
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Регион
+									select.select.user-forms__input.js-select(name="region")
+										option(value="1") выберите регион
+										option(value="2") Регион 2
+										option(value="3") Регион 3
+						.request-content__form-row.request-content__form-row_half
+							fieldset.fieldset
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Город
+									select.select.user-forms__input.js-select(name="city")
+										option(value="1") выберите город
+										option(value="2") Город 2
+										option(value="3") Город 3
+							fieldset.fieldset
+								label.user-forms__label
+									span.user-forms__labeltext
+										| Статус
+									select.select.user-forms__input.js-select(name="status")
+										option(value="1") новая
+										option(value="2") Статус 2
+										option(value="3") Статус 3
+
+						.request-content__form-row.request-content__form-row_half.request-content__form-row_right
+							fieldset.fieldset
+								label.user-forms__label.user-forms__label_has-icon
+									input(type="text", class="user-forms__input input" value='10.06.2017' data-toggle="datepicker")
+									span.user-forms__calendar.icon-calendar
+										+icon('calendar')
+							fieldset.fieldset
+								label.user-forms__label.user-forms__label_has-icon
+									input(type="text", class="user-forms__input input" value='15.06.2017' data-toggle="datepicker")
+									span.user-forms__calendar.icon-calendar
+										+icon('calendar')
+							fieldset.fieldset
+								button.button.blue.user-forms__button.request-content__button-filter
+									span отфильтровать
+
+			.container
+				.employees-requests__employee-firstrow
+
+					.employees-requests__employee-col.employees-requests__coltitle Дата и время
+					.employees-requests__employee-col.employees-requests__coltitle Город
+					.employees-requests__employee-col.employees-requests__coltitle Имя, фамилия
+					.employees-requests__employee-col.employees-requests__coltitle Телефон
+					.employees-requests__employee-col.employees-requests__coltitle Компания и офис
+					.employees-requests__employee-col.employees-requests__coltitle Статус
+
+			.employees-requests__table
+				.employees-requests__employee-row
+					.container
+						.employees-requests__flexrow
+							.employees-requests__employee-col 20 сентября 2017 12:00
+							.employees-requests__employee-col Москва
+							.employees-requests__employee-col Иванов Иван
+							.employees-requests__employee-col +7 867 563 25 65
+							.employees-requests__employee-col Окна от природы: 143396, Москва, поселение Первомайское, д. Губцево, ул. Дорожная, д. 10 <br/>+7 495 777-53-77
+							.employees-requests__employee-col новый
+								a(href="#").employees-requests__notes-box: +icon('notes')
+							.employees-requests__employee-col
+								span.employees-requests__arrow: +icon('arrow-right')
+
+						.employees-requests__acordion-content.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.container
+						.employees-requests__flexrow
+							.employees-requests__employee-col 20 сентября 2017 12:00
+							.employees-requests__employee-col Москва
+							.employees-requests__employee-col Иванов Иван
+							.employees-requests__employee-col +7 867 563 25 65
+							.employees-requests__employee-col Окна от природы: 143396, Москва, поселение Первомайское, д. Губцево, ул. Дорожная, д. 10 <br/>+7 495 777-53-77
+							.employees-requests__employee-col новый
+								a(href="#").employees-requests__notes-box: +icon('notes')
+							.employees-requests__employee-col
+								span.employees-requests__arrow: +icon('arrow-right')
+
+						.employees-requests__acordion-content.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.container
+						.employees-requests__flexrow
+							.employees-requests__employee-col 20 сентября 2017 12:00
+							.employees-requests__employee-col Москва
+							.employees-requests__employee-col Иванов Иван
+							.employees-requests__employee-col +7 867 563 25 65
+							.employees-requests__employee-col Окна от природы: 143396, Москва, поселение Первомайское, д. Губцево, ул. Дорожная, д. 10 <br/>+7 495 777-53-77
+							.employees-requests__employee-col новый
+							.employees-requests__employee-col
+								span.employees-requests__arrow: +icon('arrow-right')
+
+						.employees-requests__acordion-content.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.employees-requests__employee-row
+					.container
+						.employees-requests__flexrow
+							.employees-requests__employee-col 20 сентября 2017 12:00
+							.employees-requests__employee-col Москва
+							.employees-requests__employee-col Иванов Иван
+							.employees-requests__employee-col +7 867 563 25 65
+							.employees-requests__employee-col Окна от природы: 143396, Москва, поселение Первомайское, д. Губцево, ул. Дорожная, д. 10 <br/>+7 495 777-53-77
+							.employees-requests__employee-col новый
+							.employees-requests__employee-col
+								span.employees-requests__arrow: +icon('arrow-right')
+
+						.employees-requests__acordion-content.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			.container
+				.request-content__pagination
+					ul.pagination
+						li.pagination__item
+							a.pagination__link.active(href='#') 1
+						li.pagination__item
+							a.pagination__link(href='#') 2
+						li.pagination__item
+							a.pagination__link(href='#') 3
+
+					a(href='#').btn.request-content__btn экспортировать в CSV

@@ -1,30 +1,31 @@
-var gulp            = require('gulp'),
-    jade            = require('gulp-jade'),
+var gulp = require('gulp'),
+    jade = require('gulp-jade'),
     jadeInheritance = require('gulp-jade-inheritance'),
-    changed         = require('gulp-changed'),
-    compass         = require('gulp-compass'),
-    watch           = require('gulp-watch'),
-    connect         = require('gulp-connect'),
+    changed = require('gulp-changed'),
+    compass = require('gulp-compass'),
+    watch = require('gulp-watch'),
+    connect = require('gulp-connect'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
-    autoprefixer    = require('gulp-autoprefixer'),
-    svgSymbols      = require('gulp-svg-symbols'),
+    autoprefixer = require('gulp-autoprefixer'),
+    svgSymbols = require('gulp-svg-symbols'),
     path = require('path'),
     //svgSprite = require('gulp-svg-sprite'),
-    gulp_if         = require('gulp-if'),
-    rename          = require('gulp-rename'),
-    csso            = require('gulp-csso'),
-    rigger          = require('gulp-rigger'),
-    del             = require('del'),
-    zip             = require('gulp-zip'),
-    cached          = require('gulp-cached'),
-    filter          = require('gulp-filter'),
-    svgmin          = require('gulp-svgmin'),
-    cheerio         = require('gulp-cheerio'),
-    replace         = require('gulp-replace'),
-    plumber         = require('gulp-plumber'),
-    uglify          = require('gulp-uglify'),
-    prettify        = require('gulp-prettify');
+    gulp_if = require('gulp-if'),
+    rename = require('gulp-rename'),
+    csso = require('gulp-csso'),
+    rigger = require('gulp-rigger'),
+    del = require('del'),
+    zip = require('gulp-zip'),
+    cached = require('gulp-cached'),
+    filter = require('gulp-filter'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
+    plumber = require('gulp-plumber'),
+    uglify = require('gulp-uglify'),
+    prettify = require('gulp-prettify'),
+    fs = require("fs");
 
 var pkg = require('./package.json');
 
@@ -46,30 +47,72 @@ var outputDir = 'build/',
     outputImgDir = 'build/images/',
     outputSpriteDir = 'build/images/ico/';
 
-gulp.task('jade', function(){
-   gulp.src('src/templates/**/*.jade')
-        .pipe(changed(outputDir, {extension: '.html'}))
-        .pipe(gulp_if(global.isWatching, cached('jade')))
-        .pipe(jadeInheritance({basedir: 'src/templates/'}))
-        .pipe(filter(function (file) {
-            return !/\/_/.test(file.path) && !/^_/.test(file.relative);
-        }))
+// gulp.task('jade', function(){
+//     gulp.src('src/templates/**/*.jade')
+//         .pipe(plumber())
+//         .pipe(changed(outputDir, {extension: '.html'}))
+//         .pipe(gulp_if(global.isWatching, cached('jade')))
+//         .pipe(gulp_if(global.isWatching, jadeInheritance({basedir: 'src/templates/'})))
+//         .pipe(filter(function (file) {
+//             return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+//         }))
+//         .pipe(jade({
+//             pretty: true,
+//             indent_size: 4,
+//             unformatted: []
+//         }))
+//         .on('error', function(err) {
+//             console.log(err);
+//             // Would like to catch the error here
+//         })
+//         .pipe(gulp.dest(outputDir))
+//         .pipe(reload({stream: true}));
+//
+//    // gulp.src('src/templates/**/*.jade')
+//    //      .pipe(changed(outputDir, {extension: '.html'}))
+//    //      .pipe(gulp_if(global.isWatching, cached('jade')))
+//    //      .pipe(jadeInheritance({basedir: 'src/templates/'}))
+//    //      .pipe(filter(function (file) {
+//    //          return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+//    //      }))
+//    //      .pipe(plumber())
+//    //      .pipe(jade())
+//    //      .on('error', function(err) {
+//    //          console.log(err);
+//    //          // Would like to catch the error here
+//    //      })
+//    //      .pipe(prettify({ indent_size: 4, unformatted: [] }))
+//    //      .pipe(gulp.dest(outputDir))
+//    //      .pipe(reload({stream: true}));
+// });
+
+
+gulp.task('jade', function () {
+
+    return gulp.src('src/templates/**/*.jade')
         .pipe(plumber())
-        .pipe(jade())
-        .on('error', function(err) {
-            console.log(err);
-            // Would like to catch the error here
-        })
-        .pipe(prettify({ indent_size: 4, unformatted: [] }))
+        .pipe(cached('jade'))
+        .pipe(gulp_if(global.isWatching, jadeInheritance({basedir: 'src/templates/'})))
+        // .pipe(filter(function (file) {
+        //     return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+        // }))
+        .pipe(filter(file => /src[\\\/]templates/.test(file.path)))
+        .pipe(jade({
+            pretty: true,
+            data: {
+                "data": JSON.parse( fs.readFileSync('./src/templates/data/data.json', { encoding: 'utf8' }) )
+            }
+        }))
         .pipe(gulp.dest(outputDir))
         .pipe(reload({stream: true}));
+
 });
 
-gulp.task('setWatch', function() {
+gulp.task('setWatch', function () {
     global.isWatching = true;
 });
 
-gulp.task('css', function() {
+gulp.task('css', function () {
     gulp.src('src/sass/main.sass')
         .pipe(plumber())
         .pipe(changed('build/css'))
@@ -81,7 +124,7 @@ gulp.task('css', function() {
             style: 'expanded', // nested, expanded, compact, compressed
             comments: false
         }))
-        .on('error', function(err) {
+        .on('error', function (err) {
             console.log(err);
             // Would like to catch the error here
         })
@@ -102,19 +145,19 @@ gulp.task('css', function() {
 //         .pipe(connect.reload());
 // });
 
-gulp.task('sprite', function(){
-     gulp.src('src/images/ico/**/*.*')
+gulp.task('sprite', function () {
+    gulp.src('src/images/ico/**/*.*')
         .pipe(gulp.dest(outputSpriteDir))
         .pipe(reload({stream: true}))
 });
 
-gulp.task('svg', function() {
+gulp.task('svg', function () {
     return gulp.src('src/svg/sprites/*.svg')
-        // minify svg
-        .pipe(svgmin(function(file) {
+    // minify svg
+        .pipe(svgmin(function (file) {
             var name = path.basename(file.relative, path.extname(file.relative))
-            var ids = { cleanupIDs: { minify: true, prefix: 'def-' + name + '-' } }
-            return { plugins: [ ids ] }
+            var ids = {cleanupIDs: {minify: true, prefix: 'def-' + name + '-'}}
+            return {plugins: [ids]}
         }))
         // remove all fill and style declarations in out shapes
         .pipe(cheerio({
@@ -123,7 +166,7 @@ gulp.task('svg', function() {
                 $('[stroke]').removeAttr('stroke');
                 $('[style]').removeAttr('style');
             },
-            parserOptions: { xmlMode: true }
+            parserOptions: {xmlMode: true}
         }))
         // cheerio plugin create unnecessary string '&gt;', so replace it.
         .pipe(replace('&gt;', '>'))
@@ -138,36 +181,36 @@ gulp.task('svg', function() {
         .pipe(gulp_if(/[.]scss$/, gulp.dest('src/sass')))
 
         //.pipe(svgSprite({
-            //mode: {
-                //symbol: {
-                    //sprite: '../svg-symbols.svg',
-                    //render: {
-                       // scss: {
-                            //dest:'../../../src/sass/_symbols.scss',
-                            //template: 'src/sass/mixins/_sprite_template.scss'
-                        //}
-                    //},
-                //}
-            //}
+        //mode: {
+        //symbol: {
+        //sprite: '../svg-symbols.svg',
+        //render: {
+        // scss: {
+        //dest:'../../../src/sass/_symbols.scss',
+        //template: 'src/sass/mixins/_sprite_template.scss'
+        //}
+        //},
+        //}
+        //}
         //}))
         //.pipe(gulp.dest('src/svg'))
 
         .pipe(reload({stream: true}));
 });
 
-gulp.task('img', function(){
+gulp.task('img', function () {
     gulp.src('src/images/**/*.*')
         .pipe(gulp.dest(outputImgDir))
         .pipe(reload({stream: true}));
 });
 
-gulp.task('fonts', function(){
+gulp.task('fonts', function () {
     gulp.src('src/fonts/**/*.*')
         .pipe(gulp.dest(outputDir + "fonts"))
         .pipe(reload({stream: true}));
 });
 
-gulp.task('js', function(){
+gulp.task('js', function () {
     gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(rigger())
@@ -176,11 +219,11 @@ gulp.task('js', function(){
 });
 
 // Cжимаем js
-gulp.task('js:compress', function() {
-  return gulp.src('build/js/main.js')
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(outputDir + 'js'))
+gulp.task('js:compress', function () {
+    return gulp.src('build/js/main.js')
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(outputDir + 'js'))
     //.pipe(connect.reload());
 });
 
@@ -188,13 +231,13 @@ gulp.task('js:compress', function() {
 gulp.task('clean', del.bind(null, 'build'));
 
 // Если нужен архивчик с версткой
-gulp.task('archive', function() {
+gulp.task('archive', function () {
     return gulp.src('build/**/*')
         .pipe(zip(pkg.name + '-' + pkg.version + '.zip'))
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('watch', ['setWatch', 'jade'], function() {
+gulp.task('watch', ['setWatch', 'jade'], function () {
     gulp.watch('src/templates/**/*.jade', ['jade']);
     gulp.watch('src/svg/sprites/*.svg', ['svg']);
     gulp.watch('src/images/ico/**/*.*', ['sprite']);
@@ -205,7 +248,7 @@ gulp.task('watch', ['setWatch', 'jade'], function() {
     gulp.watch('src/fonts/*', ['fonts']);
 });
 
-gulp.task('connect', function(){
+gulp.task('connect', function () {
     connect.server({
         root: [outputDir],
         port: 3000,

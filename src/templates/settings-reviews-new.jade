@@ -1,0 +1,103 @@
+extends ./_layout/_layout
+include _mixin/_settings-notifications
+include _mixin/_checkbox-square
+
+block head
+    - pageTitle = 'Новые отзывы'
+
+block content
+    +b.MAIN.reviews
+        .container
+            +e.breadcrumb.breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Отзывы
+            +e.H1.title.title Отзывы о компании
+            +b.UL.setting-nav.setting-nav_reviews.__nav
+                +e.item
+                    +e.link(href="#") Опубликованные
+                +e.item
+                    +e.link._active(href="#") Новые
+                    +e.count 3
+                +e.item
+                    +e.link(href="#") Отклонённые
+
+            +e.header
+                +e.H3.subtitle Новые отзывы
+
+        +e.content
+
+            +e.table-head
+                .container
+                    .employees-requests__employee-firstrow
+
+                        .employees-requests__employee-col.employees-requests__coltitle Дата и время
+                        .employees-requests__employee-col.employees-requests__coltitle Оценка
+                        .employees-requests__employee-col.employees-requests__coltitle Имя, фаилия
+                        .employees-requests__employee-col.employees-requests__coltitle Город
+
+            +e.table
+                .employees-requests__table
+                    .container
+                        +e.table-title В компанию «Окна от природы»
+                    - for (var i = 0; i < 3; i++)
+                        .employees-requests__employee-row
+                            .container
+                                .employees-requests__flexrow
+                                    .employees-requests__employee-col 12.07.2017 / 12:00
+                                    .employees-requests__employee-col
+                                        .js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+                                            input(type="hidden" name="val" value="4")
+                                            input(type="hidden" name="votes" value="")
+                                    .employees-requests__employee-col Иванов Иван
+                                    .employees-requests__employee-col Новосибирск
+                                    .employees-requests__employee-col
+                                        span.employees-requests__arrow: +icon('arrow-right')
+
+                                .employees-requests__acordion-content.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            +e.table
+                .employees-requests__table
+                    .container
+                        +e.table-title В компанию Оконный завод "Лабрадор"
+                    - for (var i = 0; i < 2; i++)
+                        .employees-requests__employee-row
+                            .container
+                                .employees-requests__flexrow
+                                    .employees-requests__employee-col 12.07.2017 / 12:00
+                                    .employees-requests__employee-col
+                                        .js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+                                            input(type="hidden" name="val" value="4")
+                                            input(type="hidden" name="votes" value="")
+                                    .employees-requests__employee-col Иванов Иван
+                                    .employees-requests__employee-col Новосибирск
+                                    .employees-requests__employee-col
+                                        span.employees-requests__arrow: +icon('arrow-right')
+
+                                .employees-requests__acordion-content.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+            .container
+                +e.pagination
+                    ul.pagination
+                        li.pagination__item
+                            a.pagination__link.active(href='#') 1
+                        li.pagination__item
+                            a.pagination__link(href='#') 2
+                        li.pagination__item
+                            a.pagination__link(href='#') 3
+

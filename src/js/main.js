@@ -70,5 +70,13 @@ $(document).ready(function(){
 
 	//= _parts/_solution.js
 
+	//= _parts/_datepicker.js
+
+	//= _parts/_working-table.js
+
+	//= _parts/_settings-price.js
+
+	//= _parts/_settings-notifications.js
+
 });
 	//= _parts/_calc.js

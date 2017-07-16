@@ -1,0 +1,5 @@
+mixin checkbox-square(data)
+    +b('fieldset').checkbox-square()&attributes(attributes)
+        input(type="checkbox" id=data.id checked=data.checked || true)
+        +e.LABEL.label(for=data.id)
+            +e.text=data.text

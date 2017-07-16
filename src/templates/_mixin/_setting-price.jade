@@ -1,0 +1,95 @@
+mixin setting-price(data, isAddRegion)
+    +b.setting-price(class=isAddRegion? '_add-region' : '')&attributes(attributes)
+        if !isAddRegion
+            +e.TABLE.table-sticky
+        +e.TABLE.table
+            if !isAddRegion
+                thead
+                    tr
+                        th Продукты \ Цены в рублях
+
+                            th(data-region='piter')
+                                +e.thead-item
+                                    +e.region Санкт-Петербург
+                                        +e.region-trigger.js-delete-region
+                                            +e.region-trigger-inner
+
+                                    +e.region-all-city
+                                        span все города
+                            th(data-region='moskow')
+                                +e.thead-item
+                                    +e.region Москва
+                                        +e.region-trigger.js-delete-region
+                                            +e.region-trigger-inner
+
+                                    +e.region-all-city
+                                        span все города
+                            th(data-region='leningrad-region')
+                                +e.thead-item_has-city
+                                    +e.region Ленинградская область
+                                        +e.region-trigger.js-delete-region
+                                            +e.region-trigger-inner
+
+                                    +e.TABLE.subtable
+                                        tr
+                                            th(data-region='viborg')
+                                                +e.region-city
+                                                    +e.region-city-text Выборг
+                                                    +e.region-city-trigger.js-delete-region
+                                                        +e.region-city-trigger-inner
+
+                                            th(data-region='gatchina')
+                                                +e.region-city
+                                                    +e.region-city-text Гатчина
+                                                    +e.region-city-trigger.js-delete-region
+                                                        +e.region-city-trigger-inner
+
+                                            th
+                                                +e.region-city
+                                                    +e.region-city-text Остальные
+
+
+            tbody
+                each item in data
+
+                    +e.TR.heading
+                        th=item.title
+                        if !isAddRegion
+                            th(data-region='piter')
+                            th(data-region='moskow')
+                            th(data-region='leningrad-region')
+                                +e.TABLE.subtable
+                                    tr
+                                        th(data-region='viborg')
+                                        th(data-region='gatchina')
+                                        th
+                    each subitem in item.list
+                        tr
+                            th=subitem.subtitle
+                            if !isAddRegion
+                                th(data-region='piter')
+                                    +e.price
+                                        +e.input-field
+                                            +e.INPUT.price-input(value=subitem.priceFirst)
+                                            +e.input-value=subitem.priceFirst
+
+                                        +e.currency ₽
+                                        +e.edit
+                                        +e.save ok
+
+                                th(data-region='moskow')
+                                    +e.price
+                                        +e.input-field
+                                            +e.INPUT.price-input(value=subitem.priceSecond)
+                                            +e.input-value=subitem.priceSecond
+
+                                        +e.currency ₽
+                                        +e.edit
+                                        +e.save ok
+
+                                th(data-region='leningrad-region')
+                                    +e.TABLE.subtable
+                                        tr
+                                            th(data-region='viborg')
+                                            th(data-region='gatchina')
+                                            th

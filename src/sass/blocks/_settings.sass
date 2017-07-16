@@ -1,0 +1,627 @@
+.settings
+	font-family: "PT Sans", sans-serif
+	color: #8295a0
+
+	&_notification
+		.settings__content
+			margin-bottom: 83px
+		.settings__subtitle
+			margin-right: 97px
+		.settings__add-region-btn
+			margin-top: 13px
+			min-width: 190px
+
+	&__content-item
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 28px
+
+	&__title
+		margin-top: 91px
+		margin-bottom: 27px
+
+	&__header
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-bottom: 30px
+		&_border-bottom
+			border-bottom: 1px solid #8295a0
+			padding-bottom: 7px
+
+	&__subtitle
+		font-size: 28px
+		color: $blue
+		margin-right: 115px
+
+	&__header-fieldset
+		width: 240px
+		margin: 0
+
+	&__prompt
+		margin-bottom: 34px
+
+	&__city
+		color: #000
+		margin-bottom: 18px
+
+	&__header-button
+		margin-left: auto
+
+	&__button
+		font-size: 16px
+		padding: 10px
+		text-decoration: none
+		color: #000000
+		border: 0
+		background-color: transparent
+
+	&__add-region-header
+		position: relative
+		padding-bottom: 74px
+
+		&::before
+			position: absolute
+			bottom: 35px
+			left: 0
+			width: 920px
+			border-bottom: 1px solid #8295a0
+			content: ''
+
+	&__add-region-text
+		margin-bottom: 28px
+		color: #8295a0
+		font-size: 16px
+
+	&__add-region-btn
+		min-width: 220px
+		height: 46px
+		font-family: Roboto
+		font-size: 16px
+		text-transform: uppercase
+
+	&__notification
+		&:not(:last-child)
+			margin-bottom: 37px
+
+
+.setting-nav
+	margin: 0
+	margin-bottom: 41px
+	padding: 0
+	list-style-type: none
+	display: flex
+	flex-wrap: wrap
+	color: #8295a0
+	font-size: 16px
+
+	&_reviews
+		.setting-nav__item
+			&:not(:last-child)
+				margin-right: 30px
+	&__item
+		&:not(:last-child)
+			margin-right: 88px
+			padding-bottom: 2px
+	&__link
+		transition: .5s
+		border-bottom: 1px solid transparent
+		&_active,
+		&:hover
+			border-color: currentColor
+
+	&__count
+		display: inline-block
+		vertical-align: top
+		padding: 4px
+		margin-left: 8px
+		line-height: 1
+		color: #9b9b9b
+		background-color: #e0dfdf
+
+.working-table
+	font-size: 16px
+
+	& + &
+		margin-top: 15px
+
+	&_open
+		.working-table__edit-container
+			max-height: 400px
+			overflow: inherit
+		.working-table__edit
+			display: none
+		.working-table__time
+			max-height: 0
+		.working-table__btns
+			overflow: inherit
+			max-height: 300px
+			padding-bottom: 50px
+		&.working-table_empty
+			.working-table__table
+				display: table
+			.working-table__empty
+				display: none
+
+	&_empty
+		.working-table__table
+			display: none
+		.working-table__empty
+			display: block
+
+	&__empty
+		display: none
+		color: #8295a0
+		border: 1px solid #7b9bb4
+		padding: 9px
+		text-align: center
+
+	&__table
+		width: 100%
+		border: 1px solid #7b9bb4
+		border-collapse: collapse
+
+	th
+		border: 1px solid #7b9bb4
+		width: calc(100% / 7)
+		padding: 9px 9px 10px
+		font-weight: 400
+		vertical-align: top
+
+
+	&__edit-container
+		max-height: 0
+		overflow: hidden
+		transition: max-height .5s
+
+	&__item-header
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		font-size: 16px
+
+	&__address,
+	&__edit
+		margin-bottom: 12px
+
+	&__edit
+		margin-left: 15px
+		border-bottom: 1px solid
+		
+	&__time
+		color: #000
+		overflow: hidden
+		transition: max-height .5s
+		&_off
+			.working-table__time-not-work
+				display: block
+			.working-table__time-inner
+				display: none
+
+	&__time-not-work
+		display: none
+
+	&__edit-times
+		padding-right: 7px
+		color: #000
+		&_off
+			display: none
+
+	&__edit-time
+		display: flex
+		justify-content: space-around
+		align-items: center
+		text-align: center
+
+		&:not(:last-child)
+			margin-bottom: 3px
+
+		span
+			width: calc(100% - 75px)
+
+	&__fieldset
+		$border-color: #7b9bb4
+
+		width: 75px
+
+		.select .jq-selectbox__select
+			padding: 0 11px
+			height: 32px
+			border: 1px solid $border-color
+
+		.select .jq-selectbox__trigger
+			top: 11px
+
+		.select.opened .jq-selectbox__trigger
+			top: 13px
+
+		.select .jq-selectbox__dropdown
+			border: 1px solid $border-color
+			border-top: 0
+
+	&__checkbox-field
+		text-align: left
+		position: relative
+
+		input[type=checkbox]
+			position: absolute
+			top: 0
+			right: 0
+			pointer-events: none
+
+		.working-table__label
+			position: relative
+			margin-top: 0
+			margin-bottom: 12px
+			display: block
+			&::before
+				width: 14px
+				height: 14px
+				content: ''
+				vertical-align: middle
+				margin-right: 15px
+				border: 1px solid #c1c3c4
+				box-shadow: inset 0 0 0 2px rgba(#fff,1)
+
+		input[type=checkbox]:checked
+			+ label:before
+				content: ''
+				background-color: #0074b8
+
+	&__btns
+		display: flex
+		overflow: hidden
+		max-height: 0
+		margin-top: 28px
+		transition: max-height .5s
+
+
+		.select .jq-selectbox__select,
+		.select .jq-selectbox__dropdown li
+			font-size: 16px
+
+		.fieldset
+			margin-left: auto
+			width: 326px
+
+		.btn
+			height: 46px
+			text-transform: uppercase
+			padding: 15px 34px 17px
+			margin-right: 23px
+
+
+.personal-data
+
+	&.registration
+		padding-top: 0
+
+	.user-forms__form-head
+		margin-bottom: 26px
+
+	&__box
+		color: #8295a0
+
+	&__modal-row
+		margin-bottom: 40px
+
+	&__modal-disc
+		color: #272727
+
+	&__button
+		min-width: 189px
+		margin-top: 16px
+		text-transform: uppercase
+		font-size: 16px
+
+.settings-password
+
+	&.user-forms
+		padding-top: 0
+
+	.user-forms__form-head
+		margin-bottom: 24px
+
+	&__button
+		height: 46px
+		min-width: 120px
+		line-height: 46px
+		font-size: 16px
+		text-transform: uppercase
+
+.setting-price
+	$border-color-input: #8295a0
+
+	overflow-y: auto
+	margin-bottom: 80px
+
+	&_add-region
+		.setting-price__table
+			tbody
+				> tr:first-child
+					th
+						padding-top: 0
+
+		.setting-price__heading
+			> th
+				&::before
+					display: none
+
+	&__table-sticky
+		width: 100%
+		display: none
+		position: fixed
+		z-index: -1
+		top: 0
+		border-collapse: collapse
+		text-align: left
+		transform: translateY(-100%)
+		transition: transform .5s
+
+		&.is-show
+			display: table
+			z-index: 2
+		&.is-sticky
+			transform: translateY(0)
+		&.header-sticky
+			top: 120px
+
+		th
+			background-color: #fff
+			padding-top: 15px
+			vertical-align: top
+
+		.setting-price__region-city-trigger,
+		.setting-price__region-trigger
+			display: none
+
+	&__table
+		border-collapse: collapse
+		text-align: left
+		color: #8295a0
+		font-size: 16px
+		line-height: 1
+
+		&_edit-all
+			.setting-price__price-input
+				border-color: $border-color-input
+				opacity: 1
+			.setting-price__edit,
+			.setting-price__save
+				display: none !important
+			.setting-price__currency
+				max-width: 200px
+				opacity: 1
+			.setting-price__input-value
+				display: none
+
+		thead
+			vertical-align: top
+
+		th
+			padding: 10px 0
+			min-width: 160px
+			font-weight: normal
+
+	&__heading
+		> th
+			position: relative
+			padding-top: 65px
+			font-size: 22px
+			color: #000000
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 25px
+				left: 0
+				width: 100%
+				height: 1px
+				background-color: #8295a0
+
+	&__thead-item
+
+		&_has-city
+			text-align: left
+
+	&__subtable
+		width: 100%
+		th
+			padding: 0
+
+	&__price
+		color: #000
+		display: inline-flex
+		align-items: center
+		justify-content: space-between
+		min-width: 100px
+
+		&_edit
+			.setting-price__currency
+				max-width: 100px
+				opacity: 1
+			.setting-price__edit
+				max-width: 0
+			.setting-price__save
+				max-width: 100px
+			.setting-price__price-input
+				border-color: $border-color-input
+				opacity: 1
+			.setting-price__input-value
+				z-index: -1
+
+		&_empty
+			.setting-price__input-value
+				font-size: 13px
+
+	&__edit
+		display: inline-block
+		overflow: hidden
+		opacity: .2
+		width: 19px
+		height: 19px
+		background-image: url(../images/icon-edit.png)
+		transition: .5s
+		cursor: pointer
+
+		&:hover
+			opacity: 1
+
+	&__currency
+		display: inline-block
+		text-align: center
+		overflow: hidden
+		width: 25px
+		max-width: 0
+		opacity: 0
+		transition: .5s
+		color: #8c9da7
+
+	&__save
+		max-width: 0
+		overflow: hidden
+		width: 26px
+		height: 23px
+		border-radius: 3px
+		background-color: #8295a0
+		line-height: 23px
+		text-align: center
+		color: #ffffff
+		font-size: 16px
+		cursor: pointer
+
+	&__region
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 13px
+
+	&__region-trigger
+		position: absolute
+		width: 11px
+		height: 11px
+		top: -6px
+		right: -21px
+		cursor: pointer
+
+	&__region-trigger-inner
+		color: #2775ba
+		border: 1px solid currentColor
+		border-radius: 50%
+		width: 100%
+		height: 100%
+		position: relative
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			left: 4px
+			top: 0
+			height: 100%
+			width: 1px
+			background-color: currentColor
+
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+
+	&__region-all-city
+		font-size: 12px
+
+		span
+			padding-bottom: 1px
+			border-bottom: 1px solid
+
+	&__region-city
+		position: relative
+		display: inline-block
+		vertical-align: top
+
+	&__region-city-text
+		font-size: 12px
+		color: #8295a0
+
+	&__region-city-trigger
+		position: absolute
+		top: -5px
+		right: -10px
+		cursor: pointer
+		width: 10px
+		height: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__region-city-trigger-inner
+		width: 50%
+		height: 50%
+		position: relative
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			left: 4px
+			top: 0
+			height: 100%
+			width: 1px
+			background-color: currentColor
+
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+
+	&__price-input
+		width: 69px
+		padding: 4px
+		color: inherit
+		font-size: inherit
+		border: 1px solid transparent
+		transition: border-color .5s
+		opacity: 0
+
+	&__input-field
+		position: relative
+
+	&__input-value
+		position: absolute
+		top: 10px
+		left: 5px
+		transition: opacity .5s
+		white-space: nowrap
+
+
+.settings-notifications
+	font-size: 16px
+	&__title
+		font-size: 22px
+		color: #030303
+		overflow: hidden
+		margin-bottom: 29px
+
+	&__title-text
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding-right: 45px
+		&::before
+			position: absolute
+			top: 50%
+			left: 100%
+			width: 1240px
+			border-bottom: 1px solid #8295a0
+			content: ''
+
+	&__subtitle
+		font-size: 22px
+		margin-bottom: 17px
+		min-height: 1.2em
+
+	&__checkbox
+		&:not(:last-child)
+			margin-bottom: 13px

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11">
+    <defs>
+        <clipPath id="a">
+            <path fill="#fff" d="M5.5 0a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/>
+        </clipPath>
+        <clipPath id="b">
+            <path fill="#fff" d="M1.33 9.38l-.66-.76 8-7 .66.76z"/>
+        </clipPath>
+        <clipPath id="c">
+            <path fill="#fff" d="M1.65 2.35l.7-.7 7 7-.7.7z"/>
+        </clipPath>
+    </defs>
+    <path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="2" d="M5.5 0a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z" clip-path="url(&quot;#a&quot;)"/>
+    <path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="2" d="M1.33 9.38l-.66-.76 8-7 .66.76z" clip-path="url(&quot;#b&quot;)"/>
+    <path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="2" d="M1.65 2.35l.7-.7 7 7-.7.7z" clip-path="url(&quot;#c&quot;)"/>
+</svg>
+

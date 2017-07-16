@@ -1,0 +1,64 @@
+mixin workingTable(data)
+    +b.working-table(class=data.edit ? '_open': data.empty ? '_empty': '')&attributes(attributes)
+        +e.item
+            +e.item-header
+                +e.address= data.address
+                +e.A.edit(href='#') изменить
+
+            if data.empty
+                +e.empty время работы не указано
+
+
+            +e.TABLE.table
+                thead
+                    tr
+                        th Понедельник
+                        th Вторник
+                        th Среда
+                        th Четверг
+                        th Пятница
+                        th Суббота
+                        th Воскресенье
+                tbody
+                    tr
+                        each item in data.items
+                            th
+                                +e.time(class=!item.isWorking ? '_off': '')
+                                    +e.time-inner
+                                        +e.SPAN.time-on 9:00
+                                        | &nbsp;-&nbsp;
+                                        +e.SPAN.time-off 20:00
+                                    +e.SPAN.time-not-work не работает
+                                +e.edit-container
+                                    +e.checkbox-field
+                                        input(type="checkbox" id="#{item.day}-#{data.idMod}" checked=item.isWorking)
+                                        +e.LABEL.label(for="#{item.day}-#{data.idMod}")
+                                            +e.text Работает
+
+                                        +e.edit-times(class=!item.isWorking ? '_off': '')
+                                            +e.edit-time_from
+                                                span C
+                                                +e('fieldset').fieldset.fieldset
+                                                    label
+                                                        select.select.js-select
+                                                            option(value="09.00") 9.00
+                                                            option(value="10.00") 10.00
+                                                            option(value="11.00") 11.00
+                                            +e.edit-time_to
+                                                span До
+                                                +e('fieldset').fieldset.fieldset
+                                                    label.user-forms__label
+                                                        select.select.js-select
+                                                            option(value="19.00") 19.00
+                                                            option(value="20.00") 20.00
+                                                            option(value="21.00") 21.00
+
+            +e.btns
+                +e.BUTTON.button.button.btn.blue СОХРАНИТЬ РЕГИОН
+                +e.BUTTON.button.button.btn.blue-border.js-cancel отклонить
+                +e('fieldset').fieldset-bottom.fieldset
+                    label
+                        select.select.js-select
+                            option(value="1") Применить только для этого офиса
+                            option(value="2") Применить для всех офисов
+

@@ -1,0 +1,91 @@
+extends ./_layout/_layout
+
+block head
+	- pageTitle = 'Отклоненные отзывы'
+
+block content
+	main.reviews
+		.container
+			section.request-employee.user-forms
+				.modal.user-forms__modal.reviews__modal
+					.modal__box
+						.modal__head
+							h2.user-forms__title Отклонённый отзыв
+							.modal__close.js-mfp-close: +icon('close-md')
+						.modal__body
+							.modal__form
+								.request-employee__box
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| В компанию
+										.col-xs-8
+											| Окна от природы
+
+								.request-employee__box
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Оценка
+										.col-xs-8
+											.js-rating(data-readonly="true" data-icon="images/stars.svg" data-loader="images/ajax-loader.gif")
+												input(type="hidden" name="val" value="4")
+												input(type="hidden" name="votes" value="")
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Текст отзыва
+										.col-xs-8
+											| Устанавливали двустворчатое окно в комнату ребёнку. Впечатления положительные от начала и до конца. Подробная консультация по телефону, с описанием каждого этапа, быстрый выезд замерщика, цена, срок изготовления - всё устроило и понравилось. Есть ещё один плюс первая предоплата - только после доставки окон, вторая - после монтажа. Договор, акт выполненных работ, чеки - всё как полагается. Окна привезли в пятницу, в субботу уже установили.
+
+								.request-employee__box
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Достоинства
+										.col-xs-8
+											| высокая скорость работы
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Недостатки
+										.col-xs-8
+											| не выявлено
+
+								.request-employee__box
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Город
+										.col-xs-8
+											| Новосибирск
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Имя, фамилия
+										.col-xs-8
+											| Антон Григорьев
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Телефон
+										.col-xs-8
+											| +79219587019
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Эл. почта
+										.col-xs-8
+											| user@mail
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Номер договора
+										.col-xs-8
+											| 356985
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Дата подачи
+										.col-xs-8
+											| 24.05.2017
+									.row.registration__modal-row
+										.col-xs-4.registration__modal-row-title
+											| Дата отклонения
+										.col-xs-8
+											| 24.05.2017
+
+								.row
+									.col-xs-5
+										fieldset.fieldset
+											button.button.blue.reviews__modal-btn
+												span изменить

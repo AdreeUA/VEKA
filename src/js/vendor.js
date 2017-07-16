@@ -6,6 +6,7 @@
 
 //= _libs/jquery.rating.js
 //= _libs/threesixty.min.js
+//= _libs/datepicker.min.js
 
 
 /** Abstract base class for collection plugins v1.0.1.

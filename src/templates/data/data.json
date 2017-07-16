@@ -1,0 +1,246 @@
+{
+  "price": {
+    "defaults": [
+      {
+        "title": "Пластиковые окна",
+        "list": [
+          {
+            "subtitle": "Простое окно",
+            "priceFirst": 6300,
+            "priceSecond": 6300
+          },
+          {
+            "subtitle": "Окно для детской",
+            "priceFirst": 7300,
+            "priceSecond": 7300
+          },
+          {
+            "subtitle": "Энергоэффективное окно",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          },
+          {
+            "subtitle": "Окно для защиты от шума",
+            "priceFirst": 7200,
+            "priceSecond": 7200
+          },
+          {
+            "subtitle": "Окно с защитой от взлома",
+            "priceFirst": 8300,
+            "priceSecond": 8300
+          },
+          {
+            "subtitle": "Окно для загородного дома",
+            "priceFirst": 15200,
+            "priceSecond": 15200
+          }
+        ]
+      },
+      {
+        "title": "Пластиковые двери",
+        "list": [
+          {
+            "subtitle": "Входные двери",
+            "priceFirst": 6300,
+            "priceSecond": 6300
+          },
+          {
+            "subtitle": "Межкомнатные двери",
+            "priceFirst": 7300,
+            "priceSecond": 7300
+          },
+          {
+            "subtitle": "Офисные двери",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          }
+        ]
+      },
+      {
+        "title": "Решения для коттеджей и загородных домов",
+        "list": [
+          {
+            "subtitle": "Арочные и фигурные окна",
+            "priceFirst": 6300,
+            "priceSecond": 6300
+          },
+          {
+            "subtitle": "Ламинированные окна",
+            "priceFirst": 7300,
+            "priceSecond": 7300
+          },
+          {
+            "subtitle": "Панорамные окна Vekaslide",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          }
+        ]
+      },
+      {
+        "title": "Остекление лоджий и балконов",
+        "list": [
+          {
+            "subtitle": "Г-образный балкон",
+            "priceFirst": 6300,
+            "priceSecond": 6300
+          },
+          {
+            "subtitle": "П-образные балкон",
+            "priceFirst": 7300,
+            "priceSecond": 7300
+          },
+          {
+            "subtitle": "Лоджия 2,5 м",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          },
+          {
+            "subtitle": "Лоджия 3 м",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          },
+          {
+            "subtitle": "Лоджия 4 м",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          },
+          {
+            "subtitle": "Лоджия 6 м",
+            "priceFirst": 10200,
+            "priceSecond": 10200
+          }
+        ]
+      }
+
+    ]
+  },
+
+
+  "notification": {
+    "new": {
+      "title": "Новые",
+      "hasSubtitleRow": true,
+      "list": [
+        {
+          "subtitle": "Заявки на замер",
+          "checkboxlist": [
+            {
+              "id": 1,
+              "text": "Заявки на замер: безадресные заявки"
+            },
+            {
+              "id": 2,
+              "text": "Заявки на замер: все адресные заявки"
+            },
+            {
+              "id": 3,
+              "text": "Заявки на замер: мои адресные заявки"
+            }
+          ]
+        },
+        {
+          "subtitle": "Обратный замер",
+          "checkboxlist": [
+            {
+              "id": 4,
+              "text": "Обратный звонок: безадресные заявки"
+            },
+            {
+              "id": 5,
+              "text": "Обратный звонок: все адресные заявки"
+            },
+            {
+              "id": 6,
+              "text": "Обратный звонок: мои адресные заявки"
+            }
+          ]
+        },
+        {
+          "checkboxlist": [
+            {
+              "id": 7,
+              "text": "Регистрация сотрудника"
+            },
+            {
+              "id": 8,
+              "text": "Регистрация дилера"
+            },
+            {
+              "id": 9,
+              "text": "Заявка на дилерство"
+            },
+            {
+              "id": 10,
+              "text": "Новый отзыв"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "list": [
+        {
+          "checkboxlist": [
+            {
+              "id": 11,
+              "text": "Рассылка новостей: первая тема"
+            },
+            {
+              "id": 12,
+              "text": "Рассылка новостей: вторая тема"
+            }
+          ]
+        },
+        {
+          "checkboxlist": [
+            {
+              "id": 13,
+              "text": "Рассылка новостей: третья тема"
+            },
+            {
+              "id": 14,
+              "text": "Рассылка новостей: четвёртая тема"
+            }
+          ]
+        }
+      ]
+    },
+    "employees": {
+      "title": "Действия сотрудников",
+      "list": [
+        {
+          "checkboxlist": [
+            {
+              "id": 15,
+              "text": "Одобрение заявки дилера"
+            },
+            {
+              "id": 16,
+              "text": "Одобрение заявки сотрудника"
+            }
+          ]
+        },
+        {
+          "checkboxlist": [
+            {
+              "id": 17,
+              "text": "Отклонение заявки сотрудника"
+            },
+            {
+              "id": 18,
+              "text": "Отклонение заявки дилера"
+            }
+          ]
+        },
+        {
+          "checkboxlist": [
+            {
+              "id": 19,
+              "text": "Публикация отзыва"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

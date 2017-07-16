@@ -1,0 +1,86 @@
+/* === .request-content === */
+.request-content
+	$table-width: 1135
+
+	padding-bottom: 460px
+	min-height: calc(100vh - 830px)
+
+	&__form
+		padding-bottom: 0
+		padding-top: 86px
+	&__title
+		margin-bottom: 27px
+		font-size: 44px
+		color: $blue
+	&__form-header
+		display: flex
+		flex-wrap: wrap
+	&__form-row
+		display: flex
+		justify-content: space-between
+		&:not(:first-child)
+			padding-left: 85px
+		.fieldset
+			flex: 1
+			&:not(:last-child)
+				margin-right: 85px
+		&_half
+			width: 50%
+			.fieldset
+				&:not(:last-child)
+					margin-right: 85px
+		&_right
+			margin-left: auto
+			.fieldset
+				&:not(:last-child)
+					margin-right: 29px
+
+	&__button-filter.button
+		margin-top: 10px
+		height: 46px
+		padding-left: 26px
+		padding-right: 26px
+
+	.employees-requests__employee-col
+		padding: 16px 0 12px
+		&:nth-child(1)
+			flex-basis: percentage(156/$table-width)
+		&:nth-child(2)
+			flex-basis: percentage(115/$table-width)
+		&:nth-child(3)
+			flex-basis: percentage(151/$table-width)
+		&:nth-child(4)
+			flex-basis: percentage(165/$table-width)
+		&:nth-child(5)
+			flex-basis: percentage(390/$table-width)
+			padding-right: 70px
+		&:nth-child(6)
+			flex-basis: percentage(138/$table-width)
+
+	.icon-notes
+		display: inline-block
+		vertical-align: middle
+		margin-left: 18px
+
+	&__pagination
+		text-align: center
+		position: relative
+
+	&__btn
+		position: absolute
+		right: 0
+		top: 0
+		display: inline-block
+		height: 44px
+		vertical-align: top
+		font-size: 16px
+		color: $blue
+		border: 1px solid
+		line-height: 44px
+		text-transform: uppercase
+		padding: 0 25px
+		transition: .5s
+		&:hover
+			color: #fff
+			background-color: $blue
+			border-color: $blue

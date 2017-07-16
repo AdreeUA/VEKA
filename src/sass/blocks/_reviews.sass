@@ -1,0 +1,84 @@
+.reviews
+	padding-bottom: 100px
+
+	.employees-requests__employee-firstrow
+		border: 0
+
+		.employees-requests__coltitle
+			border-bottom: 1px solid rgba(#000, .2)
+
+	.employees-requests__employee-col
+		&:nth-child(1)
+			flex-basis: 175px
+		&:nth-child(2)
+			flex-basis: 160px
+		&:nth-child(3)
+			flex-basis: 180px
+		&:nth-child(4)
+			flex-basis: 140px
+
+	.employees-requests__flexrow
+		.employees-requests__arrow
+			display: inline-block
+			vertical-align: middle
+		.employees-requests__employee-col
+			&:last-child
+				text-align: center
+
+	.employees-requests__employee-row
+		&:nth-child(odd)
+			background-color: #fff
+		&:nth-child(even)
+			background-color: #f3f3f3
+
+	&__breadcrumb
+		margin-bottom: 61px
+
+	&__title
+		margin-bottom: 31px
+
+	&__nav
+		margin-bottom: 38px
+
+	&__header
+		display: flex
+		align-items: center
+		margin-bottom: 50px
+
+	&__subtitle
+		margin-right: 36px
+		color: $blue
+		font-size: 22px
+
+	&__header-fieldset
+		min-width: 210px
+
+	&__table-head
+		margin-bottom: 36px
+
+	&__table-title
+		font-size: 18px
+		color: #000
+		padding-left: 10px
+		margin-bottom: 8px
+
+	&__modal-btn
+		height: 46px
+		min-width: 190px
+		text-transform: uppercase
+
+
+		&.blue-border
+			border-width: 1px
+
+		& + &
+			margin-left: 29px
+
+	&__modal
+		box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.13)
+		margin-left: auto
+		margin-right: 0
+
+		.modal__box textarea.input
+			height: 64px
+			margin: 0

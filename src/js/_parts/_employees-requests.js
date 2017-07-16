@@ -3,9 +3,9 @@
  */
 
 $(function($) {
-  var allAccordions = $('.employees-requests__employee-row > .employees-requests__acordion-content');
-  var allAccordionItems = $('.employees-requests__employee-row > .employees-requests__flexrow');
-  $('.employees-requests__employee-row > .employees-requests__flexrow').click(function() {
+  var allAccordions = $('.employees-requests__employee-row .employees-requests__acordion-content');
+  var allAccordionItems = $('.employees-requests__employee-row .employees-requests__flexrow');
+  $('.employees-requests__employee-row .employees-requests__flexrow').click(function() {
     if($(this).hasClass('open'))
     {
       $(this).removeClass('open');

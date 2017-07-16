@@ -1,0 +1,90 @@
+extends ./_layout/_layout
+
+block head
+	- pageTitle = 'Заявки на обратный звонок'
+
+block content
+	main.request-content
+		.container
+			section.request-employee.request-sample.user-forms
+				#request-callbackModal.modal.user-forms__modal.request-employee__modal
+					.modal__box
+						.modal__head
+							h2.user-forms__title Заявка на обратный звонок
+							.modal__close.js-mfp-close: +icon('close-md')
+						.modal__body
+							.modal__form
+								form(action="#").js-validate
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Имя, фамилия
+											.col-xs-9
+												| Иванов Иван
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Телефон
+											.col-xs-9
+												| +7 689 536 25 95
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Город
+											.col-xs-9
+												| Москва
+
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Комментарий
+											.col-xs-9
+												| Опциональный текст комментария к заявка не замер.  Может
+												| занимать несколько строчек, содержит информацию, которую
+												| заявитель посчитал нужной
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| В компанию
+											.col-xs-9
+												| Окна от природы
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Офис
+											.col-xs-9
+												| 143396, Москва, поселение Первомайское, д. Губцево,
+												| ул. Дорожная, д. 10 +7 495 777-53-77
+
+									.request-employee__box
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Номер заявки
+											.col-xs-9
+												| 36589
+										.row.registration__modal-row
+											.col-xs-3.registration__modal-row-title
+												| Дата и время
+											.col-xs-9
+												| 12.06.2017 12:00
+
+									fieldset.fieldset
+										label.user-forms__label
+											.row.registration__modal-row
+												.col-xs-3
+													span.user-forms__labeltext.user-forms__labeltext-status
+														| Статус
+												.col-xs-9
+													select.select.user-forms__input.js-select(name="status")
+														option(value="1") новая
+														option(value="2") статус 2
+														option(value="3") статус 3
+
+									fieldset.fieldset
+										label.user-forms__label
+											.registration__modal-row
+												span.user-forms__labeltext
+													| Заметки
+												textarea.input.user-forms__input
+
+
+									fieldset.fieldset.modal__submit
+										button.button.blue.md.user-forms__button
+											span Вернуться назад

@@ -1,0 +1,158 @@
+
+<div id="addReviewModal" class="modal-full modal-ful--noflex mfp-hide">
+  <div class="modal__box">
+    <div class="modal__head modal-full__head visible-xs">
+      <div class="section__title">Написать отзыв</div>
+      <div class="modal__close js-mfp-close">
+        <svg class="icon icon-close-md ">
+          <use xlink:href="#icon-close-md"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="modal-full__close js-mfp-close hidden-xs">
+      <svg class="icon icon-close-md ">
+        <use xlink:href="#icon-close-md"></use>
+      </svg>
+    </div>
+    <div class="modal-full__body">
+      <div class="modal-full__form">
+        <form action="#" class="js-validate">
+          <div class="main__section-head hidden-xs">
+            <div class="main__title">Написать отзыв</div>
+          </div>
+          <div class="row form__row">
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <input type="text" name="name" placeholder="ФИО" required="required" class="input"/>
+              </fieldset>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required="required" class="input js-phone"/>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row form__row">
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <input type="email" name="email" placeholder="Электронная почта" required="required" class="input"/>
+              </fieldset>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <fieldset class="fieldset">
+                    <input type="text" name="number" placeholder="№ договора" required="required" class="input js-numberOnly"/>
+                  </fieldset>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <fieldset class="fieldset">
+                    <input type="text" name="number" placeholder="Дата" required="required" class="input js-datemask"/>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row form__row form__city-row">
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <input type="text" name="city" placeholder="Город" required="required" class="input js-google-autocomplete"/>
+              </fieldset>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <select data-placeholder="Партнер VEKA" required="required" class="select js-select">
+                  <option></option>
+                  <option value="1">Окна для жизни</option>
+                  <option value="2">Оконный комбинат «Светоч»</option>
+                  <option value="3">Официальный дилер VEKKER</option>
+                  <option value="4">Оконная компания №1</option>
+                  <option value="5">ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"</option>
+                  <option value="6">Горизонт-Сервис</option>
+                  <option value="1">Окна для жизни</option>
+                  <option value="2">Оконный комбинат «Светоч»</option>
+                  <option value="3">Официальный дилер VEKKER</option>
+                  <option value="4">Оконная компания №1</option>
+                  <option value="5">ООО "ЕВРОПРОФИЛЬ" ТМ ОТРИС"</option>
+                  <option value="6">Горизонт-Сервис</option>
+                </select>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row form__row">
+            <div class="col-md-6 col-sm-6">
+              <div class="rating-add"><span>Оценка:</span><span data-icon="images/stars-large.svg" data-loader="images/ajax-loader.gif" data-size="32" class="rating-star__elem js-rating">
+                  <input type="hidden" name="val" value="0"/>
+                  <input type="hidden" name="votes" value=""/></span></div>
+            </div>
+          </div>
+          <div class="row form__row">
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <textarea placeholder="Достоинства (необязательно)" onfocus="placeholder='';" onblur="placeholder='Достоинства (необязательно)';" class="input"></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <textarea placeholder="Недостатки (необязательно)" onfocus="placeholder='';" onblur="placeholder='Недостатки (необязательно)';" class="input"></textarea>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row form__row">
+            <div class="col-md-6 col-sm-6">
+              <fieldset class="fieldset">
+                <textarea placeholder="Текст отзыва" onfocus="placeholder='';" onblur="placeholder='Текст отзыва';" required="required" class="input"></textarea>
+              </fieldset>
+              <fieldset class="fieldset">
+                <label class="checkbox">
+                  <input type="checkbox" name="user_agreement" required="required"/><span class="checkbox__text">Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку</span>
+                </label>
+              </fieldset>
+              <fieldset class="fieldset modal__submit">
+                <button class="button blue md"><span>Отправить отзыв</span>
+                  <svg class="icon icon-email ">
+                    <use xlink:href="#icon-email"></use>
+                  </svg>
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="main__pattern"></div>
+</div>
+<!-- Чтобы вызвать модал «Отзыв отправлен»:-->
+<!-- $.magnificPopup.open({-->
+<!--		items: {-->
+<!--			src: '#successFormReviewModal',-->
+<!--			type: 'inline'-->
+<!--		},-->
+<!--		closeBtnInside: false-->
+<!--	});-->
+<div id="successFormReviewModal" class="modal-full mfp-hide">
+  <div class="modal__head modal-full__head visible-xs">
+    <div class="section__title">Отзыв отправлен</div>
+    <div class="modal__close js-mfp-close">
+      <svg class="icon icon-close-md ">
+        <use xlink:href="#icon-close-md"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="modal-full__close js-mfp-close hidden-xs">
+    <svg class="icon icon-close-md ">
+      <use xlink:href="#icon-close-md"></use>
+    </svg>
+  </div>
+  <div class="modal-full__success">
+    <div class="section__title hidden-xs">Отзыв отправлен</div>
+    <p>
+       
+      <b>Благодарим Ваc!</b> Ваш отзыв будет<br> 
+      опубликован после прохождения<br> 
+      проверки.
+    </p>
+  </div>
+  <div class="main__pattern"></div>
+</div>

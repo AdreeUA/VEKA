@@ -1,0 +1,43 @@
+extends ./_layout/_layout
+include _mixin/_setting-price
+
+block head
+    - pageTitle = 'Настройки: типовые цены'
+
+block content
+    +b.MAIN.settings
+        .container
+            .breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Настройки
+            +e.H1.title.title Настройки
+            +b.UL.setting-nav
+                +e.item
+                    +e.link(href="#") Личные данные
+                +e.item
+                    +e.link(href="#") Смена пароля
+                +e.item
+                    +e.link(href="#") Уведомления
+                +e.item
+                    +e.link._active(href="#") Типовые цены
+                +e.item
+                    +e.link(href="#") Время работы офисов
+
+            +e.header
+                +e.H3.subtitle Типовые цены компании
+                +e('fieldset').header-fieldset.fieldset
+                    label.user-forms__label
+                        select.select.js-select
+                            option(value="1") Окна от природы
+                            option(value="2") Окна от природы 2
+                            option(value="3") Окна от природы 3
+                +e.button.__header-button.js-change-price(href=jv0) Изменить все цены
+                +e.button.__header-button(href=jv0) Добавить регион
+
+
+            +e.content
+                - var data = locals['data']
+                +setting-price(data.price.defaults)
+

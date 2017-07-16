@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden">
   <defs>
-      <path id="def-phone-call-a" d="M0 0h24.002v24H0z"/>
+      <clipPath id="def-icon-settings-city-close-a"><path d="M5.5 0a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/></clipPath><clipPath id="def-icon-settings-city-close-b"><path d="M1.33 9.38l-.66-.76 8-7 .66.76z"/></clipPath><clipPath id="def-icon-settings-city-close-c"><path d="M1.65 2.35l.7-.7 7 7-.7.7z"/></clipPath>
+<path id="def-phone-call-a" d="M0 0h24.002v24H0z"/>
 <path id="def-plane-a" d="M0 .001h30v27.527H0z"/>
 <path id="def-play-a" d="M0 0h16v16H0z"/>
 <path id="def-profile-a" d="M0 0h40.4v62H0z"/>
@@ -88,6 +89,9 @@
     </symbol>
     <symbol id="icon-huge-arrow-right" viewBox="0 0 18.996 11.991">
       <path d="M12.792 11.811a.724.724 0 0 1-.957 0 .563.563 0 0 1 0-.851l4.854-4.358H.67C.297 6.602 0 6.335 0 6c0-.336.297-.611.67-.611h16.019L11.834 1.04a.573.573 0 0 1 0-.86.726.726 0 0 1 .957 0l6.004 5.39a.55.55 0 0 1 0 .85l-6.003 5.391z"/>
+    </symbol>
+    <symbol id="icon-icon-settings-city-close" viewBox="0 0 11 11">
+      <path stroke-miterlimit="50" stroke-width="2" d="M5.5 0a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z" clip-path="url(&quot;#def-icon-settings-city-close-a&quot;)"/><path stroke-miterlimit="50" stroke-width="2" d="M1.33 9.38l-.66-.76 8-7 .66.76z" clip-path="url(&quot;#def-icon-settings-city-close-b&quot;)"/><path stroke-miterlimit="50" stroke-width="2" d="M1.65 2.35l.7-.7 7 7-.7.7z" clip-path="url(&quot;#def-icon-settings-city-close-c&quot;)"/>
     </symbol>
     <symbol id="icon-list-news" viewBox="0 0 24 22">
       <path d="M0 2V0h24v2zm0 5V5h16v2zm0 5v-2h24v2zm0 5v-2h16v2zm0 5v-2h24v2z"/>

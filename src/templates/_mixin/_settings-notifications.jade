@@ -1,0 +1,20 @@
+include _checkbox-square
+
+mixin settings-notifications(data)
+    +b.settings-notifications()&attributes(attributes)
+        if data.title
+            +e.title
+                +e.title-text= data.title
+        +e.box
+            .row
+                each item in data.list
+                    .col-xs-4
+                        if data.hasSubtitleRow
+                            +e.subtitle= item.subtitle
+
+                        each chekbox in item.checkboxlist
+
+                            +checkbox-square({
+                                id: chekbox.id,
+                                text: chekbox.text
+                            }).__checkbox

@@ -1,0 +1,23 @@
+-const jv0 = 'javascript:void(0)';
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        block head
+        title= pageTitle || ''
+        include ../_parts/_head
+    body
+        include ../../../node_modules/bemto.jade/bemto
+        //- for svg
+        include ../svg-symbols
+        //- mixin
+        include ../_mixin/_import
+
+        include ../_parts/_header
+
+        block content
+
+        include ../_parts/_footer
+
+        include ../_parts/_scripts

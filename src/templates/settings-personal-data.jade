@@ -1,0 +1,135 @@
+extends ./_layout/_layout
+include _mixin/_workingTable
+
+block head
+    - pageTitle = 'Настройки: личные данные'
+
+block content
+    +b.MAIN.settings
+        .container
+            .breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Настройки
+            +e.H1.title.title Настройки
+            +b.UL.setting-nav
+                +e.item
+                    +e.link._active(href="#") Личные данные
+                +e.item
+                    +e.link(href="#") Смена пароля
+                +e.item
+                    +e.link(href="#") Уведомления
+                +e.item
+                    +e.link(href="#") Типовые цены
+                +e.item
+                    +e.link(href="#") Время работы офисов
+
+            +e.content
+                +b.personal-data.user-forms.registration
+
+                    form(class="user-forms__form", method="post", action="")
+                        .row
+                            .col-xs-12.col-md-4
+                                .user-forms__form-head
+                                    h3.settings__subtitle Основные сведения
+
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Имя
+                                        input(type="text", required="required", class="user-forms__input input")
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Фамилия
+                                        input(type="text", required="required", class="user-forms__input input")
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Отчество
+                                            small.user-forms__labeltext-small не обязательно
+                                        input(type="text", class="user-forms__input input")
+                                fieldset.fieldset
+                                    .user-forms__label Пол
+                                    .user-forms__radiolabels.user-forms__input
+                                        input(name="gender", type="radio", class="user-forms__radioinput", id="nothing", value="пол не выбран" checked="checked")
+                                        input(name="gender", type="radio", class="user-forms__radioinput", id="male", value="М")
+                                        input(name="gender", type="radio", class="user-forms__radioinput", id="female", value="Ж")
+
+                                        label.user-forms__radiolabel(for="nothing") не выбран
+                                        label.user-forms__radiolabel(for="male") М
+                                        label.user-forms__radiolabel(for="female") Ж
+
+
+                                fieldset.fieldset.user-forms__tel
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Телефон
+                                        .user-forms__telfield
+                                            select.select.user-forms__input.user-forms__telfield-code.js-select(name="phone")
+                                                option(value="+7") +7
+                                                option(value="+999") +999
+                                            input(type="tel", required="required", class="user-forms__input user-forms__input-tel input")
+
+                            .col-xs-12.col-md-3
+                                .user-forms__form-head
+                                    h3.settings__subtitle Местоположение
+
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Страна
+                                        select.select.user-forms__input.js-select(name="country")
+                                            option(value="1") Россия
+                                            option(value="2") Казахстан
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Регион
+                                        input(type="text", required="required", class="user-forms__input input")
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Город
+                                        input(type="text", required="required", class="user-forms__input input")
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Индекс
+                                            small.user-forms__labeltext-small не обязательно
+                                        input(type="text", class="user-forms__input input")
+                                fieldset.fieldset
+                                    label.user-forms__label
+                                        span.user-forms__labeltext
+                                            | Адрес
+                                        input(type="text", required="required", class="user-forms__input input")
+
+                            .col-xs-12.col-md-5
+                                .user-forms__form-head
+                                    h3.settings__subtitle Настройки личного кабинета
+
+                                .personal-data__box
+                                    .row.personal-data__modal-row
+                                        .col-xs-12
+                                            | Чтобы изменить данные настройки, обратитесь к администратору сайта
+                                    .row.personal-data__modal-row
+                                        .col-xs-3.personal-data__modal-row-title
+                                            | Эл. почта
+                                        .col-xs-9.personal-data__modal-disc
+                                            | user@mail
+                                    .row.personal-data__modal-row
+                                        .col-xs-3.personal-data__modal-row-title
+                                            | Роль
+                                        .col-xs-9.personal-data__modal-disc
+                                            | Администратор
+                                    .row.personal-data__modal-row
+                                        .col-xs-3.personal-data__modal-row-title
+                                            | Компании
+                                        .col-xs-9.personal-data__modal-disc
+                                            | Окна от природы, Окна Петербурга, Оконный завод «Лабрадор»
+
+
+                                fieldset.fieldset
+                                    button.button.blue.personal-data__button
+                                        span сохранить

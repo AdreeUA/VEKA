@@ -1,0 +1,45 @@
+extends ./_layout/_layout
+include _mixin/_setting-price
+
+block head
+    - pageTitle = 'Настройки: смена пароля'
+
+block content
+    +b.MAIN.settings
+        .container
+            .breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Настройки
+            +e.H1.title.title Настройки
+            +b.UL.setting-nav
+                +e.item
+                    +e.link(href="#") Личные данные
+                +e.item
+                    +e.link(href="#") Смена пароля
+                +e.item
+                    +e.link(href="#") Уведомления
+                +e.item
+                    +e.link._active(href="#") Типовые цены
+                +e.item
+                    +e.link(href="#") Время работы офисов
+
+            +e.header
+                +e.H3.subtitle Типовые цены компании
+                +e('fieldset').header-fieldset.fieldset
+                    label.user-forms__label
+                        select.select.js-select
+                            option(value="1") Окна от природы
+                            option(value="2") Окна от природы 2
+                            option(value="3") Окна от природы 3
+
+            +e.content
+                +e.add-region-header Продукты \ Цены в рублях
+                .row
+                    .col-xs-3
+                        - var data = locals['data']
+                        +setting-price(data.price.defaults, true)
+                    .col-xs-5.col-xs-offset-1
+                        +e.add-region-text Добавьте регион или город, в котором работает ваша компания, и введите примерные цены на указанные слева продукты.
+                        +e.BUTTON.add-region-btn.button.blue добавить регион

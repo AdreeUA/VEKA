@@ -1,0 +1,61 @@
+
+<div id="callModal" class="modal mfp-hide">
+  <div class="modal__box">
+    <div class="modal__head">
+      <div class="section__title">Мы вам перезвоним</div>
+      <div class="modal__close js-mfp-close">
+        <svg class="icon icon-close-md ">
+          <use xlink:href="#icon-close-md"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="modal__body">
+      <div class="modal__form">
+        <form action="#" class="js-validate">
+          <fieldset class="fieldset">
+            <input type="text" name="city" placeholder="Город" required="required" class="input js-google-autocomplete"/>
+          </fieldset>
+          <fieldset class="fieldset">
+            <input type="text" name="name" placeholder="Представьтесь, пожалуйста" required="required" class="input"/>
+          </fieldset>
+          <fieldset class="fieldset">
+            <input type="text" name="phone" placeholder="Номер телефона" required="required" class="input js-phone"/>
+          </fieldset>
+          <fieldset class="fieldset">
+            <textarea placeholder="Ваши пожелания" onfocus="placeholder='';" onblur="placeholder='Ваши пожелания';" class="input"></textarea>
+          </fieldset>
+          <fieldset class="fieldset">
+            <label class="checkbox">
+              <input type="checkbox" name="user_agreement" required="required"/><span class="checkbox__text">Ознакомлен с <a href="#" target="_blank">Регламентом о защите персональных данных</a> и выражаю <a href="#" target="_blank">согласие</a> на их обработку</span>
+            </label>
+          </fieldset>
+          <fieldset class="fieldset modal__submit">
+            <button class="button blue md">
+              <svg class="icon icon-email ">
+                <use xlink:href="#icon-email"></use>
+              </svg><span>Отправить</span>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal: Запрос получен-->
+  <div style="display: none" class="modal__box">
+    <div class="modal__head">
+      <div class="section__title">Запрос получен!</div>
+      <div class="modal__close js-mfp-close">
+        <svg class="icon icon-close-md ">
+          <use xlink:href="#icon-close-md"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="modal__body">
+      <div class="modal__text">
+        <div class="modal__icon"><img src="images/logo.svg"/></div>
+        <h6>Мы вам обязательно перезвоним!</h6>
+        <p>Благодарим вас за обращение в компанию VEKA. Наши специалисты перезвонят вам в течение нескольких часов. Если в течение 3-х рабочих дней вы не получите ответа, пожалуйста, напишите в службу поддержки по адресу <a href="#">support@veka.ru</a></p>
+      </div>
+    </div>
+  </div>
+</div>

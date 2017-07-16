@@ -1,0 +1,53 @@
+extends ./_layout/_layout
+include _mixin/_workingTable
+
+block head
+    - pageTitle = 'Настройки: время работы офисов - редактирование'
+
+block content
+    +b.MAIN.settings
+        .container
+            .breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Главная
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Личный кабинет
+                    li.breadcrumb__item: a(href="#").breadcrumb__link Настройки
+            +e.H1.title.title Настройки
+            +b.UL.setting-nav
+                +e.item
+                    +e.link(href="#") Личные данные
+                +e.item
+                    +e.link(href="#") Смена пароля
+                +e.item
+                    +e.link(href="#") Уведомления
+                +e.item
+                    +e.link(href="#") Типовые цены
+                +e.item
+                    +e.link._active(href="#") Время работы офисов
+            +e.header
+                +e.H3.subtitle Типовые цены компании
+                +e('fieldset').header-fieldset.fieldset
+                    label.user-forms__label
+                        select.select.user-forms__input.js-select(name="company")
+                            option(value="1") Окна от природы
+                            option(value="2") Окна от природы 2
+                            option(value="3") Окна от природы 3
+
+            +e.content
+                +e.P.prompt Указывайте местное время
+                +e.content-item
+                    +e.city Москва
+
+                    - var data1 = { idMod: '1', address: 'ул. Строителей Стахановцев, 17 ТЦ “Patterson”', items: [ {day: 'monday', isWorking: true},{day: 'tuesday', isWorking: true},{day: 'wednesday',isWorking: true},{day: 'thursday',isWorking: true},{day: 'friday',isWorking: true},{day: 'saturday',isWorking: true},{day: 'sunday',isWorking: true}]}
+                    +workingTable(data1)
+
+                    - var data2 = { idMod: '2', address: 'ул. Строителей Стахановцев, 17 ТЦ “Patterson”', items: [ {day: 'monday', isWorking: true},{day: 'tuesday', isWorking: true},{day: 'wednesday',isWorking: true},{day: 'thursday',isWorking: true},{day: 'friday',isWorking: true},{day: 'saturday',isWorking: false},{day: 'sunday',isWorking: false}]}
+                    +workingTable(data2)
+
+                +e.content-item
+
+                    +e.city Санкт-Петербург
+
+                    - var data3 = { empty: true, idMod: '3', address: 'ул. Строителей Стахановцев, 17 ТЦ “Patterson”', items: [ {day: 'monday', isWorking: true},{day: 'tuesday', isWorking: false},{day: 'wednesday',isWorking: false},{day: 'thursday',isWorking: false},{day: 'friday',isWorking: false},{day: 'saturday',isWorking: false},{day: 'sunday',isWorking: false}]}
+                    +workingTable(data3)
+        
